@@ -1,0 +1,22 @@
+{
+  "name": "my-html-library",
+  "version": "1.0.0",
+  "description": "A library of reusable HTML components.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "dev": "live-server src",
+    "build": "echo 'Build step not defined yet.'"
+  },
+  "keywords": [
+    "html",
+    "library",
+    "components"
+  ],
+  "author": "Kristian Jay Mago",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
