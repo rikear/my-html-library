@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- page192 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Or you want to add some padding in the block flow direction if an element doesn't have a pele-ment inside of it. That would look like this:
+      </p>
+      <code>
+        .other-thing: not (:has (p)) {
+        <br><br> 
+          padding-block: 10px;
+        <br><br>
+        }
+      </code>
+      <p>
+        How about an even more convoluted use case; suppose you want to select a hl if there is an img directly after it. We can do that like this:
+      </p>
+      <code>
+        h1: has (+ img) {
+        <br><br>
+          /* Styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        There are so many possibilities with : has ()!
+        <br><br>
+        If you need to fork your code based on support for : has (), you can do this with feature queries.
+        <br><br>
+        That would look like this:
+      </p>
+      <code>
+        @supports selector:has (*)) {
+        <br><br>
+          /* Styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        Now, don't worry if you've not come across feature queries before; we are going to look at them later on in this very chapter.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Logical Properties and Values
+          <br><br>
+          You may have noticed in one of the previous examples that I used the padding-block shorthand. That's part of the Logical Properties and Values specification and allows us to define spacing and more based on the logical direction of the document.
+          This can be useful when the writing mode being used might not match the physical mappings. For example, in some languages you start reading from the right and not the left. If you use a logical property in that instance, instead of an absolute one, it will work as intended in either case.
+          <br><br>
+          Practically, as I don't need to worry about writing modes too often, I find these properties most useful for setting padding or margin on an element in two places at once. For example, if my document is flowing from top to bottom, I can set a margin on either side of an element with margin-inline, which I find preferable to setting it with the margin shorthand, where I would need to set top and bottom and left and right each time.
+          <br><br>
+          The specification for these properties can be read at https:// www.w3.org/TR/ css-logical-1/.
+        </p>
+      </section>
+      <p>
+        Let's change tack now. We've looked at how we can select items in our responsive world. But how about how we size them? We'll look at viewport percentage lengths next.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

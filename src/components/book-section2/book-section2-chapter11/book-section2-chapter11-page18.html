@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- page339 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        As the majority of the styles relate to aesthetics, we'll merely look at the essential ingredients in our styles to make the flipping effect possible. Refer to the full style sheet in the example file for
+        the aesthetic styles.
+      <br><br>  
+        When dealing with 3D transtorms, the first essential ingredient is to define some kind of 3D space.
+      <br><br>  
+        For our example, we need to set some perspective for .flipper-object, whether horizontal or vertical, to flip within. For that, we use the perspective property. This takes a length value, attempting to simulate the distance from the viewer's screen to the edge of the elements' 3D space. We set this on the outer-most element to provide the 3D context for our nested elements
+        to move within.
+      <br><br>  
+        The value you assign to perspective is arguably counter-intuitive if you set a low number like 20 px for the perspective value, the 3D space of the element will extend right out to only 20 px from your screen, the result being a more pronounced 3D effect.
+      <br><br>  
+        Setting a high number, on the other hand, will mean the edge of that imaginary 3D space will be further away, and therefore produce a less pronounced 3D effect. I recommend opening the example in the browser and playing with the perspective in the developer tools to get a feel for it:
+      </p>
+      <code>
+        flipper {
+      <br><br>    
+          perspective: 400px; 
+      <br><br>    
+          position: relative;
+      <br><br>    
+        }
+      </code>
+      <p>
+        We use position: relative on the outer flipper element to provide a positioning context for flipper-object to be absolutely positioned within:
+      </p>
+      <code>
+        .flipper-object { 
+      <br><br>    
+          position: absolute;
+      <br><br>    
+          width: 100%; 
+      <br><br>    
+          height: 100%;
+      <br><br>    
+          transition: transform 1s;
+      <br><br>     
+          transform-style: preserve-3d;
+      <br><br>    
+        }
+      </code>
+      <p>
+        Besides positioning • flipper-object absolutely, we set the height and width to 100% so that it fils the same space as the outer container. We have also set a transition for the transtorm. If you remember from earlier in this chapter, when we dealt with transitions, just setting the time for transition means the default timing function (ease) will be used.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

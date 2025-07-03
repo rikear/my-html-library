@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- page193 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Responsive viewport relative lengths
+      </h2>
+      <p>
+        CsS Values and Units Module Level 3 (https://www.w3.org/TR/css3-values/#viewport-relative-lengths) ushered in viewport relative units. These are great for responsive web design, as each unit is a percentage length of the viewport:
+      </p>
+      <ul>
+        <li>
+          The vw unit, where each vw unit is 1% of the viewport width
+        </li>
+        <li>
+          The vh unit, where each vh unit is 1% of the viewport height
+        </li>
+        <li>
+          The min unit (for viewport minimum; equal to the smaller of either vw or vh)
+        </li>
+        <li>
+          The vmax (viewport maximum; equal to the larger of either vw or vh)
+        </li>
+      </ul>
+      <p>
+        Want a modal window that's 90% of the browser height? This is, at least in theory, as easy as:
+      </p>
+      <code>
+        .modal {
+          height: 90vh;
+        }
+      </code>
+      <p>
+        Now, as useful as viewport relative units are, some browsers have had curious implementations. Safari in iOS, for example, changes the viewable screen area as you scroll from the top of a page (it shrinks the address bar), but crucially doesn't make any changes to the reported viewport height. So that thing you sized to be 90% of the viewport may no longer be 90% of the viewport once you scroll.
+        <br><br>
+        As such, there is now a bunch of related viewport units coming our way: https:// www.w3.org/TR/css-values-4/#viewport-variants:
+      </p>
+      <ul>
+        <li>
+          Ivh/Ivw, where the lv is for largest viewport percentage units. So in our iOS example, imagine the browser in a state where any shrinking UI is out of the way and the viewport is as large as it can be; this is the size that Ivh would be a percentage of.
+        </li>
+        <li>
+          suh/swwis for smallest viewport units. This represents a percentage of the screen on the basis of any Ul being at its largest state.
+        </li>
+        <li>
+          dh/dwis for dynamic viewport units. These represent a percentage of what the browser is currently using, possibly between the largest and smallest. For example, if a browser has two states, a largest and smallest, as is the case with iOS Safari currently, this value would choose one or the other. The problem here is two-fold. Firstly, the browser doesn't necessarily animate between the two values as they change, so it may be choppy. And secondly, if the browser does decide to animate that value as its Ul sizes change, it may not always be preferable. Imagine setting your font size using that unit and then seeing all the text resize as you scroll. Probably not the best user experience!
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

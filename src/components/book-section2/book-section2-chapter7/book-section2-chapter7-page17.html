@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- page230 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        In this example, we set the background to a dark gray (#333) to test the contrast against. Then we use the vs keyword to separate the colors that are going to be tested as the color with the highest contrast against that first color. Note that currently, in the experimental version of the syntax, you need a comma after each extra color you want to test against.
+        <br><br>
+        OK, take a look at those colors and place your bets. The winner is...
+        <br><br>
+        The orange with the hex code of #F90.
+        <br><br>
+        Picking the most contrasting color from a list is impressive in itself, but even more useful is being able to specify the target contrast. So, if you are trying to achieve AA WCAG accessibility compliance, you can pass a target contrast ratio like this:
+      </p>
+      <code>
+        .header-text {
+        <br><br>
+          background-color: #333;
+        <br><br>
+          color: color-contrast (#333 vs #666, #545454, #777, #90 to 4.5);
+        <br><br>
+        }
+      </code>
+      <p>
+        After the colors, we use the to keyword and then a contrast. We can also pass a contrast like this:
+      </p>
+      <code>
+        .header-text {
+          background-color: #333;
+          color: color-contrast (#333 vs #666, #545454, #777, #90 to AA);
+        }
+      </code>
+      <p>
+        The AA here means a contrast ratio of 4.5:1, which is the ratio required for AA WCAG accessibility with text contrast. Remember we covered accessibility a little more in Chapter 2, Writing HTML Markup.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Fair warning: As I write this chapter, there is no implementation that currently supports the to keyword and passing a contrast of AA or AAA; instead, it only supports the number value.
+        </p>
+      </section>
+      <p>
+        What is especially useful about the to keyword is it gets the first in the list to meet or exceed that contrast. If you look at swatch 12, it is the same as swatch 11, except the contrast is set to 2.5. That's obviously far less than anyone would sensibly want, but it should demonstrate the point;
+      </p>
+      <code>
+        .header-text {
+          background-color: #333;
+          color: color-contrast(#333 vs #666, #545454, #777, #F90 to 2.5);
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

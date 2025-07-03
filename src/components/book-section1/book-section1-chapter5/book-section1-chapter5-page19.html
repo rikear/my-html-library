@@ -1,0 +1,47 @@
+<!DOCTYPE html><!-- page148 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            In the example code, I have set each grid item to a random position using this technique. You can see how the three above are placed in this diagram:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.12: You can move things around just as easily with named grid lines
+            </p>
+        </section>
+        <p>
+            In specification terms, the name we assign to a grid line is known as a custom ident. Because they are just words, avoid using terminology that might interfere with grid keywords. For example, don't start naming grid lines "dense," "auto-fit," or "span"!
+            <br><br>
+            Grid Layout has an extra nicety you can make use of when you use named grid lines. If you append your names with - start and - end, as we have in our example, then grid automagically (yes, I know, that's not a real word) makes you a named grid area. Wait, what? Yep, that means that once you have named your grid lines, you can place items in your grid with a one-line grid-area.
+            To prove that point, here are just the first three grid-item rules from earlier rewritten this way:
+        </p>
+        <code>
+            .grid-item-1 { 
+            <br><br>    
+                grid-area: middle / center;
+            <br><br>    
+            }
+            <br><br>    
+            .grid-item-2 {
+            <br><br>    
+                grid-area: bottom / right;
+            <br><br>    
+            }
+        </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

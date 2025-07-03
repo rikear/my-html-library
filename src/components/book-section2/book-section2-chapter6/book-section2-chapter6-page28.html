@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- page197 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+          display: inline grid;
+      <br><br>
+        }
+      <br><br>
+      }
+      <br><br>
+      @supports not (display: grid) {
+      <br><br>
+        .Item {
+      <br><br>
+          display: inline-flex;
+      <br><br>
+        }
+      <br><br>
+      }
+      </code>
+      <p>
+        Here, we are defining one block of code for when the browser supports a feature and another lot for when it doesn't. This pattern is fine if the browser supports @supports (yes, I realize that is confusing), but if it doesn't, it won't apply any of those styles.
+        <br><br>
+        If you want to make provision for devices that don't support @supports, you're better off writing your default declarations first and then your @supports-specific one after. That way, the prior rule will be overruled if support for @supports exists, and the @supports block will be ignored if the browser doesn't support it. Our prior example could, therefore, be reworked to:
+      </p>
+      <code>
+        .Item {
+        <br><br>
+            display: inline-flex;
+        <br><br>
+          }
+        <br><br>
+        @supports (display: grid) {
+        <br><br>
+          .Item {
+        <br><br>
+            display: inline-grid;
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+      <p>
+        Sorry, that explanation was tough-hopefully you got through it!
+      </p>
+      <h2>
+        Combining conditionals
+      </h2>
+      <p>
+        You can also combine conditionals. Let's suppose we only wanted to apply some rules if both Flexbox and pointer: coarse were supported (in case you missed it, we covered the pointer interaction media feature back in Chapter 3, Media Queries and Container Queries). Here is what that might look like:
+      </p>
+      <code>
+        @supports ((display: flex) and (pointer: coarse)) {
+        <br><br>
+          .Item {
+        <br><br>
+            display: inline-flex;
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

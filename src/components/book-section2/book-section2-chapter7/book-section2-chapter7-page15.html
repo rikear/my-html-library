@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- page228 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Doesn't get much easier than that. Of course, we could also use @supports, which we looked at in detail in the last chapter, CSS Selectors, Typography, and More:
+      </p>
+      <code>
+        @supports (color (dispay-p3 0 1 0)) {
+        <br><br>
+          background-color: color (display-p3 0 1 0);
+        <br><br>
+        }
+      </code>
+      <p>
+        At first glance, the @supports version may seem more verbose. It is, until you start passing color values around as custom properties instead.
+        <br><br>
+        We cover custom properties fully in Chapter 12, Custom Properties and CSS Functions, but for now, all you need to understand is in this instance, we are using a custom property as a means of storing a value that we can reuse in multiple places.
+        <br><br>
+        We would set up a color to reuse like this:
+      </p>
+      <code>
+        :root {
+        <br><br>
+          --col-accent: rgb (0 255 0);
+        <br><br>
+        }
+        <br><br>
+        @supports (color: color (display-p3 0 1 0)) {
+        <br><br>
+          :root {
+        <br><br>
+          --col-accent: color (display-p3 0 1 0);
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+      <p>
+        And then, whenever we wanted to use that color, we only have to write:
+      </p>
+      <code>
+        .hing {
+          color: var(--col-accent) ;
+        }
+      </code>
+      <p>
+        The user would then get either the rgb () version or the display-p3 version, depending on their system. With it set as a custom property, we can reuse it as many times as we like in that manner and know that each user will get the right syntax for their environment.
+      </p>
+      <h2>
+        The color-mix() function
+      </h2>
+      <p>
+        This is another very new function for color, so much so that I have had to enable experimental features in one of the only browsers that has an implementation currently - Safari. As ever, check support for features at caniuse.com (https://caniuse.com/?search=color-mix()).
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

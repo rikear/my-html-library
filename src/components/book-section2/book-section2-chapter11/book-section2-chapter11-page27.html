@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- page348 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+        animation-delay: 0s; 
+      <br><br>  
+        animation-fill-mode: none;
+        /* could also be 'forwards', 'backwards' or 'both' */ 
+      <br><br>  animation-direction: normal;
+      <br><br>  
+        /* could also be set to 'reverse', 'alternate' or 'alternate-reverse' */
+      <br><br>  
+      }
+      </code>
+      <p>
+        You can read the full definition for each of these animation properties in the CSS Animations Level 1 specification at https://www.w3.org/TR/css-animations-1/.
+      <br><br>  
+        You can run multiple animations on an element with the shorthand property by comma separating them. For example:
+      </p>
+      <code>
+        animation: animone 1s alternate both, animTwo 0.3s forwards
+      </code>
+      <p>
+        As mentioned previously, it's simple to reuse a declared key frames on other elements and with completely different settings:
+      </p>
+      <code>
+        .flipper:hover .flipper-vertical { 
+      <br><br>    
+          transform: rotateX (180deg) ;
+      <br><br>    
+          animation: pulse 2s 1s cubic-bezier (0.68, -0.55, 0.265, 1.55) 5 alternate both;
+      <br><br>    
+        }
+      </code>
+      <p>
+        Here, the pulse animation would run over 2 seconds and uses an ease-in-out-back timing function (defined as a cubic-bezier curve). It runs five times in both directions. This declaration has been applied to the vertically flipping element in the example_ 11-08/styles. css file.
+      </p>
+      <h2>
+        The animation-fill-mode property
+      </h2>
+      <p>
+        The animation-fill-mode property is worthy of a special mention. Consider an animation that starts with a yellow background and animates to a red background over 3 seconds. You can view this in example_ 11-09.
+      <br><br>  
+        We apply the animation like this:
+      </p>
+      <code>
+        .background-change { 
+      <br><br>    
+          animation: fillBg 3s;
+      <br><br>    
+          height: 200px; width: 400px;
+      <br><br>    
+          border: 1px solid #ccc;
+      <br><br>    
+        }
+      </code>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- page341 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        As you can imagine, there are a bazillion (by the way, bazillion is definitely not a real amount, I just checked) ways you can use these techniques. If you're wondering what a fancy navigation effect, or off-canvas menu, might look like with a spot of perspective, I highly recommend paying Codrops a visit: https://tympanus.net/Development/PerspectivePageViewNavigation/index.html.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the W3C specification for the CSS Transforms Module Level 1 at https://www.w3.org/TR/css-transforms-1/.
+        </p>
+      </section>
+      <p>
+        It turns out there is a very handy property when working with transforms that can do all your Xi, y, and z movement in one go. Let's take a look at that next.
+      </p>
+      <h2>
+        The translate3d property
+      </h2>
+      <p>
+        I've found great utility in the translated function. With this single function, it is possible to move an element in the x (left/right), y (up/down), and z (forward/backward) axes.
+      <br><br>  
+        Let's amend our previous example and make use of the translate3d() function. You can view this example at example_11-06.
+      <br><br>  
+        Besides setting the elements into the page a little more with padding, the only changes from our previous example can be seen here:
+      </p>
+      <code>
+        .flipper: hover .flipper-vertical { 
+      <br><br>    
+          transform: rotateX(180deg)  translate3d(0, 0, -120px);
+      <br><br>    
+        }
+      <br><br>    
+        .flipper: hover flipper-horizontal {
+      <br><br>    
+          transform: rotateY (180deg) translate3d(0, 0, 120px);
+      <br><br>    
+        }  
+      </code>
+      <p>
+        We're still applying a transform, but this time, in addition to our rotate, we have also made use of translate3d(). The syntax for the comma-separated arguments you can pass into translate3d are x-axis movement, y-axis movement, and z-axis movement.
+      <br><br>  
+        In our two examples, I'm not moving the element on the x ory axis (left to right and up and down); instead, I'm moving it toward or further away from you as you look at it.
+      </p>
+
+    </div>
+  </div>
+  
+</body>
+</html>

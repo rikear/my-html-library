@@ -1,0 +1,46 @@
+<!DOCTYPE html><!-- page140 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            grid-auto-flow
+        </h2>
+        <p>
+            The grid-auto-flow property allows you to define the direction that any implicitly added items flow inside the grid. Use a value of column when you want the grid to add extra columns to accommodate extra items, and use a value of row when you want the grid to add extra rows.
+            <br><br>
+            Let's amend our example by adding grid-auto-flow: column to make the items flow across the page instead of down:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.8: Switching the grid to add extra items horizontally
+            </p>
+        </section>
+        <p>
+            There is an additional dense keyword that can be added so that we have grid-auto-flow: column dense or grid-auto-flow: row dense - we'll look at that shortly.
+        </p>
+        <h2>
+            Placing and sizing Grid Layout items
+        </h2>
+        <p>
+            So far, each item we have added to a grid has taken up a single grid area. We are going to start a new example now you can find it in the code as example_05-04). This grid will have 20 grid items; these are just random foods and their source order within their container as a number.
+            <br><br>
+            However, there are quite a few new things to go over in the CSS. Before we go through each new thing step by step, take a look at the code and the screenshot and see how much of it you can make sense of before reading on.
+            <br><br>
+            It's also worth mentioning that I've purposely mixed up the use of whitespace in the values.
+            You can write grid-row: 6 / span 2 or grid-row: 6/span 2- either is just as valid. Just pick which you prefer.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

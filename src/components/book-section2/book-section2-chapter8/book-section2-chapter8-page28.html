@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- page261 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        It's possible to make a common-sense guess about what will cause the browser extra work. It's basically anything it would have to compute before it can paint things to the screen. For example, compare a standard div with a flat solid background against a semi-opaque image, on top of a background made up of multiple gradients, with rounded corners and a drop-shadow. The latter is more expensive; it will result in far more computational work for the browser and subsequently cause more overhead.
+        <br><br>
+        Therefore, when you apply effects like filters, do so judiciously and, if possible, test whether the page speed suffers on the lowest powered devices you are hoping to support. At the least, switch on development tool features, such as continuous page repainting in Chrome, and toggle any effects you think may cause problems. This will provide you with data (in the form of a millisecond reading of how long the current viewport is taking to paint) to make a more educated decision on which effects to apply. The lower the figure, the faster the page will perform-although be aware that browsers/platforms vary, so, as ever, test on real devices where possible. Generally, if you suspect something is slowing things down, just toggling those properties off in the dev tools will show an improvement. These tools just give you hard data to make a more educated decision.
+        <br><br>
+        For more on this subject, I recommend the following resource: https: //web.dev/rendering-performance/.
+      </p>
+      <section>
+        <object>
+          img ehre
+        </object>
+        <p>
+          Figure 8.22: Check that fancy effects aren't killing your performance
+        </p>
+      </section>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

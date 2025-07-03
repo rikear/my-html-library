@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page196 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Due to the way in which CSS is parsed we can write the older value first, then the newer style one immediately afterward. For example:
+      </p>
+      <code>
+        .thing {
+          <br><br>
+          padding: 0 10vw;
+        <br><br> 
+          padding: 0 10dvw;
+        <br><br>
+        }
+      </code>
+      <p>
+        An older browser that understands ww but not dvw will use the first padding-based declaration and discard the second because it can't understand it. A newer browser that does support dvw units will use the first declaration and then immediately replace it with the second as it comes after it.
+        <br><br>
+        Nice and simple. However, that is only really useful for minor fallbacks. There will be times when you need a more sophisticated and robust approach.
+      </p>
+      <h2>
+        Feature queries
+      </h2>
+      <p>
+        The native solution to forking code in CSS is to use feature queries, part of the CSS Conditional Rules Module Level 3 (https://www.w3.org/TR/css-conditional-3/). Support was introduced in iOS and Safari 9, Firefox 22, Edge 12, and Chrome 28.
+        <br><br>
+        The great news is, feature queries follow a similar syntax to media queries. So, as you understand media queries, the way we use feature queries should seem instantly familiar. Consider this:
+      </p>
+      <code>
+        @supports (flashing-sausages: lincolnshire) {
+        <br><br>
+          body {
+        <br><br>
+          sausage-sound: sizzling; 
+        <br><br>
+          sausage-color: slightly-burnt;
+        <br><br>
+          background-color: brown;
+        <br><br>
+          }
+        }
+      </code>
+      <p>
+        Here, the styles will only get applied if the browser supports the flashing-sausages property in combination with the lincolnshire value. I'm quite confident that no browser is ever going to support a flashing-sausages: lincolnshire property/value combination (and if they do, 1 want full credit), so none of the styles inside the @supports block will be applied.
+        <br><br>
+        Let's consider a more practical example. How about we use Grid when browsers support it and fall back to another layout technique when they don't? Consider this example:
+      </p>
+      <code>
+        @supports (display: grid) {
+        <br><br>
+          .Item {
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

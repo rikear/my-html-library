@@ -1,0 +1,35 @@
+<!DOCTYPE html><!-- page15 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  
+  <div >
+    <div >
+        <p>Oh! That nice big image (2000px wide) is forcing our page to render more than a little wonky. We clearly need to fix that.
+            <br>
+            <br>
+            Ideas? Well, we could add a fixed with to the image via CSS, but the problem there is that we want the image to scale to different screen sizes. For example. in CSS, our iPhone XR is 414 px wide by 896 px high. If we set a width of 414 px to that image, what happens if a user rotates the screen? On this device, the 414 px-wide viewport is now 896 px wide. Thankfully, it's pretty easy to achieve fluid images with a single line of CSS.
+            <br>
+            <br>
+            I'm going to create the css/styles. css CSS file now that's already linked in the head of the
+            HTML page.
+            <br>
+            <br>
+            In our blank styles. css file, here is the first thing I'm adding. Ordinarily I'd be setting a few other defaults, and we'll discuss those defaults in later chapters, but for our purposes I'm happy to open with just this: 
+        </p>
+        <code>
+            img {
+                <br>
+                max-width: 100%
+                <br>
+            }
+        </code>
+    </div>
+  </div>
+
+</body>
+</html>

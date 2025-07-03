@@ -1,0 +1,47 @@
+<!DOCTYPE html><!-- page75 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 3.3: On wider viewports, what we have in the browser doesn't match the design
+            </p>
+        </section>
+        <p>And here is the layout we are trying to achieve:</p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>Figure 3.4: The design calls for a different layout at wider viewports</p>
+        </section>
+        <p>
+            We need to keep the design as it is for smaller viewports but amend it for larger ones. Let's start by adding a media query that makes the navigation links and the logo appear at opposite sides at 1200 px and above:
+        </p>
+        <code>
+            @media (min-width: 800px) {
+                <br><br>
+                .rwd-MastHead {
+                <br><br>
+                flex-direction: row;
+                <br><br>
+                justify-content: space-between; max-width: 1000px; margin: 30px auto;
+                <br><br>
+                }
+                <br><br>
+            }
+        </code>
+    </div>
+  </div>
+
+</body>
+</html>

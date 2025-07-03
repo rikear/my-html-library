@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- page361 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Actually, that is not so dissimilar to the first example. So, how about we up the ante and factor in environment variables? That would look like this:
+      </p>
+      <code>
+        .thing {
+      <br><br>      
+          height: calc(
+      <br><br>      
+            100vh - env (safe-area-inset-top) - env(safe-area-inset-bottom) -
+            50px
+          );
+      <br><br>      
+        }
+      </code>
+      <p>
+        And now our Ul is the full height of viewport (100vh), minus any safe area the device has set, minus the height of our fixed height header. Now that is a responsive piece of interface!
+      <br><br>  
+        And as you might imagine, you can use custom properties inside a calc() too.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          There are plenty of other mathematical expressions in the latest CSS Values specifi-cation, including trigonometry and exponential functions: https://drafts. csswg. org/css-values/#trig-funcs.
+        </p>
+      </section>
+      <p>
+        Now, as we go ahead and look at some of the "comparison" functions of CSS, notice that they have the calc() capability baked in. You don't need to use calc() in them explicitly; you can just use the basic math operations (addition, subtraction, multiplication, and division) in there directly. We will make use of this capability as we look at each function in turn. First up, min().
+      </p>
+      <p>
+        The min() function accepts any number of comma-separated arguments, and resolves to the minimum.
+      <br><br>  
+        Consider this:
+      </p>
+      <code>
+        .my-responsive-component {
+      <br><br>    
+          width: min(100vw, 700px);
+      <br><br>    
+        }
+      </code>
+      <p>
+        Let's suppose we have our browser window 800 px wide. Looking at the code above, can you guess how wide our element will be? In that scenario, it will be 700 px because 100 vw would be 800 px. However, if we reduced our browser window width to say 600 px, it would resolve to 600 px (100 vw) as that would now be the minimum value of the two.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

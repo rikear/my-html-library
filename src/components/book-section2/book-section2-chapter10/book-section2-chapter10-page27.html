@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- page312 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, it's also possible to animate an SVG via JavaScript directly.
+        <br><br>
+        If you're animating just one or two things independently, it's probable things would be lighter, code-wise, if you wrote the JavaScript by hand. However, if you need to animate lots of elements or synchronize the animation of elements as if on a timeline, JavaScript libraries can really help.
+        Ultimately, you will need to judge whether the weight of including the library in your page can be justified for the goal you are trying to achieve.
+        <br><br>
+        My recommendation for animating SVGs via JavaScript is the GreenSock Animation Platform (https://greensock. com). For the next example, we'll cover a very simple example using Green-Sock.
+      </p>
+      <h2>
+        A simple example of animating an SVG with GreenSock
+      </h2>
+      <p>
+        Suppose we want to make an interface dial that animates when we click a button from zero to whatever value we input. We want not only the stroke of the dial to animate in both length and color but also the number from zero to the value we input. You can view the completed implementation in example_ 10-08.
+        <br><br>
+        So, if we entered a value of 75 and clicked Animate!!, the dial would fill around to look like this:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 10.10: Animation libraries make animating SVGs simpler
+        </p>
+      </section>
+      <p>
+        Instead of listing out the entire JavaScript file (which is heavily commented, so it should make some sense to read in isolation), for brevity's sake, we'll just consider the key points.
+        <br><br>
+        The basic idea is that we have made a circle as an SVG &lt; path &gt; (rather than a &lt; circle &gt; element). As it's a path, it has a stroke. SVG has a property called stroke-dashoffset. This value lets you control where the dash applied to a path starts. Because of this, the stroke-dasharray, which is the actual pattern of the dash, can be offset an amount equal to the length of the path itself.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page234 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        These are by no means the only things possible in CSS, but they are a selection of things I have found most useful when building responsive websites and applications for the past decade. Let's dig in.
+      </p>
+      <h2>
+        Text shadows
+      </h2>
+      <p>
+        Let's make a start by looking at text shadows. Text shadows are a fairly simple way to change the aesthetics of text, and therefore provide a good starting point. Support for text - shadow is also ubiquitous. Let's first consider the basic syntax:
+      </p>
+      <code>
+        .element {
+          text-shadow: 1px 1px 1px #ccc;
+        }
+      </code>
+      <p>
+        The first value is the amount of shadow to the right, the second is the amount down, the third value is the amount of blur (the distance the shadow travels before fading to nothing), and the final value is the color. Shadows to the left and above can be achieved using negative values as the first two values. For example:
+      </p>
+      <code>
+        .text {
+        <br><br>
+          text-shadow: -4px -4px 0px #dad7d7;
+        <br><br>
+        }
+      </code>
+      <p>
+        The color value doesn't need to be defined as a hex value. It can just as easily be HSL(A) or RGB (A):
+      </p>
+      <code>
+        text-shadow: 4px 4px opx hs1 (140 3% 26% / 0.4);
+      </code>
+      <p>
+        You can also set the shadow values in any other valid CSS length units such as em, rem, ch, rem, and so on. Personally, I rarely use em or rem units for text-shadow values. As the length values tend to be low, using 1px or 2px generally looks good across all viewports.
+        <br><br>
+        Thanks to media queries, we can easily remove text shadows at different viewport sizes too. The key here is the none value:
+      </p>
+      <code>
+        .text {
+        <br><br>
+          text-shadow: 2px 2px 0 #bfbfbf;
+        <br><br>
+        }
+        <br><br>
+        @media (min-width: 30rem) {
+        <br><br>
+          .text {
+        <br><br>
+            text-shadow: none;
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

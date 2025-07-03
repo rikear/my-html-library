@@ -1,0 +1,66 @@
+<!DOCTYPE html>  <!-- page240 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        It's worth knowing you can also start gradients before they are visible within a box. For example:
+      </p>
+      <code>
+        .linear-gradient {
+        <br><br>
+          background: linear-gradient (red -50%, blue);
+        <br><br>
+        }
+      </code>
+      <p>
+        This would render a gradient as if it had started before it was even visible inside the box. Useful if you want your gradient to begin with "the end" of the fade from one color.
+        <br><br>
+        We actually used a color stop in the previous example to define a place where a color should begin and end, so let's look at those more fully.
+      </p>
+      <h2>
+        Color stops
+      </h2>
+      <p>
+        Perhaps the handiest thing about background gradients is color stops. They provide the means to set which color is used at which point in a gradient. With color stops, you can specify something as complex as you are likely to need. Consider this example:
+      </p>
+      <code>
+        .linear-gradient { 
+        <br><br>
+          margin: 1rem;
+        <br><br>
+          width: 400px;
+        <br><br>
+          height: 200px;
+        <br><br>
+          background: linear-gradient(
+        <br><br>
+            #690 0, 
+        <br><br>
+            #f90 2%,
+        <br><br>
+            #555 2%, 
+        <br><br>
+            #eee 50%,
+        <br><br>
+            #555 98%,
+        <br><br>
+            #+90 98%, 
+        <br><br>
+            #f90 100%
+        <br><br>
+          );
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

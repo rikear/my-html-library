@@ -1,0 +1,53 @@
+<!DOCTYPE html><!-- page156 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            The grid shorthand is not for the fain-hearted, so don't be discouraged fit spite you back ou a few times before you get to grips with it. I consider myself pretty familiar with CSS (I know, You'd hope so, right?), but it took me hours rather than minutes to feel confident with what the grid shorthand syntax was doing.
+            <br><br>
+            I hope you know your Backus-Naur form, because here is how the property is described in the specification:
+        </p>
+        <code>
+            &lt; 'grid-template-rows'> / [ auto-flow && dense? ] &lt; 'grid-auto-columns'>? [ auto-flow && dense? ] &lt; 'grid-auto-rows' &gt; ? / &lt; 'grid-template-columns' &gt; 
+        </code>
+        <p>
+            Simple, right?
+            <br><br>
+            I kid, of course. At this point, when trying to understand a specification, I tend to search out this piece on understanding CSS specifications: https://www.smashingmagazine. com/2016/05/ understanding-the-css-property-value-syntax/.
+            <br><br>
+            After rereading that, I'll now do my best to distill that piece of the specification into something more human-friendly.
+            <br><br>
+            What that means is, the grid shorthand can accept any one of three different sets of syntax as its value.
+        </p>
+        <h2>
+            grid shorthand value - option one
+        </h2>
+        <p>
+            This is the same value that you would use if you were using grid-template. For example, here is a grid with two 100 px rows and three 200 px columns:
+        </p>
+        <code>
+            grid: 100px 100px / 200px 200px 200px;
+        </code>
+        <p>
+            Just like with our grid-template examples from earlier, you can also use grid-template-areas if you like.
+        </p>
+        <h2>
+            grid shorthand value - option two
+        </h2>
+        <p>
+            This involves specifying a set of lengths for explicit grid rows, then, separated by a forward slash, a definition for how you want to handle implicit columns. This can be auto-flow to set grid-auto-rows, with the option of setting grid-auto-flow by adding dense too. Or, alternatively, you could add a length value for the width of the columns it you want to set grid-template-columns instead.
+            <br><br>
+            Phew, that's a lot to compute. Take a look at some examples.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

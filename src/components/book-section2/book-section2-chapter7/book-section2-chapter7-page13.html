@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- page226 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        There are some points to be aware of when using 1ch (). Firstly, you may, as I did, incorrectly assume that as it uses a wheel for the hue then, like HSL, the wheel would be the same one as for HSL. It isn't!
+        <br><br>
+        Consider our swatch with the gradient defined with one side as lch() and then those values mapped to what you might think would be the equivalent positions in the hs1 () section (this is swatch 8 in example_07-01 for the chapter):
+      </p>
+      <code>
+        lch-hsl {
+        <br><br>
+        background: linear-gradient(
+        <br><br>
+          to right,
+        <br><br>
+          1ch (50% 150 45) 50%, hs1(45 100% 50%) 0
+        <br><br>
+          );
+        <br><br>
+        }
+      </code>
+      <p>
+        Here is what that looks like:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 7.5: Setting Ich and hsl to what you think should be the same color does not produce the same color!
+        </p>
+      </section> 
+      <p>
+        Hmmmm, nothing is ever easy when it comes to color conversion, I am afraid! Those two look nothing like one another. We would need to remember our earlier HSL mnemonic and move our HSI hue to 0 to make it similar to the position of red in the wheel used by LCH.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          If you are wondering why the gradient defined gives us a hard stop, we cover that in the next chapter, Stunning Aesthetics with CSS.
+        </p>
+      </section>
+      <p>
+        I found the Chroma part of the Ich () syntax hard to conceptualize initially, as the maximum value of color intensity not only differs between colors and screen gamut, but it is also theoretically limitless. Luckily, an out-of-range value gets normalized in the browser, so if you are after an intense color, just use a high value (say, 150) and the browser will set it accordingly. Whenever I set a value for the Chroma like that, it reminds me of Spinal Tap's "These go to 11!" (kids, ask your parents, or I'll let you search on YouTube for it if you promise to come right back).
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

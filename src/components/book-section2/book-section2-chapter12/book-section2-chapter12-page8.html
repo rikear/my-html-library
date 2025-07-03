@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page359 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        And then that host component, and any nested components, can access that custom property.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          As interesting and useful as they are, we won't delve further into web components in this book as they are a little out of scope. For a good primer on web components, I'd recommend taking a look at https://developer.mozilla.org/en-US/docs/ Web/Web_Components.
+        </p>
+      </section>
+      <p>
+        So now we are at a point where we know about custom properties, what they look like, and how we can set them at different places and use specificity to override them. We have also looked at setting defaults, just in case a custom property isn't set elsewhere. We have also looked at environment variables and where they may be a consideration.
+      <br><br>  
+        It's time now to start manipulating these values with functions. Manipulating values provides a whole slew of additional capability and flexibility. Let's take a look.
+      </p>
+      <h2>
+        CSS functions
+      </h2>
+      <p>
+        When it comes to solving the challenges of responsive web design, CSS functions are starting to replace and better media queries in some instances.
+      <br><br>  
+        Want to have text that is no smaller than 16 px, but then scales with the size of the viewport, yet never gets bigger than 30 px?
+      <br><br>  
+        With media queries, you would have to try to solve that problem something like this:
+      </p>
+      <code>
+        .headline {
+      <br><br>    
+          font-size: 16px;
+      <br><br>    
+        }
+      <br><br>    
+        @media (min-width: 400px) {
+      <br><br>    
+          font-size: 6vw;
+      <br><br>    
+        }
+      <br><br>    
+        @media (min-width: 1000px) {
+      <br><br>    
+          font-size: 30px;
+      <br><br>    
+        }
+      </code> 
+      <p>
+        But the reality is, that's quite brittle. You'll find yourself adding lots of little "tweak points" where you need to add another media query. For example, when the viewport is 950 px wide, that 6 vw is looking a little comically big.
+      </p>
+
+    </div>
+  </div>
+  
+</body>
+</html>

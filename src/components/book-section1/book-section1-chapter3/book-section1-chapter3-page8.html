@@ -1,0 +1,60 @@
+<!DOCTYPE html><!-- page71 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <section>
+            <object>
+                icone here
+            </object>
+            <p>
+                Using the @import at-rule in CSS makes the browser request the relevant file from the network and this can add to the number of HTTP requests. This can sometimes adversely affect site load speed.
+            </p>
+        </section>
+        <h2>Media queries in a CSS file</h2>
+        <p>Finally, here's the same media query written inside a CSS file, or within a style tag inside the HTML:</p>
+        <code>
+            @media screen and (orientation: portrait) {
+                /* styles here */
+            }
+        </code>
+        <h2>Inverting media query logic</h2>
+        <p>It's possible to reverse the logic of any media query expression by adding not to the beginning of the media query. For example, the following code would negate the result in our prior example, loading the file for anything that wasn't a screen with a portrait orientation:</p>
+        <code>
+            &lt;link
+            <br><br>
+            rel="stylesheet"
+            <br><br>
+            media="not screen and (orientation: portrait)" href="portrait-screen.css"
+            <br><br>
+            /&gt;
+        </code>
+        <p>Although using the not keyword is occasionally useful, I find it is far simpler to just think about applying styles when you do want them. This way you can stick to writing the most terse and simplest forms of media queries.</p>
+        <h2>
+            Combining media queries
+        </h2>
+        <p>
+            It's also possible to string multiple expressions together. For example, let's extend one of our prior examples and also limit the file to devices that have a viewport greater than 800 pixels:
+        </p>
+        <code>
+            &lt;link
+            <br><br>
+            rel="stylesheet"
+            <br><br>
+            media="screen and (orientation: portrait) and (min-width: 800px)" href="800wide-portrait-screen.css"
+            <br><br>
+            /&gt;
+        </code>
+
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html> <!-- page224 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Our prior example looks like this in code:
+      </p>
+      <code>
+        color (display-p3 0.135 1 0);
+      </code>
+      <p>
+        Browsers that support P3 should have a color picker capable of playing with it, so you can see as you play with the colors how the values express the different amounts of red, green, and blue.
+        <br><br>
+        Try another color that plays to the strengths of P3:
+      </p>
+      <code>
+        color (display-p3 0 1 1);
+      </code>
+      <p>
+        That will get you a very vivid cyan color. P3 is great for these kinds of bright colors, and simple to work with, with just a basic understanding of red, green, and blue.
+      </p>
+      <section>
+        <object>
+            icon here
+        </object>
+        <p>
+          Browsers that do support wider gamuts like display- p3 can also display images that have a relevant color profile attached. An oft-overlooked fact.
+        </p>
+      </section>
+      <h2>
+        @media (color-gamut) media query
+      </h2>
+      <p>
+        Although we dealt with media queries in great detail in Chapter 3, Media Queries and Container Queries, there is one media query better dealt with here. That is the color -gamut media query, which lets us test for the support of certain colors on the host device.
+        <br><br>
+        Here is the syntax. In this instance, we are checking for whether a device is capable of supporting the rec2020 gamut, a gamut that includes P3 and more. There is no relevance here other than for illustration:
+      </p>
+      <code>
+        @media (color-gamut: rec2020) {
+        <br><br>
+          .thing {
+        <br><br>
+            color: color (display-p3 0 1 1);
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+      <p>
+        I don't imagine this is a feature most developers will find themselves needing regularly, if at all, but it is mentioned here just in case.
+      </p>
+      <h2>
+        LCH with the Ich) function
+      </h2>
+      <p>
+        Even the larger gamut of P3 is nowhere near the limits of human visual perception. However, we now have a format in CSS capable of doing that. Lab/LCH are designed to be able to express all of human vision, even if currently our monitors are not capable of it.
+      </p> 
+    </div>
+  </div>
+  
+</body>
+</html>

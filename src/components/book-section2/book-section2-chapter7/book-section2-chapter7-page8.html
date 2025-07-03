@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- page221 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        See true-to-life color with an incredible color depth of 1.07 billion colors and wide color coverage across industry standards, including 100% sRGB, 100% Rec. 709 and 98% DCI-P3. DCI-P3 (which offers nearly 25% more coverage than sRGB), enables a wider range of colors and is quickly becoming the color standard for creating and viewing content.
+      </p>
+      <p>
+        "Wide color coverage" and "wide-gamut" are the kinds of phrases that would indicate you are looking at a screen that can deal with colors (somewhere between 25% and 50% more) you may never have yet seen it display. Probably not with CSS, anyway. Well, we will address that shortly!
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          If you want to go deeper into this color theory, I recommend the following post on the WebKit blog from 2016 that I keep coming back to time and again: ht tps:// webkit.org/blog/6682/improving-color-on-the-web/. Don't let the comparatively old date put you off; much of the color work we do these days was figured out in the 1940s and 1950s!
+        </p>
+      </section>
+      <p>
+        Now we have considered the notion of color space as a mathematical expression of color, and gamut as the range of possible colors a device can display, I think we are finally ready to look at what's new, or imminent, with CSS color.
+      </p>
+      <h2>
+        The current state of CSS color
+      </h2>
+      <p>
+        As I write this book in 2022, here is the briefest summary this author can manage of the state of CSS color:
+      </p>
+      <ul>
+        <li>
+          All monitors and browsers can display sRGB colors, and there are various syntaxes to describe them in CSS; hex (for example, #000), rgb (0,0,0), hs1(0 0% 0%).
+        </li>
+        <li>
+          There are also colors that many modern monitors can display but not all browsers currently support. This category of colors is typically dealt with in CSS with the color () function to pass a custom color space (typically display-P3) to CSS, or using LCH/Lab.
+        </li>
+        <li>
+          Finally, there is a category of colors that humans can see, yet few (if any?) monitors can display. CSS can now also describe such colors with LCH/Lab.
+        </li>
+        <li>
+          Right now, in 2022, only the Safari browser supports lch(), lab(), and color ().
+        </li>       
+      </ul>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

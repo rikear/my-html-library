@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page243 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <ul>
+        <li>
+          at center left starts it halfway down the left side of the element.
+        </li>
+      </ul>
+      <p>
+        We end our size, shape, and position parameters with a comma and then define any color stops, which work in exactly the same manner as they do with linear gradients.
+        <br><br>
+        To simplify the notation: size, shape, and position before the first comma, then as many color stops as needed after it (with each stop separated by commas).
+        <br><br>
+        When it comes to sizing things such as gradients, CSS provides some keywords that are often a better choice than hardcoded values, especially with responsive designs.
+      </p>
+      <h2>
+        Handy "extent" keywords for responsive sizing
+      </h2>
+      <p>
+        For responsive work, you may find it advantageous to size gradients proportionally rather than using fixed pixel dimensions. That way, you know you are covered (both literally and figuratively) when the size of elements changes. There are some handy sizing keywords that can be applied to gradients.
+        <br><br>
+        You would write them like this, in place of any size value:
+      </p>
+      <code>
+        background: radial-gradient(closest-side circle at center, #333, blue);
+      </code>
+      <p>
+        Here is what each of them does:
+      </p>
+      <ul>
+        <li>
+          closest-side: The shape meets the side of the box nearest to the center (in the case of circles), or meets both the horizontal and vertical sides that are closest to the center (in the case of ellipses).
+        </li>
+        <li>
+          closest-corner: The shape meets exactly the closest corner of the box from its center.
+        </li>
+        <li>
+          farthest-side: The opposite of closest-side, in that rather than the shape meeting the nearest side, it's sized to meet the one farthest from its center (or both the furthest vertical and horizontal side in the case of an ellipse).
+        </li>
+        <li>
+          farthest-corner: The shape expands to the farthest corner of the box from the center.
+        </li>
+        <li>
+          cover: Identical to farthest-corner.
+        </li>
+        <li>
+          contain: Identical to closest-side.
+        </li>     
+      </ul>
+      <p>
+        Practically, the two I find myself using most of the time are cover or contain. They are merely aliases for other keywords, but I find their names are self-explanatory and they are the same keywords you can use for background-size. We look at those keywords again with background-size later in the chapter.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

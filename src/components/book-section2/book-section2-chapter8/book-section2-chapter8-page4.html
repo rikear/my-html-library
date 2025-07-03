@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- page237 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Multiple shadows
+      </h2>
+      <p>
+        Like text shadows, you can apply multiple box shadows. Separate the box-shadow declarations with a comma. They are applied bottom to top (last to first) as they are listed. Remind yourself of the order by thinking that the declaration nearest to the top in the rule (in the code) appears nearest to the "top" of the order when displayed in the browser. As with text-shadow declarations, you may find it useful to use whitespace to visually stack the different box-shadow declarations:
+      </p>
+      <code>
+        box-shadow:
+        <br><br>
+          inset 0 0 30px hs1(0, 0%, 0%), 
+        <br><br>
+          inset o 0 70px hsla(0, 97%, 53%, 1);
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Stacking longer, multiple values one under the other in the code has an added benefit when using version control systems; it makes it easy to spot differences when you compare, or diff, two versions of the same file. It can be useful to stack selectors one under the other for that same reason.
+        </p>
+      </section>
+      <h2>
+        Understanding spread
+      </h2>
+      <p>
+        I'll be honest, for literally years, I didn't truly understand what the spread value of a box-shadow actually did. I don't think the name "spread" is useful. Think of it more as an offset. Let me explain.
+        <br><br>
+        Look at the box on the left in example_08-02. This has a standard box shadow applied, with no spread. The one on the right has a negative spread value applied. It's set with the fourth value.
+        Here is the relevant code that deals with each shadow:
+      </p>
+      <code>
+        .no-spread {
+        <br><br>
+          box-shadow: 0 10px 10px;
+        <br><br>
+        }
+        <br><br>
+        .Spread {
+        <br><br>
+          box-shadow: 0 10px 10px -10px;
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

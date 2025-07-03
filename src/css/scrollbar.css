@@ -1,0 +1,5 @@
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+/* no scroll bar design but can scroll must applied in the body of page  */

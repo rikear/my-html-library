@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- page371 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Styling the input caret with the caret-color CSS property
+      </h2>
+      <p>
+        Caret, in our context here, refers to the insertion point in an input area. You might think of that typically blinking vertical line as a "cursor," but it is purposefully named differently in CSS to make the distinction from other cursors, such as the one produced by mouse input.
+      <br><br>  
+        By the way, it's generally pronounced like your favorite orange vegetable, "carrot," but depending onyour accent, you might need to alter your pronunciation to "cari," such as we hade pendine UK, which is fine as long as the Queen doesn't hear you!
+      <br><br>  
+        The canet-Color property is a fairly recent addition to CSS that allows us to change the color of
+        the caret.
+      <br><br>  
+        Suppose we wanted an orange input insert point; we could style it like this:
+      </p>
+      <code>
+        .my-Input {
+      <br><br>    
+          caret-color: #f90;
+      <br><br>    
+        }
+      </code>
+      <p>
+        Sadly, apart from color, we don't get any real control over how the caret appears. We can't change the shape, thickness, or blink rate and style, for example. Hopefully, by the next edition of this book, all that will be possible!
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          In case you weren't aware, there is an attribute called contenteditable that can make the contents of an everyday element, such as a div or span, editable. You can also make use of : caret-color in those situations too.
+        </p>
+      </section>
+      <h2>
+        The required attribute
+      </h2>
+      <p>
+        required is a Boolean attribute, with "Boolean" meaning it has only two possibilities. In this case, you either include it or not.
+      <br><br>  
+        When it is present, like this:
+      </p>
+      <code>
+        &lt; input type "text" value aceholden "ha1e288. con" required /&gt;
+      </code>
+      <p>
+        It means that adding a value to this input will be required before the form can be submitted.
+      <br><br>  
+        If the form submission is attempted without the input containing a requisite value, a warning message is displayed. The message itself differs both in content and styling depending on the browser and the input type used.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

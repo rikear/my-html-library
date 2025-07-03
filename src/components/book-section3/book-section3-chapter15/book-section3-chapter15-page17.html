@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- page438 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Firstly, from a technical perspective, it's likely that starting with a framework will result in your project having more code than it actually needs. Secondly, from an aesthetic perspective, due to the popularity of these frameworks, it's likely your project will end up looking very similar to countless others.
+        <br><br>
+        Finally, if you only copy and paste code into your project and tweak it to your needs, you're unlikely to fully appreciate what's going on "under the hood." I's only by defining and solving the problems you have that you can master the code you place into your projects.
+      </p>
+      <h2>
+        Hiding, showing, and loading content across viewports
+      </h2>
+      <p>
+        One of the commonly touted maxims regarding responsive web design is that if you don't have something on the screen in smaller viewports, you shouldn't have it there in larger ones either.
+        <br><br>
+        This means users should be able to accomplish all the same goals (such as buying a product, reading an article, or accomplishing an interface task at every viewport size. This is common sense.
+        After all, as users ourselves, we've all felt the frustration of going to a website to accomplish a goal and being unable to, because we're using a smaller screen.
+        <br><br>
+        This also means that as screen real estate is more plentiful, we shouldn't feel compelled to add extra things just to fill the space (widgets, adverts, or links, for example). If the user could live without those extras on smaller screen sizes, they'll manage just fine on bigger ones.
+        <br><br>
+        In broad terms, I think the preceding maxim is sound advice. If nothing else, it makes designers and developers question more thoroughly the content they display onscreen. However, as ever in web design, there will be exceptions.
+        <br><br>
+        As far as possible, I resist loading in new markup for different viewports, but, very occasionally, it's a necessity. Some complex user interfaces might simply work better with different markup and designs at wider viewports. In that instance, JavaScript is typically used to replace one area of markup with another. It isn't the ideal scenario, but it is sometimes the most pragmatic.
+        <br><br>
+        By the same token, I think it's perfectly reasonable to have sections of markup hidden in CSS until they are appropriate. I'm thinking about things like headers. On more than one occasion, before Grid was well supported, I wasted an inordinate amount of time trying to figure out how to convert one header layout for mobile into a different layout for larger screens, all while using the same markup. It was folly! The pragmatic solution is to have both pieces of markup and just hide each as appropriate with a media query. When the difference is a handful of elements and the associated styles, there are almost always more sensible savings to make elsewhere.
+      </p>
+
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

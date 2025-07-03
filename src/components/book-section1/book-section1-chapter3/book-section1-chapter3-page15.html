@@ -1,0 +1,36 @@
+<!DOCTYPE html><!-- page78 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <h2>Do media queries affect which files get downloaded or how the page renders?</h2>
+        <p>Ordinarily, for a browser, CSS is considered to be a render blocking asset; the browser needs to fetch and parse a linked CSS file before the rendering of the page can complete. This stands to reason, as the browser needs to know what styles to apply for laying out and painting the page.
+        However, modern browsers are smart enough to discern which style sheets (linked with media queries in the head) need to be analyzed immediately and which can be deferred until after the initial page rendering. The upshot of this is that for these browsers, CSS files that are linked with media queries that don't apply to the current environmental situation can be deferred until after the initial page load, providing some performance advantage. There's more on this topic over on Google's developer pages: https://web.dev/critical-rendering-path-render-blocking-css/.
+        However, I would like to draw your attention to this part in particular:
+        </p>
+        <p>
+            .. note that "render blocking" only refers to whether the browser will have to hold the initial rendering of the page on that resource. In either case, the CSS asset is still downloaded by the browser, albeit with a lower priority for non-blocking resources.
+        </p>
+        <p>
+            To reiterate, all the linked files will still be downloaded; they just may not necessarily require the browser to hold the rendering of the page.
+            <br><br>
+            Therefore, a modern browser loading a responsive web page with four different style sheets linked with different media queries (to apply different styles for different viewport ranges) will download all four CSS files, but probably only parse the applicable one initially before rendering the page. Take a look at example_03-02 in the chapter's example code, which you may find more convenient to view at ht tps://benfrain.com/playground/mq-downloads/. If you view that page with a slim viewport and you are proficient enough with your browser's developer tools, you can look in the network area and check that all files are downloaded, regardless of whether the media queries are actually being applied.
+        </p>
+        <h2>
+            Should you split media queries into their own files?
+        </h2>
+        <p>
+            Let's suppose you have a style sheet with a bunch of different media queries. Suppose there are a bunch for min-widths of 800 px, and another load for widths above 1200 px. Should you separate them out into their own style sheets? In short, I would say no.
+        </p>
+       
+    </div>
+  </div>
+
+</body>
+</html>

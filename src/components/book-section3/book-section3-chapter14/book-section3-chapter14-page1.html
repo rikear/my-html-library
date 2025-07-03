@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- page406 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        But before we get to CSS nesting, I want to cover something that is both new to the language and is actually available for use in all modern browsers: CSS cascade layers.
+      </p>
+      <h2>
+        Cascade layers
+      </h2>
+      <p>
+        Cascade layers exist as a high-level tool to manage the grouping, and priority, of style rules. When writing CSS, I make a point of only using classes as the styling hooks to make my changes. To exem-plify, if I need to style a button, I won't use an isolated element selector as a styling hook like this:
+      </p>
+      <code>
+        button {
+          /* styles */
+        }
+      </code>
+      <p>
+        This is because, when using element selectors, it isn't possible to create a specificity equality across all the selectors. As soon as I want a different style button elsewhere, I will need to create a more specific selector to override the styles I have already created. Instead, I would add a class to the button and do this:
+      </p>
+      <code>
+        .btn {
+          /* styles */
+        }
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          If the nuance of why this is important when authoring projects is lost on you, I'd recommend reading my shorter book, Enduring CSS, free online at https://ecss. benfrain. com (or buy yourself an eBook/hardcopy).
+        </p>
+      </section>
+      <p>
+        However, there may be scenarios where things aren't entirely within your control. To give you a common scenario where this situation plays out, consider the following.
+      <br><br>  
+        Imagine that, despite this author's advice against using frameworks in the next chapter, you decide you want to include a CSS framework called "Shoe Lace" in your project. This framework has rules set for the display of common elements such as buttons, lists, and the like.
+      <br><br>  
+        You include the framework CSS and get working on your project. However, when looking at the buttons on the page, you decide you'd like to tweak the styling a little. Maybe that border needs
+        to be a little thinner?
+      <br><br>  
+        You look at your markup:
+      </p>
+      <code>
+        &lt;button class="btn"&gt; Buy Scone &lt;/button&gt;
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- page417 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        It's subtle, but notice that the • child-2 selector is nested but doesn't have an & as the first char-acter. What we actually need would be:
+      </p>
+      <code>
+        .item {
+      <br><br>    
+          color: #fff;
+      <br><br>    
+          & .child,
+      <br><br>    
+          & .child-2 {
+      <br><br>    
+            color: #ddd;
+      <br><br>    
+          }
+      <br><br>    
+        }
+      </code>
+      <h2>
+        Nesting conditionals such as media queries
+      </h2>
+      <p>
+        You can also nest media queries inside a selector. We mentioned this technique briefly in Chapter 3, Media Queries and Container Queries, as it is a great way to encapsulate all the variations that happen to a selector.
+      <br><br>  
+        Consider this:
+      </p>
+      <code>
+        .item {
+          <br><br>    
+          width: 100%;
+          <br><br>    
+          @media (min-width: 40em) {
+          <br><br>    
+            width: 90%;
+            <br><br>    
+            margin-inline: auto;
+            <br><br>    
+          }
+          <br><br>    
+        }
+      </code>
+      <p>
+        Notice that with the conditional/media query, we don't need to use the & symbol; we can just directly nest it.
+        <br><br>
+        Whether an element needs to have styles changed due to changes above it in the DOM tree, dif. terent media situations, or we need to express new styles in the situation where it has certain sibling selectors present, with CSS nesting we can contain it all within a single nesting rule. Here
+        is an example:
+      </p>
+      <code>
+        .item {
+        <br><br>
+          color: #333;
+          <br><br>
+          @media (prefers-color-scheme: dark) {
+          <br><br>
+            color: #e8e8e8;
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

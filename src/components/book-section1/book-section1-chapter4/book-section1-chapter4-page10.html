@@ -1,0 +1,87 @@
+<!DOCTYPE html><!-- page103 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Here's what it looks like:
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Figure 4.3: Flexbox makes it simple to offset one link in a list
+            </p>
+        </section>
+        <p>
+            You can play about with this in the example_04-04 code. Here's the markup:
+        </p>
+       <code>
+            &lt;div class="container"&gt;
+            <br><br>
+            &lt;a href="#" class="item"&gt; Home&lt; /a&gt;
+            <br><br>
+            &lt;a href="#" class="item"&gt; About Us &lt;/a&gt; &lt;a href="#" class="item" &gt;Products&lt;/a&gt;
+            <br><br>
+            &lt;a href="#" class="item" &gt; Policy &lt;/a&gt;
+            <br><br>
+            &lt;a href="#" class="last-item"&gt; Contact Us &lt;/a&gt;
+            <br><br>
+            &lt;/div>
+        </code>
+        <p>
+            And here is the CSS:
+        </p>
+        <code>
+            .container {
+            <br><br>
+                background-color: indigo;
+            <br><br>
+                font-family: "Oswald", sans-serif; 
+            <br><br>
+                font-size: 1rem;
+            <br><br>
+                min-height: 2.75rem; 
+            <br><br>
+                display: flex;
+            <br><br>
+                align-items: center;
+            <br><br>
+                padding: 0 1rem;
+            <br><br>
+            }
+            <br><br>
+            .item,
+            <br><br>
+            .last-item {
+            <br><br>
+                color: #ebebeb;
+            <br><br>
+                text-decoration: none;
+            <br><br>
+            }
+            <br><br>
+            .item {
+            <br><br>
+                margin-right: 1rem;
+            <br><br>
+            }
+            <br><br>
+            .last-item {
+            <br><br>
+            margin-left: auto;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

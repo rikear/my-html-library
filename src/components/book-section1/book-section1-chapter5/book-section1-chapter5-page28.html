@@ -1,0 +1,71 @@
+<!DOCTYPE html><!-- page157 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            so, for a grid with two explicit 100 px rows and any number of explicit columns that are 75 px wide:
+        </p>
+        <code>
+            grid: 100px 100px / repeat (auto-fill, 75px);
+        </code>
+        <p>
+            With this grid, should you have too many items, they will spill over into the implicit rows with a default size of auto.
+            <br><br>
+            In the browser, that shorthand will compute to the following:
+        </p>
+        <code>
+            grid-template-rows: 100px 100px; 
+            <br><br>
+            grid-template-columns: repeat (auto-fill, 75px);
+            <br><br>
+            grid-template-areas: none;
+            <br><br>
+            grid-auto-flow: row; 
+            <br><br>
+            grid-auto-rows: auto; 
+            <br><br>
+            grid-auto-columns: auto;
+        </code>
+        <p>
+            Let's try another. Say we want to lay out a grid that has only one row, 100 px high, but any number of columns, potentially running off the side of the container:
+        </p>
+        <code>
+            grid: 100px / auto-flow;
+        </code>
+        <p>
+            That rule computes to the following:
+        </p>
+        <code>
+            grid-template-rows: 100px; 
+            <br><br>
+            grid-template-columns: none; 
+            <br><br>
+            grid-template-areas: none;
+            <br><br>
+            grid-auto-flow: column;
+            <br><br>
+            grid-auto-rows: auto;
+            <br><br>
+            grid-auto-columns: auto;
+        </code>
+        <p>
+            It's also worth knowing that, when you use the grid shorthand, you are resetting all of the values it deals with back to their initial state. You can see that if you look at the computed values of styles in the developer tools of your browser.
+        </p>
+        <h2>
+            grid shorthand value - option three
+        </h2>
+        <p>
+            The final syntax you can pass to grid is effectively the opposite of option two. This time, you set grid-auto-flow to handle implicit rows (with an optional dense) with an optional grid-auto-rows value for the size of the rows. Then, after the forward slash, we handle grid-template-columns.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

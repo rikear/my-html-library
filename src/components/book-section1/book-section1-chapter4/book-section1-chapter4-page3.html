@@ -1,0 +1,74 @@
+<!DOCTYPE html><!-- page96 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Let's practice the formula again on the middle section. Our target value is 660. Divide that by our context of 960 and we get .6875. Move the decimal two points to the right and we have 68.75%.
+            <br><br>
+            Finally, let's look at the right-hand section. Our target is 100. We divide that by the context of 960 and we get 104166667. Move the decimal point and we have a value of 10.4166667%.
+            <br><br>
+            That's as difficult as it gets. Say it with me: target, divided by context, equals result.
+        </p>
+        <section>
+            <object>
+                icon
+            </object>
+            <p>
+                You can use values with long decimal values with no issues in CSS. Or, if you would rather see more palatable numbers in your code, rounding them to two decimal points will work just as well for the browser.
+            </p>
+        </section>
+        <p>
+            To prove the point, let's quickly build that basic layout as blocks in the browser. To make it easier to follow along, I have added a class to the various elements that describes which piece of the comp they are referring to. Ordinarily, it's not a good idea to name things based on their location. The location can change, especially with a responsive design. In short, do as I say and not as I do here!
+            <br><br>
+            You can view the layout as example_04-01. Here is the HTML:
+        </p>
+       <code>
+        &lt;div class="Wrap"&gt;
+        <br><br>
+        &lt;header class="Header"&gt; &lt;/header&gt;
+        <br><br>
+        &lt;div class="WrapMiddle" &gt;
+        <br><br>
+        &lt;aside class="Left"*/aside &gt;
+        <br><br>
+        &lt;main class="Middle"&gt; &lt;/main&gt;
+        <br><br>
+        &lt;aside class="Right"* &lt;/aside&gt;
+        <br><br>
+        &lt;/ div&gt;
+        <br><br>
+        &lt;footer class="Footer"* &lt;/footer&gt;
+        <br><br>
+        &lt;/div&gt;
+       </code>
+       <p>
+        And here is the CSS:
+       </p>
+       <code>
+            html,
+            <br><br>
+            body {
+            <br><br>
+                margin: 0;
+            <br><br>
+                padding: 0;
+            <br><br>
+            }
+            <br><br>
+            .Wrap { max-width: 1400px;
+            <br><br>
+            margin: 0 auto;
+            }
+       </code>
+    </div>
+  </div>
+  
+</body>
+</html>

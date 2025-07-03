@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- page250 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Multiple background images
+      </h2>
+      <p>
+        Although a little out of fashion at the moment, it used to be a fairly common design requirement to build a page with a different background image at the top of the page than at the bottom. Or perhaps to use different background images for the top and bottom of a content section within a page. Back in the day, with CSS 2.1, achieving this effect typically required additional markup (one element for the header background and another for the footer background).
+        <br><br>
+        With CSS, you can stack as many background images as you need on an element.
+        <br><br>
+        Here's the syntax:
+      </p>
+      <code>
+        .bg {
+        <br><br>
+          background: url(' ../img/1.png'), url('../img/2.png'),
+          url (' ../img/3.png');
+        }
+      </code>
+      <p>
+        As with the stacking order of multiple shadows, the image listed first is layered nearest to the top, or closer to the user, in the browser. You can also add a general color for the background in the same declaration if you wish, like this:
+      </p>
+      <code>
+        .bg {
+        <br><br>
+          background: url(' ../img/1.png'), url('../img/2.png'),
+          url(' ../img/3.png') left bottom, black;
+        <br><br>
+        }
+      </code>
+      <p>
+        Specify the color last and this will show up below every image specified in the preceding code snippet.
+        <br><br>
+        With the multiple background images, as long as your images have transparency, any partially transparent background image that sits on top of another will show through below. However, background images don't have to sit on top of one another, nor do they all have to be the same size.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- page315 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Now, also in that example folder, is an SVG with a filter defined in the defs elements. The SVG markup looks like this:
+      </p>
+      <code>
+        &lt;svg xmlns="http://www.w3.org/2008/svg" version="1. 1"&gt;
+          &lt;defs&gt;
+            &lt;filter 
+            id="myfilter" 
+            x="0" 
+            y="0"&gt;
+              &lt;feColorMatrix
+              in="SourceGraphic"
+              type="hueRotate"
+              values="90" result="A"
+              /&gt;
+              &lt;feGaussianBlur 
+              in="A" 
+              stdDeviation="6" /&gt;
+            &lt;/filter&gt;
+          &lt;/defs&gt;
+        &lt;/svg&gt;
+      </code>
+      <p>
+        Within the filter, we are first defining a hue rotation of 90 (using feColorMatrix), and then passing that effect, via the result attribute, to the next filter (feGaussianBlur) with a blur value of 6. Be aware that I've been deliberately heavy-handed here. This doesn't produce a nice aesthetic, but it should leave you in no doubt that the effect has worked!
+        <br><br>
+        Now, rather than add that SVG markup to the HTML, we can leave it where it is and reference it using the same CSS filter syntax we saw in the previous chapter:
+      </p>
+      <code>
+        .HRH {
+        <br><br>
+        filter: url( 'filter.svg#myfilter');
+        <br><br>
+        }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

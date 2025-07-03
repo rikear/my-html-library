@@ -9,32 +9,22 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border: 1px solid #ccc;
   transition: transform 0.2s;
+      display: block; /* use this code to act like a div so the margin width height padding will work as expected */
       width: 80%;
-      min-width: 500px;         /* Full width of parent */
+      min-width: 320px;         /* Full width of parent */
       max-width: 1100px;    /* Limit the width */
       height: 800px;       /* Fixed height or set to auto if the content resizes */
-      border: 1px solid #ccc;
-      display: block;
+      padding: 20px;
       margin: 20px auto;   /* Center it horizontally */
-      overflow: hidden;
-
-        
 }
 
-.my-card::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
 
 
 
 .my-card-background {
   width: 100%;
-  /* background-color: rgb(255, 255, 255); */
-  margin: 0;
-  padding: 0;
-
 }
 .my-card-text{
   font-size: 1.2em;

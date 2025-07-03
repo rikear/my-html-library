@@ -1,0 +1,57 @@
+<!DOCTYPE html><!-- page162 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                As ever, you can check support levels at https://caniuse.com/css-subgrid, and read the specification here: https: //www.w3.org/TR/css-grid-2/#subgrids.
+            </p>
+        </section>
+        <p>
+            In essence, subgrid provides a mechanism for non-direct child elements of a grid ancestor to inherit their grid tracks. Using subgrid is as simple as setting subgrid as the value of either grid-template-columns or grid-template-rows, or both.
+            <br><br>
+            Let us start with the subgrid value by solving the same problem we solved with display: contents in the last section.
+            <br><br>
+            When using the subgrid value, instead we would set the CSS for the • parent like this (you can view the full code in example_05-09):
+        </p>
+        <code>
+            .parent {
+            <br><br>
+                display: grid; 
+            <br><br>
+                grid-template-columns: subgrid;
+            <br><br>
+                grid-column: span 2;
+            <br><br>
+            }
+        </code>
+        <p>
+            And just like that, this particular problem is solved.
+            <br><br>
+            However, for solving that particular problem, we have actually used more code than the prior solution with display: contents, but bear with me. We can understand how it works with this simple example before we look at something more involved.
+            <br><br>
+            First, we are making the parent element a grid, and then crucially telling it that we want the template for the columns to be a subgrid, so that it will inherit the columns from the ancestor grid it is part of.
+            <br><br>
+            Next, we need to tell the browser how big this element is going to be in the ancestor grid it is part of. Here we have set it to span 2 columns, making it the full width of the ancestor grid, as, remember, the ancestor grid is made up of two columns.
+            <br><br>
+            With that in place, the grandchild elements happily position themselves in the next available
+            column. We don't need to do anything extra with them.
+        </p>
+
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

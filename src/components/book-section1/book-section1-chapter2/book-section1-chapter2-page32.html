@@ -1,0 +1,42 @@
+<!-- page58 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>
+            None of the styles are necessary for the dialog to function, but I do always like to add a stronger : focus style than the default for better accessibility. However, I thought it would also be interesting to bring the : : backdrop pseudo-element to your attention, as that is how you can style the area behind the modal dialog.
+            <br><br>
+            If any of the syntaxes or styles in there are unfamiliar to you, don't worry. We cover all of those in detail later in the book. All that is necessary here is to understand that you can style the dialog and backdrop however you see fit.
+            <br><br>
+            This book is deliberately light on JavaScript, but we do need to consider some now to understand how the dialog functions:
+        </p>
+        <code>
+            const dialogEle = document. getElementById("dialogEle");
+            const launchBtn = document-getElementById ("launchDialog");
+            const formResult = document-getElementById ("formResult");
+            launchBtn. addEventListener ("click", () => dialogEle.showModal());
+            dialogEle. addEventListener ("close", () => {
+            formResult. textContent = dialogEle.returnValue;
+            }) ;
+        </code>
+        <p>Besides creating const references to the dialog itself, the button that opens it, and a p tag to display the value of the but ton that can be clicked inside the dialog, we have two event listeners.
+        The first opens the dialog when the launchBtn button is clicked with the showModal() method, and the second listens for the close event. The close is unique to dialog and gets triggered when submitting a form inside a dialog that has a method of dialog, or if the user exits the form with, say, a press of Escape on their keyboard.</p>
+        
+        <section>
+            <object>
+                icon
+            </object>
+            <p>The default type of a but ton is submit, so in our example above, where we want to submit the form inside the dialog, there is no need to declare it. However, imagine you are building a form, as we will in detail in Chapter 13, Forms, and you have a button in your form for some other purpose; you don't want the form submitting when the user clicks that, rather than the correct submit button. As such, I recommend being in the habit of always adding type="button" whenever you use the button element.</p>
+        </section>
+       
+    </div>
+
+  </div>
+</body>
+</html>

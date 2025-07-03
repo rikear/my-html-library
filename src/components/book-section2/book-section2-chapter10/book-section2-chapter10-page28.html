@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- page313 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        This allows us to animate those properties and the result is as if the path is being drawn.
+        <br><br>
+        There's more into on this technique in the boxed-out section below.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          In case you haven't come across the SVG "line drawing" technique before, it was popularized by Polygon magazine when Vox Media animated a couple of line drawings of the Xbox One and PlayStation 4 games consoles. You can read the original post here: https://product.voxmedia. com/2013/11/25/5426880/polygon-feature-design-svg-animations-for-fun-and-profit.
+        <br><br>  
+          There's also an excellent and more thorough explanation of the technique by Jake Ar-chibald here: https://jakearchibald.com/2013/animated-line-drawing-svg/.
+        </p>
+      </section>
+      <p>
+        If the value to animate dasharray was a static, known value, this effect would be relatively simple to achieve with a CSS animation and a little trial and error (more on CSS animations in the next chapter). However, besides a dynamic value, at the same time as we are "drawing" the line, we want to fade in the stroke color from one value to another and visually count up to the input value in the text node. This is an animation equivalent to patting our heads, rubbing our tummies, and counting backward from 10,000. GreenSock makes those things easy (the animation part; it won't rub your tummy or pat your head, although it can count back from 10,000, should you need it to).
+        <br><br>
+        Here are the lines of JavaScript needed to make GreenSock do all three:
+      </p>
+      <code>
+        // Animate the drawing of the Line and color change
+      <br><br>  
+        TweenLite.to(circlePath, 1.5, {
+      <br><br>  
+          'stroke-dashoffset': '-' + amount, 
+      <br><br>  
+          stroke: strokeEndColour,
+      <br><br>  
+        });
+      <br><br>  
+        // Set a counter to zero and animate to the input value
+      <br><br>  
+        var counter = {var: 0};
+      <br><br>  
+        TweenLite.to(counter, 1.5, { 
+      <br><br>  
+          var: inputValue,
+      <br><br>  
+          onUpdate: function () {
+      <br><br>  
+        text. textContent = Math. ceil (counter. var) + %";
+      <br><br>  
+        },
+      <br><br>  
+        ease: Circ.easeOut,
+      <br><br>  
+        });
+      </code> 
+
+    </div>
+  </div>
+  
+</body>
+</html>

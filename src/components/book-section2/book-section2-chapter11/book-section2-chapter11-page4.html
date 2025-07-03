@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page325 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Used separately, the various transition properties can be used to create a transition like this:
+      </p>
+      <code>
+        .style {
+      <br><br>    
+          ...*/ (more styles) . . . */
+      <br><br>    
+          transition-property: all; 
+      <br><br>    
+          transition-duration: 1s;
+      <br><br>    
+          transition-timing-function: ease;
+      <br><br>    
+          transition-delay: 0s;
+      <br><br>    
+        }
+      </code>
+      <p>
+        This particular rule effectively says, "Transition any transitionable property on this element over 1 second with no delay using the ease timing function."
+      </p>
+      <h2>
+        The transition shorthand property
+      </h2>
+      <p>
+        We can roll these individual declarations into a single, shorthand version:
+      </p>
+      <code>
+        transition: all 1s ease Os;
+      </code>
+      <p>
+        One important point to note when writing the shorthand version is that the first time-related value provided is always parsed to be the transition-duration. The second time-related value is parsed to be the transition-delay. The shorthand version is the one I favor, as I generally only need to define the duration of the transition and the properties that should be transitioned.
+        <br><br>
+        To exemplify, suppose I wanted the background- color to transition over 2 seconds:
+      </p>
+      <code>
+        transition: background-color 2s;
+      </code>
+      <p>
+        If no timing function is provided, the default timing function of ease is applied.
+        <br><br>
+        I would also advise only defining the property or properties you actually need to transition. I's really handy to just set all, but, for example, if you only need to transition opacity, then only define opacity as the transition property. When you set all, there is a chance you will be inadvertently transitioning properties you don't want to, which can possibly lead to bugs for yourself or others down the line.
+      </p>
+      <h2>
+        Transitioning different properties over different periods of time
+      </h2>
+      <p>
+        Where a rule has multiple properties declared, you don't have to transition all of them in the same way. Consider this rule:
+      </p>
+      <code>
+        .Style {
+          /*...(more styles)... */
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

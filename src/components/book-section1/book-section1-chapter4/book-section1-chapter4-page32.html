@@ -1,0 +1,87 @@
+<!DOCTYPE html><!-- page125 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>FULL CHAPTER LIST</p>
+        <section>
+            <h3>1</h3>
+            <h3>THE ESSENTIALS OF RESPONSIVE WEB DESIGN</h3>
+            <p>
+                came from, the problems it solves, and the core tenets of implementing a Responsive Web Design with HTML and CSS.
+                By the end of this first chapter, you will have made a fully responsive web page. Along the way you will gain the understanding of where Responsive Web Design
+            </p>
+        </section>
+        <section>
+            <h3>2</h3>
+            <h3>WRITING HTML MARKUP</h3>
+            <p>
+                Good HTML markup is the basis for any good web site or application. More Importantly, HTML provides a bedrock of understanding for assistive technology. In this chapter you'll learn about everything from the opening < I DOCTYPE html to the closing <code>&lt;/html&gt;</code> tag.
+            </p>
+        </section>
+        <section>
+            <h3>3</h3>
+            <h3>MEDIA QUERIES AND CONTAINER QUERIES</h3>
+            <p>
+                Media querles provide the meens to change styles on screen width, screen height, color preference, screen density (DPI) and a whole lot more. In this Chapter, you'l also learn about CSS4 media queries like hover and pointer. We end the chapter with an overview of the forthcoming Container Queries: before long, we will be able to make container level style changes too.
+            </p>
+        </section>
+        <section>
+            <h3>4</h3>
+            <h3>FLUID LAYOUT AND FLEXBOX</h3>
+            <p>
+                We start with understanding how to convert any web design into a proportional, fluid, layout. Then a deep-dive into Flexbox; the most widely supported modern eSS layout system. You'll learn not just the syntax but also a number of use cases of Flexbox. Then you'll get your hands dirty; using what you have learned to lay out sections of this very site.
+            </p>
+        </section>
+        <section>
+            <h3>5</h3>
+            <h3>LAYOUT WITH CSS GRID</h3>
+            <p>
+                CsS Grid Is the first 2-dimensional layout system for the web. This whole chapter is dedicated to understanding the capabilities and efficiencies of CSS Grid. We'll also get to grips with the new subgrid property.
+                Understanding CSS Grid might just be the single biggest upgrade you can give your CSS skills!
+            </p>
+        </section>
+        <p>
+            Figure 4.21: This content is overstretched at this viewport width
+        </p>
+        <p>
+            Let's amend that layout with a media query and a few choice flex properties. I'm consolidating all of these changes into one media query here for brevity, but remember that you can use as many as you like to organize your code however you see fit. We covered the options extensively in Chapter 3, Media Queries and Container Queries:
+        </p>
+        <code>
+            @media (min-width: 1000px) {
+            <br><br>
+            .rwd-Chapters_List { 
+            <br><br>
+                display: flex; 
+            <br><br>
+                flex-wrap: wrap;
+            <br><br>
+            }
+            <br><br>
+            .rwd-Chapter {
+            <br><br>
+                flex: 0 0 33.33%; 
+            <br><br>
+                padding: 0 20px;
+            <br><br>
+            }
+            <br><br>
+            .rwd-Chapter:: before { 
+            <br><br>
+                left: -20px;
+            <br><br>
+            }
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

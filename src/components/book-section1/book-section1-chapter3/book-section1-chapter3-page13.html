@@ -1,0 +1,48 @@
+<!DOCTYPE html><!-- page76 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <p>
+            If any of those styles don't make sense now, don't worry. We will be covering Flexbox layout in Chapter 4, Fluid Layout and Flexbox. What is important to understand is the media query itself.
+            <br><br>
+            What we are saying is "apply this rule, but only at a minimum width of 800 px." And here is the effect of that rule in the browser:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 3.5: Our first media query gets our logo on the left and navigation over to the right
+            </p>
+        </section>
+        <p>
+            Now, the keen-eyed among you may realize that despite this new rule, which gets our logo and navigation links spread out, we have some styles applied that we no longer need at this size. The following grab shows the no-longer needed margin above and inline padding within the main navigation links:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 3.6: There are styles being applied that we want to reset at this viewport
+            </p>
+        </section>
+        <p>
+            Let's write another media query to fix that. We'll make this change at a slightly smaller screen width, as that extra space is unneeded even at 1000 px wide:
+        </p>
+        <code>
+            @media (min-width: 1000px) {
+                .rwd -Nav {
+                margin: 0;
+        </code>
+    </div>
+  </div>
+
+</body>
+</html>

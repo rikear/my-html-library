@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page308 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, like a phoenix from the flames, Chrome provided a "stay of execution" of their intention to deprecate SMIL in August 2016: ht tps://groups.google.com/a/chromium.org/d/msg/ blink-dev/500yi0440LM/YGEJBsjUAWAJ.
+        <br><br>
+        So, while theoretically, SMIL is good to use for some use cases, I tend to quarantine it mentally in a "use as a last resort" technique.
+        <br><br>
+        However, if you still have a need to use SMIL, Sara Soueidan wrote an excellent, in-depth article about SMIL animations here: https://css-tricks.com/guide-svg-animations-smil/.
+      </p>
+      <h2>
+        Styling an SVG with an external style sheet
+      </h2>
+      <p>
+        It's possible to style an SVG with CSS. This can be CSS enclosed in the SVG itself, or in the CSS style sheets you would write all your "normal" CSS in.
+        <br><br>
+        Now, if you refer back to our features table from earlier in this chapter, you can see that styling SVG with external CSS isn't possible when the SVG is included via an img tag or as a background-image (apart from in Internet Explorer). It's only possible when SVGs are inserted via an object tag or inline.
+        <br><br>
+        There are two syntaxes for linking to an external style sheet from an SVG. The most straightforward way is like this (you would typically add this in the defs section):
+      </p>
+      <code>
+        &lt;link 
+          href="styles.css" 
+          type="text/css" 
+          rel="stylesheet"
+        /&gt;
+      </code>
+      <p>
+        It's akin to the way we used to link to style sheets prior to HTMLS (for example, note the type attribute is no longer necessary in HTML5). However, despite this working in many browsers, it isn't the way the specifications define how external style sheets should be linked in SVG (https:// www.w3.org/TR/SVG/styling.html#ReferencingExternalStyleSheets). Here is the correct/ official way, actually defined for XML back in 1999 (https://www.w3.org/1999/06/REC-xml-stylesheet-19990629/):
+      </p>
+      <code>
+        &lt;?xml-stylesheet 
+          href="styles.css" 
+          type="text/css"
+        ?&gt;
+      </code>
+      <p>
+        You need to add this above the opening SVG element in your file. For example:
+      </p>
+      <code>
+        &lt;?xml-stylesheet 
+      <br><br>
+        href="styles.css" 
+      <br><br>
+        type="text/css"?&gt;
+      <br><br>
+        &lt;svg
+      <br><br>
+          width="198" height="188"
+      <br><br>
+          viewBox="0 0 198 188"
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

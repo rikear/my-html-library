@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- page326 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+        transition-property: border, color, text-shadow;
+      <br><br>   
+        transition-duration: 2s, 3s, 85;
+      <br><br>  
+      }
+      </code>
+      <p>
+        Here, we have specified with transition-property that we'd like to transition the border, color, and text-shadow. Then, with the transition-duration declaration, we are stating that the border should transition over 2 seconds, the color over 3 seconds, and the text-shadow over 8 seconds. The comma-separated durations match the comma-separated order of the transition properties.
+        <br><br>
+        You can also perform the same job with the shorthand syntax, and again this is my preferred way to do it:
+      </p>
+       <code>
+        .style {
+        <br><br>
+          transition: border 2s, color 3s, text-shadow 8s;
+        <br><br>
+        }
+       </code>>
+       <p>
+        I think it is far easier to reason about each property and its timing when they are written next to each other.
+        <br><br>
+        So far, we have dealt with transitioning different properties over different durations. However, there is also a fairly limitless number of timing functions that change how an element property changes over a duration.
+       </p>
+       <h2>
+        Understanding timing functions
+       </h2>
+       <p>
+        When you declare a transition, the properties, durations, and delays are relatively simple to understand. However, understanding what each timing function does can be a little trickier. Just what do ease, linear, ease-in, ease-out, ease-in-out, and cubic-bezier actually do? Each of them is actually a predefined cubic-bezier curve, essentially the same as an easing function. Or, more simplistically, a mathematical description of how the transition should look. It's generally easier to visualize these curves, so I recommend you head over to https: //cubic-bezier.com/ or https:// easings.net.
+        <br><br>
+        Both these sites let you compare timing functions and see the difference each one makes. Here is a screenshot of https://easings .net—on the website, you can hover over each line for a demonstration of the easing function:
+       </p>
+  </div>
+  
+</body>
+</html>

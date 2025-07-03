@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- page305 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The important part to understand is href. We are linking to an external SVG file (the defs. svg part) and then specifying the ID of the symbol within that file we want to use (the #icon-drag-left-right part). The benefits of this approach are that the asset is cached by the browser just like any other external image would/could be) and it saves littering our markup with an SVG full of symbol definitions. The downside is that, unlike when defs are placed inline, any dynamic changes to defs. svg (for example, if a path was being manipulated by JavaScript) won't be updated in the use tags.
+      </p>
+      <h2>
+        What you can do with each SVG insertion method (inline, object, background-image, and img)
+      </h2>
+      <p>
+        As mentioned previously, SVGs differ from other graphical assets. They can behave differently depending on the way they are inserted into a page. As we have seen, there are four main ways in which to place SVG onto the page:
+      </p>
+      <ul>
+        <li>
+          Inside an img tag
+        </li>
+        <li>
+          Inside an object tag
+        </li>
+        <li>
+          As a background- image
+        </li>
+        <li>
+          Inline
+        </li>
+      </ul>
+      <p>
+        And depending on the insertion method, certain capabilities will or will not be available to you. As we go on to look at some of these capabilities, it may be useful to refer back to this table, which covers what's possible with each insertion method:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 10.9: Depending on the insertion method, differing capabilities are possible
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

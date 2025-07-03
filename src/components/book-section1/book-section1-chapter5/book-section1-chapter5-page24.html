@@ -1,0 +1,61 @@
+<!DOCTYPE html><!-- page153 -->  <!-- check -->
+ <html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            We are using grid-template-columns, as we have done before, to set up the columns of our grid.
+            We are using the repeat () function to set up a repeating pattern of columns; however, instead of passing in a number of columns, we tell the grid to auto-fit. We may have used auto-fill there too, but we'll get to the differences between them in a moment. For now, we have told the browser to repeatedly create auto-fit columns, and we define the width of those columns using the minmax function.
+        </p>
+        <h2>
+            The minmaxl) function
+        </h2>
+        <p>
+            Now, if you are new to Grid, it's likely you haven't used minmax () before. It's a CSS function that allows you to set up a range for the browser. You specily a minimum size and a maximum size, and it computes something in between based on the available space. In our example, we are passing minmax () a minimum size of 300 px and a maximum size of 1 fr (remember, it might help to think of fr as "free room").
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                When dealing with minmax (), if you specify a maximum size that is smaller than the minimum, the maximum will be ignored and the minimum will be the computed value.
+            </p>
+        </section>
+        <p>
+            With that set, the grid "auto-fits" columns that are at least 300 px wide and no more than the size of its content plus a 1fr share of any remaining space.
+            <br><br>
+            In practical terms, this provides a responsive layout that lets our grid resize itself based on the available viewport width.
+            <br><br>
+            To more easily show you the difference between auto-fit and auto-f111, let's revise our one-liner to a minimum of 100 px:
+        </p>
+        <code>
+            grid-template-columns: repeat (auto-fit, minmax (100px, 1fr));
+        </code>
+        <p>
+            That gives us this layout on a wide viewport:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.15: Using auto-fit will fit our content into the available space
+            </p>
+        </section>
+        <p>
+            Note how the columns span the entire width of the page. Now we will change to auto-fill:
+        </p>
+        <code>
+            grid-template-columns: repeat (auto-fill, minmax (100px, 1fr));
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

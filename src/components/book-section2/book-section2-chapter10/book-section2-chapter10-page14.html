@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!-- page299 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Let's consider some of those features that inserting SVGs inline allows next.
+      </p>
+      <h2>
+        Reusing graphical objects from symbols
+      </h2>
+      <p>
+        Earlier in this chapter, I mentioned that 1 had picked and downloaded some icons from IcoMoon (https://icomoon. io). They were icons depicting touch gestures: swipe, pinch, drag, and more.
+        Suppose, in a website you are building, you need to make use of them multiple times. Remember I mentioned that there was a version of those icons as SVG symbol definitions? That's what we will make use of now.
+        <br><br>
+        In example_10-03, we insert the various symbol definitions inside the defs element of an SVG in the page. You'll notice that, on the svg element, an inline style is used, display: none, and the height and width attributes have both been set to 0 (those styles could be set in CSS if you prefer).
+        This is so that this SVG takes up no space. We are only using this SVG to house symbols of the graphical objects we want to use elsewhere. So, our markup starts like this:
+      </p>
+      <code>
+        &lt;body&gt;
+          &lt;svg display="none" width="0" height="0" version="1.1" xmlns="http: // www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+          &lt;defs&gt;
+          &lt;symbol id="icon-drag-left-right" viewBox="0 0 1344 1024"&gt;
+            &lt;title&lt; drag-left-right &lt;/title&t;
+            &lt;path class="path1" d="M256 192v-1601-224 224 224 224v-160h256v-
+            128z"&t; &lt;/path&t;
+      </code> 
+      <p>
+        Notice the symbol element inside the defs element? This is the element to use when we want to define a shape for later reuse.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can create symbols for use inside the defs tag by taking an existing SVG, changing the svg tag to symbol, removing the namespace attribute, and then nesting it inside the defs tag.
+        </p>
+      </section>
+      <p>
+        After the SVG has defined all necessary symbols for our work, we have all our "normal" HTML markup. Then, when we want to make use of one of those symbols, we can do this:
+      </p>
+      <code>
+        &lt;svg class="icon-drag-left-right"&gt; 
+        <br><br>
+          &lt;use&gt;
+        <br><br>
+            xlink:href="#icon-drag-left-right"
+        <br><br>
+          &lt;/use> &gt;
+        <br><br>
+        &lt;/svg&gt;
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

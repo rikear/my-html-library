@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- page255 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        After the filter property, we specify the filter we want to use, which is drop-shadow in this example, and then pass in the arguments for the filter. drop-shadow follows a similar syntax to box-shadow, so this one is easy; x and y offset, blur, then spread radius (both blur and spread are op-tional), and finally color (also optional, although I recommend specifying a color for consistency).
+        <br><br>
+        CSS filters are actually based on SVG filters, which have wider support. We'll look at the SVG-based equivalent in Chapter 10, SVG.
+      </p>
+      <h2>
+        Available CSS filters 
+      </h2>
+      <p>
+        There are a few filters to choose from. We will look at each. While images of most of the filters follow, if you are reading a copy of this book with monochrome images, you may struggle to notice the differences. If you're in that situation, remember you can still view the various filters in the browser by opening example_08-08. I'm going to list each out now with a suitable value specified. As you might imagine, a greater value means more of the filter applied. Where images are used, the image is shown after the relevant code:
+      </p>
+      <ul>
+        <li>
+          filter: url ('•/img/filters.svg#filterRed'): Lets you specify an SVG filter to use.
+        </li>
+        <li>
+          filter: blur (3x): Uses a single length value (but not as a percentage):
+        </li>
+      </ul>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.13: A blur filter applied
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

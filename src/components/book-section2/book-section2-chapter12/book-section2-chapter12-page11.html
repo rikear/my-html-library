@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page362 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Remember we have basic math functionality in min () too, so if we wanted to make allowance for some responsive part, we can do that too. Here is the example amended to use a combination of hard and dynamic values:
+      </p>
+      <code>
+        .my-responsive-component {
+      <br><br>    
+          width: min (100vw, 700px - 5%);
+      <br><br>    
+        }
+      </code>
+      <p>
+        And remember, we are not limited to just two arguments:
+      </p>
+      <code>
+        .thing {
+      <br><br>    
+          width: min(50vw, 400px, 100% - 10px);
+      <br><br>    
+        }
+      </code>
+      <h2>
+        max()
+      </h2>
+      <p>
+        Having just looked at min(), I'm sure you have a fair idea of how max () works. It takes any number of arguments and resolves to the largest.
+      <br><br>  
+        Much like clamp (), which we will look at in more detail next, I find it most useful when I want text to smoothly scale in a responsive scenario but still have a minimum size for accessibility. For example, if I never want the text in a label to be less than 18 px:
+      </p>
+      <code>
+        label {
+      <br><br>    
+          font-size: max (4vw, 18px);
+      <br><br>    
+        }
+      </code>
+      <p>
+        It can be confusing using these functions at first, as often you are using the math function that seems to have a name that is the opposite of what you are using it for! Here we are using max() to set a minimum size for something.
+      <br><br>  
+        If the same happens for you, you'll just have to trust me that it gets less confusing the more you use them.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          If it's still making your brain hurt, just make sure that whatever value you want as a minimum is chucked inside a max () function, as the value is never going to resolve to less than that.
+        </p>
+      </section>
+      <h2>
+        clamp()
+      </h2>
+      <p>
+        Beside calc(), the CSS function I tend to reach for the most in responsive work is clamp ().
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

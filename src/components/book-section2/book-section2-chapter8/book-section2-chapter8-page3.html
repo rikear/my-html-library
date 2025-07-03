@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page236 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Box shadows
+      </h2>
+      <p>
+        Box shadows allow you to create a box-shaped shadow around the outside or inside of an element. Once you understand text shadows, box shadows are a piece of cake. Principally, they follow the same syntax: horizontal offset, vertical offset, blur, spread (we will get to spread in a moment), and color. Only two of the four length values are required. In the absence of the last two length values, a value of zero is assumed. Let's look at a simple example:
+      </p>
+      <code>
+        .shadow {
+          box-shadow: 0 3px 5px #444;
+        }
+      </code>
+      <p>
+        The default box-shadow is set on the outside of the element. Another optional keyword, inset, allows the box shadow to be applied inside the element.
+      </p>
+      <h2>
+        Inset shadow
+      </h2>
+      <p>
+        The box-shadow property can also be used to create an inset shadow. The syntax is identical to a normal box shadow, except that the value starts with the keyword inset:
+      </p>
+      <code>
+        .inset {
+          box-shadow: inset 0 0 40px #000;
+        }
+      </code>
+      <p>
+        Everything functions as before, but the inset part of the declaration instructs the browser to set the effect on the inside. If you look at example_08-01, you'll see an example of each type:
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Figure 8.1: Outer shadows and inner shadows are both easily achievable
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

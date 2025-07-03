@@ -1,0 +1,72 @@
+<!DOCTYPE html><!-- page101 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            The examples are deliberately simplistic; we are just moving some boxes and their content around so that we can understand the principles of how Flexbox works.
+        </p>
+        <h2>
+            Perfect vertically centered text
+        </h2>
+        <p>
+            Note that this first Flexbox example is example_04-03:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 4.2: Centering is simple with Flexbox
+            </p>
+        </section>
+        <p>
+            Here's the markup:
+        </p>
+        <code>
+            &lt;div class="CenterMe">Hello, I'm centered with Flexbox!&lt;/div&gt;
+        </code>
+        <p>
+            Here is the entire CSS rule that's styling that markup:
+        </p>
+        <code>
+            .CenterMe {
+            background-color: indigo;
+            <br><br>
+            color: #ebebeb;
+            <br><br>
+            font-family: "Oswald", 
+            <br><br>
+            sans-serif; font-size: 2rem;
+            <br><br>
+            text-transform: uppercase;
+            <br><br>
+            height: 200px; display: flex;
+            <br><br>
+            align-items: center;
+            <br><br>
+            justify-content: center;
+            <br><br>
+            }
+        </code>
+        <p>
+            The majority of the property/value pairs in that rule are merely setting the colors and font sizes.
+            <br><br>
+            The three properties we are interested in are:
+        </p>
+        <code>
+            .CenterMe {
+                /* other declarations */
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

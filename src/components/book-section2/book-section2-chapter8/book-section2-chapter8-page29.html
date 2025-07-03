@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page262 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        OK, grown-up talk finished with now. Let's get back to looking at the fun and powerful stuff we can do with CSS. Next on the list is clipping things.
+      </p>
+      <h2>
+        CSS clip-path
+      </h2>
+      <p>
+        The clip-path property allows you to "clip" an element with a shape. Think of clipping just like drawing a shape on a piece of paper and then cutting around it. This shape can be something simple like an ellipse, something more complicated such as a polygon, or something more complex still, such as a shape defined by an inline SVG path. If you want to view each of these on a page, check out example -08_09 in this chapter's downloadable code.
+      </p>
+      <h2>
+        CSS basic shapes
+      </h2>
+      <p>
+        You can use clip-path with any of the CSS basic shapes. These are inset, circle, ellipse, and polygon, as described here: https://www.w3.org/TR/css-shapes-1/#supported-basic-shapes.
+        <br><br>
+        Let's take a look at how we would write each of these.
+      </p>
+      <h2>
+        clip-path with a circle
+      </h2>
+      <p>
+        With clip-path: circle(), the first argument you pass is the size, and the second, which is an optional argument, is the position of that shape. So, if you wanted to clip an element down to a circle 20% of the element's height and width:
+      </p>
+      <code>
+        clip-path: circle (20%) ;
+      </code>
+      <p>
+        If you wanted the same circle clip-mask but positioned 60% horizontally and 40% vertically:
+      </p>
+      <code>
+        .clip-circle {
+        <br><br>
+          clip-path: circle(35% at 60% 40%) ;
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

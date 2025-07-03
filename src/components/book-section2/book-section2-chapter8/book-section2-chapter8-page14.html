@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page247 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        I've even mixed and matched the units in there to prove you can, but it's usually easier to stick to either percentages or angles in a single gradient-if only for the sake of your own sanity!
+        <br><br>
+        Now, if you were a major internet company and wanted to create a nice spinner, all you'd need would be a border-radius of 50% and a CSS animation. I'll leave that as an exercise for you, dear reader.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can get hard stops in linear gradients and radial gradients in the same way. Simply use a value of zero as the start of the gradient for subsequent color stops and it will run "behind" the prior one, creating a "hard" transition from one color to the next.
+          I've found this technique very useful when creating bar charts and similar pieces of UI. For example, imagine a bar chart with a 25/75% split. We could achieve that like this: 
+          <br><br>
+          linear-gradient(to right, goldenrod 25%, hotpink 0%)
+        </p>
+      </section>
+      <h2>
+        Repeating gradients
+      </h2>
+      <p>
+        CSS also gives us the ability to create repeating background gradients. Let's take a look at how it's done:
+      </p>
+      <code>
+        .repeating-radial-gradient {
+        <br><br>
+          background: repeating-radial-gradient (black opx, orange 5px, red 10px);
+        <br><br>
+        }
+      </code>
+      <p>
+        Here's how that looks (don't look for long, it may cause nausea):
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.8: You can use repeating gradients to create all manner of visual effects
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

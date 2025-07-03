@@ -1,0 +1,39 @@
+<!DOCTYPE html> <!-- page388 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Date and time
+      </h2>
+      <p>
+        If you've ever bought tickets to an event online, chances are that you have used a date picker of one sort or another. The thinking behind the new date and time input types is so that the browser can provide a consistent piece of user interface for that situation.
+        Sadly, as I write this in 2022, it's hard to entirely recommend using the native date and time input types across the board, as compatibility is not consistent.
+        It's not a completely useless situation; as with all the HTML5 input types, without support the input will behave like a normal input box. However, it's worth checking https://caniuse.com/ input-datetime first to avoid disappointment. This may be one of the few remaining types where you are going to need a JavaScript solution to provide an entirely consistent experience.
+        Regardless, in the hope that cross-browser compatibility is sorted soon, let's consider the core capabilities of the date and time input types.
+      </p>
+      <h2>
+        The date input type
+      </h2>
+      <p>
+        The following code is an example:
+      </p>
+      <code>
+        &lt;input id="date" type="date" name="date" value="2022-06-16"/&gt;
+      </code>
+      <p>
+        Notice that it isn't just a matter of changing the type attribute; you might also want to use the value attribute to set the starting date for the picker. If you don't set your own date, the picker will default to today's date. If, however, you set a date in ISO8601 format (YYYY-MM-DD), inside the value, the start date will be set to that. Despite the value being written in code as YYYY-MM-DD, the browser will actually display the picker in a format better suited (arguably) to your own locale in the browser UI.
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

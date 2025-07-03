@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page340 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The key thing here, 3D wise, is transform-style: preserve-3d. This declaration tells the browser that when we transform this element, we want any child elements to preserve any 3D effect.
+      <br><br>
+        If we didn't set preserve-3d on. flipper-object, we would never get to see the back (the red part) of the flipping element.
+      <br><br>
+        You can read the specification for this property here: https:// www.w3.org/TR/2009/WD-css3-3d-transforms-20090320/#transform-style-property.
+      <br><br>
+        Each "panel" in our flipping element needs positioning at the top of its container, but we also want to make sure that, if rotated, we don't see the "rear" of it (otherwise we would never see the green panel as it sits "behind" the red one). To do that, we use the backface-visibility property. We set this to hidden so that the back face of the element is, you guessed it, hidden:
+      </p>
+      <code>
+        .panel { 
+      <br><br>    
+          top: 0;
+      <br><br>    
+          position: absolute;
+      <br><br>    
+          backface-visibility: hidden;
+      <br><br>    
+        }
+      </code>
+      <p>
+        Next, we want to make our back panel flipped by default (so that when we flip the whole thing, it will actually be in the correct position). To do that, we apply a rotate transform. Hopefully, having covered these in the previous section, you'll understand what they are doing here:
+      </p>
+      <code>
+        .flipper-vertical .back { 
+      <br><br>    
+          transform: rotateX (180deg);
+      <br><br>    
+        }  
+      <br><br>    
+        .flipper-horizontal .back { 
+      <br><br>    
+          transform: rotateY (180deg);
+      <br><br>    
+        }
+      </code>
+      <p>
+        Now that everything is in place, all we want to do is flip the entire inner element when the outer one is hovered over:
+      </p>
+      <code>
+        .lipper:hover flipper-vertical { 
+      <br><br>    
+          transform: rotateX(180deg) ;
+      <br><br>    
+        }
+      <br><br>    
+        .flipper:hover .flipper-horizontal { 
+      <br><br>    
+          transform: rotateY (180deg) ;
+      <br><br>    
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

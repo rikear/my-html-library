@@ -1,0 +1,81 @@
+<!DOCTYPE html><!-- page149 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            grid-item-3 {
+            <br><br>
+                grid-area: top / left;
+            <br><br>
+            }
+        </code>
+        <p>
+            I've gotten a little bit ahead of myself now, as I have introduced grid-area without any expla-nation. Let's cover that now.
+        </p>
+        <h2>
+            grid template-areas
+        </h2>
+        <p>
+            Yet another way you can work with Grid Layout is to create grid template areas to establish the areas of your grid. Let's rework our prior example and we will remove the named grid lines entirely, starting again with this basic CSS for the grid
+        </p>
+        <p>
+            This is example_05-06 in the code:
+        </p>
+        <code>
+            .my-first-grid {
+            <br><br>    
+                display: inline-grid; 
+            <br><br>    
+                grid-gap: 10px;
+            <br><br>    
+                grid-template-columns: 200px 200px 200px; 
+            <br><br>    
+                grid-template-rows: 200px 200px 200px; 
+            <br><br>    
+                background-color: #e4e4e4;
+            <br><br>    
+            }
+            <br><br>    
+            [class^='grid-item'] {
+            <br><br>    
+                display: grid;
+            <br><br>    
+                align-items: center;
+            <br><br>    
+                justify-content: center;
+            <br><br>     
+                outline: 3px dashed #90;
+            <br><br>     
+                font-size: 30px;
+            <br><br>    
+                color: #333;
+            <br><br>    
+            }
+        </code>
+        <p>
+            Now, we will define our grid template areas like this, which we will add to the my-first-gridrule:
+        </p>
+        <code>
+            grid-template-areas:
+            <br><br>    
+                'one two three'
+            <br><br>    
+                'four five six'
+            <br><br>    
+                'seven eight nine';
+        </code>
+        <p>
+            With grid-template-areas, we can define rows and columns very simply. A row is defined with quotes (double or single), with the names of each column space-separated inside. Each row in the grid is just another pair of quotes with custom idents inside.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

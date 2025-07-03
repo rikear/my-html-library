@@ -1,0 +1,41 @@
+<!-- page31 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>This more lax syntax applies across the whole document, not just linked assets. For example, specity a div like this if you like:</p>
+        <code>&lt;div id=wrapper&gt;</code>
+        <p>That's perfectly valid HTML5. The same goes for inserting an image:</p>
+        <code>
+            &lt;img SRc=frontCarousel.png alt="front Carousel"&gt;
+        </code>
+        <p>That's also valid HTML5. No end tag/slash, no quotes (although you still need quotes where the value has whitespace in, like in the alt tag of the example), and a mix of capitalization and lowercase characters. You can even omit things such as the opening < head› tag and the page still validates!
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>Want a shortcut to great HTML5 code? Consider the HTML5 Boilerplate (https:// html5boilerplate. com). It's a pre-made "best practice" HTML5 file. You can also custom-build the template to match your specific needs.</p>
+        </section>
+        <p>So, given the loose rules, what's the "right" way to be writing your markup?</p>
+        <h2>A sensible approach to HTML markup</h2>
+        <p>Personally, I like writing my markup quite strictly. That means closing tags, quoting attribute values, and adhering to a consistent letter case. One could argue that ditching some of these practices would save a few bytes of data, but that's what minification tools are for (any unnecessary characters/data could be stripped if needed). I want my markup to be as legible as possible and I would encourage others to do the same. I'm of the opinion that clarity in authoring code should trump brevity. When writing HTML documents, therefore, you can write clean and legible code while still embracing the economies afforded by HTML5. To exemplify, for a CSS link, I'd go with the following:</p>
+        <code>
+            &lt;link href="CSS/main.css" rel="stylesheet" /&gt;
+        </code>
+        <p>I've kept the closing forward slash at the end of the element and the quotation marks, but omitted the type attribute. The point to make here is that you can find a level you're happy with yourself.
+        HTML5 won't be shouting at you, flagging up your markup in front of the class, and standing you in a corner for not validating. However you want to write your markup is just fine...
+        <br><br>
+        No. Who am I kidding? I can't let it go - I want you to know that if you're writing your code without quoting attribute values and closing your tags, I am silently judging you!
+        </p>
+    </div>
+
+  </div>
+</body>
+</html>

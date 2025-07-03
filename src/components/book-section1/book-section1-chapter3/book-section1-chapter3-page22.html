@@ -1,0 +1,52 @@
+<!DOCTYPE html><!-- page85 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <h2>The prefers-reduced-motion feature</h2>
+        <p>
+            If a user has set their device to minimize the amount of motion it provides in its interface and system interactions, this information is exposed to CSS via the prefers-reduced-motion media query.
+            <br><br>
+            There are only two settings: no-preference or reduce.
+            <br><br>
+            If you find yourself writing more than the occasional animation or transition, it's well worth wrapping such styles up in a no-preference variant like this:
+        </p>
+        <code>
+            @media (prefers-reduced-motion: no-preference) {
+                /* animation code here */
+            }
+        </code>
+        <p>
+            Or if you want to provide a different, subtler animation to your users, you could write your animation code, and then provide another that overwrites the first for users that would like the subtler variant:
+        </p>
+        <code>
+            .ele {
+                animation: bezerk 1s;
+            }
+            @media (prefers-reduced-motion) {
+            .ele {
+                animation: subtle 1s;
+            }
+            }
+        </code>
+        <p>
+            Note in the example code that when not explicitly stating a preference, merely using the prefers-reduced-motion query will evaluate to true.
+            <br><br>
+            However you prefer to write them, this media query provides a great tool to cater to users sensitive to animations and movement, whether for medical reasons such as vestibular motion disorders or purely from a personal preference point of view.
+        </p>
+        <h2>Future possibilities</h2>
+        <p>
+            A glance down the Level 5 draft specification reveals a multitude of additional features we haven't discussed here. There is the ability to detect whether scripting is supported (think JavaScript) and the ability to create custom media queries; don't get too carried away, it's only really a nicer way to write them.
+        </p>
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page335 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Setting this on the hover state produces the following effect on hover:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.12: Just like it sounds, a skew can produce some dramatic effects
+        </p>
+      </section>
+      <p>
+        The first value is the skew applied to the x axis (in our example, 40deg), while the second (12deg) is for the y axis. Omitting the second value means any value will merely be applied to the x axis (horizontal). For example:
+      </p>
+      <code>
+        transform: skew(10deg) ;
+      </code>
+      <p>
+        Just like with translate, you can apply skews to just one axis with skewx () and skewv().
+      </p>
+      <h2>
+        Matrix
+      </h2>
+      <p>
+        Did somebody mention a completely overrated film? No? What's that? You want to know about the CSS matrix, not the film? Oh, okay.
+      <br><br>  
+        The matrix transform syntax looks rather impenetrable. Here's our example code:
+      </p>
+      <code>
+        .matrix:hover {
+      <br><br>    
+          transform: matrix (1.178, -0.256, 1.122, 1.333, -41.533, -1.989);
+      <br><br>    
+        }
+      </code>
+      <p>
+        The matrix is a mathematical description. It essentially allows you to combine a number of other transforms (scale, rotate, skew, and so on) and express it as a single declaration. The preceding declaration results in the following effect in the browser:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.13: Not for the faint-hearted, the matrix value
+        </p>
+      </section>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

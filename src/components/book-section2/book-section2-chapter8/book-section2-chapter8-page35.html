@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- page268 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, one proven trick is to create a background-image using a linear -gradient with the same semi-opaque color at either end of the gradient, which creates the effect we are after.
+        <br><br>
+        We are then moving the main element around the page with one set of keyframes animations (we will get to animations in Chapter 11, Transitions, Transformations, and Animations) and animate the clip-path with another set.
+        <br><br>
+        I think once you start playing about with these techniques, you're going to surprise yourself with just what you can create with relative ease!
+        <br><br>
+        There may be occasions when you don't just want to clip what's in an element, and you actually want to overlay it with a mask. We can do that with CSS too! Let me show you.
+      </p>
+      <h2>
+        mask-image
+      </h2>
+      <p>
+        You can also mask elements with images, from either an image source with transparency such as a PNG graphic, a linear-gradient, which we looked at earlier in this chapter, or an SVG mask element. You can read about all the possibilities afforded to us in the specification here: https:// www. w3.org/TR/css-masking-1/.
+        <br><br>
+        In the meantime, we will just look at a fairly straightforward example so you can appreciate the kind of effect that is possible and how the syntax works to achieve it.
+        <br><br>
+        Suppose we have an image. I have one that NASA took of Mars. I'd get one I took myself but, you know, it's a bit of a jaunt.
+        <br><br>
+        Now, suppose we also have a PNG image that is transparent except for the word "MARS". We can use this PNG as a mask on top of our image element.
+        <br><br>
+        This is what we see in the browser:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.29: A mask image applied
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

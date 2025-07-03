@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- page282 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Did you say the browser "might" pick one image over another?
+      </h2>
+      <p>
+        An important thing to remember is that the values given in the sizes attribute are merely hints to the browser. That doesn't necessarily ensure that the browser will always obey. This is a good thing. Trust me, it really is. It means that, in the future, if there is a reliable way for browsers to ascertain network conditions, it may choose to serve one image over another because it knows things at that point that we can't possibly know at this point as the author. Perhaps a user has a setting on their device to "only download ix images" or "only download 2x images." In these scenarios, the browser can make the best call.
+        <br><br>
+        The alternative to the browser deciding is to use the picture element. Using this element ensures that the browser serves up the exact image you asked for. We looked at this element earlier in the chapter to solve the problem of serving the best image format for the user's needs. This time we are going to use it to serve different images in different scenarios. Let's take a look at how that works.
+      </p>
+      <h2>
+        Art direction with the picture element
+      </h2>
+      <p>
+        The final scenario you may find yourself in is one in which you have different images that are applicable at different viewport sizes. For example, consider our cake-based example again from Chapter 1. Maybe on the smallest screens we would like a close-up of the scone with a generous helping of jam and cream on top. For larger screens, perhaps we have a wider image we would like to use. Perhaps it's a wide shot of a table loaded up with all manner of cakes. Finally, for larger viewports still, perhaps we want to see the exterior of a cake shop on a village street with people sitting outside eating cakes and drinking tea (I know, sounds like nirvana, right?).
+        We need three different images that are most appropriate at different viewport ranges. Here is how we could solve this with picture:
+      </p>
+      <code>
+        &lt;picture&gt;
+        <br><br>
+          &lt;source media="(min-width: 480px)" srcset="cake-table.jpg" /&gt;
+        <br><br>
+          &lt;source media="(min-width: 960px)" srcset="cake-shop.jpg" /&gt;
+        <br><br>
+          &lt;img src="scones.jpg" alt="Lots of cakes" /&gt;
+        <br><br>
+        &lt;/picture&gt;
+      </code>
+      <p>
+        Be aware that when you use the picture element, it is merely a wrapper to facilitate other images making their way to the img tag within. If you want to style the images in any way, it's the img tag that should get your attention. Similarly, you can't change the alt tag contents by depending on which image gets loaded, so make sure you provide text that covers all eventualities as best you can.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

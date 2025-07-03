@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- page296 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        An alternative approach to providing a fallback would be to add a background- image via the CSS.
+        For example, in our previous example, our fallback span has a class of. fallback-info. We could make use of this in CSS to link to a suitable background- image. That way, the background image will only be downloaded if required.
+      </p>
+      <h2>
+        Inserting an SVG as a background image
+      </h2>
+      <p>
+        SVGs can be used as background images in CSS, much the same as any other image format (PNG, JPG, or GIF). There's nothing special about the way you reference them:
+      </p>
+      <code>
+        • item { background-image: url ('image.svg');
+}
+      </code>
+      <p>
+        If you find yourself in the unlikely situation of needing to support browsers that don't support
+SVG (Android 2 and Internet Explorer 8, for example), you can use CSS feature queries, which we looked at in Chapter 6, CSS Selectors, Typography, and More:
+      </p>
+      <code>
+        .item {
+        <br><br>
+          background-image: url('image.png');
+        <br><br>
+        }
+        <br><br>
+        @supports (fill: black) {
+        <br><br>
+          .item {
+        <br><br>
+            background-image: url ('image.svg');
+        <br><br>
+            }
+        <br><br>
+        }
+      </code>
+      <p>
+        The @supports rule works here because fill is an SVG property, so if the browser understands that, it will take the lower rule over the first.
+        <br><br>
+        If your needs for SVG are primarily static background images, perhaps for icons and the like, I highly recommend implementing SVGs as background images. That's because there are a number of tools that will automatically create image sprites or style sheet assets (which means including the SVGs as data URIs), fallback PNG assets, and requisite style sheets from any individual SVGs you create. Using SVGs this way is very well supported; the images themselves cache well (so performance-wise, they work very well), and it's simple to implement.
+      </p>
+      <h2>
+        A brief aside on data URIs
+      </h2>
+      <p>
+        After reading the previous section, you might wonder what on earth a Data Uniform Resource Identifier (URI) is. In relation to CSS, it's a means of embedding what would ordinarily be an external asset, such as an image, within the CSS file itself.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

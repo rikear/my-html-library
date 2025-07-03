@@ -1,0 +1,61 @@
+<!DOCTYPE html><!-- page88 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <h2>Using a container query</h2>
+        <p>
+            Unlike media queries, which are always available, for container queries, it is necessary to establish some containment for an element. Effectively, this is like saying to the browser, "Hey, I might want to know how wide this is." Without this, we are not able to query the element.
+            <br><br>
+            Therefore, in order for a container to be query-able, we first need to tell the browser how the container should be "contained".
+            <br><br>
+            As we have established, typically, with a responsive design, width is the axis we are interested in querying. So to start solving our imagined scenario above, we can communicate that we want the elements to be containers that we can query the width of (or the height in the second selector below), and give them a name like this:
+        </p>
+        <code>
+            .main-content {
+            <br><br>
+                container: main / inline-size;
+            <br><br>
+            }
+            <br><br>
+            .sidebar {
+            <br><br>
+                container: side / block-size;
+            <br><br>
+            }
+        </code>
+        <p>
+            The container property is actually a shorthand for setting two other properties: container-name and container-type. You can set them separately with those properties if you prefer.
+            <br><br>
+            With those set, elements nested within can query the container.
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                In one version of the draft specification, setting the values in the container shorthand was done with space-separated values; in the latest draft, it is done using a forward slash (/) to delineate the two parts. This serves as a reminder that readers should check the syntax that actually ships.
+            </p>
+        </section>
+        <p>
+            As with media queries, there are different types of queries. For width, the equivalent in container queries is the inline-size. This is the length of the container in the inline axis. In the Westem, left-to-right writing world, that equates to the container width, just as block-size would be equivalent to height.
+        </p>
+        <h2>Why name the container?</h2>
+        <p>
+            If there were no other ancestor containers, then we wouldn't need to bother with a named con-tainer. We could just write a container query like this:
+        </p>
+        <code>
+            @container (inline-size &gt; 500px) { /* styles */ }
+        </code>
+       
+    </div>
+  </div>
+
+</body>
+</html>

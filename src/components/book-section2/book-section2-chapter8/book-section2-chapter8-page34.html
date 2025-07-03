@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- page267 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        You can view each of these clip-path examples in example _08-09.
+      </p>
+      <h2>
+        Animating clip-path
+      </h2>
+      <p>
+        As if all this clipping malarkey wasn't interesting enough, you can also animate a clip-path, as long as there remains the same number of points in the shape. For example, you can animate a triangle into a different shaped triangle, but without some tricks, you can't convert that same triangle into a star. I say "without some tricks" because you can effectively do this by hiding a few points along the lines of the polygon so your triangle has enough points to animate into a star.
+        <br><br>
+        Here's a grab of an extra example I added, example_08-10. This is just to hopefully give you an idea of what can be done by adding a few of the things we have already learned and a few things we will learn in future chapters together:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.28: You can even animate clip-path
+        </p>
+      </section>
+      <p></p>
+      This shows two elements with the same background image being masked with clip-path. You can also tint the image with an overlay like this:
+    </div>
+    <code>
+      background: linear-gradient(hsla(®, 0%, 0%, 0.4) 0, hsla(0, 0%, 0%, 0.4) 100%), ur1( 'image.jpg');
+    </code>
+    <p></p>
+    You may be wondering, if we wanted to tint the image with a color, why don't we just use a background color in the declaration?
+    <br><br>
+    The answer is that it doesn't work. When you set multiple backgrounds with the background property, it's not possible to use a background-color, even a semi-transparent one, above an image, and have the color let the image show through beneath.
+  </div>
+  
+</body>
+</html>

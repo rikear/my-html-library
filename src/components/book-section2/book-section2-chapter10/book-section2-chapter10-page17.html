@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- page302 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Remember, you can dig around the code in example_10-03. It's also worth noting that the color doesn't have to be set on that element itself-it can be on any parent element; currentColor will inherit a value from up the DOM tree to the nearest parent with a color value set.
+      </p>
+      <h2>
+        Re-coloring SVGs with CSS custom properties
+      </h2>
+      <p>
+        Nowadays, I find the most effective way to recolor the same SVG or symbol is by using CSS custom properties. We explore them fully in Chapter 12, Custom Properties and CSS Functions, but for now, we will just consider how they can help us with SVG. The following example can be found at example_10-04.
+        <br><br>
+        I have made a pentagon shape using two paths. Each path has a fill and a stroke value. Here is the SVG:
+      </p>
+      <code>
+        &lt;svg class="shape" width="268" height="254" xmlns="http://www.w3.org/2000/svg" &gt;
+        <br><br>
+          &lt;g fill="none" fill-rule="evenodd" stroke-width="10"&gt;
+        <br><br>
+            &lt;path d="M134 6.18L6.73 98.647148.613 149.615h157.314L261.27 98.647
+            134 6.18z" stroke="var(--stroke1)" fill="var (--fill1)"/&gt;
+        <br><br>
+            &lt;path d="M134 36.181-98.738 71.738 37.714 116.074h122.048137.714-116. 074L134 36.18z" stroke="var(--stroke2)" fill="var (--fi112)"/&gt;
+        <br><br>
+          &lt;/g&gt;
+        <br><br>
+        &lt;/svg&gt;
+      </code>
+      <p>
+        Notice how for each path element, both the stroke and fill values have been set to a CSS custom property. With those values in place, I can then set any colors I want for that SVG with CSS, JavaScript, or a combination of the two!
+        <br><br>
+        In our example, I have set default colors and hover colors, like this:
+      </p>
+      <code>
+        .shape {
+        <br><br>  
+          display: block;
+        <br><br>  
+          --strokel: #ddd;
+        <br><br>  
+          -- f1111: #444;
+        <br><br>  
+          --stroke2: #f90;
+        <br><br>  
+          --fi112: #663d00;
+        <br><br>  
+        }
+        <br><br>  
+        .shape: hover {
+        <br><br>  
+          --strokel: #333;
+        <br><br>  
+          --fill1: #444;
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page363 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        It came to browsers slightly later than min() or max () but made up for its tardy arrival by solving a classic design conundrum. You know, the "I want the headline text to be flexible in size, but it can't go too small. And it can't go too big either." Yes, that "Goldilocks" one!
+      <br><br>  
+        The clamp() function lets us specify, in the order we pass them into the function, a minimum, variable, and maximum size for any length. For example, we can address our Goldilocks text sizing problem with clamp like this:
+      </p>
+      <code>
+        .hero-text {
+      <br><br>    
+          font-size: clamp (32px, 40vw, 80px);
+      <br><br>    
+        }
+      </code>
+      <p>
+        And while our headline text might vary in size, depending on the viewport, it will never be less than 32 px or larger than 80 px. Beautiful!
+      <br><br>  
+        And like all the mathematical functions we have looked at, you can use custom properties in there too. Something like this would allow you to have a site-wide min and max text size set with a custom property, with any kind of responsive friendly unit in the middle:
+      </p>
+      <code>
+        .hero-text {
+      <br><br>    
+          font-size: clamp (var(--textMin), 40vw, var (--textMax));
+      <br><br>    
+        }
+      </code>
+      <p>
+        And we can nest some calculations in there too if needed:
+      </p>
+      <code>
+        hero-text {
+      <br><br>    
+          font-size: clamp(var (--textMin), 40vw + 5rem, var (--textMax));
+      <br><br>    
+        }
+      </code>
+      <p>
+        And keep in mind that clamp () isn't just for text; you can use it any place that accepts a length value.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the specification for clamp () here: https://www.w3.org/TR/css-values-4/#funcdef-clamp.
+        </p>
+      </section>
+      <h2>
+        Putting it all together
+      </h2>
+      <p>
+        Let's make a fun example, bringing together some of the things we have looked at in previous chapters.
+      <br><br>  
+        With just a couple of elements, let's simulate the basics of a basketball court, and the ball bouncing and being passed around.
+      </p>
+
+    </div>
+  </div>
+  
+</body>
+</html>

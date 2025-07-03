@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- page217 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        And then the same color as an eight-digit hex code:
+      </p>
+      <code>
+        background-color: #00000077;
+      </code>
+      <p>
+        Two thines to keep in mind with hex and transparency. Firstly, as the name tells you, it uses a hexadecimal numbering system, where 0-9 are handled with numbers, and 11 to 16 are handled with the "a" to "f" characters. So, if you imagine those characters out in a line:
+      </p>
+      <code>
+        0123456789abcdef
+      </code>
+      <p>
+        You can see that halfway along is the 7 character, which gives us 50% alpha.
+        The second thing to remember is that the four-digit hex doubles up each value. That's important if you want granularity because you can be more precise with two different digits for each color channel, which means in those scenarios you will want to use the eight-digit variant.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          It used to be necessary to define RGB or HSL colors with an alpha channel using the functional gba() or hsla() formats (note the appended a for alpha). However, that's no longer needed unless you need to support a very old browser.
+        </p>
+      </section>
+      <h2>
+        Alpha with functional notation
+      </h2>
+      <p>
+        Using the functional notation, you can define an alpha channel like this with HSL:
+      </p>
+      <code>
+        .redness-alpha {
+        <br><br>
+          color: hs1(359, 99%, 50%, 0.5);
+        <br><br>
+        }
+      </code>
+      <p>
+        Or by using a percentage if you like:
+      </p>
+      <code>
+        .redness-alpha {
+        <br><br>
+          color: hs1(359, 99%, 50%, 50%;
+        <br><br>
+        }
+      </code>
+      <p>
+        The RGB syntax follows the same convention as the HSL equivalent:
+      </p>
+      <code>
+        .redness-alpha-rgba {
+        <br><br>
+          color: rgb (254, 2, 8, 0.8);
+        <br><br>
+        }
+      </code>
+      <p>
+        The alpha is always represented with either a percentage or a numeric value between 0 and 1.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

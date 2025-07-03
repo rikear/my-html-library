@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- page300 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        That will display the drag left and right icon:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 10.5: With SVGs inserted inline, it's possible to reuse graphics
+        </p>
+      </section>
+      <p>
+        The magic here is the use element. As you might have guessed from the name, it's used to make use of existing graphical objects that have already been defined elsewhere. The mechanism for choosing what to reference is the xlink attribute, which, in this case, is referencing the symbol ID of the "drag left and right" icon (#icon-drag-left-right) we have inline at the beginning of the markup.
+        <br><br>
+        When you reuse a symbol, unless you explicitly set a size (either with attributes on the element itself or with CSS), use will be set to a width and height of 100%. So, to resize our icon, we could do this:
+      </p>
+      <code>
+        .icon-drag-left-right { 
+        <br><br>
+          width: 2.5rem; 
+        <br><br>
+          height: 2.5rem;
+        <br><br>
+        }
+      </code>
+      <p>
+        The use element can be used to reuse all sorts of SVG content: gradients, shapes, symbols, and more.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

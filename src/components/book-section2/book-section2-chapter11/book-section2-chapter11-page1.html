@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- page322 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <ul>
+        <li>
+          Understanding different 2D transforms (scale, rotate, skew, translate, and matrix)
+        </li>
+        <li>
+          Understanding 3D transforms
+        </li>
+        <li>
+          How to animate with CSS using keyframes
+        </li>      
+      </ul>
+      <p>
+        Let's get started with an introduction to CSS transitions.
+      </p>
+      <h2>
+        What CSS transitions are and how we can use them
+      </h2>
+      <p>
+        Transitions are the simplest way to create some visual "effect" between one state and another with CSS. Let's consider a simple example: an element that transitions from one state to another when hovered over.
+        <br><br>
+        When styling hyperlinks in CSS, it's common practice to create a hover state: an obvious way to make users aware that the item they are hovering over can be interacted with. Hover states are of little relevance to the growing number of touchscreen devices, but for mouse users, they're a great and simple interaction between website and user. They're also handy for illustrating transitions, so that's what we will start with.
+        <br><br>
+        Traditionally, using only CSS, hover states are an on/off affair. There is one set of properties and values on an element as the default, and when a pointer is hovered over that element, the properties and values are instantly changed. However, CSS transitions, as the name implies, allow us to transition between one or more properties and values to other properties and values.
+        <br><br>
+        A couple of important things to know upfront. Firstly, you can't transition from display: none;. When something is set to display: none; it isn't actually "painted" on the screen, so it has no existing state you can transition from.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Although you can't transition from display: none, it is possible to run an animation on an element as soon as its display property is changed. So, you could, for exam-ple, change an element's display property from display: none and then run an animation to fade it in from 0% opacity. We'll cover animations later in this chapter.
+        </p>
+      </section>
+      <p>
+        In order to create the effect of something fading in, you would have to transition opacity or position values. Secondly, not all properties can be transitioned. To ensure you're not attempting the impossible, here is the list of transitionable (I know, it's not even a word) properties: https:// developer.mozilla. org/en-US/docs/Web/CSS/CSS_animated_properties.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

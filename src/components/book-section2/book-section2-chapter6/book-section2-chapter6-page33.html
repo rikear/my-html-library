@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page202 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        You can then see two successive ur]() and format () sections within our sc property. Each pair of these is separated with a comma. As we noted previously, •woff2 is always our preference, as it is a better-compressed version of the same font, so we list that first. As long as the browser can understand .woff2 and download the file, it will do so. If, however, the browser can't find that file, or can't understand .woff2, it will download the woff file listed afterward.
+        <br><br>
+        Now, although this block of code is great for fans of copy and paste, it's important to pay attention to the paths the fonts are stored in. For example, if we were to place fonts in a folder inventively called fonts on the same level as a css folder, we would need to amend our paths. So, our @font-face block would become:
+      </p>
+      <code>
+        @font-face {
+        <br><br>
+        font-family: "InterRegular";
+        <br><br>
+        src: url("../fonts/Inter-Regular.woff2") format
+        <br><br>("woff2"),
+        <br><br>
+          url(" ../fonts/Inter-Regular.woff") format("woff");
+        <br><br>
+        font-weight: normal; font-style: normal;
+        <br><br>
+        font-display: fallback;
+        <br><br>
+        }
+      </code>
+      <h2>
+        Optimizing font loading with font-display
+      </h2>
+      <p>
+        If your main font is a web font, it's a good idea to request the file upfront by loading it with a link in the head section of your HTML with the rel attribute value as preload. For example:
+      </p>
+      <code>
+        &lt; link
+        <br><br>
+          rel="preload" href="fonts/inter.var.woff2"
+        <br><br>
+          as="font"
+        <br><br>
+          type="font/woff2"
+        <br><br>
+          crossorigin
+        <br><br>
+        &gt;
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read more about this font optimization technique here: ht tps://web.dev/ optimize-webfont-loading/.
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

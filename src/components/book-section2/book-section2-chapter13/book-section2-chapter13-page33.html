@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- page400 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Then, if you focus on a required input and enter a relevant value, the asterisk changes color to green. It's a subtle but helpful touch.
+      <br><br>  
+        At this point, it seems appropriate to tell you that the content value is not read out by all screen readers, which makes the point once more that using the right elements, labels, and attributes is always the best policy. In this case, the presence of the required attribute should provide a screen reader with the relevant prompt to communicate this need to the user.
+      </p>
+      <h2>
+        Creating a background fill effect
+      </h2>
+      <p>
+        Back in Chapter 8, Stunning Aesthetics with CSS, we learned how to generate linear and radial gradients as background images. Sadly, it isn't possible to transition between two background images (which makes sense, as the browser effectively rasterizes the declaration into an image). However, we can transition between values of associated properties like background-position and background-size. We'll use this capability to create a fill effect when an input or textarea receives focus.
+      <br><br>  
+        Here are the properties and values added to the input:
+      </p>
+      <code>
+        input: not ([type=' range']),
+      <br><br>    
+        textarea {
+      <br><br>    
+          min-height: 40px; 
+      <br><br>    
+          padding: 2px; font-size: 17px;
+      <br><br>    
+          border: 1px solid #ebebeb;
+      <br><br>    
+          outline: none;
+      <br><br>    
+          transition: transform 0.4s, 
+      <br><br>    
+          box-shadow 0.4s,
+      <br><br>     
+          background-position 0.2s; 
+      <br><br>    
+          background: radial-gradient(400px circle, #fff 99%, transparent 99%), #f1f1f1;
+      <br><br>    
+          background-position: -400px 90px, 0 0; 
+      <br><br>    
+          background-repeat: no-repeat, no-repeat; 
+      <br><br>    
+          border-radius: 0; position: relative;
+      <br><br>    
+        }
+      <br><br>    
+        input: not ([type='range']) : focus,
+      <br><br>    
+        textarea: focus {
+      <br><br>    
+          background-position: 0 0, e 0;
+      <br><br>    
+        }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

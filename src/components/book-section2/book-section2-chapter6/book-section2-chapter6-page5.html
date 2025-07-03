@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- page174 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            The "beginning with" substring matching attribute selector
+        </h2>
+        <p>
+            Consider the following markup:
+        </p>
+        <code>
+            &lt; li data-type="todo-chore" &gt;
+            <br><br>
+                Empty the bins
+            <br><br>
+            &lt; /li &gt;
+            <br><br>
+            &lt; li data-type="todo-exercise" &gt;
+            <br><br>
+                Play football
+            <br><br>
+            &lt; /li &gt;
+        </code>
+        <p>
+            Suppose that markup represents two items in a "to-do" list application we are building. Even though they both have different data-type attribute values, we can select them both with the
+            "beginning with" substring matching attribute selector, like this:
+        </p>
+        <code>
+            [data-type^="todo" ] {
+            <br><br>
+                /* Styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            The key character in all this is the ^ symbol. That symbol is called the caret, although it is often referred to as the hat symbol too. In this instance, it signifies "begins with." Because both data-type attributes have values that begin with "todo", our selector selects them.
+        </p>
+        <h2>
+            The "contains an instance of" substring matching attribute selector
+        </h2>
+        <p>
+            The "contains an instance of" substring matching attribute selector has the following syntax:
+        </p>
+        <code>
+            [attribute*="value"] {
+                /* Styles */
+            }
+        </code>
+        <p>
+            Like all attribute selectors, you can combine them with a type selector (one that references the actual HTML element used) if needed, although I would only do that if I had to— in case you want to change the type of element used. Let's try an example. Consider this markup:
+        </p>
+        <code>
+            &lt; p data-ingredients="scones cream jam" &gt;
+            <br><br>
+                Will I get selected?
+            <br><br>
+            &lt; /p &gt;
+        </code>
+        <p>
+            We can select that element like this:
+        </p>
+        <code>
+            [data-ingredients*="cream" ] {
+            <br><br>
+                color: red;
+            <br><br>
+            }
+        </code>
+        <p>
+            The key character in all this is the * symbol, which in this context means "contains." The "begins with" selector would not have worked in this markup as the string inside the attribute didn't begin with "cream" attribute selector finds it. It did, however, contain "cream", so the "contains an instance of" substring
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page355 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Setting and getting custom property values with JavaScript
+      </h2>
+      <p>
+        If you only take two things from that prior JavaScript snippet, it should be the manner in which you can both get and set custom properties. At first glance, it looks like you should be able to set a custom property to any string value you like. But it is a little stricter than that.
+      <br><br>
+        Suppose we have an element with a class of heading-information. We could try and seta custom property on that element with JavaScript like this:
+      </p>
+      <code>
+        const header Info = document. querySelector("heading-information");
+      <br><br>  
+        header Info. style. setProperty("--doILikeScones", "You bet I do!");
+      <br><br>  
+        console. log(getComputedStyle(header Info) •getPropertyValue("--doILikeScones")); // hoping it will Log out "You bet I do!"
+      </code>
+      <p>
+        But that won't work. Why? Well, custom properties must have their value set to a valid CSS value, so you can't use them to pass around any arbitrary snippet of data. If we amended our code and set the value to, say, "100px", we would then get that value logged out correctly.
+      <br><br>  
+        So, that's the only real rule to be aware of. You set and get values in JavaScript as strings, but in order for those strings to "work," they must be valid CSS values.
+      <br><br>  
+        Then, assuming you have set the property to something valid, when we get a value, using the getPropertyValue () method like this:
+      </p>
+      <code>
+        const header Info = document querySelector ("•heading-information"); 
+      <br><br>
+        const dolLikeSconesValue =
+      <br><br>  
+        BetComputedStyle (header Info) • getPropertyValue ("--doILikeScones"); 
+      <br><br>  
+        console. 10g(doILikeSconesValue); // would Log out value of custom property
+      </code>
+      <p>
+        Everything will work as expected.
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

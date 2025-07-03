@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- page248 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Firstly, prefix the linear-gradient or radial-gradient with repeating-. It then follows the same syntax as a normal gradient. Here, I've used pixel distances between the black, orange, and red colors (Opx, 5px, and 10px, respectively), but you could also choose to use percentages.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the W3C information on repeating gradients at https://www.w3.org/TR/css- images-3/#repeating-gradients.
+        </p>
+      </section>
+      <p>
+        There's one more way of using background gradients I'd like to share with you.
+      </p>
+      <h2>
+        Background gradient patterns
+      </h2> 
+      <p>
+        Although I've often used subtle linear gradients in designs, I've found less practical use for ra-dial, conic, and repeating gradients. However, clever folks out there have harnessed the power of gradients to create background gradient patterns. Let's look at an example from Lea Verou's collection of CSS background patterns, available at https://projects.verou.me/css3patterns/:
+      </p>
+      <code>
+        .carbon-fibre { 
+        <br><br>
+          margin: 1rem; 
+        <br><br>
+          width: 400px;
+        <br><br>
+          height: 200px;
+        <br><br>
+          background: radial-gradient (black 15%, transparent 16%) 0 0,
+        <br><br>
+            radial-gradient (black 15%, transparent 16%) 8px 8px,
+        <br><br>       
+            radial-gradient (rgba(255, 255, 255, 0.1) 15%, transparent 20%)
+            0 1px,
+        <br><br>
+            radial-gradient (rgba(255, 255, 255, 0.1) 15%, transparent 20%)
+            8px 9px;
+        <br><br>
+          background-color: #282828; 
+        <br><br>
+          background-size: 16px 16px;
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

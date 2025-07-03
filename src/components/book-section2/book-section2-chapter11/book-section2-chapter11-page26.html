@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page347 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        In this @keyframes at-rule, we've added a text-shadow and box-shadow at 100%. We can then expect the keyframes, when applied to an element, to animate the text shadow and box shadow to the defined amount. But how long does the animation last? How do we make it repeat, reverse, and more? This is how we actually apply a keyframes animation to an element:
+      </p>
+      <code>
+        .flipper:hover .flipper-horizontal { 
+      <br><br>    
+          transform: rotateY (180deg);
+      <br><br>    
+          animation: pulse 1s 1s infinite alternate both;
+      <br><br>    
+        }
+      </code>
+      <p>
+        The animation property here is a shorthand for several animation-related properties. In this example, we are declaring (in order):
+      </p>
+      <ul>
+        <ol>
+          The name of the keyframes declaration to use (pulse).
+        </ol>
+        <ol>
+          The animation-duration (1 second).
+        </ol>
+        <ol>
+          The animation-delay before the animation begins (1 second, to allow time for our button to first flip).
+        </ol>
+        <ol>
+          The number of times the animation will run (infinitely).
+        </ol>
+        <ol>
+          The direction of the animation (alternate, so it animates first one way and then back the other).
+        </ol>
+        <ol>
+          That we want the animation-fill-mode, which we will cover in detail momentarily, to retain the values that are defined in the keyframes, whether going forward or backward (both).
+        </ol>
+      </ul>
+      <p>
+        The shorthand property can actually accept all seven animation properties. In addition to those used in the preceding example, it's also possible to specify animation-play-state. This can be set to running or paused to effectively play and pause an animation. Of course, you don't need to use the shorthand property; sometimes, it can make more sense (and help when you revisit the code in the future to set each property separately. The following are the individual properties and example values. Where appropriate, alternate values have been listed with a comment:
+      </p>
+      <code>
+        .animation-properties {
+      <br><br>  
+        animation-name: warning; 
+      <br><br>  
+        animation-duration: 1.55;
+      <br><br>  
+        animation-timing-function: ease-in-out; 
+      <br><br>  
+        animation-iteration-count: infinite;
+      <br><br>  
+        animation-play-state: running; /* could also be 'paused' */
+      <br><br>  
+      }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

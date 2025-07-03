@@ -1,0 +1,54 @@
+<!DOCTYPE html><!-- page154 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Here is what that produces:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.16: Using auto-fill, any spare space is filled up with invisible columns
+            </p>
+        </section>
+        <p>
+            Notice the space at the end? What happened there?
+            <br><br>
+            The key to understanding the difference comes down to whether spare columns are collapsed or not.
+            <br><br>
+            When the browser creates the grid in both auto-fit and auto-fill, it initially lays them out the same. However, when using auto-fit, any extra columns left, having laid out the content, are collapsed, leaving that space free to be distributed evenly between the items in the row. In our example (play about with it in the code as example_05-07), because each item also has a maximum size of 1fr unit, each takes up an equal portion of that free space. This results in columns that span the entire width of the space.
+            <br><br>
+            However, with auto-fill, once the items (in our example, 100 px wide) are laid out, if there is any extra space, the extra empty columns are not collapsed. They remain in situ, filled up, and subsequently the space is not free for the grid items to gobble up. The result is that we get space at the end.
+            <br><br>
+            There will be instances where one is more appropriate than the other; just be aware that you can achieve either.
+        </p>
+        <h2>
+            Shorthand syntax
+        </h2>
+        <p>
+            There are a couple of shorthand syntaxes you can use with Grid: one relatively straightforward, one less so. The first one that you'll probably find most utility for is grid-template.
+            <br><br>
+            While shorthand syntaxes can be great, my advice would be to write your grids one propertyat a time, at least to begin with. When you get confident enough that writing each property and value out individually becomes a chore, take the time to learn the shorthand variant.
+            <br><br>
+            With that advice dispensed, let's look at these two shorthand methods.
+        </p>
+        <h2>
+            grid-template shorthand
+        </h2>
+        <p>
+            This allows you to set grid-template-rows, grid-template-columns, and grid-template-areas in one line.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

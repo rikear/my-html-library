@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- page181 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            The expression can also use negative numbers; for example, inth-child (3n-2) starts at minus 2 and then selects every third item.
+            <br><br>
+            You can also change the direction. By default, once the first part of the selection is found, the subsequent ones go down the elements in the DOM (and therefore from left to right in our example).
+            However, you can reverse that with a minus; for example:
+        </p>
+        <code>
+            span:nth-child (-2n + 3) {
+            <br><br>
+                background-color: #f90; 
+            <br><br>
+                border-radius: 50%;
+            <br><br>
+            }
+        </code>
+        <p>
+            This example finds the third item again, but then goes in the opposite direction to select every two elements; up the DOM tree and therefore from right to left in our example:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.4: With a minus symbol, we can select in the opposite direction
+            </p>
+        </section>
+        <p>
+            Hopefully, the nth-based expressions are making more sense now. nth-child and nth-last-child differ in that the nth-last-child variant works from the opposite end of the document tree. For example, :nth-last-child (-n+3) starts at 3 from the end and then selects all the items after it.
+            Here's what that rule gives us in the browser:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.5: nth-last-child lets you start from the opposite end of the elements
+            </p>
+        </section>
+        <p>
+            Finally, let's consider :nth-of-type and : nth-last-of-type. While the previous examples count any children, regardless of type (always remember the nth-child selector targets all children at the same DOM level, regardless of classes), : nth-of-type and :nth-last-of-type let you be specific about the type of item you want to select. Consider the following markup (example_06-02), which is a mixture of div and span elements, albeit with the same class:
+        </p>
+        <code>
+            &lt; Span class="span-class" &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span class="span-class" &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span class="span-class" &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span class="span-class" &gt; &lt; /span &gt;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

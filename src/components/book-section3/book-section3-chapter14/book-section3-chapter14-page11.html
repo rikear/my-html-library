@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- page416 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The @nest at-rule is used to make explicit to both the author and the browser that some nesting context, indicated by the &, is going to be present on that line, even though it isn't the first char-acter. Remember, the ampersand, &, is a symbolic reference to the outer, parent selector of the rule. By placing the & after the selector, we are making the nested selector be "printed" first, and then the outer selector. Just remember that whenever you see the &, that will be replaced by the outer selector in the eyes of the browser.
+      <br><br>  
+        With @nest and &, the full gamut of selector relationships is possible to express. For example, here is an adjacent sibling relationship and a selector where a data attribute and class are combined:
+      </p>
+      <code>
+        .item + .item {
+      <br><br>    
+          /* styles */
+      <br><br>    
+        }
+      <br><br>    
+        [data-scones].item {
+      <br><br>    
+          /* styles */
+      <br><br>    
+        }
+      </code>
+      <p>
+        That could be written nested like this:
+      </p>
+      <code>
+        .item {
+      <br><br>      
+          @nest & + item {
+      <br><br>      
+            /* styles */
+      <br><br>      
+          }
+      <br><br>      
+          @nest &[data-scones] {
+      <br><br>      
+            /*styles */
+      <br><br>      
+          }
+      <br><br>      
+        }
+      </code>
+      <p>
+        You do need to be aware that every selector in a list needs an &. So, for example, this would not work:
+      </p>
+      <code>
+        item {
+      <br><br>    
+          color: #fff;
+      <br><br>    
+          & .child,
+      <br><br>    
+          .child-2 { 
+      <br><br>    
+            color: #ddd;
+      <br><br>    
+          }
+      <br><br>    
+        }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

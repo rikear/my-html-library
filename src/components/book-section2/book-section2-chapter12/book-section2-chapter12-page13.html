@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- page364 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here is the markup. Probably the least important part of this example:
+      </p>
+      <code>
+        &lt;div class="court"&gt;
+      <br><br>    
+          &lt;div class="ball"&gt; &lt;/div&gt;
+      <br><br>    
+        &lt;/ div&gt;
+      </code>
+      <p>
+        Let's make a vague court shape and give it a background color something like a basketball court:
+      </p>
+      <code>
+        .court {
+      <br><br>    
+          width: 400px;
+      <br><br>    
+          height: 200px;
+      <br><br>    
+          background-color: rgb (197, 150, 86); 
+      <br><br>    
+          position: relative;
+      <br><br>    
+        }
+      </code>
+      <p>
+        Now we want to add a ball to our court. This ball will simulate a bounce with an animation and transition its position, which we will set with custom properties. Now, if for some reason you haven't read Chapter 11, Transitions, Transformations, and Animations, yet (shame on you), all you need to know is that this animation makes a circle appear as if it is bouncing by making it scale up in size and then back down:
+      </p>
+      <code>
+        .ball {
+      <br><br>    
+          --ballSize: 18px;
+      <br><br>    
+          --ball-border: #fff;
+      <br><br>    
+          --ball-color: #df4a23; 
+      <br><br>    
+          position: absolute;
+      <br><br>    
+          left: calc(var (--x) - var(--ballSize));
+      <br><br>    
+          top: calc(var (--y) - var(--ballSize));
+      <br><br>    
+          width: var(--ballSize); 
+      <br><br>    
+          height: var(--ballSize);
+      <br><br>    
+          background-color: var (--ball-color); 
+      <br><br>    
+          border-radius: 50%;
+      <br><br>    
+          transition: all 0.3s ease-in-out;
+      <br><br>    
+          border: 1px solid var (--ball-border);
+      <br><br>    
+          animation: 0.5s ease infinite alternate forwards bounce;
+      <br><br>    
+          }
+      <br><br>    
+          @keyframes bounce {
+        <br><br>    
+            0% {
+          <br><br>    
+            transform: scale(1);
+        <br><br>    
+          }
+      <br><br>    
+        }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

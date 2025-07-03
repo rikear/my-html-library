@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- page185 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Combinator selectors - child, next sibling, and subsequent sibling
+        </h2>
+        <p>
+            Sometimes you want to do something particular to an element but only if it follows another, or perhaps only if it is the child of another element. We are going to look now at how we can do that.
+            <br><br>
+            I'm making the assumption at this point that you understand the basic selector pattern where one class followed by another selects any descendant that matches. For example,
+            .parent. descendant t) would select any element that was a descendant of the • parent element with a class of descendant, no matter how many levels deep.
+        </p>
+        <h2>
+            The child combinator
+        </h2>
+        <p>
+            The child combinator only selects direct descendants. Consider this markup:
+        </p>
+        <code>
+            &lt; div class="parent" &gt;
+            <br><br>
+                &lt; div class="descendant child" &gt;
+            <br><br>
+                    &lt; div class="descendant grandchild" &gt; &lt; /div &gt;
+            <br><br>
+                &lt; /div &gt;
+            <br><br>
+            &lt; /div &gt;
+        </code>
+        <p>
+            We can select only the direct "child" of the parent element, like this:
+        </p>
+        <code>
+            .parent › .descendant {
+                /* Styles */
+            }
+        </code>
+        <p>
+            Notice the right-angle bracket between the two class names in the selector; that's the child com-binator symbol.
+        </p>
+        <h2>
+            The next sibling
+        </h2>
+        <p>
+            Consider another example:
+        </p>
+        <code>
+            &lt; div class="item one" &gt; one &lt; /div &gt;
+            <br><br>
+            &lt; div class="item" &gt; two &lt; /div &gt;
+            <br><br>
+            &lt; div class="item" &gt; three &lt; /div &gt;
+            <br><br>
+            &lt; div class="item" &gt; four &lt; /div &gt;
+            <br><br>
+            &lt; div class="item" &gt; five &lt; /div &gt;
+            <br><br>
+            &lt; div class="item" &gt; six &lt; /div &gt;
+            <br><br>
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

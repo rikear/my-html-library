@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- page249 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here's what that gives us in the browser, a carbon fiber background effect:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.9: A carbon fiber effect made with pure CSS
+        </p>
+      </section>
+      <p>
+        How about that? Just a few lines of CSS and we have an easily editable, responsive, and scalable background pattern.
+        <br><br>
+        You might find it useful to add background-repeat: no-repeat at the end of the rule to better understand how it works.
+        <br><br>
+        As ever, thanks to media queries, different declarations can be used for different responsive sce-narios. For example, although a gradient pattern might work well at smaller viewports, it might be better to go with a plain background at larger ones:
+      </p>
+      <code>
+        @media (min-width: 45rem) {
+        <br><br>
+          .carbon-fibre { 
+        <br><br>
+            background: #333;
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+      <p>
+        You can view this example at example_08-05.
+        <br><br>
+        So far, we have looked at many ways of creating background images using just CSS; however, whether that is linear gradients, radial gradients, or repeating gradients, it is still just one background image. What about when you want to deal with more than one background image at the same time?
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

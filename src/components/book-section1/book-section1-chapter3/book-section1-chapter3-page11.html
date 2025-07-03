@@ -1,0 +1,53 @@
+<!DOCTYPE html><!-- page74 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <ul>
+            <li>
+                scan: This can be either progressive or interlace, features largely particular to TVs. For example, a 720p HD TV (the "p" part of 720p indicates "progressive") could be targeted with scan: progressive, while a 1080i HD TV (the "" part of 1080i indicates "interlaced") could be targeted with scan: interlace.
+            </li>
+            <li>
+                grid: This capability indicates whether or not the device is grid orbitmap-based.
+            </li>
+        </ul>
+        <p>
+            All the above features, with the exception of scan and grid, can be prefixed with min or max to create ranges. For example, consider the following code snippet:
+        </p>
+        <code>
+            @import url("tiny.css") screen and (min-width: 200px) and (max-width:
+            360px) ;
+        </code>
+        <p>
+            Here, a minimum (min) and maximum (max) have been applied to width to set a range. The tiny. css file will only be imported for screen devices with a minimum viewport width of 200 pixels and a maximum viewport width of 360 pixels.
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                * Features deprecated in CSS Media Queries Level 5
+                It's worth being aware that the draft specification for Media Queries Level 5, which in turn consumed the Media Queries Level 4 draft, deprecates the use of a few features (https: //www.w3.org/TR/mediaqueries-5/#mf-deprecated), most nota-blydevice-height, device-width, and device-aspect-ratio. Support for those queries will remain in browsers but it's recommended you refrain from writing any new style sheets that use them.
+            </p>
+        </section>
+        <p>
+            If you've read, and at least partially understood, what we have been through so far in this chapter, you should be ready to start using media queries in earnest.
+            <br><br>
+            I'd suggest opening the index. html file and the associated index. css file from the Start folder of this chapter's code. Then try and add some media queries to alter some areas of the page at certain viewport widths. Let's make a couple of changes together and then you can practice some of your own.
+            <br><br>
+            Let's look at the header section of what we have currently (viewport around 1200 px wide):
+        </p>
+
+
+       
+    </div>
+  </div>
+
+</body>
+</html>

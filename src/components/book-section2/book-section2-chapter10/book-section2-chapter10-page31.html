@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- page316 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        And this is the effect in the browser:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 10.12: An image with an SVG filter applied
+        </p>
+      </section>
+      <p>
+        So, it's possible with SVG to create yourself an entirely bespoke filter. Just one more string to SVG's bow!
+      </p>
+      <h2>
+        A note on media queries inside SVGs
+      </h2>
+      <p>
+        All browsers that understand SVG should respect the CSS media queries defined inside. However, when it comes to media queries inside SVGs, there are a few things to remember.
+        <br><br>
+        For example, suppose you insert a media query inside an SVG, like this:
+      </p>
+      <code>
+        &lt;style type="text/css"&gt; &lt;![CDATA[
+      <br><br>
+          #star_Path { 
+      <br><br>
+            stroke: red;
+      <br><br>
+          }
+      <br><br>
+          @media (min-width: 800px) {
+      <br><br>
+            #star_Path {
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

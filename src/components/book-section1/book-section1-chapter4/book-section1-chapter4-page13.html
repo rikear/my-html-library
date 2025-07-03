@@ -1,0 +1,73 @@
+<!DOCTYPE html><!-- page106 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Column reverse
+        </h2>
+        <p>
+            Want them stacked in the opposite direction? Just change to flex-direction: column-reverse;
+            and you 're done.
+        </p>
+        <section>
+            <object>
+                icon jere
+            </object>
+            <p>
+                There is a flex-flow property that is shorthand for setting flex-direction and flex-wrap in one go. For example, flex-flow: row wrap; would set the direction to a row and set the wrapping on. However, at least initially, I find it easier to specify the two settings separately.
+            </p>
+        </section>
+        <h2>
+            Inline-flex
+        </h2>
+        <p>
+            Flexbox has an inline variant: display: inline-flex;. Thanks to its beautiful centering abilities, you can do some wacky things with very little effort:
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Figure 4.6: The inline equivalent of flex is the aptly named "inline-flex"
+            </p>
+        </section>
+        <p>
+            Here's the markup:
+        </p>
+        <code>
+            &lt;p&gt;
+            <br><br>
+                Here is a sentence with an
+            <br><br>
+                &lt;em class="InlineFlex" &gt;inline-flex&lt;/em&gt;.
+            <br><br>
+            &lt;/p>
+        </code>
+        <p>
+            And, using the same basic styles as the previous examples for the fonts, font sizes, and colors,
+            here is the CSS needed:
+        </p>
+        <code>
+            .InlineFlex {
+            <br><br>
+                display: inline-flex; 
+            <br><br>
+                align-items: center;
+            <br><br>
+                height: 120px;
+            <br><br>
+                padding: 0 4px;
+            <br><br>
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

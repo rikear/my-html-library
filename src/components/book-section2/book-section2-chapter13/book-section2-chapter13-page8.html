@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- page375 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The following is a code example of the list attribute in use with an associated datalist, all wrapped in a div:
+      </p>
+      <code>
+        &lt;div&gt;
+      <br><br>    
+          &lt;label for="awardWon"&gt; Award Won &lt;/label&gt;
+      <br><br>    
+          &lt;input id="awardWon" name="awardwon" type="text" list="awards" /&gt;
+      <br><br>    
+          &lt;datalist id="awards"&gt;
+      <br><br>    
+            &lt; select&gt;
+      <br><br>    
+              &lt;option value="Best Picture"&gt; &lt;/option&gt;
+      <br><br>    
+              &lt;option value="Best Director"&gt; &lt;/option&gt;
+      <br><br>    
+              &lt;option value="Best Adapted Screenplay"&gt; &lt;/option&gt;
+      <br><br>    
+              &lt;option value="Best Original Screenplay"&gt; &lt;/option&gt;
+      <br><br>    
+            &lt;/select&gt;
+      <br><br>    
+          &lt;/datalist&gt;
+      <br><br>    
+        &lt;/div&gt;
+      </code>
+      <p>
+        datalist contains the list of possible values for the input. To connect the datalist to the input, you have to set the value of the list attribute on the input to the id of the datalist.
+      <br><br>  
+        Inour example, we have added an id of "awards" to the datalist element and then set the value of the list attribute on the input to that.
+      <br><br>  
+        Although wrapping the options with a select element isn't strictly necessary, it helps when applying scripts to add comparable functionality for browsers that haven't implemented the feature.
+      <br><br>  
+        With our list and datalist wired up, the input field still appears initially to be just a normal text input field. However, when typing in the input, a selection box appears below it with matching results from the datalist. In the following screenshot, we can see the list in action (Firefox).
+      <br><br>  
+        In this instance, as "B" is present in all options within the datalist, all the values are shown for
+        the user to select from:
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

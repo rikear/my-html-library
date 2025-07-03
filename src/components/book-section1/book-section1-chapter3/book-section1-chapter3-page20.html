@@ -1,0 +1,58 @@
+<!DOCTYPE html><!-- page83 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>
+            Therefore, consider that just because a device has the capability of a fine pointer, it doesn't mean that will be the primary pointing device. Think of tablets where the primary pointer is a finger (coarse), but that has an attached stylus (a fine pointing device).
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                The safest bet is always to assume users are using touch-based input and size user interface elements accordingly. That way, even if they are using a mouse they will have no difficulty using the interface with ease. If, however, you assume mouse input and don't provide affordance for coarse pointers, it might make for a difficult user experience.
+            </p>
+        </section>
+        <p>
+            Read the draft of this feature here: https://www.w3.org/TR/mediaqueries-5/#pointer.
+        </p>
+        <h2>The hover media feature</h2>
+        <p>
+            As you might imagine, the hover media feature tests the device's ability to hover over elements on the screen. If the user has multiple inputs at their disposal (touch and mouse, for example, characteristics of the primary input are used. Here are the possible values and example code:
+            <br><br>
+            For users that have no ability to hover, we can target styles at them with a value of none:
+        </p>
+        <code>
+            @media (hover: none) {
+            * styles for when the user cannot hover */
+            }
+        </code>
+        <p>
+            Or, as before, we might choose to make the non-hover scenario the default and then only add hover styles for devices that take advantage of them:
+        </p>
+        <code>
+            @media (hover) {
+                /* styles for when user can hover */
+            }
+        </code>
+        <p>
+            Be aware that there are also any-pointer or any-hover media features. They are like the above hover and pointer but test the capabilities of any of the possible input devices.
+            <br><br>
+            That way, if you want to apply styles if any input device is capable of hover, regardless of whether that input device is the primary one, you can:
+        </p>
+        <code>
+            @media (any-hover: hover) {
+                * styles if any input device is capable of hover */
+            }
+        </code>
+    </div>
+
+  </div>
+</body>
+</html>

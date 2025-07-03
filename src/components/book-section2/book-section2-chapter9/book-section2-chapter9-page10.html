@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- page283 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Secondly, the sreset attribute here works exactly the same as in the previous example.
+        <br><br>
+        Thirdly, the img tag provides your fallback image and also the image that will be displayed if a browser understands picture but none of the media definitions match.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Just to be crystal clear, do not omit the img tag from within a picture element or things won't end well!
+        </p>
+      </section>
+      <p>
+        The key difference with picture is that we have a source tag. Here, we can use media query-style expressions to explicitly tell the browser which asset to use in a matching situation. Our first one in the preceding example is telling the browser, "Hey you, if the screen is at least 480 px wide, load in the cake-table. jpg image instead." As long as the conditions match, the browser will dutifully obey.
+      </p>
+      <h2>
+        A practical note on providing alternate image formats and sizes
+      </h2>
+      <p>
+        Writing a picture element every time you want to include alternate versions of an image on a page is an awful lot of boilerplate code. As such, many content management systems and static site generator tools will add responsive image code for you behind the scenes. For example, when you upload an image into WordPress for use in a blog post, it automatically makes alternate sizes and serves those up as options in a srcset attribute inside an img tag:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 9.3: The kind of markup WordPress adds when | insert an image into my blog
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page410 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The great thing with cascade layers is that you know that what is left outside any layers will be unaffected. So perhaps another helpful way to think of cascade layers 1s as a way to de-emphasize styles by grouping rules into tiers.
+      </p>
+      <h2>
+        Nesting layers inside other layers
+      </h2>
+      <p>
+        If you find yourself in a suitably complicated scenario, you can even nest layers inside other layers. Let's suppose we have layouts split into areas like header, sidebars, content, and modals. You might decide these concerns would be better organized under a layout layer. We could set that up like this:
+      </p>
+      <code>
+        @layer framework;
+      <br><br>    
+        @layer layout {
+      <br><br>    
+          @layer header, 
+      <br><br>    
+          sidebars, 
+      <br><br>    
+          content, 
+      <br><br>    
+          modals;
+      <br><br>    
+      }
+    <br><br>    
+      @layer components;
+      </code>
+      <p>
+        And then we use a dot notation to add styles to the nested layers like this:
+      </p>
+      <code>
+        @layer layout.header {
+      <br><br>      
+          header {
+      <br><br>      
+            display: flex;
+      <br><br>      
+          }
+      <br><br>      
+        }
+      </code>
+      <p>
+        We give the outer layer name, then a period character, and then the nested layer name.
+      <br><br>
+        Or if we wanted to @import into a nested layer, it would look like this:
+      </p>
+      <code>
+        @import url ("header.css") layer (layout. header);
+      </code>
+      <p>
+        The top-to-bottom prioritizing of layers is applied to the nested layers too, so in this instance, layout modals would have a higher priority than layout. sidebars, for example. It isn't any more "specific," though, just because it is nested. So something in layout modals wouldn't have greater priority than something in components, for example.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

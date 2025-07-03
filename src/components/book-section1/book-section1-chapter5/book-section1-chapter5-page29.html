@@ -1,0 +1,67 @@
+<!DOCTYPE html><!-- page158 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            With this kind of value, we are getting our grid to lay out in rows when needed, rather than in columns, as in the previous option. Here are some examples.
+            <br><br>
+            How about a grid that creates as many 100 px rows as needed and 5 columns that occupy 1fr each?
+        </p>
+        <code>
+            grid: auto-flow 100px / repeat (5, 1fr);
+        </code>
+        <p>
+            That computes to this:
+        </p>
+        <code>
+            grid-auto-columns: auto;
+            <br><br>
+            grid-auto-flow: row; 
+            <br><br>
+            grid-auto-rows: 100px;
+            <br><br>
+            grid-template-areas: none;
+            <br><br>
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+            <br><br>
+            grid-template-rows: none;
+        </code>
+        <p>
+            Or, what about a grid that creates a single column with as many 100 px rows as needed for the content?
+        </p>
+        <code>
+            grid: auto-flow 100px / auto;
+        </code>
+        <p>
+            That computes to this:
+        </p>
+        <code>
+            grid-auto-columns: auto;
+            <br><br>
+            grid-auto-flow: row; 
+            <br><br>
+            grid-auto-rows: 100px;
+            <br><br>
+            grid-template-areas: none; 
+            <br><br>
+            grid-template-columns: auto;
+            <br><br>
+            grid-template-rows: none;
+        </code>
+        <p>
+            You can see that the grid shorthand is very powerful but, arguably, not particularly intuitive. For some people, the shorthand is preferable. For some, it is maddening. There is no right or wrong - just what is right or wrong for you.
+            <br><br>
+            It won't be long into working with Grid before you hit a seemingly ridiculous shortcoming. LEyu are dealing with nested elements and wondering why on earth you are not able to make them align with your grid, welcome to the long list of other developers who have thought that very thing. So, what can we do about it?
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

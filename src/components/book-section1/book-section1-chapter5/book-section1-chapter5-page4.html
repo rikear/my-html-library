@@ -1,0 +1,60 @@
+<!DOCTYPE html><!-- page133 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            It will look like this in the browser and you can find it in the chapter code as example _05-01:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.2: Our first grid; as simple as possible
+            </p>
+        </section>
+        <p>
+            Here is the markup:
+        </p>
+        <code>
+            &lt; div class="my-first-grid"&gt;
+            <br><br>
+                &lt; div class="grid-item-1"&gt; 1 &lt;/div&gt;
+            <br><br>
+                &lt; div class="grid-item-2"&gt; 2 &lt;/ div&gt;
+            <br><br>
+                &lt; div class="grid-item-3" &gt; 3 &lt;/div&gt;
+            <br><br>
+                &lt; div class="grid-item-4"&gt; 4 &lt;/div&gt;
+            &lt; /div>
+        </code>
+        <p>
+            The first thing I want you to consider is that with Grid, the markup pattern is a containing ele-ment, which is the grid, and the elements of the grid are the direct children. Write the markup for grid child elements in the order that makes the most sense for the content; Grid can place them visually wherever you need them. Here is the related CSS:
+        </p>
+        <code>
+            my-first-grid {
+            <br><br>
+                display: grid;
+            <br><br> 
+                grid-gap: 10px;
+            <br><br>
+                grid-template-rows: 200px 200px; 
+            <br><br>
+                grid-template-columns: 200px 200px; 
+            <br><br>
+                background-color: #e4e4e4;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

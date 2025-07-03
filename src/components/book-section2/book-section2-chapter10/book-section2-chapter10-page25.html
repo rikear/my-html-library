@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- page310 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Animating an SVG with CSS
+      </h2>
+      <p>
+        Let's consider a quick example of adding a CSS animation inside an SVG (remember, these styles could just as easily be in an external style sheet too). Let's take the star example we have looked at throughout this chapter and make it spin. You can look at the finished example in example_10-07:
+      </p>
+      <code>
+        &lt;div class="wrapper"&gt;
+      <br><br>
+          &lt;svg
+      <br><br>
+            width="198" height="188"
+      <br><br>
+            viewBox="0 0 220 200"
+      <br><br>
+            xmlns= "http://www.w3.org/2000/svg"
+      <br><br>
+            xmlns: xlink= "http://www.w3.org/1999/xlink"
+      <br><br>
+          &gt;
+      <br><br>
+        &lt;title&gt; Star 1 &lt;/title&gt;
+      <br><br>
+        &lt;defs&gt;
+      <br><br>
+          &lt;style type="text/css"&gt;
+      <br><br>
+          &lt;![CDATA[
+      <br><br>
+          @keyframes spin {
+      <br><br>
+            0% {
+      <br><br>        
+              transform: rotate(0deg);
+      <br><br>        
+            }
+      <br><br>        
+            100% {
+      <br><br>        
+              transform: rotate 360deg);
+      <br><br>        
+            }
+      <br><br>        
+          }
+      <br><br>        
+          .star_Wrapper {
+      <br><br>
+            animation: spin 2s 15; 
+      <br><br>  
+            transform-origin: 50% 50%;
+      <br><br>  
+          }
+      <br><br>  
+          .wrapper {
+      <br><br>
+            padding: 2rem;
+      <br><br>  
+            margin: 2rem;
+      <br><br>  
+          }
+      <br><br>  
+          ]]&gt;
+      <br><br>    
+          &lt;/ style&gt;
+      <br><br>
+        &lt;g id="shape" &gt;
+      <br><br>    
+          &lt;path 
+      <br><br>    
+          fill="#14805e" 
+      <br><br>    
+          d="M50 50h50v50H50z" 
+      <br><br>    
+          /&gt;
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

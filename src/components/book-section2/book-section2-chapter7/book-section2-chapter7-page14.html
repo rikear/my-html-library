@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page227 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          For more mathematical clarity on Lab and LCH, head over to https: //www.w3.org/ TR/css-color-4/#lab-colors.
+        </p>
+      </section>
+      <h2>
+        OKLab and OKLCH
+      </h2>
+      <p>
+        Smart color people recognized shortcomings with Lab and LCH. In late 2020, Bjorn Ottosson introduced us to OKLab, humorlessly titled as such because it is an "OK Lab color space"! You can read all about the background and rationale in this blog post: https://bottosson. github. io/posts/oklab/.
+        <br><br>
+        Despite its relative newness, it has already made its way into the CSS Color Module Level 4 specification and gets its own polar form oklch() and oklab functional notations: https://www. w3.org/TR/css-color-4/#ok-lab.
+        <br><br>
+        In CSS usage, it seems that most people will find it useful for "better" and smoother gradients.
+        <br><br>
+        The specification notes that:
+      </p>
+      <p>
+        It was produced by numerical optimisation of a large dataset of visually similar colors, and has improved hue linearity, hue uniformity, and chroma uniformity compared to CIE LCH.
+      </p>
+      <p>
+        From my brief experimentation with LCH versus OKLab gradients, I couldn't see an awful lot of difference. Swatches 6 and 7 in the example file show two gradients, the first done with lch() and the next with oklab (), both using comparable colors from the specification examples. To my eyes, on my screen, I couldn't really see much difference. Your mileage may vary!
+      </p>
+      <p>
+        Fallbacks for older browsers
+      </p>
+      <p>
+        There is a nice, simple way of providing a fallback for older browsers; simply write the standard format first, and then the newer syntax straight after.
+        <br><br>
+        So if we wanted that "super green" P3 green but know that we have a nice P3 version for browsers and hardware that don't support P3 (note I'm also using the older syntax with commas for the sake of even older browsers):
+      </p>
+      <code>
+        background-color: rgb(0, 255, 0); 
+        <br><br>
+        background-color: color (display-p3 0 1 0);
+        <br><br>
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

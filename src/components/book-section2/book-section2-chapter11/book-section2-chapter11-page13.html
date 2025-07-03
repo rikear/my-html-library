@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page334 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Rotate
+      </h2>
+      <p>
+        The rotate transform allows you to rotate an element. Here's the syntax:
+      </p>
+      <code>
+        .rotate: hover {
+      <br><br>    
+          transform: rotate ( 30deg);
+      <br><br>    
+        }
+      </code>
+      <p>
+        In the browser, here's what happens:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.11: Rotating elements is straightforward with a transform
+        </p>
+      </section>
+      <p>
+        The value in parentheses should always be an angle. The angle can be expressed in degrees, gra-dians, radians, or turns. Personally, I default to using degrees (for example, 90deg), but all units are equally valid. While positive angle values always apply clockwise, using negative values will rotate the element counter-clockwise.
+        <br><br>
+        Pass an angle greater than a full revolution and the element will keep turning until it has turned around to the required degree. Therefore, you can also go crazy and make elements spin by specifying a value like the following:
+      </p>
+      <code>
+        transform: rotate(3600deg);
+      </code>
+      <p>
+        This will rotate the element 10 times in a complete circle. Practical uses for this particular value are few and far between but, you know, if you ever find yourself designing websites for a windmill company, it may come in handy.
+      </p>
+      <h2>
+        Skew
+      </h2>
+      <p>
+        If you've spent any time working in Photoshop, you'll have a good idea of what skew does. It allows an element to be skewed on either or both of its axes. Here's the code for our example:
+      </p>
+      <code>
+        .skew: hover { 
+      <br><br>    
+          transform: skew(40deg, 12deg) ;
+      <br><br>    
+        }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

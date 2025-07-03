@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page309 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+          xmlns= "http://www.w3.org/2000/svg"
+        <br><br>  
+          xmlns: xLink="http://www.w3.org/1999/xlink"
+        <br><br>  
+        &gt; &lt;/svg&gt;
+      </code>
+      <p>
+        you don't have to use an external style shet; you can use inline styles directly in the SVG itself if you would rather.
+      </p>
+      <h2>
+        Styling an SVG with internal styles
+      </h2>
+      <p>
+        You can place styles for an SVG within the SVG itself. They should be placed within the defs element. As SVG is XML-based, it's safest to include the Character Data marker (CDATA). The Character Data marker simply tells the browser that the information within the Character Data delimited section could ordinarily be interpreted as XML markup, but should not be. 
+        <br><br>
+        The syntax is like this:
+      </p> 
+      <code>
+        &lt;defs&gt;
+        <br><br>
+          &lt;style type="text/css"&gt;
+        <br><br>
+            &lt;! [CDATA[
+        <br><br>
+              #star_Path {
+        <br><br>
+                stroke: red;
+        <br><br>
+              }
+        <br><br>
+            1]] &gt;
+        <br><br>
+          &lt;/style&gt;
+        <br><br>
+        &lt;/ defs&gt;
+      </code>
+      <h2>
+        SVG properties and values within CSS
+      </h2>
+      <p>
+        Notice the stroke property in the prior code block? This isn't a CSS property; it's an SVG property. There are quite a few specific SVG properties you can use in styles (regardless of whether they are declared inline or via an external style sheet). For example, with an SVG, as you have seen in an earlier example, you don't specify a background-color; instead, you specify a fill. You don't specify a border; you specify a stroke-width.
+        <br><br>
+        For the full list of SVG-specific properties, take a look at the specification here: https:// www. w3.org/TR/SVG/styling .html.
+        <br><br>
+        With either inline or external CSS, it's possible to do all the "normal" CSS things you would expect: change an element's appearance, animate and transform elements, and so on.
+      </p>
+
+    </div>
+  </div>
+  
+</body>
+</html>

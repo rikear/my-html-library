@@ -1,0 +1,54 @@
+<!-- page54 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>However, if you add that to a page as is, even if adding that earlier CSS rule, if the viewport is less than 960 px wide, things will start to get clipped.
+        <br><br>
+        Historically, the easiest way to solve this problem is with a little CSS trick pioneered by Gallic CSS maestro Thierry Koblentz, here, https://alistapart.com/article/creating-intrinsic-ratios-for-video, essentially creating a box of the correct aspect ratio for the video it contains.
+        I won't spoil the magician's own explanation; go take a read.
+        <br><br>
+        If you're feeling lazy, you don't even need to work out the aspect ratio and plug it in yourself; there's an online service that can do it for you. Just head to https://embedresponsively.com/ and paste your i frame URL in. It will spit you out a simple chunk of code you can paste into your page. For example, our Midnight Run trailer results in this (note the padding-bottom value to define the aspect ratio):
+        </p>
+        <code>
+            &lt;style&gt;
+            <br><br>
+            .embed-container { position: relative; padding-bottom: 56.25%;
+            <br><br>
+            height: 0;
+            <br><br>
+            overflow: hidden; max-width: 100%;
+            <br><br>
+            .embed-container iframe,
+            <br><br>
+            .embed-container object,
+            <br><br>
+            .embed-container embed { position: absolute;
+            <br><br>
+            top: 0; left: 0;
+            <br><br>
+            width: 100%; height: 100%;
+            <br><br>
+            &lt;/style&gt;
+            <br><br>
+            &lt;div class="embed-container"&gt;
+            <br><br>
+            &lt;iframe
+            <br><br>
+            src="https: //www.youtube.com/embed/B1_N28DA3gY"
+            <br><br>
+            frameborder="0"
+        </code>
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

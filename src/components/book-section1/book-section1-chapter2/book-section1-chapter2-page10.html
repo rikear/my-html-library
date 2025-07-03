@@ -1,0 +1,66 @@
+<!-- page37 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>The specification for the footer element can be found here: https://html.spec.whatwg.org/multipage/sections.html#the-footer-element.</p>
+        </section>
+        <p>Now we have looked at these sectioning elements and the kind of content we should be marking up with each, it is worth looking at the well-intentioned, but largely ignored, outline algorithm.</p>
+        <h2>The HTML5 outline algorithm</h2>
+        <p>Ordinarily, for an HTML document, headings would begin with an h1 for the main page title and then progress to using lower hierarchy title tags as needed for sub-headings and the like.
+        <br><br>
+        However, HTMLS introduced the ability for each sectioning container to have its own self-con-tained outline. That means it is not necessary to think about which level of heading tag you're at in terms of the entire document. You could just concentrate on the sectioning container you were currently working in. To illustrate why this might be preferable, within a blog, post titles could be set to use hi tags, while the title of the blog itself could also have an h1 tag. For example, consider the following structure:
+        </p>
+        <code>
+        &lt;h1&gt;Ben's site&lt;/h1&gt;
+        <br><br>
+        &lt;section&gt;
+        <br><br>
+        &lt;h1&gt;Ben's blog&lt;/h1&gt;
+        <br><br>
+        &lt;p&gt;All about what I do&lt;/p&gt;
+        <br><br>
+        &lt;/ section&gt;
+        <br><br>
+        &lt;article&gt;
+        <br><br>
+        &lt;header&gt;
+        <br><br>
+        &lt;h1&gt;A post about something&lt;/h1&gt;
+        <br><br>
+        &lt;p&gt;Trust me this is a great read&lt;/p&gt;
+        <br><br>
+        &lt;p&gt;No, not really&lt;/p&gt; &lt;p&gt;See. Told you. &lt;/p&gt;
+        <br><br>
+        &lt;/header&gt;
+        <br><br>
+        &lt;/article &gt;
+        </code>
+        <p>Despite having multiple h1 headings, the outline still appears as follows:</p>
+        <ol>
+            <li>Ben's site</li>
+            <ol>
+                <li>
+                    Ben's blog
+                </li>
+                <li>
+                    A post about something
+                </li>
+            </ol>
+        </ol>
+    </div>
+  </div>
+
+</body>
+</html>

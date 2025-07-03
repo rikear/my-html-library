@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <h2>Conventions used</h2>
+        <p>There are a number of text conventions used throughout this book.
+        <br>
+        <br>
+        CodeInText: Indicates code words in text, database table names, folder names, filenames, file extensions, pathnames, dummy URLs, user input, and Twitter handles. For example: "We can fix that prior problem easily by adding this snippet in the &lt;head&gt;."
+        <br>
+        <br>
+        A block of code is set as follows:
+        </p>
+        <code>
+            img { <br>
+             &nbsp;&nbsp;&nbsp;&nbsp;max-width: 100%;<br>
+            } <br>
+        </code>
+        <p>When we wish to draw your attention to a particular part of a code block, the relevant lines or items are set in bold:
+
+        </p>
+        <code>
+            img {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;max-width: 100%; display: inline-flex;<br>
+            }
+        </code>
+        <p>Bold: Indicates a new term, an important word, or words that you see on the screen, for example,<br> 
+            in menus or dialog boxes. For example: "When writing HTML, you will typically be marking up <br>
+            or writing content inside a series of tags or elements."
+        </p>
+        <section>
+            <object>
+
+            </object>
+            <p>
+                Warnings or important notes appear like this.
+            </p>
+        </section>
+        <section>
+            <object>
+
+            </object>
+            <p>
+                Tips and tricks appear like this.
+            </p>
+        </section>
+
+       
+    </div>
+  </div>
+</body>
+</html>

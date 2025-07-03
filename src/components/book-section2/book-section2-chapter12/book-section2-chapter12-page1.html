@@ -1,0 +1,74 @@
+<!DOCTYPE html> <!-- page352 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <ul>
+        <li>
+          Setting a custom property with CSS and JavaScript
+        </li>
+        <li>
+          Using a custom property with CSS and JavaScript
+        </li>
+        <li>
+          Understanding CSS functions
+        </li>
+        <li>
+          Reducing the need for media queries
+        </li>
+        <li>
+          calc(), clamp (), and min()
+        </li>
+        <li>
+          Examples of using custom properties with CSS functions
+        </li>
+      </ul>
+      <h2>
+        Working with custom properties
+      </h2>
+      <p>
+        Let's start with a simple use case, storing a font-family name that we can then reference more simply later in the style sheet. This is what a custom property definition looks like:
+      </p>
+      <code>
+        :root {
+      <br><br>    
+          --MainFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      <br><br>    
+        }
+      </code>
+      <p>
+        Here, we are using the : root pseudo-class to store the custom property in the document root. You don't have to store them in the root, but storing them here means that any descendent element has access to them.
+      <br><br>
+        But custom properties respect the cascade. As we will see shortly, being able to reassign custom properties in different scopes is one of their superpowers.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          The : root pseudo-class always references the topmost parent element in a document structure. In an HTML document, this would always be the HTML tag, but for an SVG document (we looked at SVG in Chapter 10, SVG), it would reference a different element.
+        </p>
+      </section>
+      <p>
+        When we set a custom property, the syntax is that it should always begin with two dashes, then the custom name, like this: --MainFont. After the end of the property, just like a normal CSS property, we terminate the property with a colon. Then we just assign whatever value we want to it in the normal manner.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          It is case-sensitive, so - -MainFont would be a different custom property than --mainFont.
+        </p>
+      </section>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

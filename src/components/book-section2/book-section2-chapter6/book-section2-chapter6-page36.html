@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- page205 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        A "normal" font contains the information and glyphs for one variation of a typeface; the regular version of Roboto, for example. By comparison, a variable font, in a single file, would contain everything needed for every variation of Roboto. Bold, Italic, Thin, Black, Medium, and more besides!
+        <br><br>
+        This new devilry is not without consequence. A variable version of a font is usually considerably larger in file size terms than a "normal" version. However, it can still make sense when you are making heavy use of a single typeface. It also makes an almost limitless variation of a font possible, effectively making a custom version of a font possible.
+        <br><br>
+        Caveats aside, let's look at what we can do with a variable font.
+      </p>
+      <h2>
+        font-face changes
+      </h2>
+      <p>
+        I'm working with the Inter font we used before, but instead using the variable version. First, let's consider how we tell the browser we are working with a variable font in the first place. It's the @font-face syntax again, but with a few changes:
+      </p>
+      <code>
+        @font-face {
+        <br><br>
+          font-family: "Inter-V";
+        <br><br>
+          src: url"fonts/inter.var.woff2") format ("woff2-variations");
+        <br><br>
+          font-weight: 100 900; font-style: oblique Odeg 10deg;
+        <br><br>
+          font-display: fallback;
+        <br><br>
+        }
+      </code>
+      <p>
+        The first thing to note is the format. We are setting this to woff2-variations to tell the browser this is a font file that makes use of variations.
+        <br><br>
+        The next thing to keep in mind is that we are using a range for font-weight. The two-word value syntax we are using here is only understood by browsers that understand variable fonts. It is a way of telling the browser the range of weights this font can use. While font-weight has a range limit of 0-999, other properties may have a different range. Others still simply accept a binary value of 1 or 0.
+        <br><br>
+        Another thing to remember is that we have font-style, which is also being provided with a mul-tiple-value syntax. The oblique keyword tells the browser the next values relate to how oblique the font can be, and the two values after that define the range. Be aware that although the range here is positive, you can pass in negative values. We will see that in use momentarily.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

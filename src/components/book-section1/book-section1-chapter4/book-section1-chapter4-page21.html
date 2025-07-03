@@ -1,0 +1,60 @@
+<!DOCTYPE html><!-- page114 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            And here is what we get in the browser:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 4.14: Our first foray into using the flex shorthand
+            </p>
+        </section>
+        <p>
+            Those three items have gobbled up all the space. So what's going on?
+            <br><br>
+            The flex property is actually a shorthand way of specifying three separate properties: flex-grow, flex-shrink, and flex-basis. The specification covers these individual properties in more detail here: https://www.w3.org/TR/css-flexbox-1/#flex-components. However, the specification recommends that authors use the flex shorthand property, so that's what we will be learning here, capiche?
+        </p>
+       <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 4.15: Understanding the three possible values of the flex property
+            </p>
+       </section>
+       <p>
+        For items within a flex container, if a flex property is present, it is used to size the item rather than awidth or height value (if also present). Even if the width or height value is specified after the flex property, it will still have no effect.
+       </p>
+       <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                However, it is important to note that if the item you are adding the flex property to is not a flex item, the flex property will have no effect.
+            </p>
+       </section>
+       <p>
+        Now, let's look at what each of these flex properties actually does:
+       </p>
+       <ul>
+            <li>
+                Flex-grow is the first value you can pass to flex. It is the amount, in relation to the other
+                flex items, that the flex item can grow when free space is available.
+            </li>
+       </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

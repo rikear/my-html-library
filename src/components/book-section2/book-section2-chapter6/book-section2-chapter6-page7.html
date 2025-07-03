@@ -1,0 +1,79 @@
+<!DOCTYPE html><!-- page176 -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+                Running
+            <br><br>
+            &lt; /li &gt;
+            <br><br>
+            &lt; li
+            <br><br>
+                data-todo-type="exercise" 
+            <br><br>
+                data-activity-name="swimming" 
+            <br><br>
+                data-location="indoor"
+            <br><br>
+             &gt;
+             <br><br>
+                Swimming
+            <br><br>
+            &lt; /li &gt;
+            <br><br>
+            &lt; li
+            <br><br>
+                data-todo-type="exercise"
+            <br><br> 
+                data-activity-name="cycling" 
+            <br><br>
+                data-location="outdoor"
+            <br><br>
+            &gt;
+            <br><br>
+            Cycling
+            <br><br>
+            &lt; /li &gt;
+            <br><br>
+            &lt; li
+            <br><br>
+                data-todo-type="exercise" 
+            <br><br>
+                data-activity-name="swimming" 
+            <br><br>
+                data-location="outdoor"
+            <br><br>
+             &gt;
+             <br><br>
+                Swimming
+            <br><br>
+            &lt; /li &gt;
+        </code>
+        <p>
+            Let's suppose I only wanted to select "indoor swimming." I can't use just data-location="indoor" as that would get the first element too. I can't use data-activity-name="swimming" as that would get me the second and the fourth, but I can do this:
+        </p>
+        <code>
+            [data-activity-name="swimming"] [data-location="indoor" ] {
+            <br><br>
+                /*styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            This selects elements that have "swimming" as the activity name, as long as they also have " indoor" as the location.
+        </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

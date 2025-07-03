@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- page204 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        All the font-display setting does is allow us some control over what we would like to see happen.
+        <br><br>
+        The possible values are:
+      </p>
+      <ul>
+        <li>
+          auto: Whatever the browser determines is most appropriate.
+        </li>
+        <li>
+          block: Get a white screen for up to 3 seconds (but the delay is ultimately at the browser's discretion) and then the actual font can replace any system displayed font at any future point.
+        </li>
+        <li>
+          swap: There is a very short blocking period (100 ms is the recommended amount) to let the web font load; otherwise, a system font shows and the web font can be swapped in whenever it is available.
+        </li>
+        <li>
+          fallback: This option prevents a web font from replacing a system font if a set amount of time has passed (3 seconds is the recommendation). This option blocks for around 100 ms initially and allows a swap for up to 3 seconds, but after that, if the web font subsequently arrives, it doesn't get applied.
+        </li>
+        <li>
+          optional: Here, the browser allows a very short duration for the web font to load (100 ms) but no swap period. The result of this is that the browser has the option of canceling the font download if it hasn't arrived, or if it has, using it for subsequent page loads.
+        </li>     
+      </ul>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the specification on this property here: https: // www.w3.org/TR/ css- fonts-4/#font-display-desc.
+        </p>
+      </section>
+      <p>
+        There are plenty of other font-related properties and values specified in the CSS Font Module Level 4 specification, but font-display is currently the widest implemented and has the most direct relevance to responsive web designs and performance.
+        <br><br>
+        So far, we have looked at how to get font files into our project and even considered how best to deal with them from a performance point of view.
+        <br><br>
+        However, the most recent development in web fonts, and probably the one that has most developers excited, is variable fonts. "What new witchery is this?" I hear you cry. Let's find out.
+      </p>
+      <h2>
+        Variable fonts
+      </h2>
+      <p>
+        As I write this in 2022, variable fonts have gained decent traction. There is a W3C specification and they are supported in the latest browsers. So, what even is a variable font?
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

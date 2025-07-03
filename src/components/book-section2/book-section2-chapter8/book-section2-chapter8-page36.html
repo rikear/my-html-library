@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- page269 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here is our relevant HTML:
+      </p>
+      <code>
+        &lt; img
+        <br><br>
+          src="mars. jpg"
+        <br><br>
+          alt="An image of Mars from space" 
+        <br><br>
+          class="mask-image-example"
+        <br><br>
+        / &gt;
+      </code>
+      <p>
+        And here is our CSS:
+      </p>
+      <code>
+        .mask-image-example {
+        <br><br>
+          display: block; 
+        <br><br>
+          height: 1024px; 
+        <br><br>
+          width: 1024px;
+        <br><br>
+          margin: 0 auto; 
+        <br><br>
+          mask-image: url ( 'mars-text-mask.png');
+        <br><br>
+        }
+      </code>
+      <p>
+        The only relevant part of the mask is the mask- image property, which tells the browser what we want to use as a mask on this element.
+        <br><br>
+        Now, the cynical among you might suggest the same effect could have just been achieved in a graphics package. I'd say you were right, but then raise you this:
+      </p>
+      <code>
+        .mask-image-example { 
+        <br><br>
+          display: block; 
+        <br><br>
+          height: 1024px; 
+        <br><br>
+          width: 1024px;
+        <br><br>
+          margin: 0 auto; 
+        <br><br>
+          mask-image: url ( 'mars-text-mask.png'); 
+        <br><br>
+          animation: moveMask 6s infinite alternate;
+        <br><br>
+        }
+        <br><br>
+        @keyframes moveMask {
+        <br><br>
+          0% {
+        <br><br>
+            object-position: Opx px;
+        <br><br>
+          }
+        <br><br>
+          100% {
+        <br><br>
+          object-position: 100px 100px;
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

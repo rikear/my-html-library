@@ -1,0 +1,42 @@
+<!DOCTYPE html><!-- page67 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>Let's break the above meta tag down and understand what's going on. The name="viewport" attribute tells the browser this tag is dealing with the viewport. The content="initial-scale=2.0 section is then saying "scale the content to twice the size" (where 0.5 would be half the size, 3.0 would be three times the size, and so on) whilst the width=device-width part tells the browser that the width of the page should be equal to device-width. The meta tag can also be used to control the amount a user can zoom in and out of the page. This example allows users to go as large as three times the device width and as small as half the device width:</p>
+        <code>
+            &lt;meta
+            name="viewport"
+            content="width=device-width, maximum-scale=3, minimum-scale=0.5"
+            /&gt;
+        </code>
+        <p>You could also disable users from zooming at all:</p>
+        <code>
+            &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no" /&gt;
+        </code>
+        <p>The user-scalable=no being the relevant part.
+        <br><br>
+        However, with zooming being an important accessibility requirement for users with reduced visual acuity, it's rare that it would be appropriate to prevent it. In addition, many browsers disable the ability to prevent zooming for that very reason.
+        <br><br>
+        Right, we'll change the scale to 1.0, which means that the mobile browser will render the page at 100 percent of its viewport. Setting it to the device's width means that our page should render at 100 percent of the width of all supported mobile browsers. For the majority of responsive web design cases, this meta tag would be appropriate:</p>
+        <code>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+        </code>
+        <p>
+            That should be all you need to know about viewport met a tags from a responsive design perspec-tive. In short, ensure you have one added or things are unlikely to look and behave as you might expect! To be certain everything is in order, ensure you test at some point on an actual device.
+            <br><br>
+            With the meta tag covered, we can now get to the real focus of the chapter: media queries them-selves.
+        </p>
+
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

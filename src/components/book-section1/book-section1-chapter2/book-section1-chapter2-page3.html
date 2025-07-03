@@ -1,0 +1,39 @@
+<!-- page30 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div>
+    <div>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>Specifying alternate languages
+            <br><br>
+            According to the specifications (https: //html.spec.whatwg.org/multipage/ dom.html#the-lang-and-xml: lang-attributes), the lang attribute specifies the primary language for the element's contents and for any of the element's attributes that contain text. You can imagine how useful this will be to assistive technology such as screen readers. If you're not writing pages in English, you'd best specify the correct language code. For example, for Japanese, the HTML tag would be:
+            <br><br>
+            <code>&lt;html lang="ja"&gt;</code>
+            <br><br>
+            For a full list of languages, take a look at https://www.iana.org/assignments/ language-subtag-registry/language-subtag-registry.
+            </p>
+        </section>
+        <h2>Character encoding</h2>
+        <p>Finally, we specify the character encoding which, in simple terms, tells the browser how to parse the information contained within. As the met a tag is a void element, it doesn't require a closing tag:</p>
+        <code>&lt;meta charset="utf-8" /&gt;</code>
+        <p>Unless you have a specific reason not to, the value for the charset should always be utf-8.</p>
+        <h2>The forgiving nature of HTML5 markup</h2>
+        <p>If you're conscientious about how you write HTML markup, you'll typically use lowercase for the most part, wrap attribute values in straight quotation marks (not curly ones!), and declare a type for scripts and style sheets you link to. For example, perhaps you link to a style sheet like this:</p>
+        <code>&lt;link href="CSS/main.css" rel="stylesheet" type="text/css"/&gt;</code>
+        <p>The fact is that HTML5 doesn't require such precision; it's just as happy to see this:</p>
+        <code>&lt;link href=CSS/main.css rel=stylesheet&gt;</code>
+        <p>Did you notice that? There's no end forward slash at the end of the tag, there are no quotation marks around the attribute values, and there is no type declaration. However, easy-going HTMLS doesn't care. The second example is just as valid as the first.</p>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html><!-- page147 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            We set the grid up with this rule. Note the words in square brackets:
+        </p>
+            <code>
+                .my-first-grid {
+                <br><br>
+                    display: inline-grid; 
+                <br><br>
+                    grid-gap: 10px;
+                <br><br>
+                    grid-template-columns: [left-start] 200px [left-end center-start] 200px [center-end right-start] 200px [right-end];
+                <br><br>
+                    grid-template-rows: 200px 200px 200px;
+                <br><br> 
+                    background-color: #e4e4e4;
+                <br><br>
+                }
+            </code>
+            <p>
+                What we are doing inside the square brackets is giving a name to the grid line. In this instance, the first column grid line we have named left-start, and the one after the first column we have named left-end. Notice that, in the center grid line, we have assigned two names: left-end and center-start. We can do this by space-separating the names. In this situation, it makes sense because that grid line is both the end of the left column and the beginning of the center one.
+                <br><br>
+                Let's amend our grid-template-row and add some named grid lines there too:
+            </p>
+            <code>
+                grid-template-rows: [top-start] 200px [top-end middle-start] 200px [middle-end bottom-start] 200px [bottom-end];
+            </code>
+            <p>
+                Her's an example of how we can use these names to position grid items instead of numerical values. This is just the first three of the items we will see in the following diagram:
+            </p>
+            <code>
+                .grid-item-1 {
+                <br><br>    
+                    grid-column: center-start / center-end;
+                <br><br>    
+                    grid-row: middle-start / middle-end;
+                <br><br>    
+                }
+                <br><br>    
+                .grid-item-2 { 
+                <br><br>    
+                    grid-column: right-start / right-end; 
+                <br><br>    
+                    grid-row: bottom-start / bottom-end;
+                <br><br>    
+                }
+                <br><br>    
+                .grid-item-3 {
+                <br><br>    
+                    grid-column: left-start / left-end;
+                <br><br>    
+                    grid-row: top-start / middle-start;
+                <br><br>    
+                }
+            </code>
+    </div>
+  </div>
+  
+</body>
+</html>

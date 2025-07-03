@@ -1,0 +1,39 @@
+<!DOCTYPE html><!-- page66 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <ul>
+            <li>Understand the media query syntax</li>
+            <li>Learn how to use media queries in links, in @import statements, and within CSS files</li>
+            <li>Understand what device features we can test for</li>
+            <li>Consider whether to author alike media queries in one block or wherever it suits</li>
+            <li>Consider the latest capabilities added in Media Queries Level 5 that we can use today. Media features like pointer, hover, prefers-color-scheme, and prefers-reduced-motion, as well as better ways of dealing with viewport ranges</li>
+            <li>Look at what future media queries may provide</li>
+        </ul>
+        <p>Back in Chapter 1, The Essentials of Responsive Web Design, we inserted a meta tag into the head of our web page to make it work on mobile devices. At that point, I made the promise that Chapter 3 would explain exactly what that tag was, what it does, and why we still have it. It's time to make good on that promise.</p>
+        <h2>The meta viewport tag</h2>
+        <p>When Apple released the iPhone in 2007, they introduced a proprietary meta tag called the viewport meta tag. Its purpose was to provide a way for web pages to communicate to mobile browsers how they would like the web browser to render the page.
+        <br><br>
+        Without this meta tag, iPhones would render web pages as a 980 px wide window that the user would then have to zoom in or out of.
+        <br><br>
+        With this meta tag, it's possible to render a web page at its actual size and then adapt the layout to provide the kind of web pages we now all expect to see when we browse the internet on our phones.
+        <br><br>
+        For the foreseeable future, any web page you want to be responsive, and render well across small screen devices, will still need to make use of this meta tag as Android and a growing number of other platforms also support it.
+        <br><br>
+        As you are now aware, the viewport meta tag is added within the head tags of the HTML. It can be set to a specific width (which we could specify in pixels, for example) or as a scale, for example, 2.0 (twice the actual size). Here's an example of the viewport meta tag set to show the browser at twice (200 percent) the actual size:</p>
+        <code>
+            &lt;meta name="viewport" content="initial-scale=2.0,width=device-width" /&gt;
+        </code>
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

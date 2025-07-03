@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- page338 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        CSS 3D transformations
+      </h2>
+      <p>
+        As you've probably already realized, a 3D transform allows us to manipulate an element in an imaginary 3D space. Let's look at our first example. All we have in our example are two elements that each flip in 3D when hovered over. I've used hover here to invoke the flip, as it's a simple mechanism to trigger the effect. However, the flipping action could just as easily be initiated with any other state change a class change (via JavaScript) or when an element has received focus, for example.
+      <br><br>  
+        The only difference between these two elements is that one flips horizontally and the other verti-cally. You can view them in a browser by opening example_11-05. Images fail to fully convey this technique, but the idea is that the element flips from the green "face" to the red "face," giving the illusion of doing so through 3D space with the aid of perspective. Here's a grab partway through the transition from green to red, which hopefully conveys some of the effect:
+      </p>
+      <section>
+        <object>
+          img jere
+        </object>
+        <p>
+          Figure 11.16: Halfway through a 3D transform
+        </p>
+      </section>
+      <p>
+        It's also worth knowing that while positioning an element absolutely with top/left/bottom/right values can only be calculated to whole pixels, a transform can interpolate at subpixel positions.
+      <br><br>  
+        Here's the markup for the flipping element:
+      </p>
+      <code>
+        &lt;div class="flipper"&gt;
+      <br><br>    
+          &lt;span class="flipper-object flipper-vertical"&gt;
+      <br><br>    
+            &lt;span class="panel front"&gt; The Front &lt;/span&gt;
+      <br><br>    
+            &lt;span class="panel back"&gt; The Back &lt;/span&gt;
+      <br><br>    
+          &lt;/span&gt;
+      <br><br>    
+        &lt;/ div&gt;
+      </code>
+      <p>
+        The only difference with the horizontal one, markup wise, is that the flipper-vertical class is replaced with flipper-horizontal.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

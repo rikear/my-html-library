@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- page270 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        We will look at animations in Chapter 11, Transitions, Transformations, and Animations, but what we have done here is added an animation that moves the background image behind the mask so that the word "MARS" stays in position while the planet moves behind. Try doing that in Photoshop!
+        <br><br>
+        If we wanted to swap things around and have the mask move and the image of the planet stay put, it is as simple as swapping object-position in the animation for mask-position.
+        <br><br>
+        You can have a play with this example at example_08-11.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Be aware that, to see this example and the next, you will need to view the file from a server. If you have Node installed, you can run px serve on the Terminal from the root of the example folder to install and run a local server there.
+        </p>
+      </section>
+      <p>
+        There are quite a few related properties for mask-image that can alter the way the mask works. If you find yourself tasked with something mask-related, be sure to look through the specifications and see if there is anything in there that might aid your specific requirements.
+        <br><br>
+        Well, I don't know about you, but I'm almost exhausted with the visual CSS "cardio" we've just been through. Before you reach for the towel and water bottle, just let me tell you about mix-blend-mode.
+      </p>
+      <h2>
+        mix-blend-mode
+      </h2>
+      <p>
+        One final, very visual, property I want to relate before we end this chapter is mix-blend-mode. This property lets you decide how you want one element to "blend" with the element it sits on top of.
+        <br><br>
+        Here are the possible blend modes: normal, multiply, screen, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, hue, saturation, color, and luminosity.
+        <br><br>
+        Static images don't really do this property justice, so I'd encourage you to open example_08-12 in a browser. We're using that same image of Mars from the last example but setting it as a fixed background for the body element.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

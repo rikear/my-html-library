@@ -1,0 +1,47 @@
+<!DOCTYPE html><!-- page151 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                As the specification (the link for the relevant section follows) states that any whitespace character fails to produce a token, which for our purposes simply means delineating one area from another, you could opt to separate columns with tab characters if you would rather, to aid in visually lining up the columns: https:// www. w3. org/TR/css-grid-1/#valdef-grid-template-areas-string.
+            </p>
+        </section>
+        <p>
+            When you write the grid template areas, the indentation is not important, nor are the carriage returns; you could lay each row out in a long space-separated list if you liked. As long as the names for each area are inside quotes, with a whitespace character between each, and there is a space between each set of quotes, all is well.
+            <br><br>
+            Let's move on to some even more advanced Grid Layout techniques now.
+        </p>
+        <h2>
+            auto-fit and auto-fill
+        </h2>
+        <p>
+            auto-fit and auto-fill are "repeat-to-fill" keywords used to describe repetition to Grid.
+            Thanks to the similarity of their names, I can't help but feel that the auto-fit and auto-fill keywords are almost guaranteed to confuse - just like cover and contain do for background image-sizing (we cover them in Chapter 8, Stunning Aesthetics with CSS).
+            <br><br>
+            The upshot of this is that I frequently have to check which one is which. Thankfully, for both our benefits, we're going to clarify what each of these does now, and why you might want to use them.
+            <br><br>
+            Let me start with the why, as that covers both keywords. What if I told you that with the help of auto-fill or auto-fit, we can create a fully responsive grid that adds/removes columns based upon the available size of the viewport, with no media queries needed?
+            <br><br>
+            Compelling, right?
+            <br><br>
+            Consider a 9-column grid, where each column is at least 300 px wide. In a slightly back-to-front way, I want to start this by showing you the solution:
+        </p>
+        <code>
+            grid-template-columns: repeat (auto-fit, minmax(300px, 1fr));
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- page292 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        The g element
+      </h2>
+      <p>
+        The g element is used to group other elements together. For example, if you were drawing an SVG of a car, you might group the shapes that make up an entire wheel inside a g tag:
+      </p>
+      <code>
+        &lt;g 
+          id="Page-1" 
+          stroke="none" 
+          stroke-width="1" 
+          fill="none" 
+          fill-rule="evenodd" 
+          sketch: type="MSPage" 
+        &gt;
+      </code>
+      <p>
+        In our g tag, we can see the earlier namespace of Sketch being reused here. It will help that graphics application open this graphic again, but it serves no further purpose should this image be bound for elsewhere.
+      </p>
+      <h2>
+        SVG shapes
+      </h2>
+      <p>
+        The innermost node in this example is a polygon:
+      </p>
+      <code>
+        &lt;polygon 
+        id="Star-1" stroke="#979797" 
+        stroke-width="3" 
+        fi11="#F8E81C" 
+        sketch: type="MSShapeGroup" 
+        points="99 154 40.2214748 184.901699 51.4471742
+        119.45085 3.89434837 73.0983006 69.6107374 63. 5491503 99 4 128. 389263
+        63.5491503 194.105652 73.0983006 146.552826 119.45085 157.778525
+        184.901699 "&gt;
+        /polygon>
+      </code>
+      <p>
+        SVGs have a number of ready-made shapes available: path, rect, circle, ellipse, line, polyline, and polygon.
+      </p>
+      <h2>
+        SVG paths
+      </h2>
+      <p>
+        SVG paths differ from the shapes of SVGs as they are composed of any number of connected points, giving you the freedom to create any shape you like.
+        <br><br>
+        For example, take a look at this path, which describes the same star as before but with the shape described as a path instead of a polygon. Pay particular attention to the d attribute:
+      </p>
+      <code>
+        &lt;path 
+          d="M99 1541-58.78 30.902 11. 227-65.45L3.894 73.097165.717-9.55L99
+          4129.39 59.55 65.716 9.548-47.553 46.353 11.226 65.452z" 
+        /&gt;
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

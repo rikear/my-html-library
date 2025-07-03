@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- page396 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Transforms and transitions (Chapter 11) are used so that the focused input fields grow and the ready/submit button flips vertically when it gains focus. Box shadows and gradients (Chapter 8) are used to emphasize different areas of the form. Media queries (Chapter 3) are used to switch the Flexbox direction for different viewport sizes, and more recent CSS selectors (Chapter 6) are used for selector negation.
+      <br><br>  
+        But look, here's a thought. I'm no hotshot designer. How about you take the markup from example_ 13-01 and have a shot at styling it up yourself? If it all goes horribly wrong, you can always continue with the styled version, but this would be a solid exercise to put into practice the considerable styling skills you have learned so far.
+      <br><br>  
+        With that in mind, I won't be going over the techniques I chose in detail here again. Instead, I just want to focus on a couple of form-specific peculiarities. Firstly, how to visually indicate required fields (and for bonus points, indicate a value has been entered) and, secondly, how to create a
+        "Gll" effect when a field gets user focus.
+      </p>
+      <h2>
+        Indicating required fields
+      </h2>
+      <p>
+        We can indicate required input fields to a user using CSS alone. For example:
+      </p>
+      <code>
+        input: required {
+          /* styles */
+        }
+      </code>
+      <p>
+        With that selector, we could add a border or outline to the required fields or add a background-image inside the field. Basically, the sky's the limit! We could also use a specific selector to target an input field that is required, but only when it gains focus. For example:
+      </p>
+      <code>
+        input: focus: required {
+      <br><br>    
+          /* styles */
+      <br><br>    
+        }
+      </code>
+      <p>
+        However, that would apply styles to the input itself. What if we want to amend styles on the associated label element? I've decided I'd like to indicate required fields with a little asterisk symbol at the side of the label:
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

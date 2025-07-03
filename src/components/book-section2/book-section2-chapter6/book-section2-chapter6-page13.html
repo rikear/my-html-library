@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page182 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            &lt; Span class="span-class" &gt; &lt; /span &gt;
+            <br><br>
+            &lt; div class="span-class" &gt; &lt; /div &gt;
+            <br><br>
+            &lt; div class="span-class" &gt; &lt; /div &gt;
+            <br><br>
+            &lt; div class="span-class" &gt; &lt; /div &gt;
+            <br><br>
+            &lt; div class="span-class" &gt; &lt; /div &gt;
+            <br><br>
+            &lt; div class="span-class" &gt; &lt; /div &gt;
+        </code>
+        <p>
+            If we used the selector:
+        </p>
+        <code>
+            .span-class:nth-of-type (-2n + 3) { 
+                background-color: #f90; 
+                border-radius: 50%;
+            }
+        </code>
+        <p>
+            Even though all the elements have the same span-class class, they don't get seen as one group. The selector applies once to the span elements, and then to the div elements. Here is what gets selected:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.6: nth-of-type selectors work on each type of element they find
+            </p>
+        </section>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                CSS doesn't count like JavaScript! If you're used to using JavaScript, you'll know that it counts from O upward (zero index-based). For example, when selecting an element in JavaScript, an integer value of 1 is actually the second element. CSS, however, starts at 1 so that a value of 1 is the first item it matches.
+            </p>
+        </section>
+        <h2>
+            nth-based selection in responsive web designs
+        </h2>
+        <p>
+            Just to close out this little section, I want to illustrate a real-life responsive web design problem and how we can use nth-based selection to solve it. Imagine we are building a page showing our sun and the various planets of our solar system. Our content management system simply spits all the items out in a list, but we want to show them in a grid of sorts.
+            <br><br>
+            For some viewports, we will only be able to make it two items wide. However, as the viewport increases in width, we can show three items, and at larger sizes still, we can show four.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

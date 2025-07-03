@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- page183 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Here is the problem, though. Regardless of the viewport size, we want to prevent any items on the bottom row from having a border on the bottom. You can view this code at example_06-03.
+Here is how it looks when it's four items wide:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.7: Our task here is to remove the border on the bottom row, regardless of how many items are showing
+            </p>
+        </section>
+        <p>
+            See that pesky border below the bottom two items? That's what we need to remove. However, I want a robust solution so that if there was another item on the bottom row if another planet is suddenly discovered hiding behind Uranus!), the border would also be removed from that too.
+            <br><br>
+            Now, because there is a different number of items on each row at different viewports, we will also need to change the nth-based selection at different viewport widths. But we can use media queries for that. For the sake of brevity, I'm not going to show you the selection for each media query. I'll just show you the selection that matches four items per row, as you can see in the preceding screenshot. However, you can open the code sample to see the selections for each different viewport:
+        </p>
+        <code>
+            @media (min-width: 55rem) {
+            <br><br>
+                .Item {
+            <br><br>
+                    width: 25%;
+            <br><br>
+            }
+            <br><br>
+            /* Get me every fourth item and, of those, only ones that are in the last four items */
+            <br><br>
+                .Item:nth-child (4 + 1) :nth-last-child(-n + 4),
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

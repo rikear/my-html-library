@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- page245 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The code to achieve that looks like this:
+      </p>
+      <code>
+        .conic-gradient { 
+        <br><br>
+          width: 200px;
+        <br><br>
+          height: 200px;
+        <br><br>
+          background: conic-gradient(at center, green, white, green);
+        <br><br>
+        }
+      </code>
+      <p>
+        If you have looked at the syntax for linear and radial gradients in this chapter already, the conventions will be familiar. You specify the at position for the gradient to start, and then the color stops along the gradient. If you omit the position of the colors, they will be split equally, so that prior example is equivalent to:
+      </p>
+      <code>
+        .conic-gradient { 
+        <br><br>
+          width: 200px; 
+        <br><br>
+          height: 200px;
+        <br><br>
+          background: conic-gradient(at center, green odeg, white 180deg, green 360deg) ;
+        <br><br>
+        }
+      </code>
+      <p>
+        The one thing that did catch me out when I first started using them is that the angle for the stops isn't just written as degrees around a circle as you might assume; it can also be written as a percentage like other gradients. Imagine that you wanted to change the prior example to be solid green halfway around so it looks like this:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.6: Stops around the center point are typically set in percentages
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

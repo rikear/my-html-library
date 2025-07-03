@@ -1,0 +1,55 @@
+<!-- page57 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <code>
+            &lt;p>So, only thing left to do is dismiss me.&lt;/p&gt; 
+            <br><br>
+            &lt;button value="Dismissed!"&gt;Dismiss Dialog&lt;/button&gt;
+            <br><br>
+            &lt;/form&gt;
+            <br><br>
+            &lt;/dialog&gt;
+        </code>
+        <p>Worth noting here that I have included the content of the dialog in a form. That isn't necessary, but doing so allows you to use the special method="dialog" attribute, which "returns" the value of the button doing the submitting of the form; more in-built functionality that can prove useful!
+        <br><br>
+        Also worth noting is that when you click the button to open a dialog, it automatically gets an open attribute, which you can see in the dev tools. This can be used as a styling hook. 've added that in the styles when animating the modal backdrop when it first appears, although it isn't actually necessary in this instance.
+        <br><br>
+        Let's take a look at the styles:</p>
+        <code>
+            dialog { 
+                border-radius: 10px;
+            }
+            dialog::backdrop {
+            animation:fade 0.5s ease forwards;
+            }
+            button {
+            height: 40px;
+            padding: 5px 10px;
+            }
+            button:focus {
+            outline: 2px solid #f90;
+            }
+            @keyframes fade {
+            0% {
+            background-color: transparent;
+            }
+            100% {
+            background-color: rgb (0 57 24 / 0.6);
+            }
+        }
+        </code>
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

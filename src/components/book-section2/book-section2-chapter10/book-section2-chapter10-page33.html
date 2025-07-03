@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- page318 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        It you have never used SVGO before, I would recommend starting with SVGOMG (https:// jakearchibald.github. io/svgomg/). It's a browser-based version of SVGO that enables you to toggle the various optimization plugins and get instant feedback on the file savings. Remember our example star SVG markup from the beginning of this chapter? By default, that simple SVG is 489 bytes in size. By passing that through SVGO, it's possible to get the size down to just 218 bytes, and that's leaving the viewBox in. That's a saving of 55.42%. If you're using a raft of SVG images, these savings can really add up. Here's what the optimized SVG markup looks like:
+      </p>
+      <code>
+        &lt;svg
+      <br><br>
+          width="198" height="188"
+      <br><br>
+          viewBox="0 0 198 188"
+      <br><br>
+          xmlns="http://www.w3.org/2000/svg"
+      <br><br>
+        &gt;
+      <br><br>
+          &lt;path
+      <br><br>
+            stroke="#979797" stroke-width="3"
+      <br><br>
+            fill="#F8E81C"
+      <br><br>
+            d="M99 1541-58.78 30.902 11.227-65.45L3.894 73.097165.717-9. 55L99
+            4129.39 59.55 65.716 9.548-47.553 46.353 11.226 65.454z"
+      <br><br>
+          />
+      <br><br>
+        &lt;/svg&gt;
+      <br><br>
+      </code>
+      <p>
+        Before you spend too long with SVGO, be aware that, such is the popularity of SVGO, plenty of other SVG tools also make use of it. For example, the aforementioned iconiz (https://iconizr. com) tool runs your SVG files through SVGO by default anyway, before creating your assets, so ensure you aren't unnecessarily double optimizing.
+      </p>
+      <h2>
+        SVG implementation tips
+      </h2>
+      <p>
+        We're almost at the end of this chapter now and there is still so much we could talk about regarding SVG. Therefore, at this point, I'll just list a few unrelated considerations. They aren't necessarily worthy of protracted explanations, but I'll list them here in note form in case they save you from hours of searching Stack Overflow:
+      </p>
+      <ul>
+        <li>
+          If you have no need to animate your SVGs, opt for an image sprite of your assets or a data URI style sheet. It's far easier to provide fallback assets and they almost always perform better from a performance perspective.
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

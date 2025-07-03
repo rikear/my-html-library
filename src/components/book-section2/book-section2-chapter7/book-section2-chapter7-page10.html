@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- page223 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 7.3: The Safari color picker shows where sRGB ends and P3 takes over
+        </p>
+      </section>
+      <p>
+        In Safari, in the color picker tool, I see a representation of the standard sRGB range of colors, but the color we have defined is beyond the sRGB confines we are used to seeing and into the area that only the display-p3 color space can display. I hope your retinas are just a little shocked at the vividness on show!
+        <br><br>
+        Because it is a color space we are using, as opposed to a different color model, we use the color () function to pass this predefined color space in, and then set the red, green, and blue values. So, if we want the greenest green that P3 has to offer, we can set it in CSS like this:
+      </p>
+      <code>
+        background-color: color(display-p3 0 1 0);
+      </code>
+      <p>
+        it differs only in that rather than using 0-255 to set each color channel, it uses a decimal between O and 1, where 0 is none of that channel and 1 is all of it.
+      </p>
+      <section>
+        <object>
+           icon here
+        </object>
+        <p>
+          If you don't have access to a browser or hardware that can display this color space, then the following post, also on the WebKit blog, offers some good examples, with comparison pictures of sRGB and P3: https: //webkit.org/blog/10042/wide-gamut -color-in-css-with-display-p3/.
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

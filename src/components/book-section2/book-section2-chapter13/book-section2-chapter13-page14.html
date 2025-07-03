@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- page381 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Changing the step increments
+      </h2>
+      <p>
+        You can alter the step increments (granularity) for the spinner controls of numerical input types with the use of the step attribute. For example, to step 10 units at a time:
+      </p>
+      <code>
+        &lt;input type="number" step="10" /&gt;
+      </code>
+      <h2>
+        The url input type
+      </h2>
+      <p>
+        You can set an input field to expect a URL like this:
+      </p>
+      <code>
+        type="url"
+      </code>
+      <p>
+        As you might expect, the ur l input type is for URI values. Similar to the tel and email input types, it behaves almost identically to a standard text input. However, some browsers add specific information to the warning message provided when submitted with incorrect values. The following is a code example that includes the placeholder attribute:
+      </p>
+      <code>
+        &lt;div&gt;
+      <br><br>      
+          &lt;label for="web"&gt; our Web address &lt;/label&gt;
+      <br><br>      
+          &lt;input 
+      <br><br>      
+            id="web" 
+      <br><br>      
+            name="web" 
+      <br><br>      
+            type="url"
+      <br><br>      
+            placeholder="https://www.mysite.com" /&gt;
+      <br><br>      
+        &lt;/div&gt;
+      </code>
+      <p>
+        The following screenshot shows what happens when an incorrectly entered URL field is submitted in Chrome:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 13.10: Chrome will show a warning when the input doesn't match the type
+        </p>
+      </section>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

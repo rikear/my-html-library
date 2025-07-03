@@ -1,0 +1,60 @@
+<!DOCTYPE html><!-- page138 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            grid-auto-rows and grid-auto-columns
+        </h2>
+        <p>
+            Let's use grid-auto-rows and grid-auto-columns to make any extra grid items the same size as the existing ones:
+        </p>
+        <code>
+            my-first-grid {
+            <br><br>
+                display: inline-grid; 
+            <br><br>
+                grid-gap: 10px;
+            <br><br>
+                grid-template-rows: 200px 200px; 
+            <br><br>
+                grid-template-columns: 200px 200px; 
+            <br><br>
+                grid-auto-rows: 200px; 
+            <br><br>
+                grid-auto-columns: 200px; 
+            <br><br>
+                background-color: #e4e4e4;
+            <br><br>
+            }
+        </code>
+        <p>
+            Now, without writing any extra CSS, when additional items are placed in our grid, they get the 200 px x 200 px sizing we have defined. Here, we have added another item in the DOM for a total of six:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.6: With some auto settings, extra elements can be added at a more preferable size
+            </p>
+        </section>
+        <p>
+            You can even make patterns so that the first extra item is one size and the next is another. The pattern gets repeated:
+        </p>
+        <code>
+            .my-first-grid {
+            <br><br>
+                display: inline-grid;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

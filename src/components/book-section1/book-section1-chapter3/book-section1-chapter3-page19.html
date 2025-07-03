@@ -1,0 +1,57 @@
+<!DOCTYPE html><!-- page82 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                If you have a spare day, you can knock yourself out reading all about the official explanation of the standards ratification process at http://www.w3.org/2005/10/
+                Process -20051014/tr.
+            </p>
+        </section>
+        <p>
+            At the time of writing, whilst CSS Media Queries Level 5 enjoys a draft specification: https:/w. w3. org/TR/mediaqueries-5, not all the features it documents enjoy browser implementations.
+            So, in this section, we will concentrate on Media Queries Level 5 features that we can make use of: features already implemented in browsers.
+        </p>
+        <h2>Interaction media features</h2>
+        <p>
+            Interaction media queries are concerned with pointing devices and hover capability. Let's see what each of these can do for us.
+        </p>
+        <h2>The pointer media feature</h2>
+        <p>Here is the W3C introduction to the pointer media feature:</p>
+        <p>The pointer media feature is used to query about the presence and accuracy of a pointing device such as a mouse. If a device has multiple input mechanisms, the pointer media feature must reflect the characteristics of the "primary" input mechanism, as determined by the user agent.</p>
+        <p>
+            There are three possible states for the pointer features: none, coarse, and fine.
+            <br><br>
+            A coarse pointer device might be a finger on a touchscreen device. However, it could equally be a cursor from a games console that doesn't have the fine-grained control of something like a mouse:
+        </p>
+        <code>
+            @media (pointer: coarse) {
+                /* styles for when coarse pointer is present */
+            }
+        </code>
+        <p>
+            A fine pointer device might be a mouse but could also be a stylus pen or any future fine -grained pointer mechanism:
+        </p>
+        <code>
+            @media (pointer: fine) {
+                /* styles for when fine pointer is present */
+            }
+        </code>
+       <p>
+        Browsers report whether the value of pointer is fine, coarse, or none, based on the "primary" pointing device.
+       </p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page242 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here's the syntax for a radial background gradient (you can play with it in example_08-04):
+      </p>
+      <code>
+        .radial-gradient { 
+        <br><br>
+          margin: 1rem;
+        <br><br>
+          width: 400px;
+        <br><br>
+          height: 200px;
+        <br><br>
+          background: radial-gradient 12rem circle at bottom, yellow, orange, red) ;
+        <br><br>
+        }
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Figure 8.4: We can set a gradient to start at any point. Here, our "sunrise" gradient starts bottom center
+        </p>
+      </section>
+      <p>
+        After specifying the property (background:), we begin the radial-gradient notation. To start with, before the first comma, we define the shape or size of the gradient and the position. We used 12rem circle for the shape and size previously, but consider some other examples:
+      </p>
+      <ul>
+        <li>
+          circle would be a circle the full size of the container. The size of a radial gradient defaults to farthest-corner if omitted-more on sizing keywords shortly.
+        </li>
+        <li>
+          5em would be a circle 5em in size. It's possible to omit the circle part if giving just a size.
+        </li>
+        <li>
+          ellipse would create an ellipse shape that would fit within the element.
+        </li>
+        <li>
+          40px 30px would be an ellipse as if drawn inside a box 40 px wide by 30 px tall.
+        </li>     
+      </ul>
+      <p>
+        Next, after the size and/or shape, we define the position. The default position is center, but let's look at some other possibilities and how they can be defined:
+      </p>
+      <ul>
+        <li>
+          at top right starts the radial gradient from the top right.
+        </li>
+        <li>
+          at right 100px top 20px starts the gradient 100 px from the right edge and 20 px from the top edge.
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

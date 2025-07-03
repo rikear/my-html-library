@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page324 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+         Ordinarily, hovering over the link snaps from the first state (no red line) to the second (red line); it's an on/off affair. However, this line:
+      </p>
+      <code>
+        transition: box-shadow 1s;
+      </code>
+      <p>
+        adds a transition to the box-shadow from the existing state to the hover state over 1 second.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You'll notice in the CSS of the preceding example that we're using the adjacent sibling selector +. You'll remember this selector from Chapter 6, CSS Selectors, Typography, and More. This means if an element (an anchor tag in our example directly follows another element (another anchor tag), then apply the enclosed styles. It's useful here as we don't want a left border on the first element.
+        </p>
+      </section>
+      <p>
+        The transition property is applied on the "from" state, not the "to" state of a selector. In our case, we add the transition property and values on the element in its default state, not the hover state. You could add a transition property to the hover state too, but this would apply when you transition away from the hover state and back to default. This implementation is so that multiple different states such as : active, : focus, : hover, and more can also have different styles set and enjoy the same transition to them.
+      </p>
+      <h2>
+        The properties of a transition
+      </h2>
+      <p>
+        A transition can be declared using up to four properties:
+      </p>
+      <ul>
+        <li>
+          transition-property: The name of the CSS property to be transitioned (such as background-color, text-shadow, or all to transition every possible property).
+        </li>
+        <li>
+          transition-duration: The length of time over which the transition should occur (defined in seconds, for example, • 3s, 2s, or 1. 5s).
+        </li>
+        <li>
+          transition-timing-function: How the transition changes speed during the duration (for example, ease, linear, ease-in, ease-out, ease-in-out, or cubic-bezier).
+        </li>
+        <li>
+          transition-delay: An optional value to determine a delay before the transition com-mences. Alternatively, a negative value can be used to commence a transition immediately but part way through its transition "journey." It's defined in seconds, for example, 35, 15, or 2.5s.
+        </li>
+        <section>
+          <object>
+            icon here
+          </object>
+          <p>
+            For any duration defined in seconds with s in CSS, you can also define it in millisec-onds, if you prefer. For example, instead of 0. 5s for half a second, you could write 500ms. It's purely a preference thing, but for predictability, I would advise you to choose one or the other and stick to it throughout a project.
+          </p>
+        </section>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

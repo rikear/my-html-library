@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- page432 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        The scroll-snap-stop property
+      </h2>
+      <p>
+        By default, an excessive scroll action can send several items past the scroll snap point. With scroll-snap-stop, it is possible to make the browser stop at each snap point with each scroll action. There are just two values to choose from:
+      </p>
+      <ul>
+        <li>
+          normal, which is what the browser does by default; or
+        </li>
+        <li>
+          always, which ensures that no scroll snap points are skipped.
+        </li>        
+      </ul>
+      <p>
+        You add this declaration onto the items inside the scroll container.
+        <br><br>
+        The only slight annoyance is that, as I write this, scroll-snap-stop is not supported in Firefox. However, if this is functionality you want, there is no need to add a fallback; Firefox will skip over it and the browsers that understand it will make use of it.
+        <br><br>
+        CSS Scroll Snap is a hugely satisfying piece of functionality to use! In just a few lines, we are able to achieve in CSS what used to take whole libraries of JavaScript to achieve. All this talk of scrolling brings me to another, simple but effective, feature I need to relate.
+      </p>
+      <h2>
+        Smooth scrolling with CSS scroll-behavior
+      </h2>
+      <p>
+        One of the oldest capabilities of HTML is the ability to anchor to different points in a document. You set a link on the page, and rather than it sending the user to another webpage, the user is instead instantly taken to a different point on the same page.
+        <br><br>
+        Typically, such functionality is in the y axis, or down a page. However, it works just as well horizontally in the x axis.
+        <br><br>
+        Historically, jumping to an anchor link has always been a little jarring. As the user is instantly transported to the new point on the page, there is no affordance to communicate to the user what just occurred. People have solved this common issue over the years with the help of JavaScript, by effectively animating the scroll action.
+        <br><br>
+        Now the Web Platform has provided us with a simple API to achieve this effect, which can be used by either JavaScript or CSS. For CSS, it is the scroll-behavior property.
+        <br><br>
+        I'm going to add "start" and "end" anchor points to each end of the scroll panel we just made and add two links below the scrolling panel.
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

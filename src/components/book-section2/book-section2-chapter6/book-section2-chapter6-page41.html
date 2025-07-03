@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- page210 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+        body {
+        <br><br>
+          background-color: var (--background) ;
+        <br><br>
+          color: var (--foreground);
+        <br><br>
+          transition: all 0.35s; 
+        <br><br>
+          font-size: 1.2em;
+        <br><br>
+          font-family: "sans-serif";
+        <br><br> 
+          font-family: var (--MainFont) ; 
+        <br><br>
+          font-weight: 400;
+        <br><br>
+        }
+        @supports (font-variation-settings: "wdth" 200) {
+        <br><br>
+          body {
+        <br><br>
+          font-family: "Inter-V";
+        <br><br>
+          font-variation-settings: "wght" 300, "sint" -4; 
+        <br><br>
+          font-feature-settings: "cv08", "cv05" ;
+        <br><br>
+          }
+        <br><br>
+        }
+      </code>
+      <p>
+        How much of that can you now understand? We have a system font stack, an @font-face rule loading a variable font (complete with ranges defined for weight and slant), and a sans- serif as the default font -family—which we then immediately overwrite with a font-family defined with a CSS custom property for browsers that understand it. Finally, we use a feature query for variable fonts and define settings for it, also adding in some additional font features we'd like to see.
+        <br><br>
+        These are all approaches and techniques that we have covered in this chapter. If you can look at that and have a decent understanding of what is going on, you have done well. There's a lot in there to parse!
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

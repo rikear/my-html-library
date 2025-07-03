@@ -1,0 +1,71 @@
+<!DOCTYPE html><!-- page164 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            The Sun is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds everything from the biggest planets to tiny debris in its orbit.
+            &lt; /p &gt;
+            &lt; /figure &gt;
+        </code>
+        <p>
+            To set up the outer grid on the container, we have this:
+        </p>
+        <code>
+            .Scroll_Wrapper { 
+            <br><br>
+                display: grid;
+            <br><br>
+                width: 100%;
+            <br><br>
+                overflow-y: hidden; 
+            <br><br>
+                overflow-x: auto;
+            <br><br>
+                gap: 0 20px;
+            <br><br>
+                grid-template-rows: auto auto; 
+            <br><br>
+                grid-auto-columns: auto; 
+            <br><br>
+                grid-auto-flow: column;
+            <br><br>
+            }
+        </code>
+        <p>
+            Those are all grid-related properties you have seen already in this chapter. Now, as we are interested in positioning the contents of each planet, our . Item element, against that grid, we need to introduce subgrid.
+            <br><br>
+            We need our element to be a grid itself and, crucially, we need the rows to inherit from the nearest ancestor grid:
+        </p>
+        <code>
+            .Item {
+            <br><br>
+                grid-row: 1/-1; 
+            <br><br>
+                display: grid; 
+            <br><br>
+                grid-template-rows: subgrid; 
+            <br><br>
+                grid-template-columns: 100px 200px;
+            <br><br>
+                gap: 0 20px;
+            <br><br>
+                margin: 0;
+            <br><br>
+            }
+        </code>
+        <p>
+            As the Item is itself part of an outer grid, we need to tell it how it should be positioned in that grid, so setting grid-row: 1/-1 tells it to start at the first row and end at the last.
+            We then set the rows for this item's own grid with grid-template-rows, but use subgrid to get the row layout from the parent (the . Scroll_Wrapper).
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

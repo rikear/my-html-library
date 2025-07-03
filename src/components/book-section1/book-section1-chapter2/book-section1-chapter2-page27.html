@@ -1,0 +1,38 @@
+<!-- page53 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>In that case, we first specified a source of a made-up video format called super8. The browser goes top to bottom deciding what to play, so if it doesn't support super8, it moves on to the next source; mp4 in this case. And on and on it goes, moving down to the download link if it can't reconcile any of the sources listed. The type attribute tells the browser the MIME type of the resource. If you fail to specify this, the browser will fetch the content and try and play it anyway. But if you know the MIME type, you should add it in the type attribute. The prior code example and the sample video file (which, incidentally, is me appearing in the UK soap Coronation Street back when Thad hair and hopes of starring alongside DeNiro) in MP4 format are in the example_02-02. html
+        section of the chapter code.</p>
+        <h2>Audio and video tags work almost identically</h2>
+        <p>The audio tag works on the same principles as the video tag, with the same attributes (excluding width, height, and poster). The main difference between the two is the fact that audio has no playback area for visible content.</p>
+        <h2>Responsive HTML5 video and iframes</h2>
+        <p>The only problem with our lovely HTML video implementation is that it's not responsive. That's right; an example in a book on responsive web design with HTML5 and CSS that doesn't "re-spond." Thankfully, for HTML embedded video, the fix is easy. Simply remove any height and width attributes in the markup (for example, remove width= "640" height="480") and add the following in the CSS:</p>
+        <code>
+        video {
+        max-width: 100%; height: auto;
+        }
+        </code>
+        <p>However, while that works fine for files that we might be hosting locally, it doesn't solve the problem of videos embedded within an iframe (take a bow YouTube, Vimeo, et al.). The following code will add a film trailer for Midnight Run from YouTube:</p>
+        <code>
+        &lt;iframe
+        width="960" height="720"
+        src="https://www.youtube.com/watch?v=B1_N28DA3gY"
+        frameborder="®" allowfullscreen
+        &gt; &lt;/iframe&gt;
+        </code>
+
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

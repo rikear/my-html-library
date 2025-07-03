@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- page172 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            You can't do the same with pseudo-classes; they always have a single colon. For example, : hover, : active, and : focus are all pseudo-classes and are written with a single colon.
+            <br><br>
+            Hopefully, the difference between pseudo-classes and elements is now clear.
+            <br><br>
+            With that distinction made, let's move on and look at some of the powerful selectors available to us today in CSS.
+        </p>
+        <h2>
+            CSS selectors - beyond the normal!
+        </h2>
+        <p>
+            CSS now provides incredible power for selecting elements within a page. If you are only used to selecting elements based on their class, ID, or element type, these techniques may open your eyes to new possibilities. I'd better qualify that bold claim.
+        </p>
+        <h2>
+            CSS attribute selectors
+        </h2>
+        <p>
+            You've probably used CSS attribute selectors to create rules. For example, consider the following markup:
+        </p>
+        <code>
+            ‹img src="https://placeimg.com/640/480/any" alt="an inquisitive cat" /›
+        </code>
+        <p>
+            And this CSS:
+        </p>
+        <code>
+            img[alt] {
+                border: 3px dashed #e15f5f;
+            }
+        </code>
+        <p>
+            This would select the img element in the preceding code, and any others on the page provided that they have an alt attribute.
+            <br><br>
+            In fact, to make something a little more useful, we could combine this with the : not negation selector (we will look at that in detail later in this chapter) to add a red border around any images that have no alt attribute or an alt attribute with no value:
+        </p>
+        <code>
+            img: not ([alt]),
+            img [alt=""] {
+            border: 3px solid red;
+            }
+        </code>
+        <p>
+            That would be useful from an accessibility point of view, as it would visually highlight any images that didn't have alternate text included for assistive technology.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

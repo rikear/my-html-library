@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- page179 -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Understanding what nth rules do
+        </h2>
+        <p>
+            For the uninitiated, nth-based selectors can look pretty intimidating. However, once you've mastered the logic and syntax, you'll be amazed at what you can do with them. Let's take a look.
+            <br><br>
+            Here are the nth-based selectors at our disposal:
+        </p>
+        <ul>
+            <li>
+                nth-child(n)
+            </li>
+            <li>
+                nth-last-child(n)
+            </li>
+            <li>
+                nth-of-type(n)
+            </li>
+            <li>
+                nth-last-of-type(n)
+            </li>      
+        </ul>
+        <p>
+            We've seen that we can use (odd) or (even) values already in an nth-based expression, but the (n) parameter can be used in another couple of ways:
+        </p>
+        <ul>
+            <li>
+                As an integer; for example, : nth-child (2) would select the second item. Passing a num-ber/integer into the nth selector is easy enough to understand; just enter the element number you want to select.
+            </li>
+            <li>
+                You can also pass a numeric expression. For example, : nth-child (3n+1) would start at the first element, and then select every third element.
+            </li>
+        </ul>
+        <p>
+            The numeric expression version of the selector is the part that can be a little baffling at first. Let's break it down.
+        </p>
+        <h2>
+            Breaking down the math
+        </h2>
+        <p>
+            Let's consider 10 spans on a page (you can play about with these by looking at example_06-01):
+        </p>
+        <code>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+            <br><br>
+            &lt; Span &gt; &lt; /span &gt;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

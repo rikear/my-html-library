@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- page173 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            As another example, let's say we wanted to select all elements with a data-sausage attribute:
+        </p>
+        <code>
+            [data-sausage] {
+            <br><br>
+                /* styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            The key thing here is to use square brackets to specify the attribute you want to select.
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                The data attribute was introduced in HTML5 to provide a place for custom data that can't be stored sensibly by any other existing mech-anism. The specification description for these can be found here: https: //www. w3. org/TR/2010/WD-html5 - 20101019/elements. html#embedding-custom-non-visible-data-with-the-data-attributes.
+            </p>
+        </section>
+        <p>
+            You can also narrow things down by specifying what the attribute value is. For example, consider the following rule:    
+        </p>
+        <code>
+            img[alt="Sausages cooking"] {
+            <br><br>
+                /* Styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            This would only target images that have an alt attribute value of "Sausages cooking"; for example:
+        </p>
+        <code>
+            &lt; img src="img/sausages.png" alt="Sausages cooking" / &gt; 
+        </code>
+        <p>
+            So far, so "big deal, we could do that in CSS2." I hear you. Let's turn things up a notch, shall we?
+        </p>
+        <h2>
+            CSS substring matching attribute selectors
+        </h2>
+        <p>
+            We also have the ability to select elements based on the substring of their attribute selector. That sounds complicated. It isn't! The three options are whether the attribute:
+        </p>
+        <ul>
+            <li>
+                Begins with a certain substring
+            </li>
+            <li>
+                Contains an instance of a certain substring
+            </li>
+            <li>
+                Ends with a certain substring
+            </li>
+        </ul>
+        <p>
+            Let's see what they look like.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

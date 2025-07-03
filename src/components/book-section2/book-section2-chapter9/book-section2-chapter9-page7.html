@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- page280 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Demonstrating responsive image examples is tricky. It's not possible to appreciate on a single screen the different images that could be loaded with a particular syntax or technique. Therefore, just as when we looked at serving up different file versions of an image, the examples that follow will be mainly code, and you'll just have to trust me that it's going to produce the result you need in supporting browsers. Let's look at two further scenarios that you're likely to need responsive images for. These are switching one image for another when a different resolution is needed and changing an image entirely depending on the available viewport space.
+      </p>
+      <h2>
+        Simple resolution switching with sreset
+      </h2>
+      <p>
+        Let's suppose you have three versions of the same image. One is suitable for standard pixel density displays, commonly referred to as "1x". Another image is higher resolution, to cater for higher den-sity, or "1.5x" displays, and, finally, the third is a high "2x" resolution version for very high-density displays. Here is how we can let the browser know that we have these three versions available:
+      </p>
+      <code>
+        &lt; img
+          src="scones_small. jpg"
+          srcset="scones_medium. jpg 1.5x, scones_large. jpg 2x"
+          alt="a delicious looking baked scone"
+        / &gt;
+      </code>
+      <p>
+        This is about as simple as things get with responsive images, so let's ensure that the syntax makes perfect sense.
+        <br><br>
+        First of all, the sc attribute, which you will already be familiar with, has a dual role here; it's specifying the small 1x version of the image, and it also acts as a fallback image if the browser doesn't support the scset attribute. That's why we are using it for the small image. This way, older browsers that will ignore the scset information will get the smallest and best-performing image possible.
+        <br><br>
+        For browsers that understand sreset, with that attribute, we provide a comma-separated list of images that the browser can choose from. After the image name (such as scones _medium. jpe), we issue a simple hint.
+        <br><br>
+        I've specifically called it a hint rather than an instruction or a command, and you will see why in a moment. In this example 1. 5x and 2x have been used, but any integer would be valid. For example, 3x or 4x would work too (providing you can find a suitably high-resolution screen).
+        <br><br>
+        However, there is an issue here; a device with a 1440px wide, 1x screen will get the same image as a 480px wide, 3x screen. That may or may not be the desired effect.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

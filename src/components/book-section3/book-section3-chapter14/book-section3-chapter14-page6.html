@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- page411 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        The importance of !important
+      </h2>
+      <p>
+        I feel the use of I important has been a little vilified over the years. Like all of the best villains, that's perhaps because it is a little misunderstood. I'll exemplify. Can you explain to me what !important does here?
+      </p>
+      <code>
+        /* Author styLesheet */
+      <br><br>    
+        body {
+      <br><br>    
+          font-size: 1.1em ! important;
+      <br><br>    
+        }
+      </code>
+      <p>
+        I mean, sure, we probably all know that if you are having trouble getting a rule to have a certain declaration applied, slapping an ! important on there usually fixes it. But how and why does it actually do that?
+      <br><br>  
+        Confession. I've been writing CSS for over 20 years, and it was only when reading the specification for cascade layers that I think I fully, truly, understood the mechanics of ! important. Want to bore fellow developers next time you are sharing a coffee? Pay attention to this next bit; it will be important (see what I did there?).
+      <br><br>  
+        When styles are applied by the browser, onto the page, there is an order of priority:
+      </p>
+      <ul>
+        <li>
+          Firstly, the browser applies its own set of styles; you often see these marked in your dev tools as User Agent Style Sheet.
+        </li>
+        <li>
+          Then, user style sheets are applied. You may have none set, but if you were to set a minimum font size in your browser preferences, that setting would go into your user style sheet.
+        </li>
+        <li>
+          Finally, at the greatest priority of the three are the author style sheets; thesheets you and I write day-to-day.
+        </li> 
+      </ul>
+      <p>
+        With that initial order of precedence established, we can envisage that if the font-size for the body was set by the browser, the user, and the author, the author styles (that we as developers write) would "win" and take precedence. This works well enough for the most part, but what if a user needs a large minimum font-size for accessibility or preference? And, in our ignorance, we thought that 12 px was absolutely fine for all? That would be a problem for many! The solution to this issue is the ! important declaration.
+      <br><br>  
+        The ! important declaration inverts the established order. So, not only will an ! important declaration take precedence over a normal declaration in the same style sheet, but if an ! important declaration is added to a user style sheet, such as for our aforementioned font-size preference, this will take precedence over any author style sheet declaration.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

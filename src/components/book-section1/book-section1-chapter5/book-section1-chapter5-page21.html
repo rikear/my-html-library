@@ -1,0 +1,63 @@
+<!DOCTYPE html><!-- page150 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            You can use numbers for the start of each grid area, but you then need to escape them when you reference them.
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Escaping a character, in computer terms, is a means of invoking an alternative interpretation of the character. It is a way of being more explicit about the meaning you would like a certain character to have that could potentially be interpreted in multiple ways.
+            </p>
+        </section>
+        <p>
+            For example, if one of our areas was named "9," it would have to be referenced like this: grid-area: "\39;". I find that too burdensome, so I suggest using a string for each area or, at least, starting each custom ident with an alpha character.
+            <br><br>
+            And that means we can position our items with grid-area like this:
+        </p>
+        <code>
+            .grid-item-1 { 
+            <br><br>
+                grid-area: five;
+            <br><br>
+            }
+            <br><br>
+            .grid-item-2 { 
+            <br><br>
+                grid-area: nine;
+            <br><br>
+            }
+            <br><br>
+            .grid-item-3 { 
+            <br><br>
+                grid-area: one;
+            <br><br>
+            }
+        </code>
+        <p>
+            Admittedly, this is a simplistic example, but hopefully, you can imagine a more useful scenario: perhaps a blog layout with a header, left-hand sidebar area, main content area, and footer. You might define the necessary grid-template-areas like this:
+        </p>
+        <code>
+            grid-template-areas:
+            <br><br>
+                'header header header header header header'
+            <br><br>
+                'side side main main main main'
+            <br><br>
+                'side side footer footer footer footer';
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

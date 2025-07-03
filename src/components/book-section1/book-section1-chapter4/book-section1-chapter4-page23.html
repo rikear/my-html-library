@@ -1,0 +1,75 @@
+<!DOCTYPE html><!-- page116 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            I could write chapters and chapters on Flexbox! There are so many examples we could look at.
+            <br><br>
+            However, for now, there are just two more things I would like to share with you.
+        </p>
+        <h2>
+            Simple sticky footer
+        </h2>
+        <p>
+            Suppose you want a footer to sit at the bottom of the viewport when there is not enough content to push it there. Historically, this has been a pain to achieve, but with Flexbox it's simple. Consider this markup, which is example_04-07:
+        </p>
+        <code>
+            &lt;body&gt;
+            <br><br>
+                &lt;main&gt;
+            <br><br>
+                    Here is a bunch of text but not enough to push the footer to the bottom of the page.
+            <br><br>
+                &lt;/main&gt;
+            <br><br>
+                &lt;footer&gt;
+            <br><br>
+                    I'd like this to be at the bottom and thanks to Flexbox I can be put in my place!
+            <br><br>
+                &lt;/footer&gt;
+            <br><br>
+            &lt;/body&gt;
+        </code>
+        <p>
+            And here's the CSS:
+        </p>
+        <code>
+            html,
+            body {
+            <br><br>
+                margin: 0;
+            <br><br>
+                padding: 0;
+            <br><br>
+                font-family: "Oswald", sans-serif; 
+            <br><br>
+                color: #ebebeb;
+            <br><br>
+            }
+            <br><br>
+            html {
+            <br><br>
+                height: 100%;
+            <br><br>
+            }
+            <br><br>
+            body {
+            <br><br>
+                background-color: #ebebeb
+            <br><br> 
+                display: flex;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

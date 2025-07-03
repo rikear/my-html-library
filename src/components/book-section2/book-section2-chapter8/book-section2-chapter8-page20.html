@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- page253 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        High-resolution background images
+      </h2>
+      <p>
+        Thanks to media queries, we have the ability to load in different background images, not just at different viewport sizes, but also at different viewport resolutions.
+        <br><br>
+        For example, here is the official way of specifying a background image for a "normal" and a "high" DPI screen. You can find this in example_08-07:
+      </p>
+      <code>
+        .bg {
+          background-image: url('bg-jpg');
+        }
+        @media (min-resolution: 1.5dppx) {
+          .bg {
+            background-image: ur1( 'bg@1_5x.jpg');
+          }
+        }
+      </code>
+      <p>
+        The media query is written exactly as it is with width, height, or any of the other capability tests. In this example, we are defining the minimum resolution that bg@1_5x. jpg should use as 1.5dppx (device pixels per CSS pixel). We could also use dpi (dots per inch) or dpcm (dots per centimeter) units if preferable. However, despite the poorer support, I find dppx the easiest unit to think about; as 2dppx is twice the resolution, 3dppx would be three times the resolution. Thinking about that in dpi is trickier. "Standard" resolution would be 96dpi, twice that resolution would be 192dpi, and so on.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          A brief note on performance
+          <br><br>
+          Just remember that large images can potentially slow down the feel of your site and lead to a poor experience for users. While a background image won't block the rendering of the page (you'll still see the rest of the site drawn to the page while you wait for the background image), it will add to the total weight of the page, which is important if users are paying for data.
+        </p>
+      </section>
+      <p>
+        Earlier in this chapter, I told you we would look at more shadows when we got to dealing with CSS filters. That time has come.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html><!-- page80 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <code>
+            @media (min-width: 30rem) {
+            <br><br>
+                .thing2 { width: 75%;
+            <br><br>
+                }
+            <br><br>
+            }
+        </code>
+        <p>Can you see in this example that we have two separate media queries that are testing for the same thing: @media (min-width: 30rem)? Surely duplicating media at-rules like this is overly verbose and wasteful? Shouldn't I be advocating grouping all the like media queries into a single block like this:</p>
+        <code>
+            .thing {
+            <br><br>
+    
+            <br><br>
+            }
+            <br><br>
+            .thing2 { 
+            <br><br>
+                width: 65%;
+            <br><br>
+            }
+            <br><br>
+            /* Styles affecting other elements */
+            <br><br>
+            @media (min-width: 30rem) {
+            <br><br>
+                .thing {
+            <br><br>
+                width: 75%;
+            <br><br>
+                }
+            <br><br>
+            .thing2 {
+            <br><br>
+                width: 75%;
+            <br><br>
+                }
+            <br><br>
+            }
+            /* A few more styles go after */
+        </code>
+        <p>
+            That is certainly one way to do it. However, from a maintenance point of view, I find this more difficult. There is no "right" way to do this, but my preference is to define a rule for an individual selector once and have any variations of that rule (such as changes within media queries) defined immediately after. That way I don't have to search for separate blocks of code to find the declaration that is relevant to a particular selector.
+        </p>
+       
+    </div>
+
+  </div>
+</body>
+</html>

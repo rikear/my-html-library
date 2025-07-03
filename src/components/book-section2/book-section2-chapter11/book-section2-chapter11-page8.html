@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page329 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, the period between robot and truck is a transition (he's transitioning from one state to another). Obviously, if you have no idea who or what Optimus Prime even is, feel free to mentally discard the last few sentences. Hopefully, all will become clear when we get to the examples in a moment.
+        <br><br>
+        There are two groups of CSS transtorms available: 2D and 3D. 2D variants are probably a little more straightforward, so let's look at those first. The CSS 2D Transforms Module allows us to use the following transforms:
+      </p>
+      <ul>
+        <li>
+          scale: Scale an element (larger or smaller)
+        </li>
+        <li>
+          translate: Move an element on the screen (up, down, left, and right)
+        </li>
+        <li>
+          rotate: Rotate the element by a specified amount (defined in degrees or turns)
+        </li>
+        <li>
+          skew: Skew an element with its x and y coordinates
+        </li>
+        <li>
+          matrix: Allows you to move and shape transformations in multiple ways
+        </li>
+      </ul>
+      <p>
+        An essential concept to understand is that transforms occur outside of the document flow. More simply, any element that is transformed will not affect the position of any other element that is not a child of it. This is quite different from adding a transition to an element when you change the margin, height, or other transitionable/animatable property.
+        <br><br>
+        Open example_11-02 and you will see two sentences; the first has margin-left: 10px applied to the bold word item on hover, while the second sentence has transform: translateX(10px) applied to the same word on hover. Both have a transition of 1 second applied.
+        <br><br>
+        With nothing hovered over, they look like this:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.4: Two paragraphs in their default state
+        </p>
+      </section>
+      <p>
+        Hover over item in the first paragraph and the following happens; notice the text after that word has been shunted along?
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.5: When the first paragraph is hovered over, "item" gets a margin applied, moving all the text after it too
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

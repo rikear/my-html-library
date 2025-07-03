@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- page428 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+          overflow-x: scroll;
+          <br><br>
+          gap: 0 20px;
+          <br><br>
+          grid-template-rows: auto auto; 
+          <br><br>
+          grid-auto-columns: auto; 
+          <br><br>
+          grid-auto-flow: column;
+          <br><br>
+          /* standards way, currently only implemented by Firefox */ 
+          <br><br>
+          scrollbar-color: #b5b5b5 #616161; 
+          <br><br>
+          scrollbar-width: thin;
+          <br><br>
+        }
+      </code>
+      <p>
+        With scrollbar-color, you give it two values; the first the color for the scrollbar "thumb," the second for the track of the scrollbar. For scrollbar-width, you have only three choices: auto, thin, or none. I've opted for thin, but as you can see in my case, in Firefox, that has made very little difference:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 15.6: scrollbar-width has a vague effect in Firefox (macOS)
+        </p>
+      </section>
+      <p>
+        Now, here comes the real problem with the official way of doing things. It has not yet been implemented in Chromium or WebKit browsers.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          It, by some cruel twist of fate, you find yourself needing to style scrollbars for the much older legacy browser Internet Explorer, be aware it has its own -ms - prefixed rules for styling and removing the scrollbar.
+        </p>
+      </section>
+      <p>
+        It's unsurprising then, that most people turn to using the non-standards way of styling them, as that typically covers the overwhelming majority of users.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

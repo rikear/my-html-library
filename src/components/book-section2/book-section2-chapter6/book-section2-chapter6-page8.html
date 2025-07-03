@@ -1,0 +1,74 @@
+<!DOCTYPE html><!-- page177 -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Attribute selectors allow you to select IDs and classes that start with numbers. Before HTML5, it wasn't valid markup to start IDs or class names with a number. HTMLS removes that restriction. When it comes to IDs, there are still some things to remem-ber. There should be no spaces in the ID name, and it must be unique on the page.
+                <br><br>
+                For more information, visit https://html.spec.whatwg.org/multipage/dom. html#the-id-attribute. Now, although you can start ID and class values with numbers in HTML5, CSS still restricts you from using ID and class selectors that start with a number (https://www.w3.org/TR/CSS21/syndata.html#characters).
+                Luckily for us, we can easily work around this by using an attribute selector; for example, [id="10"].
+            </p>
+        </section>
+        <p>
+            Right, I think our attribute selecting skills are now pretty good. Let's move on to how we can deal with selecting elements based on where they are in the document.
+        </p>
+        <h2>
+            CSS structural pseudo-classes
+        </h2>
+        <p>
+            CSS gives us more power to select elements based on where they sit in the structure of the DOM.
+            Let's consider a common design treatment; we're working on the navigation bar for a larger viewport and we want to have all but the last link over on the left. Historically, we would have needed to solve this problem by adding a class name to the last link so we could select it, like this:
+        </p>
+        <code>
+            &lt; nav class="nav-Wrapper" &gt;
+            <br><br>
+                &lt; a href="/home" class="nav-Link" &gt;
+            <br><br>
+                    Home 
+            <br><br>
+                &lt; /a &gt;
+            <br><br>
+                &lt; a href="/About" class="nav-Link" &gt;
+            <br><br>
+                    About 
+            <br><br>
+                &lt; /a &gt; 
+            <br><br>
+                &lt; a href="/Films" class="nav-Link" &gt; 
+            <br><br>
+                    Films 
+            <br><br>
+                &lt; /a &gt;  
+            <br><br>
+                &lt; a href="/Forum" class="nav-Link" &gt;
+            <br><br>
+                    Forum 
+            <br><br>
+                &lt; /a &gt; sa href="/Contact-Us" class="nav-Link nav-LinkLast" &gt;
+            <br><br>
+                    Contact Us 
+            <br><br>
+                &lt; /a &gt;
+            <br><br>
+            &lt; /nav &gt;
+        </code>
+        <p>
+            This in itself can be problematic. For examnle sometimes inst gettine a content management system to add a class to a final list item can be frustratingly difficult. Thankfully, in those even-tualities, we can solve this problem and many more with CS structural pseudo-classes.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

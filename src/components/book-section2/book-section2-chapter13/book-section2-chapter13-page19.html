@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- page386 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Learn about regular expressions (regexes)
+        <br><br>  
+          If you've never encountered regular expressions before, I'd suggest starting here: https://en.wikipedia.org/wiki/Regular_expressions.Regular expressions are used across many programming languages as a means of matching strings. While the format is intimidating at first, they are incredibly powerful and flexible. For ex-ample, you could build a regular expression to match a password format or select a certain style of CSS class-naming convention. To help build up your own regex pattern and get a visual understanding of how they work, I'd recommend starting with a browser-based tool like https: //www.regexr.com/.
+        </p>
+      </section>
+      <p>
+        The following code is an example:
+      </p>
+      <code>
+        &lt;div&gt;
+      <br><br>      
+          &lt;label for="name"&gt; Your Name (first and last) &lt;/label&gt;
+      <br><br>      
+          &lt;input
+      <br><br>      
+            id="name"
+      <br><br>      
+            name= "name"
+      <br><br>      
+            pattern="^([\D]{2,30} \s+)+([a-zA-Z]{2, 30})$"
+      <br><br>      
+            placeholder="Dwight Schultz"
+      <br><br>      
+            required
+      <br><br>      
+          /&gt;
+      <br><br>      
+        &lt;/ div&gt;
+      </code>
+      <p>
+        Such is my commitment to this book, I searched the internet for an entire 458 seconds to find a regular expression that would match a basic first and last name syntax (Western European languages only, sorry). This is by no means bulletproof but should ensure that the value entered is not a number (sorry, R2-D2, you will have to register your film complaints elsewhere) and is made of at least two space-separated values between 2 and 30 characters long.
+      <br><br>  
+        By entering the regular expression value within the pattern attribute, it makes supporting browsers expect a matching input syntax. Then, when used in conjunction with the required attribute, incorrect entries get the following treatment in supporting browsers. In this instance, I tried submitting the form without providing a last name:
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- page180 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            We will style them like this:
+        </p>
+        <code>
+            span {
+            <br><br>    
+                height: 2rem; 
+            <br><br>    
+                width: 2rem;
+            <br><br>    
+                background-color: blue; 
+            <br><br>    
+                display: inline-block;
+            <br><br>    
+            }
+        </code>
+        <p>
+            As you might imagine, this gives us 10 squares in a line:
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Figure 6.2: We will test our nth-child selection skills on these 10 identical elements
+            </p>
+        </section>
+        <p>
+            OK, let's look at how we can select different ones with nth-based selections.
+            <br><br>
+            For practicality, when considering the expression within the parentheses, I start from the right. So, for example, if I want to figure out what (2n+3) will select, I start with the right-most number (the "3" here indicates the third item from the left and know it will select every second element from that point on. So, adding this rule:
+        </p>
+        <code>
+            span:nth-child (2n + 3) {
+            <br><br>
+                background-color: #f90; 
+            <br><br>
+                border-radius: 50%;
+            <br><br>
+            }
+        </code>
+        <p>
+            Results in this in the browser:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.3: Anything that matches our nth-child selector is turned round and orange
+            </p>
+        </section>
+        <p>
+            As you can see, our nth selector targets the third list item and then every subsequent second one after that too. If there were 100 list items, it would continue selecting every second one.
+            <br><br>
+            How about selecting everything from the second item onward? Well, although you could write :nth-child you you don't actually need the first number as, as, unless otherwise stated, nis equal to 1. We can, therefore, just write : nth-child (n+2). Likewise, if we wanted to select every third element, rather than write : nth-child (3n+3), we could just write : nth-child (3n) asevery third item would begin at the third item anyway, without needing to state it explicitly.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

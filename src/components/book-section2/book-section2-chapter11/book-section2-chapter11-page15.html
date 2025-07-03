@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- page336 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        If you find yourself doing work with animations in JavaScript without the help of an animation library, you'll probably need to become a little more acquainted with matrix. It's the syntax all the other transforms get computed into behind the scenes, so if you're grabbing the current state of an animation with JavaScript, it will be the matrix value you will need to inspect and understand.
+      <br><br>  
+        Now, I like a challenge (unless, you know, it's sitting through the Marvel Cinematic Universe back catalog), but I think the majority of us would agree that that syntax is a bit testing. The specification doesn't exactly clear matters up: https:// www.w3.org/TR/css-transforms-1/#mathematical-description.
+      <br><br>  
+        However, the truth is I can count on the fingers of one hand how many times I've needed to write or understand a CSS transform described as a matrix, so it likely isn't something to concern yourself with.
+      <br><br>  
+        If you do find yourself needing to create one, I'd suggest heading over to https:// www. useragentman.com/matrix/. The Matrix Construction Set website allows you to drag and drop the element exactly where you want it and includes good ol' copy-and-paste code for your CSS file.
+      </p>
+      <h2>
+        The transform-origin property
+      </h2>
+      <p>
+        Notice how, with CSS, the default transform origin— the point the browser uses as the center for the transform—is in the middle: 50% along the x axis and 50% along the y axis of the element.
+        This differs from SVG, which defaults to the top left (or 0 0).
+      <br><br>  
+        Using the transform-origin property, we can amend the point from which transforms originate.
+      <br><br>  
+        Consider our earlier matrix transform. The default transform-origin is 50% 50% (the center of the element). The Firefox developer tools show how the transform is applied:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.14: Default transform-origin applied
+        </p>
+      </section>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

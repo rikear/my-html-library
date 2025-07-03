@@ -1,0 +1,57 @@
+<!-- page32 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>Despite HTML5's looser syntax, it's always worth checking whether your markup is valid. Checking that markup validates catches basic human errors like missing or mismatched tags, missing alt attributes on images, incorrectly nested elements, and so on. The W3C validator was created for just this reason: https://validator. w3. org/.</p>
+        </section>
+        <p>Enough of me berating writers of "slacker" markup. Let's look at some genuinely useful economies of HTML5.</p>
+        <h2>All hail the mighty <code>&lt;a&gt;</code> element</h2>
+        <p>The a tag (short for anchor tag) is arguably the most important and defining tag of HTML. The anchor tag is the tag used to link from the document a user is on to another document elsewhere on the internet, or another point in the same document.</p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>You can read the specification for the <code>&gt;a&lt;</code> element here: https://html.spec. whatwg.org/#the-a-element.</p>
+        </section>
+        <p>A welcome benefit of HTML5 is that we can wrap multiple elements in an a tag. In prior versions of HTML, if you wanted your markup to validate, it was necessary to wrap each element in its own a tag. For example, look at the following code:</p>
+        <code>
+        &lt;h2&gt; &lt;a href="index.html">The home page&lt;/a&gt; &lt;/h2&gt;
+        <br><br>
+        &lt;p&gt; &lt;a href="index.html">This paragraph also links to the home page&lt;/a&gt; &lt;/p&gt;
+        <br><br>
+        &lt;a href="index.html" &gt;
+        <br><br>
+        &lt;img src="home-image-png" alt="A rendering of the home page" /&gt;
+        <br><br>
+        &lt;/a>
+        </code>
+        <p>Nowadays, we can ditch all the individual a tags and instead wrap the group, as demonstrated in the following code:</p>
+        <code>
+        &lt;a href="index.html &gt;
+        <br><br>
+        &lt;h2&gt; The home page &lt;/h2&gt;
+        <br><br>
+        &lt;p&gt; This paragraph also links to the home page&lt;/p&gt;
+        <br><br>
+        &lt;img src="home-image.png" alt="A rendering of the home page" / &gt;
+        <br><br>
+        &lt;/a&gt;
+        </code>
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

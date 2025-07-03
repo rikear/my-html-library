@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- page203 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Adding a link with rel="preload" included in this way triggers a request for the web font early in the critical rendering path, without having to wait for the CSS Object Model (CSSOM) to be created. While this technique is recommended by Google, even if other browsers don't do the same, it is unlikely to do any harm. If you are serving up a woff and woff2 file, it's only worth doing this optimization for the .woff2 file; browsers that support . woff2 also support the preload value in the rel attribute.
+        <br><br>
+        We can make further optimizations with web fonts by making use of the font-display property.
+      </p>
+      <h2>
+        font-display
+      </h2>
+      <p>
+        We can also make use of the font-display property of CSS (older browsers that don't understand it will simply ignore it):
+      </p>
+      <code>
+        font-display: fallback;
+      </code>
+      <p>
+        You can also see this property being used in the previous examples. It provides some control over how fonts should get displayed.
+        <br><br>
+        The fallback value we have provided sets an extremely short block period and a short swap period.
+        <br><br>
+        To understand what terms like "block" and "swap" mean in this context, we need to consider what the browser does in terms of displaying fonts. I'm talking generically here, but the concepts work for our needs.
+        <br><br>
+        Imagine a browser loading our web page in which we have specified a web font for our text. The browser already has the HTML and is parsing the CSS, and learns it needs to download a font in order to display the text it has as intended. Before it draws any text to the screen, it hangs on, waiting for the web font so it can paint the text onto the page as needed. This delay is referred to as a FOIT, standing for Flash of Invisible Text.
+        <br><br>
+        As soon as the font arrives, the browser parses it and paints the text to the screen accordingly.
+        <br><br>
+        The hope is that this delay is imperceptible. Where it is not, there are two schools of thought on how best to handle things.
+        <br><br>
+        One option is to wait for the font to be downloaded, usually for up to a few seconds but sometimes indefinitely; Safari is the most famous proponent of this option.
+        <br><br>
+        The second option is to render the text with a system font initially and then replace the font with the correct font when the browser has it. This redraw of text from system font to the actual intended font is known as a Flash of Unstyled Text, or FOUT for short.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

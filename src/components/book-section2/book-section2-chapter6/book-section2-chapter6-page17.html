@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- page186 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Let's suppose we wanted to select an item, but only if it is the next sibling of one. With that markup, we could select the second element in that list like this:
+        </p>
+        <code>
+            .one + . item {
+            <br><br>
+                border: 3px dashed #f90;
+            <br><br>
+            }
+        </code>
+        <p>
+            The + symbol there means "next sibling," so select the next sibling element of. one, our second element.
+        </p>
+        <h2>
+            The subsequent sibling
+        </h2>
+        <p>
+            With the same markup from the previous example, if we wanted to select all items after the third, we could do this:
+        </p>
+        <code>
+            .item:nth-child(3) ~ item {
+            <br><br>
+                border: 3px dashed #f90;
+            <br><br>
+            }
+        </code>
+        <p>
+            The ~ symbol, called a tilde, says "every subsequent sibling."
+        </p>
+        <h2>
+            The negation (:not) selector
+        </h2>
+        <p>
+            Another handy selector is the negation pseudo-class selector. This is used to select everything that isn't something else. Consider this:
+        </p>
+        <code>
+            &lt; div class="a-div" &gt; &lt; /div &gt;
+            <br><br>
+            &lt; div class="a-div" &gt; &lt;/div &gt;
+            <br><br>
+            &lt; div class="a-div" &gt; &lt;/div &gt;
+            <br><br>
+            &lt; div class="a-div not-me" &gt; &lt;/div &gt;
+            <br><br>
+            &lt; div class="a-div" &gt; &lt; /div &gt;
+        </code>
+        <p>
+            And then these styles:
+        </p>
+        <code>
+            .a-div {
+            <br><br>
+                display: inline-block;
+            <br><br>
+                height: 2rem; width: 2rem;
+            <br><br>
+                background-color: blue;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

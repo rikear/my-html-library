@@ -1,0 +1,55 @@
+<!-- page38 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>As such, theoretically, you shouldn't need to keep track of the heading tag you need to use in terms of the whole document. It should be possible to use whatever appropriate level of heading tag is needed within each piece of sectioned content and the HTMLS outline algorithm will order it accordingly.</p>
+        <p>You can test the outline of your documents using HTML5 outliners at one of the following URLs:</p>
+        <ul>
+            <li>https://gsnedders.htm15.org/outliner/</li>
+            <li>https://hoyois.github.io/html5outliner</li>
+        </ul>
+        <p>However, the reality is that search engines and the like make no use of the HTMLS outliner at present. Therefore, from a pragmatic viewpoint, it probably makes more sense to continue thinking about headings in terms of the whole document. That will make your documents easier to read for search engines and also aid assistive technology to infer the correct meaning.</p>
+        <h2>A note on h1-h6 and the <code>&lt;hgroup&gt;</code> element</h2>
+        <p>Be aware that using h1-h6 tags to mark up groups of headings and their associated sub-headings/ taglines is discouraged. I'm talking about this kind of thing:</p>
+        <code>
+            &lt;h1&gt;Scones: &lt;/h1&gt;
+            <br><br>
+            &lt;h2&gt;The most resplendent of snacks&lt;/h2&gt;
+        </code>
+        <p>
+            Instead, try and reserve h1-h6 elements for when sections of content require a distinct heading.
+            <br>
+            <br>
+            So, how should we author such content? It is recommended to group it in an group element like this:
+        </p>
+        <code>
+        &lt;hgroup&gt;
+        <br><br>
+        &lt;h1&gt;Scones: &lt;/h1&gt;
+        <br><br>
+        &lt;p&gt;The most resplendent of snacks&lt;/p&gt;
+        <br><br>
+        &lt;/hgroup&gt;
+        </code>
+        <p>You should use an group element with a h1-h6 tag inside, along with any number of p tags before or after.</p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                The specification for the group element can be found here: https://html. spec. whatwg.org/multipage/sections.html#the-hgroup-element.
+            </p>
+        </section>
+       
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- page276 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Making and viewing WebP is a little easier than AVIF, if only because it has been around for longer and, as such, enjoys wider support. All modern operating systems and browsers now support WebP. Even Mac-only graphics applications such as Sketch allow a native export to Webp.
+        <br><br>
+        While not offering quite the file savings of AVIF, WebP is a solid second choice. But, unless you only need to support the latest browsers, you will still need something in place for users on older systems.
+      </p>
+      <h2>
+        Image format comparisons
+      </h2>
+      <p>
+        Let's consider an example to illustrate the possible savings. In the code that accompanies this chapter, you will find a file called scones. jpg. This is the same picture of scones we used in Chapter 1, The Essentials of Responsive Web Design, completely unmodified. On my computer, it tells me it has a file size of 199KB. If I load that file into the aforementioned Squoosh and leave the defaults, it tells me it can optimize the file down to a JPG of only 122KB. That file is in the code as squoosh-scones. jpg. That 39% saving in itself should be enough to show how much unneeded weight our images contain.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          How does image optimization work?
+          <br><br>
+          By default, an image from an application like Photoshop or straight out of a camera contains heaps of extra information we just don't need when destined for the web. Things like the location the image was taken, the date and time, camera used, aperture and lens settings, focal depth, and heaps, heaps more. Plus, the image can almost always have its data rewritten in a more optimized manner. That by itself would be the general idea of lossless optimization. At this point, we would be taking no detail from the image. However, we can often go further, removing image data with no reduction in perceived quality. That process is known as lossy optimization.
+          <br><br>
+          The trick is to find the "sweet spot" where you are saving significant extra data but not diminishing the perceptual quality of the image. At the very least, for any serious work, you should be trying to automate lossless compression of images, where no human analysis of the output will be necessary.
+        </p>
+      </section>
+      <p>
+        Let's save that same file as a Webp file; this gives us a file of only 79,4KB, a 60% saving on the original file size. You can find that file as squoosh-scones . webp.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

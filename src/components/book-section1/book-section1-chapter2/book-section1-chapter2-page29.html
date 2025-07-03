@@ -1,0 +1,45 @@
+<!-- page55 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <code>
+            allowfullscreen
+            &lt; &lt;/iframe&gt;
+            &lt;/div&gt;
+        </code>
+        <p>That's all there is to it. Simply add to your page and you're done: we now have a fully responsive YouTube video (note: kids, don't pay any attention to Mr. DeNiro; smoking is bad)!</p>
+        <h2>The modern way to embed iframes and keep aspect ratio</h2>
+        <p>If you only need to support more modern browsers (check at https://caniuse.com/mdn-css properties _aspect-ratio), you can set the aspect ratio of something like an i frame with the aspect-ratio CSS property. For an iframe we want to keep in a 16:9 ratio, such as a YouTube video, we could add a suitable class and do this:</p>
+        <code>
+            .iframe-16-9 {
+            aspect-ratio: 16/9; 
+            max-width: 100%;
+            }
+        </code>
+        <p>You can see this in action for yourself in example_02-04. html of the chapter code. Of course, the aspect-ratio property is not limited to iframes - you can use it on any box in CSS that you want to maintain certain proportions with.</p>
+        <h2>The loading attribute</h2>
+        <p>If you find yoursel adding a lot of images or i frame elements to your page, consider the loading attribute. Setting this attribute to lazy means the browser will only go and fetch the item if the user scrolls it into view. This is really useful for any media you know will certainly not be visible when the page first displays, meaning the cost of loading that item is saved until it is actually needed. I's literally as simple as adding it like this:</p>
+        <code>
+            &lt;img src="home-image-png" alt="A rendering of the home page" loading="lazy" /&gt;
+        </code>
+        <p>Or, if you were adding something like a YouTube video embed, you could make the same econ-&lt;/p&gt;
+        <code>
+            &lt;iframe
+            loading="lazy" width=" 560" height="315"
+        </code>
+        
+
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

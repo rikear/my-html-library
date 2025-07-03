@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- page358 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The only solid example of these I'm currently aware of are the safe-area-inset-* properties applicable to notched mobile phones. Made famous by the iPhone X, the "safe-areas" relate to the sections at the top and bottom of the screen where areas of Ul or physical hardware, such as cameras, impinge upon the viewing area.
+        <br><br>
+        Environment variables are defined with the env() function, rather than the var () function for custom properties. Values are passed into this function just like you would any other CSS function.
+        For example, if we wanted to add padding to the top of our element equal to the height of the environment's "safe area inset top," we could do this:
+      </p>
+      <code>
+        padding-top: env (safe-area-inset-top) ;
+      </code>
+      <p>
+        If the browser has that value available and it understands env () function, it will apply the value; otherwise, it wskip over it to the next declaration.
+      <br><br>
+        Unlike custom properties, we are not able to set environment variables for ourselves; these are values set by the environment alone.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the current specification for environment variables here: https:// drafts. csswg.org/css-env-1/#env-function.
+        <br><br>  
+          There are a few extra peculiarities to the iPhone notched screens. If you want a full walk-through of dealing with the iPhone notches, read https://benfrain.com/ css-environment-variables-iphonex/.
+        </p>
+      </section>
+      <h2>
+        Custom properties and web components
+      </h2>
+      <p>
+        Web components provide the web platform with native encapsulated components. This means the styles within them are contained, unable to access styles above them in the DOM. However, one thing that can penetrate this boundary is - you guessed it - custom properties.
+      <br><br>  
+        This makes custom properties the perfect mechanism for passing around values that you want to share among nested components.
+      <br><br>  
+        You can set a custom property on the outermost part of a web component using the : host pseu-do-class, like this:
+      </p>
+      <code>
+        host {
+      <br><br>    
+          --myCustomProperty: 100%;
+      <br><br>    
+        }
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page189 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+        .biog-post &gt; h3,
+        <br><br>
+        .blog-post &gt; h4,
+        <br><br>
+        .blog-post &gt; ul,
+        <br><br>
+        .blog-post &gt; ul &lt; li,
+        <br><br>
+        .blog-post &gt; p, 
+        <br><br>
+        .blog-post &gt; a {
+          <br><br>
+        /* shared styles */
+        <br><br>
+      }
+      </code>
+      <p>
+        That accidental "less than" symbol will mean this rule won't apply any styles to any of the selec-tors. Now, I don't think that is something to concern yourself with too much, but there are newer selectors that can solve these issues.
+      </p>
+      <h2>
+        The :is() functional pseudo-class
+      </h2>
+      <p>
+        This is also known as the "matches any" selector. Let's use it to refactor that prior example, and then talk about the differences:
+      </p>
+      <code>
+        .blog-post &gt; : is(h1, h2, h3, h4, ul, ul &lt; li, P, a) {
+        <br><br>
+          /* shared styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        Not only is this more compact, but it has the added benefit that even though that invalid selector is still present, the entire rule is not invalidated; just that one. Nice, eh?
+        <br><br>
+        Now, it is important to be aware that the : is functional gives all selectors within the specificity of the most specific selector. And that can be problematic. Here is the relevant portion of the specification:
+      </p>
+      <p>
+        The specificity of an is (), : not (), or : has () pseudo-class is replaced by the specificity of the most specific complex selector in its selector list argument.
+      </p>
+      <p>
+        So, suppose you have a grouping like this:
+      </p>
+      <code>
+        :is(.thing, .another-thing, and-another) {
+        <br><br>
+          /* styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        Each of those selectors will only have a specificity of 0,1,0, as the most specific selector in the selector list is a class.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

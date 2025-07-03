@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- page191 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        You can hopefully guess that the square we have will be red. The ID is an order of magnitude more specific than the class, and it is also written after it in the stylesheet too, so no way that square is going to have a gold background! However, wrap it in a :where ():
+      </p>
+      <code>
+        .hi {
+          width: 200px; 
+          height: 200px;
+          background-color: gold;
+        }
+        :where (#thing) {
+          background-color: red;
+        }
+      </code>
+      <p>
+        And that ID has zero specificity, meaning our square displays gold. This selector is useful in lots of scenarios but I find it most useful for "reset" styles, or any style you know you'll be overriding later on.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Remember to check support for your users. As we delve into CSS more and more, don't forget to visit https://caniuse. com, if you ever want to know what the current level of browser support is for a particular CSS or HTML5 feature. Alongside showing browser version support (searchable by feature), it also provides the most recent set of global usage statistics from https://gs. statcounter. com.
+        </p>
+      </section>
+      <h2>
+        The :has () relational pseudo-class
+      </h2>
+      <p>
+        A very recent addition to the CSS selectors at our disposal is the : has () functional pseudo-class.
+        <br><br>
+        In simple terms, it's a way of selecting an element, as long as it has certain child elements or conditions.
+        <br><br>
+        Let's suppose you want to do something with a container, but only if it has a video element inside.
+        <br><br>
+        That would look like this:
+      </p>
+      <code>
+        .thing: has (video) {
+        <br><br>
+          /* Styles */
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

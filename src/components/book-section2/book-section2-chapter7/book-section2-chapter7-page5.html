@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page218 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You may be wondering-why not just use opacity, as CSS allows elements to have opacity set with the opacity declaration? When we apply opacity to an element, a value is set between zero and one in decimal increments for example, opacity set to 0. 1 is 10%). However, opacity differs from an alpha channel. Setting an opacity value on an element affects the entire element, whereas setting a value by using an alpha channel allows particular parts of an element to have an alpha layer. For example, an element could have an alpha value for the background color but a solid color for the text within it.
+        </p>
+      </section>
+      <p>
+        OK, that brings us to the beginning of the newer CSS color capabilities.
+        <br><br>
+        In the last code snippet, we defined an RGB color with an alpha channel using this kind of syntax:
+      </p>
+      <code>
+        .redness-alpha-rgb {
+          <br><br>
+          color: rgb (254, 2, 8, 0.8);
+          <br><br>
+        }
+      </code>
+      <p>
+        However, we can now write things space-separated instead.
+      </p>
+      <h2>
+        Space-separated functional color notation
+      </h2>
+      <p>
+        Unless you need to support old browsers, you can, and probably should, write colors using the newer space-separated syntax. That doesn't get you anything extra for the sRGB-based notations we have already looked at, but as the newer color formats, which we will look at momentarily, also use the space-separated syntax, you may as well just use the same style for all.
+        <br><br>
+        So, space-separate the color values, and then if you need an alpha channel, add a forward slash (/) before adding the alpha as either a decimal value or a percentage.
+        <br><br>
+        For example:
+      </p>
+      <code>
+        .redness-alpha-rgba {
+          <br><br>
+          color: rgb (254 2 8 / 0.8);
+          <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

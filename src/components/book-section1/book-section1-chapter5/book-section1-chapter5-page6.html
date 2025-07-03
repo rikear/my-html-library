@@ -1,0 +1,66 @@
+<!DOCTYPE html><!-- page135 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Let's use the alignment properties we learned about in the last chapter to try centering our grid
+items:
+        </p>
+        <code>
+            .my-first-grid { 
+            <br><br>
+                display: grid; 
+            <br><br>
+                grid-gap: 10px;
+            <br><br>
+                grid-template-rows: 200px 200px;
+            <br><br> 
+                gria-template-columns: 200px 200px; 
+            <br><br>
+                background-color: #e4e4e4; 
+            <br><br>
+                align-items: center;
+            <br><br>
+                justify-content: center;
+            <br><br>
+            }
+        </code>
+        <p>
+            When I first started with Grid Layout and tried something like this, I expected to see the numbers perfectly centered in their respective grid tracks. However, that is not the case:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.3: If you don't set a width, a grid will consume the available space
+            </p>
+        </section>
+        <p>
+            If we think about what we have done, it does make sense. We made a grid, with two columns and two rows, each 200 px, and asked for the items to be both vertically and horizontally centered.
+            Because we have used grid and not inline-grid, the grid fills the entire width of the page, despite the fact that our grid items don't need all that space.
+
+        </p>
+        <code>
+            my-first-grid {
+            <br><br>
+                display: inline-grid; 
+            <br><br>
+                grid-gap: 10px;
+            <br><br>
+                grid-template-rows: 200px 200px;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  <!-- kulang ito -->
+</body>
+</html>

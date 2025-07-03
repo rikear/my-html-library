@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- page225 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        LCH is an abbreviation of Lightness, Chroma, Hue. It is the same color space as Lab, but using polar coordinates.
+      </p>
+      <section>
+        <object>
+            icon here
+        </object>
+        <p>
+          If you aren't familiar with the term polar coordinates, it's a way to describe how far something is from a reference point. Imagine looking down on a color wheel that shows all the possible colors of a color space. The center of that wheel is the pole, our reference point. You can describe where one color is in relation to the reference point by giving a direction/angle and a distance along the axis of that angle. That is the essence of how polar coordinates work in CSS color and mathematics.
+        </p>
+      </section>
+      <p>
+        The syntax is Lightness as a percentage, then two numerical values: one for the Chroma, and the third value for the Hue angle. So, here is an example of a very bright red:
+      </p>
+      <code>
+        background-color: 1ch (50% 132 43);
+      </code>
+      <p>
+        Like the other functional color notations, you can add a forward slash (/) and then add an alpha channel as a value between 0 and 1 or a percentage.
+        <br><br>
+        Arguably one of the more important things to take from LCH/Lab is that the Lightness is designed to look the same across different colors, something that the lightness of HSL does not do. So you should be able to define two different colors with the same lightness in lch() and they should appear to have the same perceptual lightness.
+        <br><br>
+        If you compare swatch 3, "hs] () same lightness", and swatch 4, "lch() same lightness", in the example file, hopefully you can appreciate that the lightness of the two colors in the LCH example are more similar than the lightness of the two HSL colors.
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 7,4: Comparison of two colors in HSL (top) and LCH (bottom) that should have the same lightness
+        </p>
+      </section>
+      <p>
+        Practically, when working with LCH, lower the lightness value for a darker variant of a color, and increase it for a lighter one.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

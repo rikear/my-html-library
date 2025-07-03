@@ -1,0 +1,94 @@
+<!DOCTYPE html> <!-- page298 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        If you're encoding SVGs in this manner, I would suggest avoiding the Base64 method as it doesn't compress as well as text for SVG content.
+      </p>
+      <h2>
+        Generating image sprites
+      </h2>
+      <p>
+        My personal recommendation, tool-wise, for generating image sprites or data URI assets, is iconiz (https://iconizr. com). It gives you complete control over how you would like your resultant SVG and fallback PNG assets. You can have the SVGs and fallback PNG files output as data URIs or image sprites, and it even includes the requisite JavaScript snippet for loading the correct asset if you opt for data URIs. This is highly recommended.
+        <br><br>
+        While I'm a big fan of SVGs as background images, if you want to animate them dynamically, or inject values into them via JavaScript, then it will be best to opt for inserting SVG data "inline" into the HTML.
+      </p>
+      <h2>
+        Inserting an SVG inline
+      </h2>
+      <p>
+        As SVG is merely an XML document, you can insert it directly into the HTML. For example:
+      </p>
+      <code>
+        &lt;div&gt;
+      <br><br>      
+          &lt;h3&gt; Inserted 'inline': &lt;/h3&gt;
+      <br><br>      
+          &lt;span class="inlineSVG" &gt;
+      <br><br>      
+            &lt;svg 
+      <br><br>      
+            id="svgInline" 
+      <br><br>      
+            width="198" 
+      <br><br>      
+            height="188" 
+      <br><br>      
+            viewBox="0 0 198 188" 
+      <br><br>      
+            xmIns= "http://www.w3.org/2000/svg" 
+      <br><br>      
+            xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+      <br><br>      
+            &lt;title&gt; Star 1 &lt;/title&gt;
+      <br><br>      
+              &lt;g 
+      <br><br>      
+              class="star_Wrapper" 
+      <br><br>      
+              fill="none" 
+      <br><br>      
+              fill-rule="evenodd"&gt;
+      <br><br>      
+                &lt;path 
+      <br><br>      
+                id="star_Path" 
+      <br><br>      
+                stroke="#979797" 
+      <br><br>      
+                stroke-width="3"
+      <br><br>      
+                fil1="#F8E81C" 
+      <br><br>      
+                d="M99 1541-58.78 30.902 11.227-65.45L3.894
+      <br><br>      
+                73.097165.717-9.55L99 4129.39 59.55 65.716 9.548-47.553
+      <br><br>      
+                46.353 11.226 65.452z" /&gt;
+      <br><br>      
+              &lt;/g&gt;
+      <br><br>      
+            &lt;/ svg&gt;
+      <br><br>      
+          &lt;/ span&gt;
+      <br><br>      
+        &lt;/div&gt;
+      <br><br>      
+      </code>
+      <p>
+        There is no special wrapping element needed; you literally just insert the SVG markup inside the HTML markup. It's also worth noting that if you remove any width and height attributes on the svg element, the SVG will scale fluidly to fit the containing element.
+        <br><br>
+        Inserting SVG as markup into your documents is probably the most versatile option in terms of accessing the broadest range of SVG features.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

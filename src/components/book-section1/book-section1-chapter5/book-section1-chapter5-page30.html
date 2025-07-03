@@ -1,0 +1,66 @@
+<!DOCTYPE html><!-- page159 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Allowing nested elements to take part in the Grid
+        </h2>
+        <p>
+            It is important to be aware that when you define a grid, it is only the direct descendant elements of that grid element that can participate in the layout. The children of those direct descendants cannot.
+            <br><br>
+            There are more flexible solutions to this shortcoming on the horizon in the form of subgrid.
+            However, right now, subgrid only has an implementation in Firefox and Safari, so we will only take a cursory look at that in a moment.
+            <br><br>
+            One way we can work around this particular problem right now is with display: contents.
+            <br><br>
+            What the display: contents declaration does is effectively make the layout aspect of the element it is set on - and crucially, not the accessibility side - disappear, allowing the children of that element to behave visually, as if the parent element didn't exist.
+            <br><br>
+            Let's consider this markup, and try this out for yourself as we go, by playing with example_05-08:
+        </p>
+        <code>
+            &lt; div class="container" &gt;
+            <br><br>
+                &lt; div class="child" &gt; Child -1 &lt; /div &gt;
+            <br><br>
+                &lt; div class="child" &gt; Child-2 &lt; /div &gt;
+            <br><br>
+                &lt; div class="parent" &gt;
+            <br><br>
+                    &lt; div class="grandchild" &gt; Grandchild 3 &lt; /div &gt;
+            <br><br>
+                    &lt; div class="grandchild" &gt; Grandchild 4 &lt; /div &gt;
+            <br><br>
+                &lt; /div &gt;
+            <br><br>
+            &lt; /div &gt;
+        </code>
+        <p>
+            And then this CSS:
+        </p>
+        <code>
+            .container { 
+            <br><br>
+                display: grid;
+            <br><br>
+                grid: repeat (2, 200px) / repeat (2, 200рx);
+            <br><br>
+            }
+            <br><br>
+            [class*=' child'] {
+            <br><br>
+            border: 2px dashed orange;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

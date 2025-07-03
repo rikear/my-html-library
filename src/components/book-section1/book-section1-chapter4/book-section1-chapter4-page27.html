@@ -1,0 +1,75 @@
+<!DOCTYPE html><!-- page120 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Let's combine our new source order-changing powers with some media queries to produce not just a different layout at different screen widths but different ordering.
+            Let's suppose we want our main content at the beginning of a document. Let's amend the content of our earlier example:
+        </p>
+        <code>
+            &lt; div class="container"&gt;
+            <br><br>
+                &lt; main class="item" &gt; Content &lt;/main&gt;
+            <br><br>
+                &lt; aside class="item"&gt; Side one &lt;/aside&gt;
+            <br><br>
+                &lt; aside class="item aside-two"&gt; Side Two &lt;/aside&gt;
+            <br><br>
+                &lt; header class="item"&gt; Header &lt;/header&gt;
+            <br><br>
+            &lt; footer class="item"&gt; Footer &lt;/footer&gt;
+            <br><br>
+            &lt;/div&gt;
+        </code>
+        <p>
+            First is the page content, then our two sidebar areas, then the header, and finally the footer. As we'll be using Flexbox, we can structure the HTML in the order that makes sense for the document, regardless of how things need to be laid out visually.
+            <br><br>
+            After some basic styling for each flex item, for the smallest screens (outside of any media query), I'll go with the following order:
+        </p>
+        <code>
+            header {
+            <br><br>
+                background-color: #105b63;
+            <br><br> 
+                order: 1;
+            <br><br>
+            }
+            <br><br>
+            main {
+            <br><br>
+                background-color: #fffad5;
+            <br><br> 
+                color: #333; 
+            <br><br>
+                order: 2;
+            <br><br>
+            }
+            <br><br>
+            aside {
+            <br><br>
+                background-color: #ffd34e; 
+            <br><br>
+                color: #222;
+            <br><br>
+                order: 3;
+            <br><br>
+            }
+            <br><br>
+            aside. aside-two {
+            <br><br>
+                background-color: #db9e36; 
+            <br><br>
+                color: #333;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html><!-- page98 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Now, let's consider how we would have the same content on a smaller screen that flexes to a point and then changes to the layout we have already seen. You can view the final code of this layout in example_04-02.
+            <br><br>
+            The idea is that, for smaller screens, we will have a single "tube" of content. The left-hand area will only be viewable as an "off-canvas" area typically, an area for a menu or similar, which sits off the viewable screen area and slides in when a menu button is pressed. The main content sits below the header, then the right-hand section below that, and finally the footer area. In our example, we can expose the left-hand menu area by clicking anywhere on the header. Typically, when making this kind of design pattern for real, a menu button would be used to activate the
+            side menu.
+            <br><br>
+            As you would expect, when combining this with our newly mastered media query skills, we can adjust the viewport and the design just "responds" — effortlessly moving from one layout to another and stretching between the two. I'm not going to list all the CSS properties here; it's all in example_04-02. However, here's an example the left-hand section:
+        </p>
+        <code>
+            .Left {
+                height: 625px;
+            <br><br>
+                background-color: #03аб6а;
+            <br><br> 
+                display: inline-block;
+            <br><br>
+                position: absolute;
+            <br><br>
+                left: -200px;
+            <br><br>
+                width: 200px; font-size: 0.9rem;
+            <br><br>
+                transition: transform 0.3s;
+            <br><br>
+            }
+            @media (min-width: 40rem) {
+            <br><br>
+                .Left {
+            <br><br>
+                width: 20.83%;
+            <br><br>
+                left: 0;
+            <br><br>
+                position: relative;
+            <br><br>
+                }
+            <br><br>
+            }
+        </code>
+        <p>
+            You can see that, up first, without a media query, is the small screen layout. Then, at larger screen sizes, the with becomes proportional, the positioning relative, and the left value is set to zero.
+        </p>    
+    </div>
+  </div>
+  
+</body>
+</html>

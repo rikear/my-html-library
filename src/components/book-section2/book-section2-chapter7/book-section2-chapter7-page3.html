@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page216 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The first figure in an HSL color definition represents hue. Looking at our wheel, we can see that yellow is at 60° green is at 120°, cyan is at 180°, blue is at 240°, magenta is at 300°, and finally, red is at 360° So, as the aforementioned HSL color had a hue of 315, it's easy to know that it will be between magenta (at 300°) and red (at 360°).
+        <br><br>
+        The next two values in an HSL definition are for saturation and lightness, specified as percentag-es. These merely alter the base hue. For a more saturated or "colorful" appearance, use a higher percentage in the second value. The final value, controlling the lightness, can vary between 0% for black and 100% for white. So, once you've defined a color as an HSL value, it's also easy to create variations of it, merely by altering the saturation and lightness percentages. For example, the same red color we defined in the RGB color section can also be defined in HSL values as follows:
+      </p>
+      <code>
+        .redness {
+          color: hsl (359, 99%, 50%) ;
+        }
+      </code>
+      <p>
+        If we wanted to make a slightly darker color, we could use the same HSL value and merely alter the lightness (the final value) percentage value only:
+      </p>
+      <code>
+        .darker-red {
+          color: hs1(359, 99%, 40%) ;
+        }
+      </code>
+      <p>
+        In conclusion, if you can remember the mnemonic "Young Guys Can Be Messy Rascals" (or any other mnemonic you care to memorize) for the HSL color wheel, you'll be able to approximately write HSL color values without resorting to a color picker, and also create variations upon it. Show that trick to the savant Ruby, Node.js, and NET developers at the office party and earn some quick kudos!
+      </p>
+      <h2>
+        Alpha channels
+      </h2>
+      <p>
+        It won't be long when working with designs on the web before you will be asked if the color of something can be partially transparent to allow some of what's beneath to show through. For that need, with hex, RGB, and HSL, it is possible to define an alpha channel.
+      </p>
+      <h2>
+        Alpha with hex
+      </h2>
+      <p>
+        With hex, you can define an alpha channel with a four-digit or eight-digit syntax. Here is black with a 50% alpha channel written first as a four-digit hex code:
+      </p>
+      <code>
+        background-color: #0007;
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

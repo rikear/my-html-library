@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- page187 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            •a-div: not (• not-me) { 
+                background-color: orange;
+                border-radius: 50%;
+            }
+        </code>
+        <p>
+          Our final rule will make every element with a class of. a - div orange and round, with the exception of the div that also has the . not-me class. You can find that code in the example _06-05 folder of the code samples (remember, you can grab them all at https://rwd. education):
+        </p>
+        <code>
+          <object>
+            img here
+          </object>
+          <p>
+            Figure 6.9: The negation selector allows you to exclude elements from selection
+          </p>
+        </code>
+        <p>
+          So far, we have looked primarily at what's known as structural pseudo-classes (full information on this is available at https: //www.w3.org/TR/selectors/#structural-pseudos). However, CSS has many more selectors. If you're working on a web application, it's worth looking at the full list of UI element state pseudo-classes (https://www.w3.org/TR/selectors/#resource-pseudos) as they can, for example, help you target rules based on whether something is selected or not.
+        </p>
+        <h2>
+          The empty (:empty) selector
+        </h2>
+        <p>
+          I've encountered situations where I have an element that includes some padding on the inside and gets content dynamically inserted. Sometimes, it gets content inserted, while sometimes it doesn't The trouble is, when it doesn't include content, I still see the padding. Consider the HTML in example_06-06:
+        </p>
+        <code>
+          &lt; div class="thing" &gt; &lt; /div gt;
+        </code>
+        <p>
+          And here's the CSS:
+        </p>
+        <code>
+            .thing {
+              padding: 1rem;
+              background-color: violet;
+            } 
+        </code>
+        <p>
+          Without any content in that element, I still see the background color. Thankfully, we can easily hide it, like this:
+        </p>
+        <code>
+          .thing: empty {
+            display: none;
+          }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

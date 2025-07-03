@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- page328 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Therefore, unless there is a compelling reason to do so, using the default transition (ease) over a short interval is often best; a maximum of 1 second is my own preference, and usually as little as 0.2s.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Fun transitions for responsive websites
+          Did you ever have one of those occasions growing up when one parent was out for the day and the other parent said something to the effect of, "OK, while your mom/ dad is out, we're going to put sugar all over your breakfast cereal, but you have to promise not to tell them when they come back." I'm certainly guilty of that with my little ankle biters. So, here's the thing. While no one is looking, let's have a bit of fun.
+          I don't recommend this for production, but try adding this to your responsive project:
+        </p>
+        <code>
+          * {
+            transition: all 1s;
+          }
+        </code>
+        <p>
+          Here, we are using the CSS universal selector * to select everything and then setting a transition on all properties for 1 second (15). As we have omitted to specify the timing function, ease will be used by default and there will be no delay as, again, a default of 0 is assumed if an alternative value is not added. The effect? Well, try resizing your browser window and most things (links, hover states, and the like) behave as you would expect. However, because everything transitions, it also includes any rules within media queries, so as the browser window is resized, elements sort of flow from one state to the next. Is it essential? Absolutely not! Is it fun to watch and play around with? Certainly! Now, remove that rule before your mom sees it!
+        </p>
+      </section>
+      <p>
+        Right, hopefully, we have transitions licked. Now we can have some fun, because we are going to learn how to effortlessly move elements around the screen with transforms. There are 2D and 3D variants; we will start with 2D and if that gets a bit flat (see what I did there? No? I'll see myself out) then we will move on to 3D.
+      </p>
+      <h2>
+        CSS 2D transforms
+      </h2>
+      <p>
+        Despite sounding similar to CSS transitions, CSS transforms are entirely different. As we already established, transitions deal with the transition from one state to another. Transforms, on the other hand, are a means of defining what the state should actually be.
+        My own (admittedly childish) way of remembering the difference is like this: imagine a Transformer robot like Optimus Prime. When he has changed into a truck, he has transformed.
+      </p> 
+
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- page429 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, before we get into the non-standards, proprietary way that Safari and Chrome-based browsers use, an important point. If you are going down the route of altering scrollbars in any significant manner, ensure you consider accessibility. In the example above, I went for a 3:1 color contrast ratio of track to background, and thumb to track. That should be the minimum you opt for, despite the fact that, often, the host operating system's own scrollbars do not adhere to those contrast ratios!
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          If you want a deeper dive into the considerations when styling scrollbars, I recommend the following: https://adrianroselli. com/2019/01/baseline-rules-for-scrollbar-usability.html.
+        </p>
+      </section>
+      <p>
+        Here is what I have added to deal with WebKit and Chrome browsers:
+      </p>
+      <code>
+        .Scroll Wrapper::-webkit-scrollbar { 
+      <br><br>    
+          width: 25px;
+      <br><br>    
+          background-color: #616161;
+      <br><br>    
+        }
+      <br><br>    
+        .Scroll Wrapper::-webkit-scrollbar-thumb { 
+      <br><br>    
+          background-color: #b5b5b5; 
+      <br><br>    
+          border-radius: 12px;
+      <br><br>    
+      }
+      </code>
+      <p>
+        And in Chrome, this is the effect that has:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 15.7: Using non-standards scrollbar styling in Chrome
+        </p>
+      </section>
+      <p>
+        There are other -webkit- prefixed scrollbar properties; the aim here is merely to get us some equivalence to the "official" declarations we set. Remember, regardless of what you set, mobile browsers tend to do their own things.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

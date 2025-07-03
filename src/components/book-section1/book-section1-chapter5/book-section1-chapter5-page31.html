@@ -1,0 +1,40 @@
+<!DOCTYPE html><!-- page160 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            And by default, that gives us something like this in the browser:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.17: By default, descendants of grid items cannot take part in the grid
+            </p>
+        </section>
+        <p>
+            You can see that the two grandchildren elements are not taking part in the grid. We can solve that like this:
+        </p>
+        <code>
+            .parent {
+            <br><br>
+            display: contents;
+            <br><br>
+            }
+        </code>
+        <p>
+            By setting the parent element to have display: contents, we are allowing the element to display its contents and therefore allowing those elements to participate in the grid layout.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

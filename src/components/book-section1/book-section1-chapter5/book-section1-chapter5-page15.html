@@ -1,0 +1,68 @@
+<!DOCTYPE html><!-- page144 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Placing items in the grid
+        </h2>
+        <p>
+            Before this example, we have been positioning each grid item in a single grid area. However, here, we have certain grid items being assigned spans of columns or rows numerically.
+            <br><br>
+            Let's take the grid-item example:
+        </p>
+        <code>
+            .grid-item {
+            <br><br>
+                grid-column: 2/-1;
+            <br><br>
+            }
+        </code>
+        <p>
+            Here, the grid-column property is being set to start at the second grid line and end at the - 1 grid line. The -1 looks pretty odd at first, but it is part of a very smart piece of syntax.
+            <br><br>
+            The first number is the start point, which is separated from the endpoint with a forward slash, /. Positive numbers count from the start side, the left-hand side in our column example, while negative numbers start from the end side, the right, in this instance. So, - 1 basically just means the last grid line. So, this nice terse syntax just reads: "Start at line 2 and go to the end."
+            <br><br>
+            There's an example of spanning across rows in there too. Take a look at this one again:
+        </p>
+        <code>
+            .grid-item {
+            <br><br>
+                grid-row: 4 / 7;
+            <br><br>
+            }
+        </code>
+        <p>
+            This one says, "Start at grid row line 4 and end at grid row line 7." If your preference is not telling the Grid where something ends and more how much space something should span, Grid Layout has just the property for you.
+        </p>
+        <h2>
+            span
+        </h2>
+        <p>
+            Take a look at the CSS for • grid-item7 now:
+        </p>
+        <code>
+            .grid-item17 {
+            <br><br>
+                grid-row: 6 / span 2;
+            <br><br>
+                grid-column: 2/3;
+            <br><br>
+            }
+        </code>
+        <p>
+            Can you see how we have done something a little different with the value for grid-row?
+            <br><br>
+            Rather than stipulating a definite start and end point when placing grid items, you can give one or the other and then tell the item to span a number of rows/columns from that point either forward or backward. In our example, we told the item to start at grid line 6 and span 2 rows.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

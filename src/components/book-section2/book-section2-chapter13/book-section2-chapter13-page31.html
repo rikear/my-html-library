@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page398 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        So, back to our issue. If we have a form with labels and fields like this, with the label above the input (to give us the requisite basic layout), it leaves us a little stuck:
+      </p>
+      <code>
+        &lt;div class="form-Input_Wrapper"&gt;
+      <br><br>      
+          &lt;label for="film"&gt; The film in question? &lt;/label&gt;
+      <br><br>      
+          &lt;input
+      <br><br>      
+            id="film" 
+      <br><br>      
+            name="film"
+      <br><br>       
+            type="text"
+      <br><br>      
+            placeholder="e.g. King Kong" 
+      <br><br>      
+            required
+      <br><br>      
+          /&gt;
+      <br><br>      
+        &lt;/div&gt;
+      </code>
+      <p>
+        In this situation, until recently in CSS, there was no way to change the style of the label based on whether the input is required or not (as it comes after the label in the markup). So, let's look at two ways to solve the issue. The code for both is in the example_13-02 files.
+      <br><br>  
+        In recent browsers, which support the : has selector that we looked at in Chapter 6, CSS Selectors, Typography, and More, we can easily use a selector like this:
+      </p>
+      <code>
+        .form-Input_Wrapper: has (input: required) label: :after (}
+      </code>
+      <p>
+        And then style the :: after pseudo-element accordingly. This looks at the element that contains the label and the label and says, "If I have a required input in here, select the label inside."
+      <br><br>  
+        But as support for that isn't great, let's consider how to work around the problem for older browsers.
+      <br><br>  
+        We could switch the order of those two elements in the markup, but then we would end up with the label underneath the input.
+      <br><br>  
+        However, have you remembered that both Flexbox and Grid give us the ability to visually reverse the order of elements (read all about them in Chapter 4 and Chapter 5 if you haven't done so already) with ease?
+      <br><br>  
+        That allows us to use the following markup to create a direct sibling association we can use in CSS:
+      </p>
+      <code>
+        &lt;div class="form-Input_Wrapper"&gt;
+          &lt;input 
+            id="film"
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

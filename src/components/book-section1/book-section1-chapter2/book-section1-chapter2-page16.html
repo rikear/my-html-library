@@ -1,0 +1,43 @@
+<!-- page42 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <code>
+        Of course I didn't. It would probably kill me if I did. What a way to go. Mmmmmm, scones!
+        &lt;/p&gt;
+        &lt;/details&gt;
+        </code>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>Figure 2.2: By adding the open attribute, the content is shown by default</p>
+        </section>
+        <p>Browsers typically add some default styling to indicate the panel can be opened. Changing the style is frankly a horror show as there is no consensus on how to do this. Different browsers have their own implementations of how we can deal with any visual marker for the details. In Safari, you need to use a proprietary pseudo class (note the -webkit - prefix). So, to remove it entirely:</p>
+        <code>
+            summary:: -webkit-details-marker {
+            display: none;
+            }
+        </code>
+        <p>You can, of course, use that same selector to style the marker differently.
+        <br><br>
+        To perform the equivalent action in Chrome and Firefox, you can do this:
+        </p>
+        <code>
+            summary: : marker
+        </code>
+
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

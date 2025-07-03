@@ -1,0 +1,39 @@
+<!DOCTYPE html><!-- page131 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Grid-specific concepts and terminology
+        </h2>
+        <p>
+            The first concept to understand is explicit and implicit item placement. The Grid Layout you define in your CSS with columns and rows is the explicit grid; it's the layout of the items you have explicitly defined. Meanwhile, the implicit grid is the grid placement of items that happens when additional items you didn't foresee also get added to the grid. The placement of these newitems is implied by the layout of your explicit grid. Don't worry if that doesn't make sense yet; it will!
+            <br><br>
+            The next concept that commonly confuses people (it certainly did me) is that grid lines are on either side of the grid items. The bit in the middle, between the lines, is referred to as a grid track.
+            Where two tracks from different directions intersect is where a grid area is formed. This grab from the dev tools of Chrome should help illustrate the point:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.1: Be aware that grid lines sit on either side of tracks, where the content lives
+            </p>
+        </section>
+        <p>
+            A key takeaway is that when you place items within a grid, you can do so by referencing the grid lines (which, therefore, implies a grid area) or the grid areas themselves, if they are named.
+            <br><br>
+            There is no limit, theoretically, to the number of tracks a grid can have. However, browsers are at liberty to truncate grids. If you set a value beyond the browser's limit, the grid will be truncated to that limit. Practically, I can't imagine hitting a browser's limit being a likely scenario, but I'm mentioning it here for completeness.
+        </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

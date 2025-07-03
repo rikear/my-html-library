@@ -1,0 +1,71 @@
+<!DOCTYPE html><!-- page110 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            &lt; div class="item AlignSelf">Item Two &lt;/div&gt;
+            <br><br>
+            &lt; div class="item"&gt; Item Three& lt;/div&gt;
+            <br><br>
+            &lt;/ div &gt;
+        </code>
+        <p>
+            And here is the CSS for that one item we want to move:
+        </p>
+        <code>
+            .AlignSelf {
+            <br><br>
+                align-self: flex-end;
+            <br><br>
+            }
+        </code>
+        <p>
+            Here is the effect in the browser:
+        </p>
+       <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 4.10: Individual items can be aligned in a different manner
+            </p>
+       </section>
+       <p>
+        Wow! Flexbox really makes these kinds of changes trivial. In the example, the value of align-self was set to flex-end. Let's consider the possible values we could use on the cross axis before looking at alignment in the main axis.
+       </p>
+       <h2>
+        Possible alignment values
+       </h2>
+       <p>
+        For cross-axis alignment, Flexbox has the following possible values:
+       </p>
+       <ul>
+        <li>
+            flex-start: Setting an element to flex-start makes it begin at the "starting" edge of
+            its flex container.
+        </li>
+        <li>
+            flex-end: Setting to flex-end aligns the element at the end of the flex container.
+        </li>
+        <li>
+            center: This puts it in the middle of the flex container.
+        </li>
+        <li>
+            baseline: This sets all the flex items in the container so that their baselines align.
+        </li>
+        <li>
+            stretch: This makes the items stretch to the size of their flex container (in the cross axis).
+        </li>
+       </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

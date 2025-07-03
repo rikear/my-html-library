@@ -1,0 +1,47 @@
+<!-- page56 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div>
+        <code>
+            src="https://www.youtube.com/embed/NkfMBI1tVwY"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture"
+            allowfullscreen
+            &gt; &lt;/iframe&gt;
+        </code>
+        <p>In case you were wondering, the opposite of lazy in this context is eager, which is the default if you don't add the attribute.</p>
+        <h2>The &lt;dialog&gt; element</h2>
+        <p>You know what a dialog is, even if you know it by a different name. It's the pop-up you get on a site asking you to subscribe to a newsletter, or log in to a service. Coding this kind of thing has always been problematic. Worse still, if you didn't think they were problematic it is likely because you didn't realize there were accessibility problems with your implementation. It's likely users using only a keyboard could struggle to get focus into the dialog or be unable to leave it.
+        <br><br>
+        Thankfully, we now have a specific element to handle these use cases. In the code for this chapter, you will want to consider example_02-05. html.
+        <br><br>
+        Inside that HTML file is also the relevant CSS and JavaScript to produce a simple but fully working dialog.
+        When the modal dialog is opened, it automatically gets centered, focused, and the backdrop of the dialog — which is automatically inserted — covers everything below, preventing any of the underlying content from being interacted with. You can dismiss the dialog with the but ton inside it, or a keyboard press of the Escape key; the keyboard support is functionality you get for free.
+        The dialog is a wonderful addition to the web platform.
+        <br><br>
+        Here is the relevant HTML from our example:
+        </p>
+        <code>
+            &lt;button id="launchDialog">Where is the dialog?&lt;/button&gt;
+            <br><br>
+            &lt;p id="formResult"&gt;&lt;/p&gt;
+            <br><br>
+            &lt;dialog id="dialogEle"&gt;
+            <br><br>
+            &lt;form method="dialog"&gt;
+            <br><br>
+            &lt;h1&gt;How about this? A native Dialog.&lt;/h1&gt;
+        </code>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page207 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        There is also a low-level property that lets you bundle up your variable font settings into a single property/value combination:
+      </p>
+      <code>
+        font-variation-settings: "wght" 300, "sint" -4;
+      </code>
+      <p>
+        Here, we have set the font weight to 300 and the angle of the slant to -4. However, the specification offers the following cautionary advice:
+      </p>
+      <p>
+        When possible, authors should generally use the other properties related to font variations (such as font-optical-sizing), and only use this property for special cases where its use is the only way of accessing a particular infrequently used font variation. For example, it is preferable to use font-weight: 700 rather than font-variation-settings: "wght" 700.
+      </p>
+      <p>
+        I'm not sure why this advice is given. The specification doesn't explain the rationale. Hopefully, this detail will be added when the specification is complete. You can find the current version here: https://www.w3.org/TR/css-fonts-4/.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Font variation properties can be animated and transitioned, which can make for some fantastic effects!
+        </p>
+      </section>
+      <p>
+        Having covered the registered axis group, let's briefly take a look at the custom axis group.
+      </p>
+      <h2>
+        Custom axis
+      </h2>
+      <p>
+        Variable fonts can include their own axis. For example, the FS Pimlico Glow VF font has a "glow" axis. You can amend that like this:
+      </p>
+      <code>
+        font-variation-settings: "GLOW" 500;
+      </code>
+      <p>
+        Notice how this custom axis is written in uppercase; that is, "GLOW"? That's how to determine the difference between a registered and custom axis in variable font settings.
+        <br><br>
+        If your head isn't already hurting from the seemingly endless possibilities, I also need to tell you about font features, which are sort of similar to the two different axes we just looked at. Don't worry; it will make sense shortly.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

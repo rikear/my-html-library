@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- page317 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+                stroke: violet;
+              }
+            }
+        ]]&gt; &lt;/style&gt;
+      </code>
+      <p>
+        And that SVG is displayed on the page at a width of 200 px, inside a browser viewport that is 1,200 px wide. 
+        <br><br>
+        We might expect the stroke of the star to be violet when the screen is 800 px and above. After all, that's what we have our media query set to. However, when the SVG is placed on the page via an img tag, as a background image, or inside an object tag, it has no knowledge of the outer HTML document. Hence, in this situation, min-width means the minimum width of the SVG itself. So, unless the SVG itself is displayed on the page at a width of 800 px or more, the stroke won'te violet.
+        <br><br>
+        Conversely, when you insert an SVG inline, it merges (in a manner of speaking) with the outer HTML document. The min-width media query here is looking to the viewport (as is the HTML) to decide when the media query matches.
+        <br><br>
+        To solve this particular problem and make the same media query behave consistently, we could amend our media query to this:
+      </p>
+      <code>
+        @media (min-device-width: 800px) {
+      <br><br>    
+          #star_Path {
+      <br><br>    
+            stroke: Violet;
+      <br><br>    
+          }
+      <br><br>    
+        }
+      </code>
+      <p>
+        That way, regardless of the SVG size or how it is embedded, it is looking to the device width (ef-fectively the viewport).
+      </p>
+      <h2>
+        Optimizing SVGs
+      </h2>
+      <p>
+        As conscientious developers, we want to ensure that assets are as small as possible. The easiest way to do this with SVGs is to make use of automation tools that can optimize various particulars of SVG documents. Besides obvious economies such as removing elements (for example, stripping the title and description elements), it's also possible to perform a raft of micro-optimizations that, when added up, make for far leaner SVG assets. Presently, for this task, I would recommend SVGO (https://github. com/svg/svgo).
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

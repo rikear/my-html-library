@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- page433 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        So, on the first scrolling item we add this id:
+      </p>
+      <code>
+        &lt;figure id="start" class="Item"&gt;
+      </code>
+      <p>
+        And on the last this:
+      </p>
+      <code>
+        &lt;figure id="end" class="Item"&gt;
+      </code>
+      <p>
+        And our two links look like this:
+      </p>
+      <code>
+        &lt;a class="ScrollBtn" href="#start"&gt; Start &lt;/a&gt;
+        &lt;a class="ScrollBtn" href="#end"&gt; End &lt;/a&gt;
+      </code>
+      <p>
+        Now, our mechanism is set up as traditional anchor points: as you might imagine, by default, clicking on End instantly scrolls the panel to the end. However, if we add scroll-behavior: smooth to our scroll panel, we get a silky-smooth scroll behavior instead:
+      </p>
+      <code>
+        .Scroll _Wrapper {
+        <br><br> 
+          display: grid;
+          <br><br>
+          width: 100%;
+          <br><br>
+          overflow-y: hidden; 
+          <br><br>
+          overflow-x: scroll;
+          <br><br>
+          gap: 0 20px;
+          <br><br>
+          grid-template-rows: auto auto;
+          <br><br> 
+          grid-auto-columns: auto; 
+          <br><br>
+          grid-auto-flow: column;
+          <br><br>
+          /* standards way, currently onLy implemented by Firefox */ 
+          <br><br>
+          scrollbar-color: #b5b5b5 #616161;
+          <br><br> 
+          scrollbar-width: thin;
+          <br><br>
+          scroll-snap-type: x mandatory;
+          <br><br>
+          scroll-behavior: smooth;
+          <br><br>
+        }
+      </code>
+      <p>
+        Nice! Sadly, this is something that images just don't convey. However, ifyou open example _15-03, then you can have a play with it for yourself.
+        <br><br>
+        We've taken a basic scrolling panel and, with some choice CSS, managed to add custom-colored scrollbars, smooth scrolling, and snap points for a very impressive and robust user experience.
+        <br><br>
+        We've reached the end of the bonus techniques section. Hopefully, you have a few more handy tricks in your arsenal for the next project you embark on.
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

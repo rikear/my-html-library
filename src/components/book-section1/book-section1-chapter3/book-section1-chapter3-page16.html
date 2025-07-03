@@ -1,0 +1,44 @@
+<!DOCTYPE html><!-- page79 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <p>
+            Apart from preference and/or compartmentalization of code, there is rarely a great tangible advantage in separating different media query styles into separate files. After all, using separate files increases the number of HTTP requests needed to render a page, which in turn can make the pages slower in certain other situations. Nothing is ever easy on the Web! It is, therefore, really a question of evaluating the entire performance of your site and testing each scenario on different devices.
+            <br><br>
+            As a default approach, unless the project has considerable time available for performance opti-mizations, this is one of the last places I would look to make performance gains.
+            <br><br>
+            More practically, only once I am certain all images are compressed, all scripts are squished as small as possible with concatenation and minification, all assets are being served gzipped, all static content is being cached via CDNs and all surplus CSS rules have been removed, would I start looking to split up media queries into separate files for potential performance gains.
+            <br><br>
+            In all but exceptional circumstances, I recommend adding media queries within an existing style sheet alongside the "normal" rules. If you are happy to do the same, that leads to one further consideration: should media queries be declared underneath the associated selector? Or split off into a separate block of code at the end for all alike media queries? Glad you asked.
+        </p>
+        <h2>Consolidate media queries or scatter them where it suits?</h2>
+        <p>
+            I'm a fan of writing media queries underneath the original "normal" rule. For example, let's say I want to change the width of a couple of different elements, at different places in the style sheet, depending on the viewport width. I would typically do this:
+        </p>
+        <code>
+            .thing {
+            width: 50%;
+            }
+            @media (min-width: 30rem) {
+            .thing {
+            width: 75%;}
+            }
+            /*More styles for different eLements */
+            .thing2 { width: 65%;
+            }
+        </code>
+
+
+       
+    </div>
+  </div>
+
+</body>
+</html>

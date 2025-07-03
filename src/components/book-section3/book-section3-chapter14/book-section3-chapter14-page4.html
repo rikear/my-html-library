@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- page409 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The reset would get the lowest priority, followed by the framework, then layout, with the components layer having the highest priority. Whitespace isn't important, so you can write them vertically or on one line.
+      <br><br>
+        This would work equally well:
+      </p>
+      <code>
+        @layer reset, framework, layout, components;
+      </code>
+      <p>
+        Personally, I think it's easier to reason about them listed vertically, as it enforces the order of priority, but you do you!
+      <br><br>  
+        Itis also important to remember that the first instance of a layer defines its priority for perpetuity. Anywhere you subsequently add to, or re-declare that layer, it will remain in its current priority order.
+      </p>
+      <h2>
+        Adding rules to layers
+      </h2>
+      <p>
+        Because you don't have to add styles to a layer when you define it, you can add rules to a layer any number of times from any location. After a few hundred lines of CSS, if you decide you need to add a rule to layout, you can simply do this:
+      </p>
+      <code>
+        @layer layout {
+      <br><br>      
+          .my-Thing { 
+      <br><br>      
+            display: grid;
+      <br><br>      
+            grid-auto-flow: column;
+      <br><br>      
+          }
+      <br><br>      
+        }
+      </code>
+      <p>
+        The rule will be added to the relevant layer and obey the priority assigned to that layer when it was defined.
+      </p>
+      <h2>
+        The priority of rules in and outside of layers
+      </h2>
+      <p>
+        A helpful feature of cascade layers is that any styles outside of a layer are always a greater priority than styles in one. This makes it helpful if you want to, effectively, quarantine styles. This is exactly the procedure we followed at the outset, moving our mythical "Shoe Lace" framework CSS into its own layer, allowing us to write styles for our button easily without needing to battle specificity.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

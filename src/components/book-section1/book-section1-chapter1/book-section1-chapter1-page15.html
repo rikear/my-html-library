@@ -1,0 +1,31 @@
+<!DOCTYPE html><!-- page17 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <p>All this max width-based rule does is stipulate that all images should grow to be a maximum of 100% of their size. Where a containing element (such as the body or a div it sits within) is less than the full intrinsic width of the image, the image will simply scale up to display as large as it
+          can within that constraint.</p>
+        <h2>A brief tangent on width/max-width for images</h2>
+        <p>To make images fluid, you could also use the more widely used width property, for example, width: 100%, but this has a different effect. When a property of width is used then the image will be displayed at that width, relative to its container if using percentages, regardless of its own inherent size. The result in our example would be that the logo (also an image) would stretch beyond its intrinsic size to fill 100% of its container. With a container far wider than the image, as is the case with our logo, this leads to a massively oversized image.
+            <br>
+            <br>
+            Excellent. Everything is now laid out as expected. No matter the viewport size, nothing is overflowing the page horizontally.
+            <br>
+            <br>
+            However, if we look at the page in larger viewports, the basic styles start to get both literally and figuratively stretched. Take a look at the example page at a size around 1400 px:
+        </p>
+        <object>
+            img here
+        </object>
+        <p>Figure 1.6: We clearly need to fix the size of this image for larger viewports</p>
+    </div>
+  </div>
+
+</body>
+</html>

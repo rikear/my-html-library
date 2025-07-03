@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page331 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Translate
+      </h2>
+      <p>
+        Here's the syntax for translate:
+      </p>
+      <code>
+        .translate:hover { 
+          transform: translate(-20px, -20px);
+        }
+      </code>
+      <p>
+        Here's the effect that rule has on our example:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.8: translate lets you move an element anywhere on the x or y axis
+        </p>
+      </section>
+      <p>
+        The translate property tells the browser to move an element by an amount, defined by a length (for example, vw, px,%, and so on). The first value is the x axis and the second value is the y axis.
+        Positive values given within parentheses move the element right or down; negative values move it left or up. If you only pass one value, then it is applied to the x axis.
+        <br><br>
+        If you want to specify just one axis to translate an element, you can also use translateX (-20px), which, in this instance, would move the element left 20 px, or you could use trans lateY (-20px), which, in this case, would move the element 20 px up.
+      </p>
+      <h2>
+        Using translate to center absolutely positioned elements
+      </h2>
+      <p>
+        translate provides a really useful way to center absolutely positioned elements within a relatively positioned container. You can view this example at example_11-04.
+      </p>
+      <p>
+        Consider this markup:
+      </p>
+      <code>
+        &lt;div class="outer" &gt;
+      <br><br>  
+          &lt;div class="inner"&gt; &lt;/div&gt;
+      <br><br>  
+        &lt; /di&gt;&gt;
+      </code>
+      <p>
+        And then this CSS:
+      </p>
+      <code>
+        .outer {
+          position: relative;
+          height: 400px;
+          background-color: #F90;
+      </code>
+
+    </div>
+  </div>
+  
+</body>
+</html>

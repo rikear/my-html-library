@@ -1,0 +1,75 @@
+<!DOCTYPE html><!-- page105 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            You can find that as example_04-05.
+        </p>
+        <section>
+            <object>
+                icon ere
+            </object>
+            <p>
+                Be aware that when using the reverse-based properties, you are only changing the order in presentation. This won't change the order of the content for people using a screen reader, for example. If the order of the items is essential to the understanding of the content, ensure you make the changes in the DOM to benefit all users.
+            </p>
+        </section>
+        <h2>
+            How about if we want them laid out vertically instead?
+        </h2>
+        <p>
+            Simple. Change to flex-direction: column; on the wrapping element and remove the auto margin:
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Figure 4.5: Items laid out vertically instead
+            </p>
+        </section>
+        <p>
+            Here's the code for it:
+        </p>
+        <code>
+            .container {
+            <br><br>
+                background-color: indigo;
+            <br><br>
+                font-family: "Oswald", sans-serif; 
+            <br><br>
+                font-size: 1rem;
+            <br><br>
+                min-height: 2.75rem;
+            <br><br> 
+                display: flex;
+            <br><br>
+                flex-direction: column;
+            <br><br>
+                align-items: center;
+            <br><br>
+                padding: 0 1rem;
+            <br><br>
+            }
+            <br><br>
+            .item,
+            <br><br>
+            .last-item { 
+            <br><br>
+                color: #ebebeb;
+            <br><br>
+                text-decoration: none;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

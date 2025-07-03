@@ -1,0 +1,44 @@
+<!DOCTYPE html> <!-- page275 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, if you want to save yourself and your users bandwidth, it is no longer so simple. Let's consider two newer image formats and where they might be applicable and advantageous to use.
+        <br><br>
+        AVIF and WebP are formats that, given the same image as a starting point, almost always produce a smaller file size and preferable quality than an equivalent JPG file.
+      </p>
+      <h2>
+        AVIF image format
+      </h2>
+      <p>
+        AVIF, the image counterpart of AVI video, is an open-source image format for still and, crucially, animated images. It supports an alpha channel, which JPG doesn't, and compresses data far more effectively than JPEG or even WebP (which we will look at shortly). It also supports greater color depth, allowing the use of wide gamut colors in images (you'll want to look at Chapter 7, CSS Color, for more info on color gamut). On top of that, it supports animations and "live" photos with image sequences.
+        <br><br>
+        If that wasn't enough, it almost always, to my eyes at least, produces a better-looking image when compared with, say, a JPG. So what's the catch? There are two. Firstly, the ease with which you can create an AVIF image, and then, secondly, the support in browsers for actually viewing them.
+        <br><br>
+        To create AVIF images you typically need a plugin for your graphic editor of choice; few graphic programs natively support AVIF currently. If you want a straightforward browser-based tool to do a conversion, look at Squoosh: https:// squoosh. app/
+        <br><br>
+        When it comes to viewing AVIF images in the browser, as of 2022, there is only support for Chrome and Firefox. Not even Edge, itself with the same Chromium underpinnings as Chrome, supports it. Safari is also missing support on macOS. This is despite the fact that the WebKit engine Safari runs on is capable of using AVIF. This is because Safari uses the host operating system's image decoding capabilities - and macOS currently lacks support.
+        <br><br>
+        However, this doesn't mean we can't utilize AVIF; we just need to employ it where we can, and use a different format when we can't. We will come to the practicalities of doing that shortly.
+        Before that, let's also consider WebP.
+      </p>
+      <h2>
+        WebP image format
+      </h2>
+      <p>
+        WebP was a format created by Google. Roughly speaking, a WebP image will tend to give you a 25% file saving against a comparable PNG or JPG.
+        <br><br>
+        It also supports alpha and animation, so it can be a good replacement for GIF.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

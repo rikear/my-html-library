@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- page427 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        And here it is in firefox (both browsers on macos):
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 15.5: Default scrollbar on Firefox (macOS)
+        </p>
+      </section>
+      <p>
+        I actually think the default appearance on Firefox is very nice and I'm not sure I would do much to change it. However, the Chrome one could maybe do with a little work.
+      </p>
+      <h2>
+        Styling scrollbars
+      </h2>
+      <p>
+        Nowadays, we can make visual changes to the way scrollbars look. Safari and Chrome use a non-standard approach, while good old Firefox, which steadfastly refused to allow its scrollbars to be changed (since the year 2000!) until there was a specification, now follows the CSS Scrollbars Styling Module Level 1: https: //www.w3.org/TR/css-scrollbars-1/.
+        <br><br>
+        Let's start with the specification and see what that gives us. It's important to note that the specification is purposefully more limiting than some of the non-standard scrollbar controls. This is because it is not possible to know exactly what constituent parts a scrollbar will have on any given system. As such, the specification limits us to the color of the scroll track and thumb (that's the term for the part you click/touch and drag), and the width of the scrollbar itself. Here it is applied:
+      </p>
+      <code>
+        .Scroll_Wrapper { 
+        <br><br>
+          display: grid;
+          <br><br>
+          width: 100%;
+          <br><br>
+          overflow-y: hidden;
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

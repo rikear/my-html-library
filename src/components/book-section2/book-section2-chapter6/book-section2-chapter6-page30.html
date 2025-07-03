@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- page199 -->
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Mercifully, things have now pretty much settled on woff and the newer . Woff2. In addition, we have more control over the particulars of our fonts in CSS, and new variable fonts, which we will cover momentarily, are popping up on a monthly basis.
+        <br><br>
+        If some of that introduction was lost on you, fear not. Let's try to get through the current state of the art in web typography.
+        <br><br>
+        First, however, let's talk about system fonts, as they represent the best-performing web typography choice you can opt for.
+      </p>
+      <h2>
+        System fonts
+      </h2>
+      <p>
+        Each operating system has its own set of fonts that come pre-installed. However, aside from a few exceptions, there aren't many fonts you can rely upon to be installed on every device a user might view your site with. Subsequently, we've grown accustomed to writing font stacks, which enable us to write a font "wish list" for the browser. For example:
+      </p>
+      <code>
+        font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      </code>
+      <p>
+        The browser reads this declaration and goes from left to right until it finds a font it has avail-able, choosing that to render the associated text. In our example system font stack here, macOs users will get San Francisco or Helvetica (-apple-system tells Safari to pick San Francisco and BlinkMacSystemFont tells Chrome to use Helvetica), Android will get Roboto, the popular Ubuntu Linux distribution will get Ubuntu, Windows users will see Segoe Ul, and then we have some last-ditch attempts to get something nice with Helvetica Neue or Arial. If all else fails, we tell the browser to use any sans-serif font it has.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Some font names contain whitespace, so it is necessary to surround those strings with single or double quotes. You can see in our previous example that both "Segoe UI" and "Helvetica Neue" are written this way.
+        </p>
+      </section>
+      <p>
+        For a lot of situations, using system fonts is a compelling choice. There is zero network overhead and you'll never have to worry about fonts not loading or seeing unsightly jumps on the page as one fontis replaced with another. Although, as we shall learn shortly, there are means to mitigate that.
+        <br><br>
+        The tradeoff is that with system fonts, you can never be entirely sure how your text is being rendered on the user's device. If specific typography is crucial to the project at hand, you'll want to look at web fonts with @font-face.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

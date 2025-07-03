@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- page423 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here is the CSS to make that happen:
+      </p>
+      <code>
+        .truncate { 
+        <br><br>
+          width: 530px;
+          <br><br>
+          overflow: hidden;
+          <br><br>
+          text-overflow: ellipsis;
+          <br><br> 
+          white-space: nowrap;
+          <br><br>
+        }
+      </code>
+      <p>
+        Each one of those properties is needed to make the truncation occur.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the specification for the text-overflow property here: https:// drafts. csswg.org/css-overflow-3/#text-overflow.
+        </p>
+      </section>
+      <p>
+        Whenever the width of the content exceeds the width defined, it will be truncated. The width can just as happily be set as a percentage, such as 100% if it's inside a flexible container.
+        <br><br>
+        We set overflow: hidden to ensure that anything that overruns the box is hidden.
+        <br><br>
+        When the content does overrun, text-overflow: ellipsis creates the ellipsis symbol in the correct place to indicate the overrunning content. This could be set to clip if preferred. In that instance, the content just gets clipped where it overflows, possibly mid-character.
+        <br><br>
+        Thewhite-space: nowrap property/value pair is needed to ensure that the content doesn't wrap inside the surrounding element, which is what it would do by default.
+      </p>
+      <h2>
+        Multi-line truncation
+      </h2>
+      <p>
+        There still isn't a perfect way to do multi-line truncation despite there being a specification: https://drafts.csswg.org/css-overflow-3/#propdef--webkit-line-clamp.
+        <br><br>
+        This is based on a proprietary WebKit way of doing things that has been around for so long now that browser providers have actually implemented it in their own browsers, with -webkit- prefix and all!
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

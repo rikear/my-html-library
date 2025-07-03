@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- page209 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        When we want to apply these custom features, we make use of the font-feature-settings property. This works very similarly to the font-variation-settings syntax. For example, to switch on "slashed zeroes," we can do this:
+      </p>
+      <code>
+        font-feature-settings: "zero";
+      </code>
+      <p>
+        This "slashed zeroes" option is a binary choice, so it is not necessary to write "zero" 1. However, if we wanted to toggle this setting off further into our styles, we could write:
+      </p>
+      <code>
+        font-feature-settings: "zero" 0;
+      </code>
+      <p>
+        When you want to apply multiple font-feature-settings, you can comma-separate them. So, if we wanted to have "lowercase L with tail" and "uppercase i with serif," we could write this:
+      </p>
+      <code>
+        font-feature-settings: "cv08", "cv05";
+      </code>
+      <p>
+        These are the options switched on in the completed example _06-07.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          When looking at the chapter code, don't concern yourself with any additional syntax that doesn't make sense. There are CSS custom properties used, for example, and we will cover those fully in Chapter 12, Custom Properties and CSS Functions.
+        </p>
+      </section>
+      <p>
+        There is plenty more in the way of settings and features specified in CSS Fonts Module Level 4. We have just scratched the surface! To dig in further, take a look at the specification: https:// www.w3.org/TR/css-fonts-4/.
+      </p>
+      <h2>
+        Exercise
+      </h2>
+      <p>
+        Have a look at the CSS from our example page:
+      </p>
+      <code>
+        : root {
+        <br><br>
+          --MainFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        <br><br>
+        }
+        <br><br>
+        @font-face {
+          <br><br>
+        font-family: "Inter-V";
+        <br><br>
+        src: url("fonts/inter.var.woff2") format ("woff2-variations"); 
+        <br><br>
+        font-weight: 100 900; 
+        <br><br>
+        font-display: fallback;
+        <br><br>
+        font-style: oblique Odeg 10deg;
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

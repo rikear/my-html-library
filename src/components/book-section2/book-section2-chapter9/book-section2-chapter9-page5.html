@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- page278 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Using the picture element to progressively enhance images
+      </h2>
+      <p>
+        We will soon see how to use the picture element for "art direction," serving up different images for different situations. However, I have actually found the greatest practical utility in the picture element is for providing alternative image formats. Let's look at that first.
+        <br><br>
+        The most common use case I find myself currently needing is providing an AVIF version of an image, if possible, then a WebP version for users if they can't make use of AVIF, and then a JPG if a user can't make use of an AVIF or a WebP. Here is how we can do that with picture:
+      </p>
+      <code>
+        ‹picture>
+          < source srcset="scone.avif" type="image/avif" /›
+          ‹source srcset="scone.webp" type="image/webp" /›
+          <img
+            src="scone.jpg"
+            alt="A delicious scone, baked to perfection" loading="lazy"
+          />
+        </picture>
+      </code>
+      <p>
+        The essence of the picture element is wrapping a number of images up, with the preferred options first, and the browser chooses the first one it is able to make use of. If you have already read Chapter 2 on Writing HTML Markup, you will recognize the source element from the Providing alternate media sources section. The principle is identical: we specify different versions of a piece of media, and the browser chooses the first one it can make use of.
+        <br><br>
+        In our example code above, we would prefer the browser to use the scone. avif image, but if it can't use that, it uses the scone. webp. If even that cannot be understood, it falls back to scone. jpg. Crucially, in this situation where all the images are of the same thing, you don't need to write the alt text for the image more than once. Whichever image the browser chooses, it will only download that one image.
+        <br><br>
+        In addition, back in Chapter 2, we covered the loading attribute, and noted that if we were happy for images to download in their own time, we could add loading="lazy" to them. The same is true here, but like the alt tag, you can see in our example code that we only have to specify it on. the img tag; the two source elements in our picture are merely alternate sc values for the img.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

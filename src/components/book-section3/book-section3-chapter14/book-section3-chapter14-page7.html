@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- page412 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        This way, users have a guaranteed mechanism to ensure their needs are applied.
+      <br><br>  
+        In addition, any user-agent (e.g. browser) l important declarations trump even the user ! important styles. There is further nuance if needing to factor in encapsulation contexts such as shadow trees, but for our purposes, this mental model will suffice.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          The specification for cascade layers offers additional information regarding encap-sulation: https://www.w3.org/TR/css-cascade-5/#cascade-context.
+        <br><br>  
+          In addition, Level 6 of the CSS Cascade specification also introduces the notion of scoped styles, which are sure to make isolating groups of rules even more flexible.
+          You can read that draft specification here: https://www.w3.org/TR/css-cascade-6/#scoped-styles.
+        </p>
+      </section>
+      <p>
+        So, what does this have to do with cascade layers?
+      </p>
+      <h2>
+        limportant in cascade layers
+      </h2>
+      <p>
+        Let's extend our earlier, simplistic example:
+      </p>
+      <code>
+        @layer reset, 
+      <br><br>  
+        framework, 
+      <br><br>  
+        layout,
+      <br><br>  
+        components;
+      </code>
+      <p>
+        In this instance, as we have established, in terms of the layers, reset will have the least priority, and components the most. However, should we add an ! important to one of the declarations in the reset layer, this is what would effectively happen:
+      </p>
+      <code>
+        reset, 
+      <br><br>  
+        framework, 
+      <br><br>  
+        layout,
+      <br><br>  
+        components;
+      <br><br>  
+        !components 
+      <br><br>  
+        !layout
+      <br><br>  
+        !framework, 
+      <br><br>  
+        !reset,
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

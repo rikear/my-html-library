@@ -1,0 +1,63 @@
+<!DOCTYPE html><!-- page86 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>
+            Also the ability to specify ranges in a terser syntax. For example, instead of this:
+        </p>
+        <code>
+            @media (min-width: 30rems) and (max-width: 60rems) {
+            <br><br>
+            /* Styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            You could write:
+        </p>
+        <code>
+            @media (30rems <= width <= 60rems) {
+            <br><br>
+            /* Styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            I don't know ifit's lack of exposure, but I find that new syntax quite difficult to parse. We will see how it fares if it makes it to a browser implementation.
+            <br><br>
+            Media queries are a very powerful part of CSS. It's always worth checking what they can do for you right now, and also in the near future.
+        </p>
+        <h2>Container queries</h2>
+        <p>
+            Media queries operate their queries on the capabilities of the device. Practically, when working with responsive designs, it's the width of the container we are typically interested in.
+            <br><br>
+            However, suppose we are creating a visual component that might be used in a wider container, such as a main content area, but equally might be used in a thinner, sidebar aside area. We tend to work around these scenarios without container queries by using descendant selectors to give some context and make style changes based on the document structure:
+        </p>
+        <code>
+            .component {
+            <br><br>
+            display: flex;
+            <br><br>
+            }
+            <br><br>
+            .sidebar .thing {
+            <br><br>
+            flex-direction: column;
+            <br><br>
+            }
+        </code>
+        <p>
+            Then, with this override for when the component is in the sidebar established, we can combine these selectors with media queries as needed. Maybe we need one set of styles when in the
+            <code>.Sidebar</code> and the screen is a certain size, and then another set of styles when not in the <code>.sidebar</code> but we are still at that viewport size:
+        </p>
+    </div>
+
+  </div>
+</body>
+</html>

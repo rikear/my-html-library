@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- page408 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The syntax should be relatively familiar to you. In much the same way that styles inside a media query are encapsulated by a condition, the @layer encompasses the styles within a layer. cascade layers can also be applied on file imports too, allowing you to import a style sheet into a layer. This is something quite likely to be useful if we are dealing with a third-party library. Importing a style sheet into a cascade layer is done like this:
+      </p>
+      <code>
+        @layer framework;
+        @import url("shoelace-framework.ss") layer (framework);
+      </code>
+      <p>
+        In that instance, we still make our layer first, and then import our style sheet into it with the layer () function.
+      <br><br>  
+        Right. At this point, it's time we go through some ground rules when working with cascade layers.
+      </p>
+      <h2>
+        Naming cascade layers
+      </h2>
+      <p>
+        Naming a cascade layer is just like naming a set of keyframes. Within reason, name your layers however it suits your project. If you like grouping code by area, you can do that. If naming by types of styles, like "reset", "utilities", or "colors" is more your thing, then that is fine too. There is no right or wrong; it's a case of doing whatever best suits the way you work.
+      <br><br>  
+        You can also have anonymous layers, and they will work just the same. I can't really recommend doing that, though. For how little it takes to name a layer, it will make it far easier to work with, and think about, if it is named.
+      </p>
+      <h2>
+        Where to declare layers
+      </h2>
+      <p>
+        Declare your layers near the start of your style sheet. As you can't put layers between @import statements, I ensure that layers get defined at the top, then any @import statements, and then the styles. As we will see in a moment, that doesn't mean all the styles for a layer need to be nested there too. It's just for the initial setup.
+      <br><br>  
+        When you declare layers, they work top to bottom, with the last one declared being a higher priority than the first. So, suppose we had layers declared like this:
+      </p>
+      <code>
+        @layer reset, 
+      <br><br>  
+        framework,
+      <br><br>   
+        layout, 
+      <br><br>  
+        components;
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

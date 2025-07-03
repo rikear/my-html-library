@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page349 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+        @keyframes fillBg {
+      <br><br>      
+          0% {
+      <br><br>      
+            background-color: yellow;
+      <br><br>      
+          }
+      <br><br>      
+          100% {
+      <br><br>      
+          background-color: red;
+      <br><br>      
+          }
+      <br><br>      
+        } 
+      </code>
+      <p>
+        However, once the animation completes, the background of the div will return to nothing. That's because, by default, when an animation ends, the element goes back to exactly how it was before the animation ran. In order to override this behavior, we have the animation-fill-mode property.
+        In this instance, we could apply this:
+      </p>
+      <code>
+        animation-fill-mode: forwards;
+      </code>
+      <p>
+        This makes the item retain any values that have been applied by the animation end. In our case, the div would retain the red background color that the animation ended on. More on the animation-fill-mode property here: https://www.w3.org/TR/css-animations-1/#animation-fill-mode.
+      </p>
+      <sec>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.22: Without animation-fill-mode set to forwards, animations run and then immediately reset
+        </p>
+      </sec>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

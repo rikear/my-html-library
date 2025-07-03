@@ -1,0 +1,55 @@
+<!DOCTYPE html> <!-- page337 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Now, if we adjust the transform-origin like this:
+      </p>
+      <code>
+        matrix: hover {
+          transform: matrix (1.678, -0.256, 1.522, 2.333, -51.533, -1,989);
+          transform-origin: 270px 20px;
+        }
+      </code>
+      <p>
+        Then you can see the effect this has:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.15: You can amend the origin of transforms as needed
+        </p>
+      </section>
+      <p>
+        The first value is the horizontal offset and the second value is the vertical offset. You can use keywords. For example, left is equal to 0% horizontal, right is equal to 100% horizontal, top is equal to 0% vertical, and bottom is equal to 100% vertical. Alternatively, you can use a length, using any of the CSS length units.
+      <br><br>
+        If you use a percentage for the transform-origin values, then the horizontal/vertical offset is relative to the height/width of the element's bounding box. If you use a length, then the values are measured from the top-left corner of the element's bounding box.
+      <br><br>
+        The specification for CSS Transforms Module Level 1 can be found here: https:// ww.w3.0rg/ TR/css-transforms-1.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          For more on the benefits of moving elements with transform, read this old but great post by Paul Irish, https://www.paulirish. com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/, which provides some good data.
+        </p>
+      </section>
+      <p>
+        So far, we have dealt with transforming in two dimensions, the x and y axes. However, CSS can also handle elements in 3D space. Let's look at what extra fun we can have with 3D transtorms.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

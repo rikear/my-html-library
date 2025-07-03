@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- page365 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+          100% {
+      <br><br>      
+            transform: scale(1.3);
+      <br><br>      
+          }
+      <br><br>      
+        }
+      </code> 
+      <p>
+        You can see that we are setting some custom properties on the ball. Particularly useful is --ballSize. We reference that a few times, which means that tweaking that value automatically changes both the width and height of the ball, and also factors in to the calculations being made to the left and top positions. In those calc() functions, you can also see there is a custom property for - -* and --y, which we are setting every so often with JavaScript. Here is the snippet of JavaScript that powers our ball movement:
+      </p>
+      <code>
+        // Get the ball from the DOM
+        const ball = document. querySelector".ball");
+      <br><br>  
+        // Get a random number between the Min and the Max
+        const getRand = (min, max) => Math.floor (Math. random() * (max - min + 1) + min);
+      <br><br>  
+        // Set the values into the custom property
+        const setcoords = () => {
+      <br><br>    
+          ball. style. setProperty("--x", '#{getRand(0, 100)}%'); 
+      <br><br>    
+          ball.style.setProperty("--y", '${getRand(0, 100)}%*);
+      <br><br>    
+        };
+      <br><br>    
+        setCoords ();
+      <br><br>    
+        //Every so often, set the position of the ball
+        setInterval (() => {
+      <br><br>    
+          setCoords ();
+      <br><br>    
+        }, getRand (1000, 3000));
+      </code>
+      <p>
+        If you look at the DOM in example_12-02, you can see that the value is updated every 1-3 seconds. Because we have a transition set on all, when the ball gets its left and top position updated, we see the ball move to its new position.
+      <br><br>  
+        Now, that's where I have parked the example. What about you? Perhaps you could take it further and use background-image to set and position a basketball court? Or use an image of a basketball for the ball?
+      <br><br>  
+        If you are confident adding more JavaScript and markup, perhaps add some sliders to interactively resize the court with custom properties? Or perhaps a color picker to change the court or ball? Or perhaps tweak the animation to use custom properties based on screen width to alter the scale of the ball? Be creative; see what fun you can have!
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

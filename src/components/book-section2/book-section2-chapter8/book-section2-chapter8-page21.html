@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- page254 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        CSS filters
+      </h2>
+      <p>
+        There 1s a glaring problem with box-shadow. As the name implies, it is limited to the rectangular CSS box shape of the element it is applied to. Here's a screengrab of a triangle shape made with CSS with a box shadow applied:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.11: Box shadows don't always provide the effect you want
+        </p>
+      </section>
+      <p>
+        Not exactly what I was hoping for. Thankfully, we can overcome this issue with CSS filters, part of the Filter Effects Module Level 1 (https://www.w3.org/TR/filter-effects/).
+        <br><br>
+        Here is that same element with a CSS drop-shadow filter applied instead of a box-shadow you can view the code in example_08-08):
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.12: A drop-shadow filter effect can apply to more than just boxes
+        </p>
+      </section>
+      <p>
+        Here is the format for CSS filters:
+      </p>
+      <code>
+        .filter-drop-shadow {
+        <br><br>
+          filter: drop-shadow(8px 8px 6px #333);
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

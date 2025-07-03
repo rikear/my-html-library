@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- page201 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          If you can, download a subset of your font, specific to the language you intend to use. For example, if you are not going to be using Cyrillic or Greek characters, why include them? The resultant file size will be much smaller as it won't contain glyphs for languages you have no intention of using. You can often choose character sets when you are buying a font, but for an open-source version, there are a growing number of services and utilities, such as Glyphhanger (https://github. com/zachleat/ glyphhanger), that can subset a font for you.
+        </p>
+      </section>
+      <p>
+        Having downloaded the Inter font, a look inside the ZIP file reveals folders of the different files available. I'm choosing the Inter-Regular. woff2 and Inter-Regular. woff files for our example.
+        <br><br>
+        To make a web font available for use in our CSS, we use the @font -face at-rule. This lets us provide a name for the font that we can then reference, and also tells the browser where to go to fetch this file from. Let's look at the syntax:
+      </p>
+      <code>
+        @font-face {
+          font-family: "InterRegular";
+          src: url("Inter-Regular.woff2") format("woff2"),
+            url (" Inter-Regular woff") format("woff");
+          font-weight: normal; font-style: normal;
+          font-display: fallback;
+        }
+      </code>
+      <p>
+        Inside the @font-face braces, we give our font the "InterRegular" name. I could have called it "FlyingBanana" had I wanted; it wouldn't affect anything other than I would then need to reference this font with that name when I wanted to use it. For example:
+      </p>
+      <code>
+        .hero- Image {
+        font-family: "FlyingBanana", sans-serif;
+        }
+      </code>
+      <p>
+        So, know that you can do this, but it makes sense to use a name similar to the font you are expecting to see!
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

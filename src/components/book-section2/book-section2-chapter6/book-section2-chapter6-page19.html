@@ -1,0 +1,81 @@
+<!DOCTYPE html> <!-- page188 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, just be careful with the : empty selector. For example, you might think this is empty:
+      </p>
+      <code>
+        &lt; div class="thing" &gt; &lt; /div &gt;
+      </code>
+      <p>
+        It isn't! Look at the whitespace in there. Whitespace is not "no" space! And neither is something like a line break.
+        <br><br>
+        However, just to confuse matters, be aware that a comment doesn't affect whether an element is considered empty or not. For example, this is still considered empty:
+      </p>
+      <code>
+        &lt; div class="thing" &gt; 
+        &lt; ! --I'm empty, honest I am-- &gt; 
+        &lt; /div &gt;
+      </code>
+      <h2>
+        Grouping selectors
+      </h2>
+      <p>
+        Ordinarily, when we want to share a bunch of properties across a number of things, we just com-ma-separate the selectors into a list:
+      </p>
+      <code>
+        .thing1,
+        <br><br>
+          [data-thing],
+        <br><br>
+          #thing {
+        <br><br>
+          /* styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        That works fine for a few things. All those comma-separated selectors get the same styles applied, but it can start to become unwieldy and repetitive in more complicated scenarios:
+      </p>
+      <code>
+        .blog-post &gt; h1,
+        <br><br>
+        .blog-post &gt; h2,
+        <br><br>
+        .blog-post &gt; h3,
+        <br><br>
+        .blog-post &gt; h4,
+        <br><br>
+        .blog-post &gt; ul,
+        <br><br>
+        .blog-post &gt; ul li,
+        <br><br>
+        .blog-post &gt; p,
+        <br><br>
+        .blog-post &gt; a {
+        <br><br>
+        /* shared styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        The other downside is that a single mistake in that group renders the whole list invalid:
+      </p>
+      <code>
+        .blog-post &gt; h1,
+        <br><br>
+        .blog-post &gt; h2,
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

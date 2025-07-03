@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page304 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        This results in four blue colors ordinarily and four green colors when hovered over:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 10.8: CSS custom properties create near limitless possibilities
+        </p>
+      </section>
+      <p>
+        As you can see, there are a lot of positives to placing SVGs inside the markup. The only downside is that it's necessary to include the same SVG data on every page where you want to use the icons. Sadly, this is bad for performance, as the assets (the SVG data) aren't going to be cached easily. However, there is another option.
+      </p>
+      <h2>
+        Reusing graphical objects from external sources
+      </h2> 
+      <p>
+        Rather than paste an enormous set of SVG symbols in each page, while still using the use element, it's possible to link out to external SVG files and grab the portion of the document you want to use. Take a look at example_10-05 and the same three icons as we had in example_10-03, which are put on the page in this manner:
+      </p>
+      <code>
+        &lt;svg class="icon-drag-left-right"&gt;
+        <br><br>
+          &lt;use xlink:href="defs. svg#icon-drag-left-right"&gt; &lt;/use&gt;
+        <br><br>
+        &lt;/svg&gt;
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Be aware that some of these examples need running on a server. Two simple solu-tions: either use something like BrowserSync or px serve to create a simple local server, or paste the code into a service like ht tps://codepen.io/.
+        </p>
+      </section>
+
+    </div>
+  </div>
+  
+</body>
+</html>

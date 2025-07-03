@@ -1,0 +1,38 @@
+<!DOCTYPE html><!-- page132 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Setting up a Grid Layout
+        </h2>
+        <p>
+            Here is the introduction to the explicit grid section of the W3C specification (https://www.w3.org/ TR/css-grid-1/#explicit-grids). It's worth rereading a few times as it is dense with essential information for understanding how the grid works:
+            <br><br>
+            The three properties grid-template-rows, grid-template-columns, and grid-template-areas together define the explicit grid of a grid container. The final grid may end up larger due to grid items placed outside the explicit grid; in this case implicit tracks will be created, these implicit tracks will be sized by the grid-auto-rows and grid-auto-columns properties.
+            <br><br>
+            The size of the explicit grid is determined by the larger of the number of rows/ columns defined by grid-template-areas and the number of rows/columns sized by grid-template-rows/grid-template-columns.
+            <br><br>
+            Any rows/columns defined by grid-template-areas but not sized by grid-template-rows/grid-template-columns take their size from the grid-auto-rows/grid-auto-columns properties. If these properties don't define any explicit tracks the explicit grid still contains one grid line in each axis.
+            <br><br>
+            Numeric indexes in the grid-placement properties count from the edges of the explicit grid. Positive indexes count from the start side (starting from 1 for the start-most explicit line), while negative indexes count from the end side (starting from -1 for the end-most explicit line).
+            <br><br>
+            The grid and grid-template are properties that allow a shorthand to be used to set all three explicit grid properties (grid-template-rows, grid-template-columns, and grid-template-areas) at the same time. The grid shorthand also resets properties controlling the implicit grid, whereas the grid-template property leaves them unchanged.
+            <br><br>
+            Now, I'm conscious that when you haven't worked at all with Grid Layout it can be very intimi-dating, and that quoted section from the specification might seem completely opaque right now.
+            Hopefully, when you have read this chapter through, and played with Grid Layout yourself, it
+            will make a little more sense.
+            <br><br>
+            Again, don't worry if little of that previous text made sense. Let's start our Grid journey in code with a very simple example. First, the world's easiest Grid Layout: four numbered boxes.
+        </p> 
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page246 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here is the code you would use; just adding a 50% stop on the green of, alternatively, 180deg, would produce an identical result.
+      </p>
+      <code>
+        .conic-gradient { 
+        <br><br>
+          width: 200px; 
+        <br><br>
+          height: 200px;
+        <br><br>
+          background: conic-gradient(at center, green 50%, white, green);
+        <br><br>
+        }
+      </code>
+      <p>
+        One final trick. We can make solid sections with our conic gradients. After the first color stop, if you set another color stop and set it to start at Odeg, it appears as a solid color. Here is an example of a single div using a conic gradient to make four different color sections:
+      </p>
+      <section>
+        <object>
+          Figure 8.7: A single element using a conic gradient to create color sections
+        </object>
+        <p>
+          This works because the subsequent stops also start at the beginning, but by the time they are visible beneath the color that is listed before, they are already a solid color. Here is the full code for that example:
+        </p>
+      </section>
+      <code>
+        .conic-gradient {
+        <br><br>
+          width: 200px;
+        <br><br>
+          height: 200px;
+          background: conic-gradient(at center, red 0 25%, orange 0% 180deg, green 0% 75%, blue 0%);
+        <br><br>
+        }
+      </code>
+      
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- page311 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+            &lt;circle 
+      <br><br>      
+            fill="#ebebeb" 
+      <br><br>      
+            cx="50" 
+      <br><br>      
+            cy="50" 
+      <br><br>      
+            r="50" 
+      <br><br>      
+            /&gt;
+      <br><br>      
+            &lt;/g&gt;
+      <br><br>      
+            &lt;/ defs&gt;
+      <br><br>      
+            &lt;g class="star 
+      <br><br>      
+            Wrapper" 
+      <br><br>      
+            fill="none" 
+      <br><br>      
+            fill-rule="evenodd"&gt;
+      <br><br>      
+              &lt;path
+      <br><br>      
+            id="star_Path" stroke="#333" stroke-width="3" fil1="#F8E81C"
+        <br><br>      
+              d="M99 1541-58.78 30.902 11.227-65.45L3.894 73.097165.717-9.55L99
+      <br><br>      
+              4129.39 59.55 65.716 9.548-47.553 46.353 11.226 65.453z"
+      <br><br>      
+              /&gt;
+      <br><br>      
+            &lt;/g&gt;
+      <br><br>      
+          &lt;/ svg&gt;
+      <br><br>      
+        &lt;/div&gt;
+      </code>
+      <p>
+        If you load that example in the browser, after a l-second delay, the star will spin a full circle over the course of 2 seconds.
+        <br><br>
+        Notice how a transform-origin of 50% 50% has been set on the SVG? This is because, unlike CSS, the default transform-origin of an SVG is not 50% 50% (center in both axis); it's actually • 0 (top left). Without that property set, the star would rotate around the top-left point.
+        <br><br>
+        You can get quite far animating SVGs with CSS animations. However, when you want to add interactivity or synchronize several events, it's generally best to lean on JavaScript. And the good news is that there are great libraries that make animating SVGs really easy. Let's look at an example of that now.
+      </p>
+      <h2>
+        Animating SVG with JavaScript
+      </h2>
+      <p>
+        With an SVG inserted into the page via an object tag or inline, it's possible to manipulate the sVG directly or indirectly with JavaScript. By indirectly, I mean it's possible with JavaScript to change a class on or above the SVG that would cause a CSS animation to start. For example:
+      </p>
+      <code>
+        svg {
+        <br><br>
+          /* no animation */
+        <br><br>
+        }
+        <br><br>
+        .added-with-js svg {
+        <br><br>
+          /* animation */
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

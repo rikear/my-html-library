@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page353 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        We can reference that value elsewhere in our style sheet with the var () notation, like so:
+      </p>
+      <code>
+        .Title {
+      <br><br>    
+          font-family: var(--MainFont);
+      <br><br>    
+        }
+      </code>
+      <p>
+        And the browser would effectively read that as an instruction to do this:
+      </p>
+      <code>
+        Title {
+      <br><br>    
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      <br><br>    
+        }
+      </code>
+      <p>
+        You can store as many custom properties as you need in this manner.
+      <br><br>  
+        Even though in this example we are saving some characters using the custom property, making use of them isn't merely an exercise in convenience when authoring; it's an approach that pays you back time and again when you want to change things.
+      <br><br>  
+        Imagine that you have defined and referenced colors and font declarations throughout your project in this manner, and then sometime later you want to change a color or font-family. It's now just a single change in one place and the values effectively get changed everywhere. Every rule that makes use of the variable gets the new value, without having to amend the rules directly.
+      </p>
+      <h2>
+        Simple theming
+      </h2>
+      <p>
+        The ability to set a value in one place to be used in many other places makes custom properties a great candidate for theming. And we are not limited to CSS as a means of interacting with them, as there is a JavaScript API to get and set the values of custom properties.
+      <br><br>  
+        Let's look at a simple example of using and switching custom properties with JavaScript. You can find this in example_ 12-01. We will make a page with the poem "If," by Rudyard Kipling. At the bottom is a simple light/dark mode toggle button. All the button will do is toggle the value of two CSS custom properties, --background and --foreground.
+      <br><br>  
+        Here is our CSS:
+      </p>
+      <code>
+        body {
+      <br><br>    
+          background-color: var (--background);
+      <br><br>    
+          color: var (--foreground) ;
+      <br><br>    
+        }
+      </code>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

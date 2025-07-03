@@ -1,0 +1,52 @@
+<!DOCTYPE html><!-- page143 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            We've introduced a few new things here. Let's cover each in turn, starting with how we have achieved a nice uniform gap between grid elements.
+        </p>
+        <h2>
+            gap
+        </h2>
+        <p>
+            I've used gap in some of the prior code samples, but I've not explained it. Forgive me! The gap property lets you specify a gap between grid tracks. It is actually shorthand for both row-gap and column -gap. Just like when you specify a margin with two values, the first value applies to the top and bottom (row), and the second to the left and right (columns). If you specify a single value, as we have, it applies to both.
+            <br><br>
+            It's especially useful because, unlike dealing with padding or margin when laying things out, you don'tneed to worry about undoing it again on the final item; gap only applies between the items. You should also be aware that all modern browsers allow you to apply gap to Flexbox items too!
+        </p>
+        <h2>
+            repeat
+        </h2>
+        <p>
+            If you were making a grid with 30 identical columns, it would get a little tiring having to write auto 30 times, for instance, grid-template-columns: auto auto auto auto auto auto...; in fact, I got bored just writing that!
+            <br><br>
+            Thankfully, the Grid Layout specification writers have blessed us with repeat (). As you might have guessed, the repeat () function provides a convenient way of stamping out the need for any number of items. In our example, we have used it to create four columns, all 1fr in width:
+        </p>
+        <code>
+            repeat (4, 1fr);
+        </code>
+        <p>
+            The format of the syntax is that, inside the parentheses, the first value is the number of times you want something repeated, and the second value is the with of each item.
+            <br><br>
+            Don't worry, I'll explain fr units in a moment; for now, just know that you can create multiple col-umns/rows with ease. Do you want 15 columns, all 100 px wide? It's as easy as repeat (15, 100px).
+        </p>
+        <h2>
+            fr units
+        </h2>
+        <p>
+            The fr unit represents "flexible length" and stands for "flex fraction." It's used to communicate how much of any available free space we want something to gobble up, much like the flex-grow unit we covered for Flexbox in Chapter 4, Fluid Layout and Flexbox.
+            <br><br>
+            The specification doesn't say so, but I conceptualize fr as standing for "free room" when I'm thinking about a layout. In our example, we have made four columns, each taking up one portion
+            of the available free room.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

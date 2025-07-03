@@ -1,0 +1,79 @@
+<!DOCTYPE html><!-- page111 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            There are some particulars inherent to using these properties, so if something isn't playing hap-pily, always refer to the specification for any edge case scenarios: https:// www.w3.org/TR/css-flexbox-1/#align-items-property.
+        </p>
+        <h2>
+            justify-content
+        </h2>
+        <p>
+            Alignment in the main axis is controlled with justify-content. Possible values for justify-
+            content are:
+        </p>
+        <ul>
+            <li>
+                flex-start
+            </li>
+            <li>
+                flex-end
+            </li>
+            <li>
+                center
+            </li>
+            <li>
+                space-between
+            </li>
+            <li>
+                space-around
+            </li>
+            <li>
+                space-evenly
+            </li>
+        </ul>
+        <p>
+            The first three do exactly what you would now expect. However, let's take a look at what the last three do. Consider this markup:
+        </p>
+        <code>
+            &lt;div class="container"&gt;
+            &lt;div class="item"&gt; Item One &lt;/div&gt;
+            &lt;div class="item"&gt; Item Two &lt;/div&gt;
+            &lt;div class="item"&gt; Item Three &lt;/div&gt;
+            &lt;/div&gt;
+        </code>
+        <p>
+            And then consider the following CSS. We are setting the three div elements with a class of item to each be 25% width, wrapped by a flex container, with a class of container, set to be 100% width:
+        </p>
+        <code>
+            .container {
+                background-color: indigo;
+            <br><br>
+                display: flex;
+            <br><br>
+                justify-content: space-between;
+            <br><br>
+                height: 200px;
+            <br><br>
+                width: 100%;
+            <br><br>
+            }
+            <br><br>
+            .item {
+            <br><br>
+                background-color: #34005b;
+            <br><br>
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

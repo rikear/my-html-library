@@ -1,0 +1,42 @@
+<!DOCTYPE html><!-- page81 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                With CSS preprocessors, associating all alike rules can be even more convenient as the media query "variant" of a rule can be nested directly within the initial ruleset.
+                But that's a technique for a different book. Curious? Take a look here: ht tps: //ecss. benfrain.com/chapter8.html#h-H2_1.
+                <br><br>
+                We also have native nesting due to arrive in CSS; more on that in Chapter 14, Cutting-Edge CSS Features.
+            </p>
+        </section>
+        <h2>What about file size?</h2>
+        <p>
+            It would seem fair to argue against the former technique on the grounds of verbosity. Surely file size alone should be enough reason not to write media queries in this manner? After all, no one wants a big, bloated CSS file to serve their users. However, the simple fact is that gzip compres-sion, which should be compressing all possible assets on your server, reduces the difference to a completely inconsequential amount. I've done various tests on this in the past, so if it's something you would like to read more about, head over to: http://benfrain.com/inline-or-combined-media-queries-in-sass-fight/. The bottom line is: I don't believe you should concern yourself with file size if you would rather write media queries directly after the "standard" styles.
+            <br><br>
+            As a final note on this, if you want to author your media queries directly after the original rule but have all alike media queries definitions merged into one, there are a number of build tools that facilitate this (at the time of writing, PostCSS and Gulp both have relevant plugins).
+            <br><br>
+            That should give you everything you need to start wielding media queries like a pro. However, before we move on, there are a number of media query features in Media Queries Level 5 we can actually start using today. Let's take a sneak peek!
+        </p>
+        <h2>Media Queries Level 5</h2>
+        <p>
+            Specifications at the W3C go through a ratification process, from Working Draft (WD) to Candidate Recommendation (CR) to Proposed Recommendation (PR) before finally arriving, many years later, at W3C Recommendation (REC). So modules at a greater maturity level than others are generally safer to use. For example, CSS Spatial Navigation Level 1 is in progress as I write this (http://www.w3.org/TR/css-nav-1/), at Working Draft status with no support in browsers. Meanwhile, the topic of this chapter until this point has been Media Queries Level 3, which is implemented in every modern browser.
+        </p>
+
+
+       
+    </div>
+  </div>
+
+</body>
+</html>

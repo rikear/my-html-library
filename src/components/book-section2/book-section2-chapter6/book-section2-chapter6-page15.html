@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page184 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+                /* Now get me every one after that same collection too. */
+            <br><br>
+                .Item: nth-child (4n + 1):nth-last-child-n + 4) ~ . Item { 
+            <br><br>
+                    border-bottom: 0;
+            <br><br>
+                }
+            <br><br>
+            }
+        </code>
+        <p>
+            You'll notice here that we are chaining the nth-based pseudo-class selectors, much like we chained attribute selectors earlier in this chapter. It's important to understand when you chain nth selectors like this that the first selector doesn't "filter" the selection for the next selector; rather, the element has to match each of the selections.
+        </p>
+        <p>
+            So, for the line like this:
+        </p>
+        <code>
+            .Item: nth-child(4n + 1):nth-last-child(-n + 4),
+        </code>
+        <p>
+            • Item has to be the first item of four and also be one of the last four:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.8: Achievement unlocked-using nth-child selectors like some kind of nth-child wizard!
+            </p>
+        </section>
+        <p>
+            Nice. Thanks to nth-based selections, we have a defensive set of rules to remove the bottom border, regardless of the viewport size or the number of items we are showing, You can view the completed code in example_06-04.
+            <br><br>
+            Now, one nifty bit of selection we are doing in that prior example is using the "subsequent sibling" selector. We haven't looked at that, so we will cover it next.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

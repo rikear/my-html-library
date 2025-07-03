@@ -1,0 +1,55 @@
+<!DOCTYPE html><!-- page137 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Explicit and implicit
+        </h2>
+        <p>
+            Earlier in the chapter, we discussed the difference between an explicit and implicit grid, an explicit grid being the structure you define in your CSS when setting up the grid. When more content is placed in that grid than you provisioned for, the implicit grid comes into effect.
+            <br><br>
+            Let's look at that again by extending our prior example.
+            <br><br>
+            We'll add in another item and see what happens:
+        </p>
+        <code>
+            &lt; div class="my-first-grid"&gt;
+            <br><br>
+                &lt; div class="grid-item-1"&gt; 1 &lt;/div&gt;
+            <br><br>
+                &lt; div class="grid-item-2"&gt; 2 &lt;/div&gt;
+            <br><br>
+                &lt; div class="grid-item-3"&gt; 3 &lt;/div&gt;
+            <br><br>
+                &lt; div class="grid-item-4"&gt; 4 &lt;/div&gt;
+            <br><br>
+                &lt; div class="grid-item-5"&gt; 5 &lt;/div&gt;
+            <br><br>
+            &lt; /div&gt;
+        </code>
+        <p>
+            With that added, this is what we get in the browser:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.5: The grid has added our item, but not with the kind of proportions we were hoping for
+            </p>
+        </section>
+        <p>
+            That's sort of useful; the grid has created implicit grid lines to create an implicit track for our new item. Now, we didn't tell it what to do with that extra item, so it made the best guess. However, we can control how Grid handles items implicitly with the following properties: grid-auto-rows and grid-auto-columns.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- page295 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Using an img tag
+      </h2>
+      <p>
+        The most straightforward way to use an SVG graphic is exactly how you would insert any image into an HTML document. We just use a good ol' img tag:
+      </p>
+      <code>
+        &lt;img 
+        <br><br>
+          src="mySconeVector.svg" 
+        <br><br>
+          alt="Amazing line art of a scone"
+        <br><br> 
+        /&gt;
+      </code>
+      <p>
+        This makes the SVG behave more or less like any other image. There isn't much else to say about that.
+      </p>
+      <h2>
+        Using an object tag
+      </h2>
+      <p>
+        The object tag is the container recommended by the W3C for holding non-HTML content in a web page (the specification for object is here: https://html.spec.whatwg.org/multipage/ iframe-embed-object.html#the-object-element). We can make use of it to insert an SVG into our page like this:
+      </p>
+      <code>
+        &lt;object data="img/svgfile.svg" type="image/svg+xmI"&gt;
+        <br><br>
+          &lt;span class="fallback-info"&gt; Your browser doesn't support SVG &lt;/span&gt;
+        <br><br>
+        &lt;/object&gt;
+      </code>
+      <p>
+        Either a data or type attribute is required, although I would always recommend adding both.
+        The data attribute is where you link out to the SVG asset in the same manner you would link to any other asset. The type attribute describes the MIME (internet media type) type relevant to the content. In this instance, image/svg+ml is the MIME type to indicate that the data is SVG.
+        You can add a width and height attribute too if you want to constrain the size of the SVG with this container.
+        <br><br>
+        An SVG inserted into the page via an object tag is also accessible with JavaScript, so that's one reason to insert them this way. However, an additional bonus of using the object tag is that it provides a simple mechanism for when a browser doesn't understand the data type.
+        <br><br>
+        For example, imagine a dreadful scenario where you have to support an incredibly old browser like Internet Explorer &, which has no support for SVC. Opening that object there, the object woula simply see the message "Your browser doesn't support SV." You can use this space to provide a fallback image in an img tag. However, be warned that from my cursory testing, the browser will always download the fallback image, regardless of whether it actually needs it. Therefore, if you want your site to load in the shortest possible time (you do, trust me), this might not actually
+        be the best choice.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

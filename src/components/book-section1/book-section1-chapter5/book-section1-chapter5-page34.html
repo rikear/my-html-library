@@ -1,0 +1,52 @@
+<!DOCTYPE html><!-- page163 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            Let's look at one further, slightly more involved example. Consider this screenshot:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.19: Without subgrid, the labels at the bottom are out of alignment
+            </p>
+        </section>
+        <p>
+            Here, we have a horizontally scrolling component containing images of different planets of our Solar System. Crucially, notice how, due to the information text that accompanies each planet, the caption for the image doesn't sit at the same level? While that is a problem we could fix with other means and approaches, subgrid is a perfect fit.
+            <br><br>
+            Here it is with our subgrid code in place. Notice how the captions below each planet line up per-fectly? Let's look at how this is done.
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 5.20: subgrid allows us to inherit the row and column tracks of a parent grid
+            </p>
+        </section>
+        <p>
+            Firstly, consider the markup. We have a containing element with the class of. Scroll Wrapper to create the scrolling section, and then a number of figure elements, each with a class of. Item, and containing a planet image and associated information.
+            <br><br>
+            For brevity, I'll just show you the HTML for the opening of the containing element, and one of the planets (the full code is at example _05-10):
+        </p>
+        <code>
+            &lt; div class="Scroll _Wrapper" &gt;
+                &lt; figure class="Item" &gt;
+                    &lt; img src="Sun.jpg" alt="Our Sun in space" / &gt;
+                    &lt; figcaption class="Caption" &gt; The Sun &lt; /figcaption &gt;
+                    &lt; p &gt;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

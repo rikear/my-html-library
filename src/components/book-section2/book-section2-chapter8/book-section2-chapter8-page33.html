@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- page266 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Think of this as a way of describing where to start cutting (the first argument), where to go next (any subsequent arguments), and where the last point should be. The polygon then connects the final point to the first to complete the path.
+        <br><br>
+        Each argument is made up of an x-coordinate described from the top left of the containing box (for example, 50% along), and then the y-coordinate (for example, 60 px from the top) in relation to the top of the containing box. This gives you the ability to let things scale with percentages or use harder pixel values, depending on your requirements.
+        <br><br>
+        My favorite way to get started with a clip-path polygon is to use Bennett Feely's "Clippy" web-site: https://bennettfeely. com/clippy/.
+        <br><br>
+        There are a bunch of premade shapes to choose from, as well as a GUI for amending the shape.
+        Highly recommended!
+      </p>
+      <h2>
+        clip-path with URL (clipping source)
+      </h2>
+      <p>
+        You can also pass the clip-path a clipping source via a URL. The URL needs to be an SVG clipPath somewhere in the document.
+        <br><br>
+        I made a star shape as an SVG path and added an id of starSymbol to the clipPath element. With that in place, you can tell clip-path to use that path like this:
+      </p>
+      <code>
+        .clip-url {
+        <br><br>
+          clip-path: url#starSymbol);
+        <br><br>
+        }
+      </code>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.27: A clip-path applied with an SVG path
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

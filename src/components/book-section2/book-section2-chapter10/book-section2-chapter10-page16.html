@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- page301 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Inline SVGs allow different colors in different contexts
+      </h2>
+      <p>
+        With inline SVGs, you can also do useful things like change colors based on context, and that's great when you need multiple versions of the same icon in different colors:
+      </p>
+      <code>
+        .icon-drag-left-right { 
+        <br><br>
+          fill: #f90;
+        <br><br>
+        }
+        <br><br>
+        .different-context .icon-drag-left-right { 
+        <br><br>
+          fill: #ddd;
+        <br><br>
+        }
+      </code>
+      <h2>
+        Making dual-tone icons that inherit the color of their parent
+      </h2>
+      <p>
+        With inline SVGs, you can also have some fun and create two-tone effects from a single color icon (as long as the SVG is made up of more than one path) with the use of currentColor, the oldest CSS variable. To do this, inside the SVG symbol, set the fill of the path you want to be one color as currentColor. Then, use the color value in your CSS to color the element. For the paths in the SVG symbol without the fill, set them as currentColor; they will receive the fill value. To exemplify this:
+      </p>
+      <code>
+        .icon-drag-left-right {
+        <br><br>
+          width: 2.5rem;
+        <br><br>
+          height: 2.5rem;
+        <br><br>
+          fill: #f90;
+        <br><br>
+          color: #ccc; /* this gets applied to the path that has its fill attribute set to currentcolor in the symbol */
+        <br><br>
+        }
+      </code>
+      <p>
+        Here's that same symbol reused three times, each with different colors and sizes:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 10.6: Making dual-color SVGs by inheriting colors
+        </p>
+      </section>
+    </div>
+  </div>
+  
+</body>
+</html>

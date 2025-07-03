@@ -1,0 +1,69 @@
+<!DOCTYPE html><!-- page155 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            So, for example, for a grid with two 200 px rows and three 300 px columns, we could write:
+        </p>
+        <code>
+            grid-template: 200px 200px / 300px 300px 300px;
+        </code>
+        <p>
+            Or, if you'd rather do it with the repeat function, you could write:
+        </p>
+        <code>
+            grid-template: repeat (2, 200px) / repeat (3, 300px) ;
+        </code>
+        <p>
+            The part before the forward slash /) deals with the rows and the bit after the columns. You can add grid-template-areas in there too if you like:
+        </p>
+        <code>
+            grid-template:
+            <br><br>
+                [rows-top] 'a a a' 200px
+            <br><br>
+                'bb b' 200px [rows-bottom]
+            <br><br>
+                / 300px 300px 300px;
+        </code>
+        <p>
+            That computes to this in the browser:
+        </p>
+        <code>
+            grid-template-rows: [rows-top] 200px 200px [rows-bottom] ; 
+            <br><br>
+            grid-template-columns: 300px 300px 300px; 
+            <br><br>
+            grid-template-areas: 'a a a' 'b b b';
+        </code>
+        <p>
+            Personally, I find that once you start mixing in named template areas alongside numerical values, it starts to get too confusing to understand easily. Regardless, some people love the shorthand syntax (maybe you will be one of them), and you should be aware it's possible.
+            <br><br>
+            However, we re going to take it up another notch now and deal with the grid shorthand.
+        </p>
+        <h2>
+            grid shorthand
+        </h2>
+        <p>
+            The other shorthand syntax, grid, lets you define a grid all in one line.
+            <br><br>
+            Using this one property, you can set the properties controlling the explicit portion of a grid: grid-template-rows, grid-template-columns, and grid-template-areas, as well as the properties controlling the implicit part of a grid: grid-auto-rows, grid-auto-columns, and grid-auto-flow.
+            <br><br>
+            An essential concept to hold onto when writing the grid shorthand is that a grid can only grow implicitly with either rows or columns, not both.
+            <br><br>
+            At first, that might seem odd, but if you think about it, how would a grid that could add both rows and columns implicitly lay items out? How would it decide whether to add rows or columns?
+            <br><br>
+            So, with that in mind, we can endeavor to wrap our heads around the grid shorthand.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

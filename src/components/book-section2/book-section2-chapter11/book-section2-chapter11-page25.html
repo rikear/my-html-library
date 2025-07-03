@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- page346 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Firstly, we will create a keyframes at-rule:
+      </p>
+      <code>
+        @keyframes pulse {
+      <br><br>      
+          100% {
+      <br><br>      
+            text-shadow: 0 0 5px #bbb; 
+      <br><br>      
+            box-shadow: 0 0 3px 4px #bbb;
+      <br><br>      
+          }
+        }
+      </code>
+      <p>
+        As you can see, after writing @keyframes to define a new keyframes at-rule, we name this particular animation (pulse, in this instance). The @keyframes at-rule describes what you want to happen for each cycle of your animation loop.
+      <br><br>  
+        It's generally best to use a name that represents what the animation does, not where you intend to use the animation, as a single @keyframes rule can be used as many times as you need throughout a project.
+      <br><br>  
+        We have used a single keyframe selector here: 100%. However, you can set as many keyframes (defined as percentage points) as you like within a @keyframes at-rule. Think of these as points along a timeline. For example, at 10%, make the background blue, at 30%, make the background purple, and at 60%, make the element semi-opaque. On and on as you need.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          There is also the keyword from, which is equivalent to 0%, and to, which is equivalent to 100%. You can use the keywords like this:
+        </p>
+        <code>
+          @keyframes pulse {
+        <br><br>      
+            to {
+        <br><br>      
+              text-shadow: 0 0 5px #bbb; 
+        <br><br>      
+              box-shadow: 0 0 3px 4px #bbb;
+        <br><br>      
+            }
+        <br><br>      
+          }
+        </code>
+      </section>
+      <p>
+        You'll notice here that we haven't bothered to define a starting point. That's because the starting point is the state each of those properties is already at. Here's the part of the specification that explains that (https: //www.w3.org/TR/css3-animations/#keyframes):
+      </p>
+      <p>
+        If a '0%' or 'from' keyframe is not specified, then the user agent constructs a '0%' keyframe using the computed values of the properties being animated. If a '100%' or 'to' keyframe is not specified, then the user agent constructs a '100%' keyframe using the computed values of the properties being animated.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

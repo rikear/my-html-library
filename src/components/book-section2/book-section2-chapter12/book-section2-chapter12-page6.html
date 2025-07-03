@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page357 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+        line-height: var (--lineHeight);
+        color: var (--co11);
+        background-color: var (--col2, #000);
+        --padInline: 15px;
+      }
+      </code>
+      <p>
+        Remember that you can also reassign them for any child elements.
+      <br><br>  
+        Some things to note from those code blocks. You may have noticed clamp () in there. We haven't looked at that yet, but we will later in the chapter. We have also done something a little different on thatbackground-color, and that's setting a fallback value. Let's talk about that a little more next.
+      </p>
+      <h2>
+        Setting a fallback value
+      </h2>
+      <p>
+        There may be a situation where you want to protect against a custom property being unavailable. Perhaps the values are set with JavaScript, and that has failed to load, or hasn't been initialized yet. Whatever the reason, you can safeguard against the eventuality by providing a fallback val-ue. The syntax is straightforward: simply provide your fallback value after the custom property name and a comma.
+      <br><br>  
+        For example, suppose I wanted to use the --backgroundColor custom property, but default to a dark gray color if that variable was unavailable. I could write it like this:
+      </p>
+      <code>
+        .my-Item {
+      <br><br>    
+          background-color: var(--backgroundColor, #555);
+      <br><br>    
+        }
+      </code>
+      <p>
+        I you are ever unsure whether a custom property will be set, it makes a lot of sense to get into the habit of supplying fallback values whenever you use custom properties. That way, if the visual component you are building finds itself in an area where the custom property is not set, it will still render with the sensible default you provided.
+      </p>
+      <h2>
+        env() environment variables
+      </h2>
+      <p>
+        In addition to custom properties we might make for ourselves, there are also some system-lev-el properties that can be read in from the environment we are operating in. These are called environment variables. The idea here is that there are certain values that only the host environment knows. This gives us the ability to factor in that unknown when we build, so regardless of the environment, our responsive designs can respond.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html> <!-- page281 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Advanced switching with sreset and sizes
+      </h2>
+      <p>
+        Let's consider another situation. In a responsive web design, it wouldn't be uncommon for an image to be the full viewport width on smaller viewports, but only half the width of the viewport at larger sizes. The main example in Chapter 1, The Essentials of Responsive Web Design, was a typical illustration of this. Here's how we can communicate these intentions to the browser:
+      </p>
+      <code>
+        &lt;img
+        <br><br>
+          scset="scones-small. jpg 450w, scones-medium.jpg 900w" 
+        <br><br>
+          sizes="(min-width: 280px) 100vw, (min-width: 640px) 50vw" 
+        <br><br>
+          src="scones-small.jpg"
+        <br><br>
+          alt="Lots of delicious scones"
+        <br><br>
+        /&gt;
+      </code>
+      <p>
+        Inside the img tag, we are utilizing sreset again. However, this time, after specifying the images, we are adding a value with a w suffix. This tells the browser how wide the image is. In our exam-ple, we have a 450 px wide image (called scones- small. jpg) and a 900 px wide image (called scones-medium. jpg). It's important to note that this w-suffixed value isn't a "real" size. It's merely an indication to the browser, roughly equivalent to the width in "CSS pixels."
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          What exactly defines a pixel in CSS? I wondered that myself. Then, I found the explanation at http://www.w3.org/TR/css3-values/#reference-pixel and wished I hadn't wondered.
+        </p>
+      </section>
+      <p>
+        This w-suffixed value makes more sense when we factor in the additional sizes attribute. The sizes attribute allows us to communicate the intentions for our images to the browser. In the example above, the first value is equivalent to "for devices that are at least 280px wide, I intend the image to be around 100vw wide."
+        <br><br>
+        If some of the units used, such as vh (where 1vh is equal to 1% of the viewport height) and vw (where 1vw is equal to 1% of the viewport width), don't make sense, be sure to read Chapter 6, CSS Selectors, Typography, and More.
+        <br><br>
+        The second part is, effectively, "Hi browser, for devices that are at least 640px wide, I only intend the image to be shown at 50vw." That may seem a little redundant until you factor in dots per inch (DPI) (or DPR for device pixel ratio). For example, on a 320px wide device with a 2x resolution (effectively requiring a 640px wide image, if shown at full width), the browser might decide the 900px wide image is actually a better match as it's the first option it has for an image that would be big enough to fulfil the required size.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

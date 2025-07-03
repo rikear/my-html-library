@@ -1,0 +1,69 @@
+<!DOCTYPE html><!-- page134 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            .rid-item-1 { 
+            <br><br>
+                grid-row: 1; 
+            <br><br>
+                grid-column: 1;
+            <br><br>
+            }
+            .grid-item-2 { 
+            <br><br>
+                grid-row: 1; 
+            <br><br>
+                grid-column: 2;
+            <br><br>
+            }
+            <br><br>
+            .grid-item-3 {
+            <br><br>
+                grid-row: 2; 
+            <br><br>
+                grid-column: 1;
+            <br><br>
+            }
+            <br><br>
+            .grid-item-4 {
+            <br><br>
+                grid-row: 2; 
+            <br><br>
+                grid-column: 2;
+            <br><br>
+            }
+            <br><br>
+            [class^='grid-item'] {
+            <br><br>
+            outline: 3px dashed #f90;
+            <br><br> 
+            font-size: 30px;
+            <br><br>
+            color: #333;
+            <br><br>
+            }
+        </code>
+        <p>
+            The parts to concentrate on in that CSS are the grid-specific properties. I've added some outlines and a background to make it easier to see where the grid is and the size and shape of the grid items.
+            <br><br>
+            We use display: gridto set our container as a grid and then use grid-template-rows: 200px 200px to set two rows, each 200 px high, and grid-template-columns: 200px 200px to set the grid to have two 200 px-wide columns.
+            <br><br>
+            In terms of the child elements of the grid, we use grid-row with a number to tell Grid Layout which row to place the item in and grid-column to tell it which column to place it in.
+            <br><br>
+            By default, the child elements of a grid remain as their standard layout type. Although our grid items belong to our grid, in this example, as they are all div elements, they are still computed as display: block. This is important to understand when we start trying to align grid items.
+        </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

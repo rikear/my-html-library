@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page374 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        The autocomplete attribute
+      </h2>
+      <p>
+        By default, most browsers aid user input by autocompleting the value of form fields where possible.
+      <br><br>  
+        While the user can turn this preference on and off within the browser, we can now also indicate to the browser when we don't want a form or field to allow autocompletion with the autocomplete attribute. This is useful not just for sensitive data (bank account numbers, for example) but also if you want to ensure users pay attention and enter something by hand.
+      <br><br>  
+        For example, for many forms I complete, if a telephone number is required, I enter a "spoof" telephone number. I know I'm not the only one that does that (doesn't everyone?), but I can ensure that users don't enter an autocompleted spoof number by setting the value of the autocomplete attribute to off on the relevant input field. The following is a code example of a field with the autocomplete attribute set to off:
+      </p>
+      <code>
+        &lt;div&gt;
+      <br><br>      
+          &lt;label for="tel"&gt; Telephone (so we can berate you if you're wrong)
+          &lt;/label &gt;
+      <br><br>      
+          &lt;input 
+      <br><br>      
+            id="tel"
+      <br><br>      
+            name="tel" type="tel"
+      <br><br>      
+            placeholder="1-234-546758"
+      <br><br>      
+            autocomplete="off"
+      <br><br>      
+            required
+      <br><br>      
+          /&gt;
+      <br><br>      
+        &lt;/div&gt;
+      </code>
+      <p>
+        It's not possible to stop autocompletion on entire fieldsets in one go, but you can stop autocom-pletion on entire forms. Just add the autocomplete attribute to the form element itself. Here's an example:
+      </p>
+      <code>
+        &lt;form id="redemption" method="post" autocomplete="off"&gt;
+      <br><br>  
+          &lt;!-- content --&gt;
+      <br><br>  
+        &lt;/form&gt;
+      </code>
+      <h2>
+        The list attribute and the associated datalist element
+      </h2>
+      <p>
+        This list attribute and the associated datalist element allow a number of selections to be presented to a user once they start entering a value in the field.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

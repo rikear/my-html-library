@@ -1,0 +1,46 @@
+<!DOCTYPE html><!-- page115 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <ul>
+            <li>
+                flex-shrink is the second value you can pass. It is the amount the flex item can shrink, in relation to the other flex items, when there is not enough space available.
+            </li>
+            <li>
+                • flex-basis is the final value you can pass to flex. It is the basis size the flex item is sized to. If you don't set an item to shrink, you can use flex-basis like a min-width.
+            </li>
+        </ul>
+        <p>
+            Although it's possible to just write flex: 1 and have that interpreted to mean flex: 1 1 0, Irecommend writing all the values into a flex shorthand property yourself. I think it's clearer to understand what you intend to happen that way.
+            <br><br>
+            For example, flex: 1 1 auto means that the item will grow into one part of the available space.
+            It will also shrink one part when space is lacking, and the basis size for the flexing is the intrinsic width of the content, that is, the size the content would be if flex wasn't involved.
+            <br><br>
+            Let's try another: flex: 0 0 50px means this item will neither grow nor shrink, and its basis is 50 px (so it will be 50 px regardless of any free space).
+            <br><br>
+            What about flex: 2 0 50%? That's going to take two "lots" of available space, it won't shrink, and its basis size is 50%. What do you think will happen if you have three items all set to that width in a fixed-width container? Well, let's think this through. Our shorthand has the flex-basis set to 50%, so each item is going to start out at 50% of the container. And as there are three of them, one is going to overflow. Now, we don't have any flex-shrink set, so none of them are going to get any smaller. And although we have flex-grow set to 2, there is no room to grow, so we get this:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 4.16: If items don't fit, like anything else they overflow, wrap, or scroll if you set them to do so
+            </p>
+        </section>
+        <p>
+            Hopefully, these brief examples have demystified the flex property a little, and this incredibly powerful property is starting to make a little sense. If you take a look at example_04-06e, the first item is set to flex: 1.5 @ auto;. Hopefully, you can imagine what that will look like before opening it in the browser to find out.
+        </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

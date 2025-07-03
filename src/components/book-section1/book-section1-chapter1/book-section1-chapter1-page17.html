@@ -1,0 +1,50 @@
+<!DOCTYPE html><!-- page19 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <p>The exact minimum with can be specified using a raft of different-length units including percent, em, rem, and px. In CSS, a minimum-width media query is written like this:</p>
+        <code>
+            @media screen and (min-width: 800px) {
+            /* styles /*
+             }
+        </code>
+        <p>The @media directive tells the browser we are starting a media query, the screen part (declaring screen is technically not needed in this situation, but we will deal with that in detail in Chapter
+        3) tells the browser these rules should be applied to all screen types, and we then have the and keyword, which chains together another set of conditionals, which in this case is the (min-width: 800px). That tells the browser that the rules should also be limited to all viewports at least 800 px wide.
+        <br>
+        <br>
+        I believe it was Bryan Rieger, http://www.slideshare.net/bryanrieger/rethinking-the-
+mobile-web-by-yiibu, who first wrote that:
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>The absence of support for media queries is in fact the first media query.</p>
+        </section>
+        <p>What he meant by that is that the first rules we write, outside of a media query, should be our starter, or "base," rules for the most basic devices, which we then enhance for more capable devices and larger screens.
+        <br>
+        <br>
+        That is what we are doing in this example. The basic styles are written first. It is only when we need to do something different that we introduce a media query.
+        <br>
+        <br>
+        This approach also facilitates a "smallest screen first" mentality and allows us to progressively layer on detail as and when the design needs to change for bigger screens.
+        </p>
+        <h2>Amending the example for a larger screen</h2>
+        <p>We've already established that our design is starting to suffer at around 800 px width. Therefore, let's mix things up a little by way of a simple example of how we can lay things out differently at different viewport sizes.
+        <br>
+        <br>
+        First off, we will stop that main "hero" image from getting too big and keep it over on the right.
+        Then the intro text can sit to the left.
+        </p>
+    </div>
+  </div>
+
+</body>
+</html>

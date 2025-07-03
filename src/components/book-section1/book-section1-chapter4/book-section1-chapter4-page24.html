@@ -1,0 +1,73 @@
+<!DOCTYPE html><!-- page117 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <code>
+            flex-direction: column; 
+            <br><br>
+            min-height: 100%;
+            <br><br>
+            }
+            <br><br>
+            main {
+            <br><br>
+                flex: 1 0 auto; 
+            <br><br>
+                color: #333;
+            <br><br>
+                padding: 0600rem;
+            <br><br>
+            }
+            <br><br>
+                footer {
+            <br><br>
+                background-color: violet;
+            <br><br>
+                color: #fff;
+            <br><br>
+                padding: 1.5rem;
+            <br><br>
+            }
+        </code>
+        <p>
+            Take a look at that in the browser, and test it by adding more content into main. You'll see that when there is not enough content, the footer is stuck to the bottom of the viewport. When there is enough, it sits below the content.
+            <br><br>
+            This works because our flex property is set to grow where space is available. As our body is a flex container of 100% minimum height, the main content can grow into all of that available space.
+            Beautiful!
+        </p>
+        <h2>
+            Changing the source order
+        </h2>
+        <p>
+            Flexbox has the ability to re-order items. Prior to Flexbox, if you wanted to have something that came after something else in the DOM appear before it instead, you were in for a rough time.
+            However, Flexbox makes such work trivial. Let's have a look at how it works.
+            <br><br>
+            Consider this markup, which you can build along with in example_04-08:
+        </p>
+        <code>
+            &lt;div class="container"&gt;
+            <br><br>
+                &lt;header class="item" &gt; Header &lt;/header &gt;
+            <br><br>
+                &lt;aside class="item"&gt; Side one &lt;/aside &gt;
+            <br><br>
+                &lt;main class="item"&gt; Content &lt;/main&gt;
+            <br><br>
+                &lt;aside class="item aside-two" &gt; Side Two &lt;/aside&gt;
+            <br><br>
+                &lt;footer class="item"&gt; Footer &lt;/footer&gt;
+            <br><br>
+            &lt;/div&gt;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

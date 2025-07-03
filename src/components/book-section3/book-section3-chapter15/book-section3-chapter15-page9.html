@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- page430 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        For desktop browsers, you could also opt to only show the scrollbar when the parent element is hovered over. However, remember that if you stray from the standard scrollbars, you are liable to make all the accessibility considerations and affordances needed for them to be usable.
+        <br><br>
+        Well, with these minor tweaks, our example is in decent shape and fairly consistent. We have a nice simple grid layout, with subgrid in there for browsers that support it, and some custom scrollbar work in there too. Now I want to show you another lovely little scrolling-based extra that is simple to add but produces a very polished result.
+      </p>
+      <h2>
+        CSS Scroll Snap
+      </h2>
+      <p>
+        CSS Scroll Snap snaps the scrolling of content to predefined points in the container. Again, it is a user interface pattern that is commonplace in the interfaces of native applications, app stores, and things like carousels. However, historically, such functionality required JavaScript to implement to get anything approaching a near comparable experience.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the official specification for CSS Scroll Snap at https://www.w3.org/TR/cSS-scroll-snap-1/.
+        </p>
+      </section>
+      <p>
+        Let's use CSS Scroll Snap to add scroll snap functionality to our horizontal "Solar System" container.
+      </p>
+      <h2>
+        The scroll-snap-type property
+      </h2>
+      <p>
+        First of all, we define the scroll-snap-type for our scrolling container. This is where we can decide whether we want the container to scroll snap in the x, y, or both, axes.
+        <br><br>
+        This property also allows us to define the strictness of the scroll snapping that is applied. The mandatory value is the one I always opt for unless I'm resetting scroll snapping, at which point you can use none. none will revert scroll snap to behave like a standard scroll container.
+        <br><br>
+        What mandatory does is ensure that if an item is partially scrolled within the container (for ex-ample, the left-hand side is off the viewport by a certain amount), then it will be "snapped" into or out of view.
+        <br><br>
+        There is also a proximity value. What this does is leave the snapping to the discretion of the browser.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- page198 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Here, we have used the and keyword but we can also use or alongside it in a query, or just instead of it; for example, if we were happy to apply styles if those two prior property/value combinations were supported, or if 3D transforms were supported:
+      </p>
+      <code>
+        @supports ((display: flex) and (pointer: coarse)) or
+        <br><br>
+          (transform: translate3d(0, 0, 0)) {
+        <br><br>
+            .Item {
+        <br><br>
+              display: inline-flex;
+        <br><br>
+            }
+        <br><br>
+        }
+      </code>
+      <p>
+        Note the extra set of parentheses that separates the display and pointer conditional from the transform conditional.
+        <br><br>
+        Finally, with all the newer selectors we have looked at and future ones coming in time, it is worth knowing you can test for those too. This is what a feature query for : where() would look like:
+      </p>
+      <code>
+        @supports selector :where(div)) {
+        <br><br>
+          /* styles */
+        <br><br>
+        }
+      </code>
+      <p>
+        You place the selector you are interested in testing support for into the selector () function.
+        <br><br>
+        All the related not-, or-, and and-related keywords work just the same with selector (). This is incredibly handy, as not only can we then fork our code on a specific feature, but we can do it for the more recent selectors introduced to CSS too.
+        <br><br>
+        The only other thing to mention is that you can nest other at-rules inside, such as media queries and keyframes.
+        <br><br>
+        And that's everything you are likely to need to understand when it comes to feature queries. As with media queries, put your "default" styles first, and then your enhancement inside a feature query @supports at-rule.
+        <br><br>
+        It's time to switch gears one final time in this chapter to cover our last major topic: web typography.
+      </p>
+      <h2>
+        Web typography
+      </h2>
+      <p>
+        Typography on the web has come on tremendously in the last few years. It was once necessary to limit yourself to system fonts. Then, when custom fonts were made viable, a bevy of different file types was required to satisfy all the competing file implementations.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- page356 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Custom properties and specificity
+      </h2>
+      <p>
+        Custom properties also behave like other properties in terms of the cascade and specificity. And that can be incredibly useful. For example, we set our custom properties at the root level, but if they are redeclared closer to the element in question, the more specific value will override the first, as they inherit values from the closest ancestor. Consider this CSS:
+      </p>
+      <code>
+        :root {
+          --backgroundColor: red;
+        }
+        header {
+          --backgroundColor: goldenrod;
+        }
+      </code>
+      <p>
+        The header and any elements within it that make use of the --backgroundColor custom property will have a "goldenrod" background color, whereas other elements will have a red background.
+      <br><br>  
+        In our example we have just set a background color, but it is possible to set all manner of defaults in one place for items to inherit, and then override as necessary.
+      <br><br>  
+        You could do something like this:
+      </p>
+      <code>
+        :root {
+        <br><br>  
+          --fontSize: 1.2em;
+        <br><br>  
+          --lineHeight: 1.4;
+        <br><br>  
+          -- col1: #333;
+        <br><br>  
+          --co12: #f9f9f9;
+        <br><br>  
+          --fontFam: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI, Tahoma, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Open Sans, sans-serif;
+        <br><br>  
+          --padInline: clamp (10px, 3vw, 25px);
+        <br><br>  
+          --padBlock: clamp (10px, 2vh, 20px) ;
+        <br><br>  
+        }
+      </code>
+      <p>
+        And then anywhere you want a visual component that uses those properties, you can pick and choose them:
+      </p>
+      <code>
+        .component {
+      <br><br>    
+          font-size: var(--fontSize); 
+      <br><br>    
+          font-family: var(--fontFam);
+      </code>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

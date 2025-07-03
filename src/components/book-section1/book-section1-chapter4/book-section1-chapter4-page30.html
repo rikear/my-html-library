@@ -1,0 +1,63 @@
+<!DOCTYPE html><!-- page123 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            In that example, the shortcut flex-flow: row wrap has been used. flex-flow is actually a shorthand property of sorts that lets you set two properties in one: flex-direction and flex-wrap.
+            <br><br>
+            We've used flex-direction already to switch between rows and columns and to reverse elements.
+            However, we haven't looked at flex-wrap yet.
+        </p>
+        <h2>
+            Wrapping with flex
+        </h2>
+        <p>
+            By default, items in a flex container will shrink to fit and, if they can't, they will overflow the container. For example, consider this markup:
+        </p>
+        <code>
+            &lt;div class="container"&gt;
+            <br><br>
+                &lt;div class="item"&gt; Item 1 &lt;/div&gt;
+            <br><br>
+                &lt;div class="item"&gt; Item 2 &lt;/div&gt;
+            <br><br>
+                &lt;div class="item"&gt; Item 3 &lt;/div&gt;
+            <br><br>
+                &lt;div class="item"&gt; Item 4 &lt;/div&gt;
+            <br><br>
+            &lt;/div&gt;
+        </code>
+        <p>
+            And this CSS:
+        </p>
+        <code>
+            .container { 
+                display: flex; 
+                width: 500px;
+                background-color: #bbb; 
+                align-items: center;
+                border: 1px solid #111;
+            }
+            .item {
+                color: #111;
+                display: inline-flex; 
+                align-items: center;
+                justify-content: center; 
+                font-size: 23px; 
+                flex: 0 0 160px;
+                height: 40px;
+                border: 1px dashed #545454;
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

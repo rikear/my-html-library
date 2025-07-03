@@ -1,0 +1,42 @@
+<!-- page50 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <h2>Embedding media in HTML5</h2>
+        <p>For many, HTMLS first entered their vocabulary when Apple refused to add support for Flash technology in their iOS devices. Flash had gained market dominance (some would argue market stranglehold) as the plugin of choice to serve up video through a web browser. However, rather than using Adobe's proprietary technology, Apple decided to rely on HTMLS instead to handle rich media rendering. While HTMLS was making good headway in this area anyway, Apple's public support of HTML5 gave it a major leg up and helped its media tools gain greater traction in the wider community.
+        <br><br>
+        We've discussed already that people tend to just use the term HTML rather than HTML5 these days, but that label was important historically in relation to media. Before HTML5, adding video and audio into markup was a bit of a pain. These days, it's easy.</p>
+        <h2>Adding video and audio in HTML</h2>
+        <p>Here's a "simple as can be" example of how to link to a video file on your page:</p>
+        <code>
+            &lt;video src="myVideo.mp4" &gt;&lt;/video&gt;
+        </code>
+        <p>HTML allows a single video tag (or audio tag for audio) to do all the heavy lifting. It's also possible to insert text between the opening and closing tag to inform users when there is a problem.
+There are also additional attributes you'd ordinarily want to add, such as the height and width.
+Let's add these in:</p>
+        <code>
+            &lt;video src="myVideo.mp4" width="640" height="480" &gt;
+            If you're reading this either the video didn't load or your browser is waaaayyyyyy old!
+            &lt;/video&gt;
+        </code>
+        <p>Now, if we add the preceding code snippet into our page and look at it in some browsers, it will appear, but there will be no controls for playback. To ensure we show the default playback con-trols, we need to add the controls attribute. For the sake of illustration, we could also add the autoplay attribute.</p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>These days, you will also usually need to add the muted attribute if you want your video to autoplay. Everyone detested videos automatically blaring out audio into a crowded office (if you want to listen to a little Rick Astley at lunch, who am I to judge) so much that most browsers won't autoplay without the muted attribute present.</p>
+        </section>
+
+       
+    </div>
+
+  </div>
+</body>
+</html>

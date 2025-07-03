@@ -1,0 +1,36 @@
+<!DOCTYPE html> <!-- page12 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  
+  <div >
+    <div >
+        <p>As you can see, it's rendering, but like a desktop page shrunken down to fit the space available
+        down into the viewport.
+        The reason for that is that iOS renders web pages at 980 px wide by default and shrinks them
+        Before responsive design was "a thing" it was commonplace to see websites render like that on an iPhone. Nowadays, thanks to the ubiquity of responsive web design, they are as rare as rocking horse droppings!
+        </p>
+        <section>
+            <object>
+                icone here
+            </object>
+            <p>The area of a browser window that a web page is allawed to be viewed in is known technically as the viewport. To be clear, the viewport area excludes the browser toolbars and URL bar etc. From now on, we will generall use this more accurate term.</p>
+        </section>
+        <p>We can make the page more mobile friendly by adding this snippet in the &lt;head&gt;:</p>
+        <code>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+        </code>
+        <p>This viewport meta tag is the non-standard but de facto way of telling the browser how to render the page. Although      introduced to the web by Apple, rather than a standard process, it remains essential for responsive web design. We will     cover the meta tag and its various settings and permutations in Chapter 3, Media Queries and Container Queries.
+        <br>
+        <br>
+        For now, you just need to know that in this case, our viewport meta tag is effectively saying "make the content renderat the width of the device."
+        </p>
+    </div>
+  </div>
+
+</body>
+</html>

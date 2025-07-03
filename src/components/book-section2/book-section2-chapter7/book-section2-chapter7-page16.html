@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page229 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Consider swatch 10 in our example. You should see a color that is like a mix between gold and orange, because that is exactly what it is!
+        <br><br>
+        Here, we are using the color-mix) function to mix gold and orange:
+      </p>
+      <code>
+        .mix {
+          background-color: color-mixin Ich, gold 50%, orange);
+        }
+      </code>
+      <p>
+        The color-mix () function lets you specify a color space to mix in, and then two colors to mix in that color space. It's like kindergarten for web developers!
+        <br><br>
+        Here are the essentials to understand. You pass a percentage after the first color (and you can use any of the color notations we have looked at in this chapter) and that is the amount of that color passed into the "mixer." The percentage left is given to the second color.
+        <br><br>
+        I'svery early days for color-mix and, as such, we won't spend much time with it here. However, 1 hope you agree it's an interesting addition to our color capabilities that is sure to make interesting things possible in the years to come.
+        <br><br>
+        You can read the specification for color-mix() here: https://www.w3.org/TR/css-color-5/#color-mix. It also gives in-depth detail on how the gamuts are mapped when values are passed in that the mixing color space cannot deal with, and lots more.
+      </p>
+      <h2>
+        The color-contrast() function
+      </h2>
+      <p>
+        As interesting as the color-mix() function is, it's not something I can think of immediate use cases for.
+        <br><br>
+        However, the color-contrast () function is different. The color-contrast () function lets you specify a color, then at least another two colors, to effectively compete for the title of "Most Contrasting Color." That's not a real thing by the way, but it does mean a huge difference to day-to-day life as a developer trying to ensure you create suitably contrasting sites for accessibility.
+        Let's take a look at some examples.
+        <br><br>
+        This first example of color-contrast is the 11th swatch in our example file:
+      </p>
+      <code>
+        header-text {
+        <br><br>
+          background-color: #333;
+        <br><br>
+          color: color-contrast (#333 vs #666, #545454, #777, #90);
+        <br><br>
+        }
+      </code>
+
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page415 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        If you have never used Sass before, and the concept of nesting is entirely lost on you, consider css like this:
+      </p>
+      <code>
+        .parent { 
+      <br><br>    
+          font-size: 16px;
+      <br><br>    
+        }
+      <br><br>    
+        .parent .child { 
+      <br><br>    
+          font-size: 1em;
+      <br><br>    
+        }
+      <br><br>    
+        .ancestor .parent { 
+      <br><br>    
+          font-size: 1.5rem;
+      <br><br>    
+        }
+      </code>
+      <p>
+        In those three rules, the common selector is the parent class, which is repeated in each of the rules. With nesting, we could compact those three selectors like this:
+      </p>
+      <code>
+        .parent {
+      <br><br>      
+          font-size: 16px;
+      <br><br>      
+          & .child {
+      <br><br>      
+            font-size: lem;
+      <br><br>      
+          }
+      <br><br>      
+          @nest .ancestor & {
+      <br><br>      
+            font-size: 1.5rem;
+      <br><br>      
+          }
+      <br><br>      
+        }
+      </code>
+      <p>
+        Let's unpack what's going on here. Firstly, by putting a selector inside the first set of braces, prefixed by an ampersand &, we establish a parent-child relationship. The & symbol is used in nesting to represent the context, or selector, of the rule it is nested within.
+      <br><br>  
+        To make something a child of something else, you must use the & as the first non-whitespace character of the nested selector. While a direct child doesn't require anything further than the initial ampersand, expressing other relationships does require additional syntax.
+      <br><br>  
+        For example, in the second nested rule in the example above, we express the relationship between the parent selector and ancestor selector above it with the @nest keyword and the ampersand & selector after the selector.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

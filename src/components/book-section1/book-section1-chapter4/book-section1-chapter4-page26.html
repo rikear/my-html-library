@@ -1,0 +1,43 @@
+<!DOCTYPE html><!-- page119 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            That renders in the browser like this:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 4.17: Here, our boxes are displayed in source order
+            </p>
+        </section>
+        <p>
+            Now, suppose we want to switch the order of main to be the first item, visually, without touching the markup. With Flexbox, it's as simple as adding a single property/value pair:
+        </p>
+        <code>
+            main {
+            <br><br>
+                order: -1;
+            <br><br>
+            }
+        </code>
+        <p>
+            The order property lets us revise the order of items within a Flexbox simply and sanely. In this example, a value of -1 means that we want it to be before all the others.
+            <br><br>
+            It you want to switch items around quite a bit, I'd recommend being a little more declarative and adding an order number for each item. This makes things a little easier to understand when you combine them with media queries.
+        </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- page431 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        It is important to understand why you may occasionally want and need to use proximity. Suppose you had items in a carousel that were always bigger than the viewport. Because, with mandatory, it would always snap, you may have trouble advancing the scroll panel. Setting it to proximity means that content will remain accessible as the browser will determine how much room should be left to accommodate scrolling.
+        <br><br>
+        Despite that, in our instance, since we know the width of our cells won't exceed the width of the viewport, we will apply mandatory for a consistent experience.
+        <br><br>
+        So, our container will be amended with this extra line:
+      </p>
+      <code>
+        .Scroll_Wrapper {
+          /* other styles */
+          scroll-snap-type: x mandatory;
+        }
+      </code>
+      <p>
+        Now, if you refresh the browser and try the scroll panel, you will likely be disappointed. That, by itself, doesn't do anything. We now need to apply the scroll-snap-align property to the child items.
+      </p>
+      <h2>
+        The scroll-snap-align property
+      </h2>
+      <p>
+        The scroll-snap-align property controls where an item inside a scroll-snap container will snap to. The options are:
+      </p>
+      <ul>
+        <li>
+          none to reset an item.
+        </li>
+        <li>
+          start to snap the item to the beginning of a scroll snap area.
+        </li>
+        <li>
+          end to snap the item to the end of a scroll snap area.
+        </li>
+        <li>
+          center to snap the item to the center of the scroll snap area.
+        </li>
+      </ul>
+      <p>
+        So, let's add. Item and set it to snap to the start:
+      </p>
+      <code>
+        Item {
+          /* other styles */
+          scroll-snap-align: start;
+        }
+      </code>
+      <p>
+        Now, if you scroll, you'll see that the items snap within their container.
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

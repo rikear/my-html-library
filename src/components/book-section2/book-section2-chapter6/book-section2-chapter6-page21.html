@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page190 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, if I add an ID selector in there:
+      </p>
+      <code>
+        :is (#ouch .thing, •another-thing, and-another) {
+        <br><br>
+          /* styles */
+        <br><br>
+        }
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          For more on specificity and the maintenance of larger CSS codebases, you may be interested in another of your author's books, Enduring CSS!
+        </p>
+      </section>
+      <p>
+        However, if you do find yourself in such a pickle, we have just the selector for you.
+      </p>
+      <h2>
+        The :where() functional pseudo-class
+      </h2>
+      <p>
+        The :where() selector takes a selector list, just as : is () does. However, this selector is snappily known as the "specificity-adjustment pseudo-class." Cripes!
+        <br><br>
+        Any selector inside the : where() selector list is given a specificity of zero. Even big bad ID selec-tors! So, if you do find yourself in a scenario where you need to use an ID selector, you can wrap it in : where() and it will not add to specificity. Let's take a look.
+        <br><br>
+        Suppose we had markup like this:
+      </p>
+      <code>
+        <div id="thing" class="hi"›hi</div>
+      </code>
+      <p>
+        And we added CSS like this:
+      </p>
+      <code>
+        .hi {
+        <br><br>
+          width: 200px;
+        <br><br>
+          height: 200px;
+        <br><br>
+          background-color: gold;
+        <br><br>
+        }
+        <br><br>
+        #thing {
+        <br><br>
+          background-color: red;
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

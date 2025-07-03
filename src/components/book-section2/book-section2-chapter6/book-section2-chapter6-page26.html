@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- page195 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        However, you can perhaps find more utility for these units when coupled with fonts. For example, it's now trivially easy to create text that scales in size, depending on the viewport.
+        <br><br>
+        For example:
+      </p>
+      <code>
+        .hero-text {
+        <br><br>
+          font-size: 10vw;
+        <br><br>
+        }
+      </code>
+      <p>
+        Now, the text will always be sized as a percentage of the viewport width. However, the limit with something like vw units for text, used in isolation, quickly becomes apparent as you use them. Our example size of 10vw would be a large headline size of 32px at a small viewport size of 320px, but a rather over-the-top size of 130px at a larger viewport of 1300px.
+        <br><br>
+        We can solve this kind of issue easily with the CSS c lamp function. But that's a whole other topic, and you will need to head over to Chapter 12, Custom Properties and CSS Functions, to get the lowdown on that.
+        <br><br>
+        However, for the newer viewport-related units we just looked at and a whole raft of stuff we haven't yet, it can be really handy to be able to fork your code for when those things are supported and when they are not. For that we can reach for feature queries. Let's look at how to use those next.
+      </p>
+      <h2>
+        Using @supports to fork CSS
+      </h2>
+      <p>
+        When you're building out a responsive web design, attempting to provide a single design that works everywhere, on every device, it's a simple fact that you'll frequently encounter situations when features or techniques are not supported on certain devices. It's also a likely scenario with newer selectors, like : has (), which we looked at earlier in the chapter. In these instances, you'll likely want to create a fork in your CSS. If the browser supports a feature, provide one chunk of code; if it doesn't, it gets different code.
+        <br><br>
+        This is the kind of situation that gets handled by if/else or switch statements in JavaScript. In CSS, we use the @supports at-rule.
+        <br><br>
+        Now, before we dig into feature queries, it is worth pointing out a straightforward way of providing fallbacks for older browsers. Suppose we want to use some of our new viewport-related length units but ensure we have some kind of fallback for older browsers.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

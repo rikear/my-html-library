@@ -1,0 +1,58 @@
+<!DOCTYPE html><!-- page72 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <h2>A number of different media queries</h2>
+        <p>Further still, we could have a list of media queries. If any of the listed queries are true, the file will be loaded. If none are true, it won't. Here is an example:</p>
+        <code>
+            &lt;link
+            <br><br>
+            rel="stylesheet"
+            <br><br>
+            media="screen and (orientation: portrait) and (min-width: 800px), projection"
+            <br><br> href="800wide-portrait-screen. css"
+            /&gt;
+        </code>
+        <p>
+            There are two points to note here. Firstly, a comma separates each media query, effectively acting like an or command. Secondly, you'll notice that after projection, there is no trailing and or feature/value combination in parentheses. That's because, in the absence of these values, the media query is applied to all media types. In our example, the styles will apply to all projectors.
+        </p>
+        <section>
+            <object>
+                icone here
+            </object>
+            <p>
+                You should be aware that you can use any CSS length unit to specify media queries.
+                Pixels (px) are the most commonly used, but ems (em) and rems (rem) are equally valid and applicable.
+            </p>
+        </section>
+        <h2>Everyday media queries</h2>
+        <p>
+            At this point, it's probably prudent of me to tell you that in most situations, you don't actually need to specify screen. Here's the key point in the specification:
+        </p>
+        <p>
+            A shorthand syntax is offered for media queries that apply to all media types; the keyword 'all' can be left out (along with the trailing 'and'). Le. if the media type is not explicitly given it is'all'.
+        </p>
+        <p>
+            Therefore, unless you want to target styles to particular media types, just leave the screen and part out. That's the way we will be writing media queries in the example files from this point on.
+            For example:
+        </p>
+        <code>
+            @media (min-width: 750px) {
+                /* styles */
+            }
+        </code>
+
+
+       
+    </div>
+  </div>
+
+</body>
+</html>

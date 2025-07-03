@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page414 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Old browsers
+      </h2>
+      <p>
+        All modern browsers have shipped cascade layers but, depending on the browsers you need to support, it may be some time before you can make use of them in production. Remember, you can always check support at ht tps://caniuse.com/css-cascade-layers.
+      <br><br>  
+        Unfortunately, there is no way of providing any kind of fallback for cascade layers in older brows-ers; the layers will simply be ignored. You can test for cascade layers with @supports, which we covered in Chapter 6, CSS Selectors, Typography, and More. That would look like this:
+      </p>
+      <code>
+        @supports not at-rule(@layer) {
+          /* Styles added here for browsers that don't support Layers */
+        }
+      </code>
+      <p>
+        That concludes our overview of cascade layers.
+      <br><br>  
+        Now onto something that, at this time, is a little more conceptual. Regardless, a feature that will hopefully be with us soon: CSS nesting.
+      </p>
+      <h2>
+        CSS nesting
+      </h2>
+      <p>
+        If you have done any work with CSS in the last 10-15 years, you will have come across CSS pre-pro-cessors, the most enduring of which is Sass.
+      <br><br>  
+        When Sass first appeared, there was nothing like variables, color functions, or nesting in CSS. I don't think it's even debatable that had it not been for the popularity and ultimate ubiquity of Sass and other pre-processors like LESS, we wouldn't now have CSS custom properties, color manipulation functions, and hopefully soon, the topic of this section: native CSS nesting.
+      <br><br>  
+        CSS nesting does not provide anything new in the browser. It's purely a developer experience improvement; syntactic improvements, if you will. It's also subtly different than how Sass implements nesting; just different enough that it might catch you out at first.
+      <br><br>  
+        Let's consider how CSS nesting works and you can decide whether it's something you feel will improve your development experience or not.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          I was so enamored with Sass that back in 2013 I wrote a book on it, Sass and Compass for Designers, Despite being nearly a decade old, it's still largely relevant today. You can find out more about it here: https:// sassandcompass.com.
+        </p>
+      </section>
+      
+       
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- page290 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        We will list a few of those packages in the coming pages. However, although it's certainly common and possible to only work with SVG graphics from within a graphics editing application, understanding exactly how an SVG fits together and how you can tweak it to your exact will can become very useful if you need to start manipulating and animating an SVG.
+        <br><br>
+        So, let's take a closer look at that SVG markup and get an appreciation of what exactly is going on in there. I'd like to draw your attention to a few key things.
+      </p>
+      <h2>
+        The root SVG element
+      </h2>
+      <p>
+        The root SVG element here has attributes for width, height, and viewBox:
+      </p>
+      <code>
+        &lt;svg width="198px" height="188px" viewBox="0 0 198 188"
+      </code>
+      <p>
+        Each of these plays an important role in how an SVG is displayed.
+        <br><br>
+        Hopefully, at this point, you understand the term viewport. It's been used in most chapters of this book to describe the area of a device through which content is viewed. For example, a mobile device might have a 320 px by 480 px viewport. A desktop computer might have a 1,920 px by 1,080 px viewport.
+        <br><br>
+        The width and height attributes of the SVG effectively create a viewport. Through this defined viewport, we can peek in to see the shapes defined inside the SVG. Just like a web page, the contents of the SVG may be bigger than the viewport, but that doesn't mean the rest isn't there; it's merely hidden from our current view.
+        <br><br>
+        The viewBox, on the other hand, defines the coordinate system in which all the shapes of the SVG are governed. You can think of the viewBox values 0 0 198 188 as describing the top-left and bottom-right areas of a rectangle. The first two values, known technically as min-x and min-y, describe the top-left corner, while the second two, known technically as width and height, describe the bottom-right corner. Having the viewBox attribute allows you to do things like zoom an image in or out. For example, if you halve the width and height in the viewBox attribute like this:
+      </p>
+      <code>
+        &lt;svg width="198px" height="188px" viewBox="0 0 99 94"
+      </code>
+      <p>
+        The shape, which is half the size of the SVG, will "zoom" up to fill the size of the SVG width and height.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

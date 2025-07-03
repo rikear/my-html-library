@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page239 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          The specification for CSS Image Values and Replaced Content Module 4 can be found at https://www.w3.org/TR/css-images-4/.
+        </p>
+      </section>
+      <h2>
+        The linear-gradient notation
+      </h2>
+      <p>
+        The linear-gradient notation, in its simplest form, looks like this:
+      </p>
+      <code>
+        .linear-gradient {
+        <br><br>
+          background: linear-gradient (red, blue);
+        <br><br>
+        }
+      </code>
+      <p>
+        This will create a linear gradient that starts at red and fades to blue. Unless you tell it otherwise, which we will look at next, it will go from the top to the bottom.
+      </p>
+      <h2>
+        Specifying gradient direction
+      </h2>
+      <p>
+        If you want to specify a direction for the gradient, there are a couple of ways to do this. The gradient will always begin in the opposite direction to where you are sending it.
+        <br><br>
+        For example:
+      </p>
+      <code>
+        .linear-gradient {
+          background: linear-gradient (to top right, red, blue);
+        }
+      </code>
+    </div>
+    <p>
+      In this instance, the gradient heads to the top right. It starts red in the bottom-left corner and fades to blue at the top right.
+      <br><br>
+      If you're more mathematically minded, you may believe it would be comparable to write the gradient like this:
+    </p>
+    <code>
+      .linear-gradient { 
+      <br><br>
+        background: linear-gradient(45deg, red, blue);
+      <br><br>
+      }
+    </code>
+    <p>
+      However, keep in mind that on a rectangular box, a gradient that heads "to top right" (always the top right of the element it's applied to) will end in a slightly different position than 45deg (always 45 degrees from its starting point).
+    </p>
+  </div>
+  
+</body>
+</html>

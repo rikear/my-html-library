@@ -1,0 +1,45 @@
+<!DOCTYPE html><!-- page70 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <p>
+            Copy and save that into a new file, or, if you have the downloaded code for the book, you can find it as example_03-01.
+            <br><br>
+            Now, open the file in a browser and resize the window. The background color of the page will vary depending upon the current viewport size.
+            <br><br>
+            A default color is defined first, outside of a media query. Then, when any of the media queries are
+            "true," the styles inside the media query overwrite the default.
+            <br><br>
+            The basic syntax of a media query is simple when you get used to it. You use the @media at-rule to communicate a media query and then write the media test in parentheses. The test must pass in order for the styles within the curly braces to be applied.
+            <br><br>
+            You can write media queries in links in HTML, to load particular style sheets if the media query passes. You can write media queries on CSS @import at-rules to determine which style sheets should be imported. You can also write media queries directly into a CSS file to determine which rules should be applied on the basis of which media queries resolve to true.
+            <br><br>
+            Let's look at each in turn.
+        </p>
+        <h2>Media queries in link tags</h2>
+        <p>Here's what a media query looks like on a link you'd find in the <code>&lt; head &gt;</code> section of markup:</p>
+        <code>
+            &lt;link
+            rel="stylesheet"
+            media="screen and (orientation: portrait)" href="portrait-screen.css"
+            / &gt;
+        </code>
+        <p>This media query is asking, "Are you a screen and is your orientation portrait?".</p>
+        <h2>Media query on an @import at-rule</h2>
+        <p>Here's the same rule on an @import statement:</p>
+        <code>
+            @import url( "portrait-screen.css") screen and (orientation: portrait);
+        </code>
+        <p>You can see all the same component parts there: the file to be loaded and the test that has to be passed. Different syntax, same outcome.</p>
+    </div>
+  </div>
+
+</body>
+</html>

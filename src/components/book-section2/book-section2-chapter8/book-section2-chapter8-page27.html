@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page260 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        Combining CSS filters
+      </h2>
+      <p>
+        You can also combine filters easily; simply space-separate them. For example, here is how you would apply opacity, blur, and sepia filters at once:
+      </p>
+      <code>
+        .MultipleFilters {
+        <br><br>
+          filter: opacity (10%) blur (2px) sepia (35%);
+        <br><br>
+        }
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Apart from hue-rotate, when using filters, negative values are not allowed.
+        </p>
+      </section>
+      <p>
+        I think you'll agree that CSS filters offer some pretty powerful effects. There are also effects that we can transition and transform from situation to situation. We'll look at how to do that in Chapter 11, Transitions, Transformations, and Animations.
+        <br><br>
+        However, before you go crazy with these new toys, we need to have a grown-up conversation about performance.
+      </p>
+      <h2>
+        A warning on CSS performance
+      </h2>
+      <p>
+        When it comes to CSS performance, I would like you to remember this one thing:
+      </p>
+      <section>
+        <object>
+          line here
+        </object>
+        <p>
+          "Architecture is outside the braces, performance is inside."
+        </p>
+        <p>
+          Ben Frain
+        </p>
+        <object>
+          line here
+        </object>
+      </section>
+      <p>
+        Let me expand on my little maxim: as far as I can prove, worrying about whether a CSS selector (the part outside the curly braces) is fast or slow is pointless. I set out to prove this here:https: // benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/.
+        <br><br>
+        However, one thing that really can grind a page to a halt, CSS-wise, is expensive properties (the parts inside the curly braces). When we use the term "expensive" in relation to certain styles, it simply means it costs the browser a lot of overhead. It's something the browser, or perhaps more
+        accurately, the host hardware, finds overly taxing to do.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

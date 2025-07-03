@@ -1,0 +1,81 @@
+<!DOCTYPE html><!-- page178 -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            The :last-child selector
+        </h2>
+        <p>
+            Way back in CSS 2.1, we already had a selector applicable for the first item in a list, the : first-child selector:
+        </p>
+        <code>
+            div: first-child {
+            <br><br>
+                /* Styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            However, CSS Level 3 added a selector that can also match the last:
+        </p>
+        <code>
+            div:last -child {
+            <br><br>
+                /* Styles */
+            <br><br>
+            }
+        </code>
+        <p>
+            Let's look at how that selector could fix our prior problem if we didn't want to, or couldn't, add another class at the desired point in the markup:
+        </p>
+        <code>
+            .nav-wrapper {
+            <br><br>
+                isplay: flex;
+            <br><br>
+            }
+            <br><br>
+            .nav-Link:last-child { 
+            <br><br>
+                margin-left: auto;
+            <br><br>
+            }
+        </code>
+        <p>
+            There are also useful selectors for when something is the only item (:only-child) and the only item of a type (:only-of-type).
+        </p>
+        <h2>
+            The nth-child selectors 
+        </h2>
+        <p>
+            The nth-child selectors let us solve even more difficult problems. With the same markup as before, let's consider how nth-child selectors allow us to select any arbitrary link(s) we want within the list.
+        </p>
+        <p>
+            Firstly, what about selecting every other list item? We could select the odd ones like this:
+        </p>
+        <code>
+            .nav-Link:nth-child (odd) {
+                /* Styles */
+            }
+        </code>
+        <p>
+            Or, if you wanted to select the even ones, you could do this:
+        </p>
+        <code>
+            .nav-Link:nth-child (even) {
+                /* Styles */
+            }
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

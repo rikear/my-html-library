@@ -1,0 +1,50 @@
+<!DOCTYPE html> <!-- page397 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 13.22: An asterisk to indicate a required field is a common pattern
+        </p>
+      </section>
+      <p>
+        But this presents a problem. Generally, CSS only lets us effect a change on elements if they are children of an element, the element itself, or a general or adjacent sibling of an element that receives "state" (when I say state, I'm talking about hover, focus, active, checked, and so on). In the following examples, I'm using hover, but that would obviously be problematic for touch-based devices:
+      </p>
+      <code>
+        .item hover .item-child {
+        }
+      </code>
+      <p>
+        With the preceding selector, styles are applied to item-child when the item is hovered over.
+        Now consider:
+      </p>
+      <code>
+        .item:hover ~ item-general-sibling {
+        }
+      </code>
+      <p>
+        With this selector, when the item is hovered over, styles are applied to item-general-siblingif i a the same DOM level as item and follows it. Next up:
+      </p>
+      <code>
+        .item:hover + item-adjacent-sibling {
+        }
+      </code>
+      <p>
+        Here, when the item is hovered over, styles are applied to item-adjacent-sibling if it is the docent sling dement of ten (straight after i tin the DOM).
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

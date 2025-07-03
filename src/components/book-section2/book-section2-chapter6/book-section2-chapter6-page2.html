@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!-- page171 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            Pseudo-elements and pseudo-classes  
+        </h2>
+        <p>
+            There is potential for some contusion when we go on shortly to talk about "pseudo" classes. The reason being is that, in CSS, there are both pseudo-classes and pseudo-elements. Let's therefore take a moment to establish the difference.
+            <br><br>
+            The word "pseudo" in this context means something that is like something, but not really it. So, a pseudo-element is something that is like an element but not really one, and a pseudo-class is something that selects something that isn't really something, but rather the state of something.
+            So.: hover is a pseudo-state, as it selects something when in a certain state. It's poseible pm starting to sound like the Riddler now from Batman! Let's clarify with some code. Here is how you create a pseudo-element in CSS:
+        </p>
+        <code>
+            .thing:: before {
+            <br><br>
+                content: "Spooky";
+            <br><br>
+            }
+        </code>
+        <p>
+            That inserts a : : before pseudo-element into the . thing element with the content "Spooky". A ::before behaves like a first child of the element it is defined on, and an :: after behaves like a last child.
+            <br><br>
+            The following image might help. It shows a single element represented in the Firefox developer tools, containing text with both a : : before and an :: after pseudo-element added in CSS:
+        </p>
+        <section>
+            <object>
+                img here
+            </object>
+            <p>
+                Figure 6.1: The Firefox developer tools will show you where pseudo-elements are in the DOM
+            </p>
+        </section>
+        <p>
+            The key thing to remember with pseudo-elements is that if you don't provide a value for content, nothing will show on the page. Notice the double colon before before? Officially, that is how you should code pseudo-elements as it helps differentiate them from pseudo-classes, which only use one. However, a single colon worked with the first implementations of: before and ::after and so you can still write them that way too.
+        </p>
+        <h2>
+            CSS selectors - beyond the normal!
+        </h2>
+        <p>
+            CSS now provides incredible power for selecting elements within a page. If you are only used to selecting elements based on their class, ID, or element type, these techniques may open your eyes to new possibilities. I'd better qualify that bold claim.
+        </p>
+        <h2>
+            CSS attribute selectors
+        </h2>
+        <p>
+            You've probably used CSS attribute selectors to create rules. For example, consider the following markup:
+        </p>
+        <code>
+            &lt; img src="https://placeimg.com/640/480/any" alt="an inquisitive cat" / &gt;
+        </code>
+        <p>
+            And this CSS:
+        </p>
+        <code>
+            img[alt] {
+            <br><br>
+                border: 3px dashed #e15f5f;
+            <br><br>
+            }
+        </code>
+        <p>
+            This would select the img element in the preceding code, and any others on the page provided that they have an alt attribute.
+            <br><br>
+            In fact, to make something a little more useful, we could combine this with the : not negation selector (we will look at that in detail later in this chapter) to add a red border around any images that have no alt attribute or an alt attribute with no value:
+        </p>
+        <code>
+            img: not ([alt]),
+            <br><br>
+            img [alt=""] {
+            <br><br>
+                border: 3px solid red;
+            <br><br>
+            }
+        </code>
+        <p>
+            That would be useful from an accessibility point of view, as it would visually highlight any images that didn't have alternate text included for assistive technology.
+        </p>
+    </div>
+  </div>
+  
+</body>
+</html>

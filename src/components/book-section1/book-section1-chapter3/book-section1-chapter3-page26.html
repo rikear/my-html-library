@@ -1,0 +1,58 @@
+<!DOCTYPE html><!-- page89 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                As you have likely gathered, the syntax is purposely modeled after media queries, and if you have read the rest of this chapter, that syntax should make immediate sense.
+            </p>
+        </section>
+        <p>
+            However, if there is a possibility of more than one ancestral container, this approach may become problematic.
+            <br><br>
+            The container name allows us to write container queries specific to a specific container. So, assuming our imaginary component has two ancestral containers, we can have some styles applied when the main container is over 500 px wide like this:
+        </p>
+        <code>
+            @container main (inline-size &gt; 500px) {
+                .thing {
+                /* styles*/
+                }
+            }
+        </code>
+        <p>
+            And those styles will only get applied when the main container is more than 500 px wide. And, crucially, not if the side container is more than 500 px wide.
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                By default, container queries resolve to their nearest ancestor container that accepts querying on the specified axis, or smallest viewport size if none available.
+            </p>
+        </section>
+        <p>
+            As named containers provide the ability to query more than one container, we can effectively say,
+            "If the main is 400 px wide apply one set of styles, and if the side is over 20 rem high, apply these other styles." This provides us a lot of flexibility.
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                There are additional queries being specified for container queries such as style and state; however, right now there aren't even initial experimental implementations in browsers. To read more on those possibilities, keep an eye on the developing specification at https://drafts.csswg.org/css-contain-3/.
+            </p>
+        </section>
+    </div>
+
+  </div>
+</body>
+</html>

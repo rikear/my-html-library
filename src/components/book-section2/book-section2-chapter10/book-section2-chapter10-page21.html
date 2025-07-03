@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page306 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Now, there are caveats to consider, marked within numbers:
+      </p>
+      <ul>
+        <ol>
+          When using an SVG inside an object, you can use an external style sheet to style the SVG, but you have to link to that style sheet from within the SVG.
+        </ol>
+        <ol>
+          You can use SVGs in an external asset (which is cacheable), although those external assets cannot be manipulated by JavaScript.
+        </ol>
+        <ol>
+          A media query inside the styles section of an "inlined" SVG works on the size of the document it lives in (not the size of the SVG itself).
+        </ol>  
+      </ul>
+      <p>
+        Be aware that browser implementations of SVG also vary. Therefore, just because those things should be possible (as indicated previously) doesn't mean they will be in every browser, or that they will behave consistently!
+        <br><br>
+        The results in the preceding table are based on the test page in example_ 10-06.
+        <br><br>
+        The behavior of the test page is comparable in the latest versions of Firefox, Chrome, and Safari.
+      </p>
+      <h2>
+        Extra SVG capabilities and oddities
+      </h2>
+      <p>
+        Let's put aside the foibles of browsers for a moment and consider what some of these features in the table actually allow, and why you may or may not want to make use of them.
+        <br><br>
+        SVGs will always render as sharp as the viewing device will allow and regardless of the manner of insertion. For most practical situations, resolution independence is usually reason enough to use SVG. It's then just a question of choosing whichever insertion method suits your workflow and the task at hand.
+        <br><br>
+        However, there are other capabilities and oddities that are worth knowing about, such as SMIL animation, different ways to link to external style sheets, marking internal styles with character data delimiters, amending an SVG with JavaScript, and making use of media queries within an SVG. Let's cover those next.
+      </p>
+      <h2>
+        SMIL animation
+      </h2>
+      <p>
+        SMIL animations (https://www.w3.org/TR/smil-animation/) are a way to define animations for an SVG within the SVG document itself. SMIL (pronounced "smile," in case you were wondering) stands for Synchronized Multimedia Integration Language and was developed as a method of defining animations inside an XML document (remember, SVG is XML-based).
+        <br><br>
+        Here's an example of how to define a SMIL-based animation:
+      </p>
+      <code>
+        &lt;g 
+      <br><br>
+        class="star _Wrapper"
+      <br><br> 
+        fill="none" 
+      <br><br>
+        fill-rule="evenodd"&gt;
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

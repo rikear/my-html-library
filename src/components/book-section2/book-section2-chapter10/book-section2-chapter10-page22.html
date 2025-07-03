@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- page307 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+          &lt;animate
+      <br><br>     
+            xlink:href="#star_Path"
+      <br><br>     
+            attributeName="fill"
+      <br><br>      
+            attributeType="XML"
+      <br><br>     
+            begin="O5" 
+      <br><br>     
+            dur="2s"
+      <br><br>     
+            fill="freeze"
+      <br><br>      
+            from="#F8E81C"
+      <br><br>     
+            to="#14805e"
+      <br><br>     
+          /&gt;
+      <br><br>     
+          &lt;path
+      <br><br>     
+          id="star_Path"
+      <br><br>      
+          stroke="#979797"
+      <br><br>      
+          stroke-width="3"
+      <br><br>     
+          fill="#F8E81C"
+      <br><br>     
+          d="M99 1541-58.78 30.902 11.227-65.45L3.894 73.097165.717-9.55L99
+          4129.39 59.55 65.716 9.548-47.553 46.353 11.226 65.452z"
+      <br><br>     
+          /&gt;
+        </g>
+      </code>
+      <p>
+        I've grabbed a section of the earlier SVG we looked at. The g is a grouping element in SVG, and this one includes both a star shape (the path element with id="star_Path") and the SMIL animation within the animate element. That simple animation tweens the fill color of the star from yellow to green in 2 seconds.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          Tweening
+          <br><br>
+          In case you didn't already know (I didn't), "tweening" as a term is simply a shortening of "inbetweening," as it merely indicates all the in-between stages from one animation point to another.
+        </p>
+      </section>
+      <p>
+        What's more, it does that whether the SVG is put on the page in an img, object, background-image, or inline (honestly, open up example_10-06 in any recent browser to see).
+        <br><br>
+        Wow! Great, right? Well, kind of. Despite being a standard for some time, SMIL remains on shaky ground. In the second edition of this book, released in August 2015, it looked like the Chrome browser was going to deprecate SMIL in Chrome.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

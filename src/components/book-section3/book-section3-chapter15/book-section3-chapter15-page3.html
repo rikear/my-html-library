@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page424 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Right now, you can use -webkit-line-clamp like this, which you can view in example_15-02:
+      </p>
+      <code>
+        .multi-line-truncate {
+        <br><br>
+          width: 250px;
+          <br><br>
+          text-overflow: ellipsis;
+          <br><br>
+          overflow: hidden;
+          <br><br>
+          -webkit-line-clamp: 2;
+          <br><br>
+          -webkit-box-orient: vertical;
+          <br><br>
+          display: -webkit-box;
+          <br><br>
+        }
+      </code>
+      <p>
+        And that produces an effect like this:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 15.2: Multi-line truncation is possible with caveats
+        </p>
+      </section>
+      <p>
+        This seems like exactly what we want. However, be advised that the implementation is brittle.
+        Here are some reasons why. Firstly, if you happen to omit the overflow: hidden declaration, you still get the ellipsis at the line length you specified, but the text continues. Worse, even with those declarations all added, if you happen to add padding inside the box you get a similar effect of an ellipsis at the specified line but with additional text still visible.
+        <br><br>
+        It can certainly help you out in a pinch, but be aware of the caveats.
+      </p>
+      <h2>
+        Creating horizontal scrolling panels
+      </h2>
+      <p>
+        When I say horizontal scrolling panel, hopefully you know the kind of thing I mean.
+        <br><br>
+        Horizonta scrolling panels are common on the iOS App Store and Google Play Store for showing panels of related content (movies, albums, and more). Where there is enough horizontal space, all of the items are viewable. However, when space is limited (think mobile devices), the panel is scrollable from side to side.
+        <br><br>
+        We made a horizontal scrolling panel together in example_05-10 from Chapter 5, Layout with CSS Grid. That will be the start for the finished example_15-03, which we are going to move toward in the next sections. It was already perfectly functional, but there are some new, scrolling-related, treats we can add with CSS that will really elevate the experience of using it.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

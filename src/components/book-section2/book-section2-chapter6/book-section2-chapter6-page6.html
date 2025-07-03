@@ -1,0 +1,77 @@
+<!DOCTYPE html><!-- page175 -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            The "ends with" substring matching attribute selector
+        </h2>
+        <p>
+            The "ends with" substring matching attribute selector has the following syntax:
+        </p>
+        <code>
+            [attribute$="value"] {
+                /* Styles */
+            }   
+        </code>
+        <p>
+            An example should help. Consider this markup:
+        </p>
+        <code>
+            &lt; p data-ingredients="scones cream jam" &gt;
+            <br><br>
+                Will I get selected? &lt;/p &gt;
+            <br><br>
+            &lt; p data-ingredients="toast jam butter" &gt;
+            <br><br>
+                Will I get selected? &lt;/p &gt;
+            <br><br>
+            &lt; p data-ingredients="jam toast butter" &gt;
+            <br><br>
+                Will I get selected? &lt;/p &gt;
+        </code>
+        <p>
+            Suppose we only want to select the element with "jam" at the end of the data-ingredients attribute (which would be the first element of those three). We can't use the "contains an instance of" (it will select all three) or "begins with" (it will only select the last one) substring attribute selector. However, we can use the "ends with" substring attribute selector:
+        </p>
+        <code>
+            [data-ingredients$= "jam"] {
+            <br><br>
+                color: red;
+            <br><br>
+            }
+        </code>
+        <p>
+            The key character in all this is the $ (dollar) symbol, which means "ends with."
+            <br><br>
+            Right, we have some pretty handy attribute-related selectors now. But it's also worth knowing that you can chain attribute selectors, just like you can class selectors.
+        </p>
+        <h2>
+            Chaining attribute selectors
+        </h2>
+        <p>
+            You can have even more possibilities for selecting items by grouping attribute selectors. Suppose
+            we had this markup:
+        </p>
+        <code>
+            &lt; li 
+            <br><br>
+            data-todo-type="exercise" 
+            <br><br>
+            data-activity-name="running" 
+            <br><br>
+            data-location=" indoor"
+            <br><br>
+            &gt;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

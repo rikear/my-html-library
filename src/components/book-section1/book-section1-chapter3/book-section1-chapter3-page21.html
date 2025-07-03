@@ -1,0 +1,50 @@
+<!DOCTYPE html><!-- page84 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <p>
+            If you wanted to style an element a certain way based upon whether any attached pointer device was coarse, you could use any-pointer like this:
+        </p>
+        <code>
+            @media (any-pointer: coarse) {
+                /* styles to be applied if any attached pointer is coarse */
+            }
+        </code>
+        <h2>User preference media features</h2>
+        <p>
+            There are a number of features in the Media Queries Level 5 draft that cater to the preferences and needs of users. Some of these can be seen as largely superficial, while others have more concrete applications such as enhancing accessibility. Let's look at some next.
+        </p>
+        <h2>The prefers-color-scheme media feature</h2>
+        <p>
+            In the last couple of years, popular operating systems for both desktop and mobile computers have given users the option of a dark mode. To supplement this, operating systems expose this user preference to the browser by way of the prefers-color-scheme media feature.
+            <br><br>
+            At present there are three possible preferences: light, dark, and no-preference. To exemplify this feature's use, we might amend the default colors for a page like this:
+        </p>
+        <code>
+            body {
+                background-color: #e4e4e4; 
+                color: #545454;
+            }
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background-color: #333; 
+                    color: #ddd;
+                }
+            }
+        </code>
+        <p>
+            In the same vein as I'm recommending you to write your default "mobile" styles in the root of your style sheet, I would recommend writing the default colors in the root too and adding one of these queries to cater for an alternative interface if needed or desired.
+            <br><br>
+            You can read the draft specification for the prefers- color-scheme media feature here: https: // www.w3.org/TR/mediaqueries-5/#prefers-color-scheme.
+        </p>
+    </div>
+  </div>
+</body>
+</html>

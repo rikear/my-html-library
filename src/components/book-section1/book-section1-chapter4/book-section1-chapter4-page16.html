@@ -1,0 +1,63 @@
+<!DOCTYPE html><!-- page109 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <h2>
+            align-items
+        </h2>
+        <p>
+            The align-items property positions items in the cross axis. Let's apply this property to our wrapping element, like so:
+        </p>
+        <code>
+            .container {
+            <br><br>
+                background-color: indigo;
+            <br><br>
+                display: flex; 
+            <br><br>
+                height: 200px; 
+            <br><br>
+                width: 400px;
+            <br><br>
+                align-items: center;
+            <br><br>
+            }
+        </code>
+        <p>
+            As you would imagine, the item within that box gets centered vertically:
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Figure 4.9: A one-liner provides cross-axis centering
+            </p>
+        </section>
+        <p>
+            The same effect would be applied to any number of children within.
+        </p>
+        <h2>
+            align-self
+        </h2>
+        <p>
+            Sometimes, you may want to pull just one item into a different alignment. Individual flex items can use the align-self property to align themselves.
+            <br><br>
+            At this point, let's remove the previous alignment properties in the CSS and also add another two div elements to the markup, both also with a class of item. In the middle one of these three items, we will add an additional class of AlignSelf. We'll use that class in the CSS to add the align-self property. So here's the HTML:
+        </p>
+        <code>
+            &lt;div class="container"&gt;
+                &lt;div class="item">Item One&lt;/div&gt;
+        </code>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page330 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Now, hover over item in the second paragraph and notice how just that word moves. The words around it are unaffected.
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.6: In the second paragraph, "item" is transformed, moving to the right without affecting anything else
+        </p>
+      </section>
+      <p>
+        So, transforms, either 2D or 3D, do not affect document flow.
+      <br><br>
+        Let's try out the various 2D transforms. You can test each of these out by opening example_11-03 in the browser. There's a transition applied to all of the transforms so that you get a better idea of what's happening.
+      </p>
+      <h2>
+        Scale
+      </h2>
+      <p>
+        Here's the syntax for scale:
+      </p>
+      <code>
+        .scale: hover {
+      <br><br>
+          transform: scale (1.4);
+      <br><br>
+        }
+      </code>
+      <p>
+        Hovering over the scale link in our example produces this effect:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 11.7: You can scale elements up or down in size
+        </p>
+      </section>
+      <p>
+        We've told the browser that when this element is hovered over, we want the element to scale to 1.4 times its original value.
+      <br><br>
+        Besides the values we've already used to enlarge elements, by using values below 1, we can shrink elements; the following will shrink the element to half its size:
+      </p>
+      <code>
+        transform: scale (0.5);
+      </code>
+      <p>
+        You can also apply a scale only on a single axis. Horizontal is scaleX and vertical is scaleY. So, if you wanted to scale something to twice its width, you'd use:
+      </p>
+      <code>
+        transform: scaleX(2);
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- page399 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <code>
+            name="film" type="text"
+            placeholder="e.g. King Kong" 
+            required
+          /&gt;
+          &lt;label for="film"&gt; The film in question? &lt;/label&gt;
+        &lt;/div&gt;
+      </code>
+      <p>
+        And then simply apply flex-direction: row-reverse orflex-direction: column-reverseto the parent. These declarations reverse the visual order of their child elements, allowing the desired aesthetic of the label above (smaller viewports) or to the left (larger viewports) of the input.
+      <br><br>  
+        Now, we can get on with actually providing some indication of required fields and when they have received input.
+      <br><br>  
+        Thanks to our revised markup, the adjacent sibling selector now makes this possible:
+      </p>
+      <code>
+        input: required + label:after {
+        }
+      </code>
+      <p>
+        This selector essentially says, "For every label that follows an input with a required attribute, apply the enclosed rules." Here is the CSS for that section:
+      </p>
+      <code>
+        input: required + label: after {
+        content: '*'
+        ;
+        font-size: 2.1em; position: relative;
+        top: 6px;
+        display: inline-flex; margin-left: 0.2ch; transition: color 1s;
+        }
+        input: required: invalid + label: after { color: red;
+        }
+        input: required:valid + label:after {
+        color: green;
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

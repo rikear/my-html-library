@@ -1,0 +1,66 @@
+<!DOCTYPE html> <!-- page393 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        One big problem I've encountered with the range input type is that the current value is never displayed to the user. Although the range slider is only intended for vague number selections, l've often wanted to display the value as it changes. Currently, there is no way to do this using HTMLS. However, if you absolutely must display the current value of the slider, it can be achieved easily with some simple JavaScript. Amend the previous example to the following code:
+      </p>
+      <code>
+        &lt;input 
+      <br><br>    
+          id="howYouRateIt"
+      <br><br>    
+          name="howYouRateIt"
+      <br><br>    
+          type="range"
+      <br><br>    
+          min="1" 
+      <br><br>    
+          max="10" 
+      <br><br>    
+          value="5"
+      <br><br>    
+          onchange="showValue(this. value)"
+      <br><br>    
+        /&gt;  
+      <br><br>    
+        &lt;span id="range"&gt; 5 &lt;/span&gt;
+      </code>
+      <p>
+        We've added two things, an onchange attribute and also a span element with the id of "range". Now, we'll add the following tiny piece of JavaScript:
+      </p>
+      <code>
+        &lt;script&gt;
+      <br><br>      
+          function showValue (newValue)
+      <br><br>      
+          {
+      <br><br>      
+            document. getElementById ("range"). innerHTML=newValue;
+      <br><br>      
+          }
+      <br><br>      
+        &lt;/ script&gt;
+      </code>
+      <p>
+        All this does is get the current value of the range slider and display it in the element with an id of "range" (our span tag). You can then use whatever CSS you deem appropriate to change the appearance of the value. We will do that ourselves in a moment once we start styling our form.
+      </p>
+      <h2>
+        Styling HTML5 forms with CSS
+      </h2>
+      <p>
+        We have our HTML5-powered form built now, and understand the various input types and associated attributes. However, we need to make it a little more visually appealing across different viewport sizes. By applying some of the techniques we've learned throughout the previous chap-ters, I think we can improve the aesthetics of our form considerably.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

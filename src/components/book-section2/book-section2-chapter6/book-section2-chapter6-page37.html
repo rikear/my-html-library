@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- page206 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Finally, note that we have used the font-display property here to tell the browser how we want to handle the loading and display of this font, but that is no different than non-variable fonts.
+        <br><br>
+        You can look at this completed example at example_06-07.
+        <br><br>
+        This is all well and good, Ben, but how do we actually, you know, use it? OK, let's dig in.
+      </p>
+      <h2>
+        How to make use of a variable font
+      </h2>
+      <p>
+        Variable fonts use what's termed a variation axis.
+        <br><br>
+        A variation axis is just a way of defining two points at either end of a scale. You can then choose any point along the scale to display your font. The scale doesn't need to be vast; in fact, it can be as simple as "on" or "off" (not much of a scale, I know). Variation axes are subdivided into two groups: registered and custom.
+      </p>
+      <h2>
+        Registered axis
+      </h2>
+      <p>
+        Registered axes are the most popular ones, which the specification writers have made specific provision for:
+      </p>
+      <ul>
+        <li>
+          Weight: How heavy the text appears; for example, font-weight: 200.
+        </li>
+        <li>
+          Width: How narrow (condensed) or wide the text appears; for example, font-stretch: 110%.
+        </li>
+        <li>
+          Italic: Whether the font is being displayed as italic or not; for example, font-style: italic.
+        </li>
+        <li>
+          Slant: Don't confuse this with italic. This simply alters the angle of the text; it doesn't substitute any glyphs. For example, font-style: oblique 4deg.
+        </li>
+        <li>
+          Optical size: This is the only one of the registered axes that has required a new font prop-erty. Using font-optical-sizing lets you alter, yes, you guessed it, the optical sizing. But what is that? It's the practice of altering a glyph based upon the size it is displayed at to aid clarity. This means the same glyph displayed at a large size might enjoy thinner stems, for example.
+        </li>   
+      </ul>
+      <p>
+        The values you choose to use with these properties should fall within the capabilities of the variable font you are using. For example, there isn't much point in specifying a font weight of 999 it the font you are using can only go up to 600.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

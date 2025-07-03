@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!-- page407 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        And you do the sensible thing and apply the lightest possible selector in your own style sheet to make a change:
+      </p>
+      <code>
+        .btn {
+          border: 1px dotted goldenrod;
+        }
+      </code>
+      <p>
+        Then you check the change in the browser and... nothing has happened. What is going on?
+      <br><br>  
+        Eventually, you look inside the "Shoe Lace" framework files and uncover the problem. They have a selector like this:
+      </p>
+      <code>
+        /* CSS framework code */
+      <br><br>    
+        button.btn {
+      <br><br>    
+          font-size: 1.3em;
+      <br><br>    
+          border: 2px solid #333;
+      <br><br>    
+        }
+      </code>
+      <p>
+        This means that every time you want to override this set of styles, you need to use a more specific selector. That's far from ideal, as now your own styles and selectors have become more specific, which is sure to lead to more issues in the future.
+      <br><br>  
+        Cascade layers exist to solve these kinds of problems. They can also be a useful tool in organizing your own groups of styles. But before we consider that, let's take our first look at cascade layers by seeing how we could solve our prior issue:
+      </p>
+      <code>
+        @layer framework {
+      <br><br>        
+            /* CSS framework code */
+      <br><br>        
+            button. btn {
+      <br><br>        
+              font-size: 1.3em;
+      <br><br>        
+              border: 2px solid #333;
+      <br><br>        
+            }
+      <br><br>        
+        }
+      <br><br>        
+        .btn {
+      <br><br>        
+          border: 1px dotted goldenrod;
+      <br><br>        
+        }
+      </code>
+      <p>
+        And just like that, our problem has been solved. Using the @layer at-rule establishes a cascade layer, meaning that the styles inside the layer are immediately deemed subordinate to those outside the layer. And we will get into the nitty-gritty of how layers do that momentarily.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

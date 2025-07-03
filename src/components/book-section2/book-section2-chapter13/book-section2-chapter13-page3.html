@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- page370 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        You can see from the previous code snippet that each input element of the form is also wrapped in a div with a label associated with each input (we could have wrapped the input with the label element if we'd wanted to, too). So far, so normal. However, within this first input, we've just stumbled upon our first HTMLS form feature. After the common attributes of id, name, and type, we have placeholder.
+      </p>
+      <h2>
+        The placeholder attribute
+      </h2>
+      <p>
+        As the name suggests, the placeholder attribute offers a means of providing a hint or some placeholder data to indicate the kind of input we are expecting. An obvious example would be the word Search in a search box.
+      <br><br>  
+        Needing placeholder text within form fields is such a common requirement that the folks creating HTML5 decided it should be a standard feature of HTML. To add placeholder text for an input, simply add the placeholder attribute. Its value will be displayed in the input until the field gains focus. When it loses focus, if a value has not been entered, it will redisplay the placeholder text.
+      <br><br>  
+        In our example, the placeholder attribute is filled in like this:
+      </p>
+      <code>
+        placeholder="e•g. King Kong"
+      </code>
+      <h2>
+        Styling the placeholder text
+      </h2>
+      <p>
+        You can style the placeholder attribute with the : placeholder-shown pseudo-selector:
+      </p>
+      <code>
+        input: placeholder-shown {
+      <br><br>    
+          color: #333;
+      <br><br>    
+        }
+      </code>
+      <p>
+        You can also change the text size of the placeholder text; it doesn't need to be the same as the values. As ever, be mindful of accessibility. Although it is only placeholder text, I still try to ensure the text is 16 px or greater.
+      </p>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You shouldn't rely on the placeholder text to convey any essential informa-tion, as screen readers do not treat placeholder text as a label. Read more about that here: https://www.w3.org/WAI/tutorials/forms/instructions/ #placeholder-text.
+        </p>
+      </section>
+      <p>
+        When it comes to color accessibility, ensure you use appropriate contrast. If you don't already have a tool to check acceptable contrast levels, I'd recommend bookmarking https://webaim. org/resources/contrastchecker/.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

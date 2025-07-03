@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- page231 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        In this case, the color-contrast function returns #777, which is the first color from the list that meets or exceeds the target contrast.
+        <br><br>
+        I'm sure you can see the usefulness of this function, especially in situations where you want to use a bunch of pre-defined brand colors while still addressing accessibility concerns. I hope this gets broad browser implementation soon.
+      </p>
+      <h2>
+        Relative colors with the relative color syntax
+      </h2>
+      <p>
+        One other new feature of the CSS Color Module Level 5 specification that is worth a little exploration is the relative color syntax. This lets you amend a color by kind of deconstructing it. At this point, an example may be more useful. Consider swatch 13 in our examplefile, which is set with this CSS:
+      </p>
+      <code>
+        .relative {
+          --bg: #f90;
+          background-color: hs1(from var (--bg) h s calc(1 + 10%)) ;
+        }
+      </code>
+      <p>
+        So, here we have a custom property set to a hex value (#f90). Then, with our hs 1() color function notation, we use the from keyword to "pick" where we are generating our relative color from.
+        In this case, it is the hex in the line above, but it could be any color set in any of the notations that CSS allows. Then, we can use the letters of the color type, in this case h, s, and 1, to get the component parts of the origin color into our current format and then tweak it. In this instance, I have used the calc() function to brighten the color by 10%. Remember that in HSL, lightness is always a percentage.
+        <br><br>
+        Let's look at one more. This is swatch 14:
+      </p>
+      <code>
+        .relative-rgb {
+        <br><br>
+          --bg: hs1(0 100% 50%) ;
+        <br><br>
+          background-color: rgb(from var (--bg) r 100 b / 88%);
+        <br><br>
+        }
+      </code>
+      <p>
+        Here, we take a color defined in our custom property in HSL, then tweak the green value to be 100 and add an 80% alpha layer.
+        <br><br>
+        Like the other functions, color-contrast and color-mix, this doesn't have broad support, but is sure to low plenty of creative expression in the years to come. From a purely practical perspective, it will allow you to manipulate all the colors of a code base in the same way, regardless of whether the authoring format was hex, rgb(), hsl(), or any of the other notations we have considered.
+      </p>
+       
+    </div>
+  </div>
+  
+</body>
+</html>

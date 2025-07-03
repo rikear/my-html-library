@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- page413 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        The browser effectively makes important "versions" of each layer, crucially in reverse order. The outcome of this, practically, is that an ! important rule in the reset becomes the highest priority, despite normal rules being the least priority in the "normal" reset layer.
+      <br><br>  
+        So, all this is to help you understand that when using cascade layers, you need to be even more vigilant in your use of ! important. If you can avoid it in your layers, so much the better and the more predictable they will be.
+      <br><br>  
+        As an exercise, take a look at the CSS of example_ 14-01:
+      </p>
+      <code>
+        @layer reset, type;
+      <br><br>      
+        @layer reset {
+      <br><br>      
+          .para { 
+      <br><br>      
+            font-size: 2rem;
+      <br><br>      
+            color: hotpink !important;
+      <br><br>       
+            text-decoration-style: dotted;
+      <br><br>      
+            text-decoration: line-through orange !important;
+      <br><br>      
+          }
+      <br><br>      
+        }
+      <br><br>      
+        @layer type {
+      <br><br>      
+          .para { 
+      <br><br>      
+            font-size: 1.2rem ! important; 
+      <br><br>      
+            color: goldenrod ! important;
+      <br><br>      
+            text-decoration: solid overline lime ! important;
+      <br><br>      
+          }
+      <br><br>      
+        }
+      <br><br>      
+        .para { 
+      <br><br>      
+          font-size: 1rem;
+      <br><br>      
+          color: brown;
+      <br><br>      
+          text-decoration: wavy underline lime ! important;
+      <br><br>      
+        }
+      </code>
+      <p>
+        Before you open up this page in a browser and see which styles get applied, consider what you have just learned. What do you think will be the applied font-size, color, and text-decoration?
+      </p>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

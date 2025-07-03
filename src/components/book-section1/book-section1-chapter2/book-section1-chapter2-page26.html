@@ -1,0 +1,45 @@
+<!-- page52 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+  <div >
+    <div >
+        <p>To use an attribute, simply add it to the tag. Here's an example that includes all these attributes:</p>
+        <code>
+        &lt;video
+        src="myVideo.mp4"
+        width="640" height="480"
+        controls autoplay muted preload="auto"
+        100p poster="myVideoPoster.png"
+        &gt;
+        If you're reading this either the video didn't load or your browser is waaaayyyyyy old!
+        &lt;/video &gt;
+        </code>
+        <h2>Providing alternate media sources</h2>
+        <p>The source tag enables us to provide alternate sources for the media. For example, alongside providing an MP4 version of the video, if we wanted to provide support for a new format, we could easily do so. Further still, if the user didn't have any suitable playback technology in the browser, we could provide download links to the files themselves. Here's an example:</p>
+        <code>
+            &lt;video
+            width="640" height="480"
+            controls preload="auto"
+            100p poster="myVideoPoster.png"
+            &gt;
+            &lt;source src="video/myVideo.sp8" type="video/superg" /&gt;
+            &lt;source src="video/myVideo.mp4" type="video/mp4" /&gt;
+            &lt;p&gt;
+            &lt;b&gt;Download Video:&lt;/b&gt;
+            MP4 Format:
+            &lt;a href="myVideo.mp4" &gt; "MP4" &lt;/a&gt;
+            &lt;/p&gt;
+            &lt;/video&gt;
+        </code>
+       
+    </div>
+
+  </div>
+</body>
+</html>

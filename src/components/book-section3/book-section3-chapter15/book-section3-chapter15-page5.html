@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- page426 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        To get the scrolling working, we just need a wrapper that is narrower than the sum of its contents and to set it to overflow automatically in the x axis. That way, it won't scroll if there is enough space, but it will if there isn't.
+        <br><br>
+        With Grid, the main scroller is set like this:
+      </p>
+      <code>
+        .Scroll_Wrapper { 
+        <br><br>
+          display: grid; width: 100%;
+          <br><br>
+          overflow-y: hidden; 
+          <br><br>
+          overflow-x: auto;
+          <br><br>
+          gap: 0 20px;
+          <br><br>
+          grid-template-rows: auto auto;
+          <br><br>
+          grid-auto-columns: auto; 
+          <br><br>
+          grid-auto-flow: column;
+          <br><br>
+        }
+      </code>
+      <p>
+        No matter how many items are added to the grid, it will continue to add them as columns. Skip back to Chapter 5, Layout with CSS Grid, if you need a refresher on any of the properties and values used.
+        <br><br>
+        One thing you might not be very happy about is the default scrollbar. This is typically quite elegant on touch devices but a little more unrefined on desktop.
+        <br><br>
+        Here it is on Chrome:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 15.4: Default scrollbars in Chrome
+        </p>
+      </section>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

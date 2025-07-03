@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- page291 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          To really understand viewBox and the SVG coordinate system and the opportunities it presents, I recommend this post by Sara Soueidan: https://sarasoueidan.com/ blog/svg-coordinate-systems/ and this post by Jakob Jenkov:https://jenkov. com/tutorials/svg/index.html.
+        </p>
+      </section>
+      <h2>
+        Namespace
+      </h2>
+      <p>
+        This SVG has an additional namespace defined for the Sketch graphics program that generated it (xmIns is short for XMI namespace):
+      </p>
+      <code>
+        xmIns: sketch="http://www.bohemiancoding.com/sketch/ns"
+      </code>
+      <p>
+        These namespace references tend to only be used by the program that generated the SVG, so they are often not needed when the SVG is bound for the web. Optimization processes for reducing the size of SVGs will often strip them out.
+      </p>
+      <h2>
+        The title and desc tags
+      </h2>
+      <p>
+        There are title and desc tags that make an SVG document highly accessible:
+      </p>
+      <code>
+        &lt;title&t; Star 1 &lt;/title&t;
+        <br><br>
+          &lt;desc&t; Created with Sketch. &lt;/desc&t;
+      </code>
+      <p>
+        These tags can be used to describe the contents of the graphics when they cannot be seen. How-ever, when SVG graphics are used for background graphics, these tags can be stripped to further reduce the file size.
+      </p>
+      <h2>
+        The defs tag
+      </h2>
+      <p>
+        There is an empty defs tag in our example code:
+      </p>
+      <code>
+        &lt;defs&gt; &lt;/defs&gt;
+      </code>
+      <p>
+        Despite being empty in our example, this is an important element. It is used to store definitions of all manner of reusable content, such as gradients, symbols, paths, and more.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- page354 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Below is the snippet of JavaScript we are using. Essentially, it just says that when someone clicks the toggle button, if the foreground variable is currently #eee (nearly white), then set it to #333 (a dark gray); otherwise, set it to eee. And, if the background variable is #333, set it to #eee; otherwise, set it to #333:
+      </p>
+      <code>
+        var root = document. documentElement;
+      <br><br>      
+        var btn = document. getElementById ("colorToggle");
+      <br><br>      
+        btn.addEventListener("click", (e) => {
+      <br><br>      
+          root.style.setProperty(
+      <br><br>      
+            "--background",
+      <br><br>      
+            getComputedStyle(root).getPropertyValue("--background") === "#333"
+      <br><br>      
+              ? "#eee"
+      <br><br>      
+              : "#333"
+      <br><br>      
+          );
+      <br><br>      
+            root. style. setProperty( 
+      <br><br>      
+              "--foreground",
+      <br><br>      
+              getComputedStyle(root) •getPropertyValue("-- foreground") === "#eee"
+      <br><br>      
+                ?"#333"
+      <br><br>      
+                :"#eee"
+      <br><br>      
+          );
+      <br><br>      
+        });
+      </code>
+      <p>
+        And here is a screenshot showing each state:
+      </p>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 12.1: An example of each state side by side, colors easily swapped with custom properties
+        </p>
+      </section>
+
+    </div>
+  </div>
+  
+</body>
+</html>

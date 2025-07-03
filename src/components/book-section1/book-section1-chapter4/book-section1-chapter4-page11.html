@@ -1,0 +1,78 @@
+<!DOCTYPE html><!-- page104 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+        <p>
+            When you set display: flex; on a wrapping element, the children of that element become flex items, which then get laid out using the flex layout model. The magical property here is margin-left: auto;, which makes that item use all of the available margin on that side.
+        </p>
+        <h2>
+            Reverse the order of items
+        </h2>
+        <p>
+            Want to reverse the order of the items?
+        </p>
+        <section>
+            <object>
+                icon here
+            </object>
+            <p>
+                Figure 4.4: Reversing the visual order with Flexbox
+            </p>
+        </section>
+        <p>
+            It's as easy as adding flex-direction: row-reverse; to the wrapping element and changing margin-left: auto; to margin-right: auto; on the offset item:
+        </p>
+       <code>
+        .container {
+        <br><br>
+            background-color: indigo;
+        <br><br>
+            font-family: "Oswald", sans-serif; 
+        <br><br>
+            font-size: 1rem; 
+        <br><br>
+            min-height: 2.75rem; 
+        <br><br>
+            display: flex;
+        <br><br>
+            flex-direction: row-reverse;
+        <br><br>
+            align-items: center;
+        <br><br>
+            padding: 0 1rem;
+        }
+        <br><br>
+        .item,
+        <br><br>
+        .last-item {
+        <br><br>
+            color: #ebebeb;
+        <br><br>
+            text-decoration: none;
+        <br><br>
+        }
+        <br><br>
+        item {
+        <br><br>
+            margin-right: 1rem;
+        <br><br>
+        }
+        <br><br>
+        .last-item {
+        <br><br>
+            margin-right: auto;
+        <br><br>
+        }
+       </code>
+    </div>
+  </div>
+  
+</body>
+</html>

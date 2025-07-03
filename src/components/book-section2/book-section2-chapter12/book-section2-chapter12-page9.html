@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- page360 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <p>
+        Now we have a better tool for the job. You can do this instead:
+      </p>
+      <code>
+        .headline {
+      <br><br>    
+          font-size: clamp (16px, 4vw, 30px);
+      <br><br>    
+        }
+      </code>
+      <p>
+        That's pretty powerful, right? The clamp () function is just one of many CSS functions we now have at our disposal. But hang on. I got a little excited then and jumped ahead. Before we look in detail at functions like clamp (), let's start by looking at a function you may have already looked at, calc ().
+      </p>
+      <h2>
+        calc()
+      </h2>
+      <p>
+        The calc() function allows us to do basic arithmetic in CSS. I purposefully said basic because it only allows addition, subtraction, division, and multiplication.
+      <br><br>  
+        It's essential to put whitespace around the plus and minus symbols; otherwise, the calc() won't, err... calc! It isn't necessary to have whitespace around the division or multiplication symbols, but I always add it there too just for consistency.
+      <br><br>  
+        So, to illustrate, this is good:
+      </p>
+      <code>
+        thing {
+      <br><br>    
+          width: calc (100vw - 30px) ;
+      <br><br>    
+        } 
+      </code>
+      <p>
+        But this is bad:
+      </p>
+      <code>
+        .thing {
+      <br><br>    
+          width: calc (100vw -30px);
+      <br><br>    
+        }
+      </code>
+      <p>
+        As you can see in the example above, you can mix and match units in the calculations. This is particularly useful in our responsive challenges. Suppose we are building some piece of user in-terface, and we want something the full height of the viewport but minus a fixed-height header that is 50 px. We can solve this with ease with calc:
+      </p>
+      <code>
+        .thing {
+      <br><br>    
+          height: calc (100vh - 50px);
+      <br><br>    
+        }
+      </code>
+
+       
+    </div>
+  </div>
+  
+</body>
+</html>

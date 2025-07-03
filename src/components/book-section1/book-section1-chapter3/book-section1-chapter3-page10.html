@@ -1,0 +1,56 @@
+<!DOCTYPE html><!-- page73 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div >
+    <div >
+        <h2>What can media queries test for?</h2>
+        <p>When building responsive designs, the media queries that get used most usually relate to a device's viewport width (width). In my own experience, I have found little need, with the occasional exception of resolution and viewport height, to employ the other capabilities. However, just in case the need arises, here is a list of all capabilities that Media Queries Level 3 can test for. We will look at some other queries from later versions of the specification later in the chapter. For now, hopefully, some will pique your interest:</p>
+        <ul>
+            <li>
+                width: The viewport width.
+            </li>
+            <li>
+                height: The viewport height.
+            </li>
+            <li>
+                device-width*: The rendering surface's width (for our purposes, this is typically the screen width of a device).
+            </li>
+            <li>
+                device-height*: The rendering surface's height (for our purposes, this is typically the screen height of a device).
+            </li>
+            <li>
+                orientation: This capability checks whether a device is portrait or landscape in orien-tation.
+            </li>
+            <li>
+                aspect-ratio: The ratio of width to height based on the viewport width and height. A 16:9 widescreen display can be written as aspect-ratio: 16/9.
+            </li>
+            <li>
+                device-aspect-ratio*: This capability is similar to aspect-ratio but is based on the width and height of the device's rendering surface, rather than the viewport.
+            </li>
+            <li>
+                color: The number of bits per color component. For example, min-color: 16 will check that the device has 16-bit color.
+            </li>
+            <li>
+                color-index: The number of entries in the color lookup table (the table is how a device changes one set of colors to another) of the device. Values must be numbers and cannot be negative.
+            </li>
+            <li>
+                monochrome: This capability tests how many bits per pixel are in a monochrome frame buffer. The value would be a number (integer), for example, monochrome: 2, and cannot be negative.
+            </li>
+            <li>
+                resolution: This capability can be used to test screen or print resolution; for example, min-resolution: 300dpi. It can also accept measurements in dots per centimeter; for example, min-resolution: 118apcm.
+            </li>     
+        </ul>
+
+
+       
+    </div>
+  </div>
+
+</body>
+</html>

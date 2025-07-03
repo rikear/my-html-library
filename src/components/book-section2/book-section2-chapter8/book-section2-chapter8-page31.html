@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- page264 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        clip-path with ellipse
+      </h2>
+      <p>
+        With clip-path: ellipse(), the first argument is the x-axis radius (horizontal) and the second argument is the y-axis radius (vertical). Just like circle(), you specity positioning lengths after the at keyword:
+      </p>
+      <code>
+        .clip-ellipse {
+        <br><br>
+          clip-path: ellipse(100px 50px at 60% 40%);
+        <br><br>
+        }
+      </code>
+      <section>
+        <object>
+          img here
+        </object>
+        <p>
+          Figure 8.24: An elliptical clip-path applied
+        </p>
+      </section>
+      <h2>
+        clip-path with inset
+      </h2>
+      <p>
+        The inset () function for clip-path is a little different. You pass four lengths, and these are how much you want to inset the mask from the edges. Just like when you set margin, the values go clockwise: top, right, bottom, and left. Just like margin, you can also pass just two length values; the first will be top and bottom and the second will be left and right (the three-value syntax works the same too).
+        <br><br>
+        There is also an optional round keyword that can be used, followed by another length; this sets how much you would like each corner to be rounded by.
+        <br><br>
+        Here is an example with four inset values passed and four different radius values for the comers:
+      </p>
+      <code>
+        .clip-inset {
+        <br><br>
+          clip-path: inset (40px 20px 40px 20px round 0 30px 15px 40px);
+        <br><br>
+        }
+      </code>
+    </div>
+  </div>
+  
+</body>
+</html>

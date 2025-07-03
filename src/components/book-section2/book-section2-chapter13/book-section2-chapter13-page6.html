@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- page373 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <h2>
+        The autofocus attribute
+      </h2>
+      <p>
+        The HTMLS autofocus attribute allows a form to have a field focused, ready for user input, as soon as the page loads. The following code is an example of an input field wrapped in a div with the autofocus attribute added at the end:
+      </p>
+      <code>
+        &lt;div&gt;
+      <br><br>      
+          &lt;label for="search"&gt; Search the site... &lt;/label&gt;
+      <br><br>      
+          &lt;input
+      <br><br>      
+            id="search" 
+      <br><br>      
+            name="search" 
+      <br><br>      
+            type="search"
+      <br><br>      
+            placeholder="Wyatt Earp"
+      <br><br>      
+            autofocus
+      <br><br>      
+          /&gt;
+      <br><br>      
+        &lt;/div&gt;
+      </code>
+      <p>
+        Tread carefully with autofocus for a few reasons.
+      <br><br>  
+        Firstly, if multiple fields have autofocus added, only the first autofocused field will be focused.
+        It's not hard to imagine a scenario where you accidentally added autofocus to one field, and some time later added autofocus to another. Your user may not get the experience you expected, and you might have yourself a bug to troubleshoot.
+      <br><br>  
+        Secondly, it's also worth considering that some users use the spacebar to quickly skip down the content of a web page. On a page where a form has an autofocused input field, this capability is negated; instead, a space is added to the focused input field. It's easy to see how that could be a
+        source of frustration for users.
+      <br><br>  
+        In addition, users of assistive technology will be instantly transported to a location on the page they have no control of not exactly the best user experience!
+      <br><br>  
+        If using the autofocus attribute, be certain it's only used once in a form and be sure you understand the implications.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- page235 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Component</title>
+  <link rel="stylesheet" href="/my-html-library/src/css/scrollbar.css">
+</head>
+<body>
+
+  <div>
+    <div>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          It's worth knowing that, in CSS, where a value starts with a zero, such as 0. 14s, there is no need to write the leading zero: . 14s is exactly the same.
+        </p>
+      </section>
+      <p>
+        If there is no blur to be added to a text shadow, the value can be omitted from the declaration.
+        <br><br>
+        For example:
+      </p>
+      <code>
+        .text {
+          text-shadow: -4px -4px #dad7d7;
+      }
+      </code>
+      <p>
+        That is perfectly valid. The browser assumes that the first two values are for the offsets if no third value is declared.
+      </p>
+      <h2>
+        Multiple text shadows
+      </h2>
+      <p>
+        It's possible to add multiple text shadows by comma-separating two or more shadows. For ex-ample:
+      </p>
+      <code>
+        .multiple {
+          text-shadow: Opx 1px #fff, 4px 4px 0px #dad7d7;
+        }
+      </code>
+      <p>
+        Also, as CSS is forgiving of whitespace, you can lay out the values like this if it helps with readability:
+      </p>
+      <code>
+        .text {
+        <br><br>
+          text- shadow:
+        <br><br>
+            3px 3px #bbb, /* right and bottom */
+        <br><br>
+            -3px -3px #999; /* Left and top */
+        <br><br>
+        }
+      </code>
+      <section>
+        <object>
+          icon here
+        </object>
+        <p>
+          You can read the WC specification for the text-shadow property here: https:// www. w3.org/TR/css-text-decor-3/#text-shadow-property.
+        </p>
+      </section>
+      <p>
+        So, that's how you create shadows around text. What about when you want a shadow on a containing element?
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>
